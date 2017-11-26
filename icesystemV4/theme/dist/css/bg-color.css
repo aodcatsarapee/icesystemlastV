@@ -1,0 +1,19 @@
+.bg-success{
+	background: #00a65a;
+	color: #fff;
+}
+
+.bg-warning{
+	background: #F39C12;
+	color: #fff;
+}
+
+.bg-info{
+	background: #3C8DBC;
+	color: #fff;
+}
+
+.bg-danger{
+	background: #DD4B39;
+	color: #fff;
+}
