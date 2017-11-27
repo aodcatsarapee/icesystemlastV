@@ -101,6 +101,6 @@
           <input type="hidden" name="absence_total" class="form-control" value="<?php echo $ab; ?>">
 
 
-           <input type="submit" class="btn btn-default" id="insert" value=" บันทึกข้อมูล " style="float: right;font-size: 15px;">
+           <input type="submit" class="btn btn-default" id="insert" value=" จ่ายเงินเดือน " style="float: right;font-size: 15px;">
         </form>
         <br><br>

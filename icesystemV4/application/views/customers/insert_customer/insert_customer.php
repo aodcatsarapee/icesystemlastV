@@ -40,7 +40,7 @@
           <div class="form-group  ">
             <label class="col-sm-3 control-label"  >เลขบัตรประชาชน :</label>
             <div class="col-sm-4">
-              <input class="form-control" type="text" name="id_card" id="id_card"  placeholder="เช่น 1509901476538 "   >
+              <input class="form-control" type="text" name="id_card" id="id_card"  placeholder="เช่น 1509901476538 "  maxlength="13" minlength="13"  >
             </div>
           </div>
 
@@ -89,7 +89,7 @@
  			<div class="form-group  ">
           <label class="col-sm-3 control-label"  >รหัสไปรษณีย์ :</label>
             <div class="col-sm-5">
-              <input class="form-control" type="text" name="cus_post_code" id="cus_post_code"  size="20px;" placeholder="เช่น 50000 " >
+              <input class="form-control" type="text" name="cus_post_code" id="cus_post_code"  size="20px;" placeholder="เช่น 50000 "  maxlength="4" minlength="4">
             </div>
  			</div>
 
@@ -98,7 +98,7 @@
  			<div class="form-group  ">
  			<label class="col-sm-3 control-label"  >เบอร์โทรที่ติดต่อได้ :</label>
             <div class="col-sm-5">
-              <input class="form-control" type="text" name="cus_phone" id="cus_phone"  size="20px;" placeholder="เช่น 0955142114 " >            </div>
+              <input class="form-control" type="text" name="cus_phone" id="cus_phone"  size="20px;" placeholder="เช่น 0955142114 "  maxlength="10" minlength="10">            </div>
  			</div> 			
 
 
