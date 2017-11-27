@@ -2,10 +2,20 @@
 
 $(document).ready(function(){
 
-   
+$('#modal-insert-user').on('hidden.bs.modal', function () {
+    location.reload();
+   })
+
+   $('#modal-edit-user').on('hidden.bs.modal', function () {
+    location.reload();
+   })
+
              $("#insert_form_user").validate({
 
               rules: {
+                      employee_fname  :"required",
+                      employee_lname  :"required",
+                      department :"required",
                             username:{
                       		required: true,
                             minlength: 6,
@@ -23,8 +33,6 @@ $(document).ready(function(){
                           minlength: 6,
                           maxlength: 15,                         
                       },
-                      employee:"required",
-                      
                       },
                     messages: {
                     username:{
@@ -33,6 +41,9 @@ $(document).ready(function(){
                         maxlength :"กรุณากรอกไม่เกิน 15 ตัวอักษร"
                     },
                     type   :"กรุณาเลือกข้อมูล",
+                    employee_fname  :"ไม่มีข้อมูล",
+                    employee_lname  :"ไม่มีข้อมูล",
+                    department :"ไม่มีข้อมูล",
                     password :{
                         required: "กรุณากรอกข้อมูล",
                         minlength:"กรุณากรอกอย่างน้อย 6 ตัวอักษร",
@@ -44,7 +55,7 @@ $(document).ready(function(){
                         minlength:"กรุณากรอกอย่างน้อย 6 ตัวอักษร",
                         maxlength :"กรุณากรอกไม่เกิน 15 ตัวอักษร"
                     },
-                     employee:"กรุณาเลือกข้อมูล",
+                    
                     },
                     errorElement: "em",
                 errorPlacement: function ( error, element ) {
@@ -108,6 +119,8 @@ $(document).ready(function(){
                                      url:"User/insert_user",
                                    
                                     type: 'POST',
+
+                                    dataType: "JSON",
                                    
                                     data: formData,
 
@@ -120,66 +133,237 @@ $(document).ready(function(){
                                     processData: false,
                                    
                                     success:function(data){
-                                 
-                                    $('#insert_form_user')[0].reset(); 
+ 
+                                    if(data.check_username)
+                                    {
+                                        // $('.help-block1').text('ok');
+                                        // setTimeout(function () {
+                                        //     $('.help-block1').text('')
+                                        // }, 5000);
+                                        $('#insert_form_user')[0].reset(); 
+                                        location.reload(); 
+                                    }
+                                    else
+                                    {
+                                        $('.help-block1').text('ชื่อผู้ใช้งานซำกับในระบบ');
+                                        setTimeout(function () {
+                                            $('.help-block1').text('')
+                                        }, 5000);
+                                    }
                                    
-                                         alert("success!");
-
-                                      location.reload(); 
-
                                      },
                                         error: function (textStatus, errorThrown) {
-                                           alert("ชื่อผู้ใช้งานมีอยู่เเล้ว หรือ พนักงานมีชื่อผู้ใช้งานเเล้ว");
-                                        
-                                         
+                                          
+                    
                                         }
                              });
 
   		}
 
      });
+
+    //  edit user emp
+
+    $("#edit_edit_user").validate({
+        
+                      rules: {
+                                    username:{
+                                      required: true,
+                                    minlength: 6,
+                                    maxlength: 15,
+                              },
+                              type   :"required",
+                              password :{
+                                  required: true,
+                                  minlength: 6,
+                                  maxlength: 15,
+                              },
+                              confirmpassword :{
+                                  equalTo : '[name="password"]',
+                                  required: true,
+                                  minlength: 6,
+                                  maxlength: 15,                         
+                              },
+                              },
+                            messages: {
+                            username:{
+                                required: "กรุณากรอกข้อมูล",
+                                minlength:"กรุณากรอกอย่างน้อย 6 ตัวอักษร",
+                                maxlength :"กรุณากรอกไม่เกิน 15 ตัวอักษร"
+                            },
+                            type   :"กรุณาเลือกข้อมูล",
+                            password :{
+                                required: "กรุณากรอกข้อมูล",
+                                minlength:"กรุณากรอกอย่างน้อย 6 ตัวอักษร",
+                                maxlength :"กรุณากรอกไม่เกิน 15 ตัวอักษร"
+                            },
+                            confirmpassword :{
+                                 equalTo :"รหัสผ่านไม่ตรงกัน",
+                                required: "กรุณากรอกข้อมูล",
+                                minlength:"กรุณากรอกอย่างน้อย 6 ตัวอักษร",
+                                maxlength :"กรุณากรอกไม่เกิน 15 ตัวอักษร"
+                            },
+                            
+                            },
+                            errorElement: "em",
+                        errorPlacement: function ( error, element ) {
+                            // Add the `help-block` class to the error element
+                            error.addClass( "help-block" );
+        
+                            // Add `has-feedback` class to the parent div.form-group
+                            // in order to add icons to inputs
+                            element.parents( ".col-sm-7" ).addClass( "has-feedback" );
+        
+                             element.parents( ".col-sm-6" ).addClass( "has-feedback" );
+        
+                              element.parents( ".col-sm-3" ).addClass( "has-feedback" );
+        
+                              element.parents( ".col-sm-5" ).addClass( "has-feedback" );
+        
+                            error.insertAfter( element );
+                            
+        
+                            // Add the span element, if doesn't exists, and apply the icon classes to it.
+                            if ( !element.next( "span" )[ 0 ] ) {
+                                $( "<span class='glyphicon glyphicon-remove form-control-feedback'></span>" ).insertAfter( element );
+                            }
+                        },
+                        success: function ( label, element ) {
+                            // Add the span element, if doesn't exists, and apply the icon classes to it.
+                            if ( !$( element ).next( "span" )[ 0 ] ) {
+                                $( "<span class='glyphicon glyphicon-ok form-control-feedback'></span>" ).insertAfter( $( element ) );
+                            }
+                        },
+                        highlight: function ( element, errorClass, validClass ) {
+                            $( element ).parents( ".col-sm-7" ).addClass( "has-error" ).removeClass( "has-success" );
+                            $( element ).next( "span" ).addClass( "glyphicon-remove" ).removeClass( "glyphicon-ok" );
+                            $( element ).parents( ".col-sm-6" ).addClass( "has-error" ).removeClass( "has-success" );
+                            $( element ).next( "span" ).addClass( "glyphicon-remove" ).removeClass( "glyphicon-ok" );
+                             $( element ).parents( ".col-sm-3" ).addClass( "has-error" ).removeClass( "has-success" );
+                            $( element ).next( "span" ).addClass( "glyphicon-remove" ).removeClass( "glyphicon-ok" );
+                             $( element ).parents( ".col-sm-5" ).addClass( "has-error" ).removeClass( "has-success" );
+                            $( element ).next( "span" ).addClass( "glyphicon-remove" ).removeClass( "glyphicon-ok" );
+        
+                        },
+                        unhighlight: function ( element, errorClass, validClass ) {
+                            $( element ).parents( ".col-sm-7" ).addClass( "has-success" ).removeClass( "has-error" );
+                            $( element ).next( "span" ).addClass( "glyphicon-ok" ).removeClass( "glyphicon-remove" );
+                            $( element ).parents( ".col-sm-6" ).addClass( "has-success" ).removeClass( "has-error" );
+                            $( element ).next( "span" ).addClass( "glyphicon-ok" ).removeClass( "glyphicon-remove" );
+                            $( element ).parents( ".col-sm-3" ).addClass( "has-success" ).removeClass( "has-error" );
+                            $( element ).next( "span" ).addClass( "glyphicon-ok" ).removeClass( "glyphicon-remove" );
+                             $( element ).parents( ".col-sm-5" ).addClass( "has-success" ).removeClass( "has-error" );
+                            $( element ).next( "span" ).addClass( "glyphicon-ok" ).removeClass( "glyphicon-remove" );
+                        },
+        
+        
+                    submitHandler: function(form) {
+        
+                     
+        
+                         var formData = new FormData($('#edit_edit_user')[0]);
+        
+                                      $.ajax({
+                                             url:"User/update_emp_user",
+                                           
+                                            type: 'POST',
+        
+                                            dataType: "JSON",
+                                           
+                                            data: formData,
+        
+                                            async: false,
+        
+                                            cache: false,
+        
+                                            contentType: false,
+        
+                                            processData: false,
+                                           
+                                            success:function(data){
+         
+                                            if(data.check_username)
+                                            {
+                                                // $('.help-block1').text('ok');
+                                                // setTimeout(function () {
+                                                //     $('.help-block1').text('')
+                                                // }, 5000);
+                                                // $('#insert_form_user')[0].reset(); 
+                                                // location.reload(); 
+                                            }
+                                            else
+                                            {
+                                                // $('.help-block1').text('ชื่อผู้ใช้งานซำกับในระบบ');
+                                                // setTimeout(function () {
+                                                //     $('.help-block1').text('')
+                                                // }, 5000);
+                                            }
+                                           
+                                             },
+                                                error: function (textStatus, errorThrown) {
+                                                  
+                            
+                                                }
+                                     });
+        
+                  }
+        
+             });
      
 
  // edit user
 
+  $(".edit_data_user").click(function () {
+      var id = $(this).attr("id");
+  	$.ajax({
+          url: "User/select_emp_user",
+          dataType: "JSON",
+  		method: "post",
+  		data: {
+  			id: id
+  		},
+  		success: function (data) {
+        
+             $("#edit_employee_id").val(data.user.employee_id);
+             $("#edit_employee_fname").val(data.user.employee_fname);
+             $("#edit_employee_lname").val(data.user.employee_lname);
+             $("#edit_department").val(data.user.name);
 
-  $(".edit_data_user").click(function(){
-                            var id=$(this).attr("id");
-                                      $.ajax({
-                                          url:"User/select_user",
-                                          method:"post",
-                                          data:{id:id},
-                                          success:function(data){
-                                          $("#detail_user").html(data);
-                                          $("#modal-edit-user").modal('show');   
-                                       
-                                        }
+            //  $('#modal-edit-user').modal('show');
+  		}
+  	})
+  });
 
-                                    })
-         
-                                           
-                                });
+  
 
 
-  $(".delete_dataa").click(function(){
-                
-                   var id = $(this).attr("id");
-                 
-                  $("#submit_delete").click(function(){
-                                      $.ajax({
-                                    url:"User/delete_user",
-                                    method:"post",
-                                    data:{id:id},
-                                    success:function(data){
-                                    
-                                    location.reload();
-                                       
-                                        }
+  $(".delete_dataa").click(function () {
 
-                                    })
-                              })
+  	var id = $(this).attr("id");
 
-              });
+  	$("#submit_delete").click(function () {
+  		$.ajax({
+  			url: "User/delete_user",
+  			method: "post",
+  			data: {
+  				id: id
+  			},
+  			success: function (data) {
+
+  				location.reload();
+
+  			}
+
+  		})
+  	})
+
+  });
+
+
+
+            //  ค้นหารายชื่อพนักงาน
+            
+
 
  $('#datatable-users').DataTable({
              

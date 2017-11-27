@@ -1,102 +1,70 @@
 <?php 
 
-	class User extends CI_Controller
-	{	
+class User extends CI_Controller
+{	
 		public function __construct()
 		{
 			parent::__construct();
-
 			$this->load->model('User_model');
+			$this->load->model('employee_models');	
+        }
+         public function index()
+        {
+            $data1['employee1'] =$this->employee_models->select_data_employee($_SESSION['employee_id']);
+            $this->load->view('header',$data1);
+            $data['emp_user'] =$this->User_model->get_emp_user();       
+            $this->load->view('user1/index',$data);          
+            $this->load->view('footer');
+        }
+        public function search_employee()
+        {
+            $data['employee']=$this->User_model->search_employee($this->input->post('search_employee'));
 
-			$this->load->model('employee_models');
-
-			
-		}
-
-		public function index() {
-
-			$data1['employee1'] =$this->employee_models->select_data_employee($_SESSION['employee_id']);
-
-			$this->load->view('header',$data1);
-
-			$data['user'] =$this->User_model->User_show();
-
-			$data['employee'] =$this->employee_models->employee_view();
-			
-			
-			
-			$this->load->view('user/index',$data);
-						
-			$this->load->view('footer');
-
-		
-		}
-		public function insert_user()
+            if( $data['employee'] != null)
+            {
+                $data['status']=true;  
+                $check_user_employee=$this->User_model->check_user_employee($this->input->post('search_employee'));
+                if( count($check_user_employee) == 0)
+                {
+                    $data['check_user']=true;  
+                }else
+                {
+                    $data['check_user']=false;
+                }
+            }else{
+                $data['status']=false;
+            }
+            echo json_encode($data);
+        }
+        public function insert_user()
 		{
+            $check_user=$this->User_model->check_user($this->input->post('username'));
 
-		$user = array(
+           if($check_user == 0)
+           {
+            $data['check_username']=true;  
+            $user_insert= array(
+                'username'=>$this->input->post('username'),
+                'password'=>$this->input->post('username'),
+                'employee_id'=>$this->input->post('employee_id'),
+                'user_type'=>$this->input->post('type'),
+            );
+            $this->db->insert('users',$user_insert);
+           }
+           else
+           {
+            $data['check_username']=false;
+           }
 
-			'username' =>$_POST['username'],
-			'password' =>$_POST['password'],
-			'employee_id' =>$_POST['employee'],
-			'type'     =>$_POST['type'],
-			'date'     =>date("Y-m-d H:i:s"), 
-		 );
+           echo json_encode($data);
+        }
+        public  function select_emp_user()
+        {
+            $data['user']=$this->User_model->select_emp_user($this->input->post('id'));
 
-		 $this->db->insert('users',$user);		
-		}
+            echo json_encode($data);
 
-	public function select_user ()
-	{
-
-		$id = $_POST['id'];
-
-		$data['employee'] =$this->employee_models->employee_view();
-
-		$data['customer'] =$this->User_model->customer_view();
-
-		$data['user'] = $this->User_model->select_user($id);
-
-		$this->load->view("user/edit/select",$data);
-	}
-
-
-
-
-	public function edit_user ()
-	{
-
-
-
-		$user_id = $_POST['user_id'];
-		$username = $_POST['username'];
-		$password = $_POST['p'];
-		
-
-
-		$user = array(
-
-			'username' =>$_POST['username'],
-			'password' =>$_POST['p'],
-			'date'     =>date("Y-m-d H:i:s"),
-		
-			
-		 );
-
-			$this->db->where("user_id",$user_id);
-			$this->db->update('users',$user);
-
-
-	}
-
-	public function delete_user(){
-
-				$id=$_POST['id'];
-				
-				$this->db->where("user_id",$id);
-				$this->db->delete('users');
-
-		}	
-
+        }
+        
+        
 }
-?>
