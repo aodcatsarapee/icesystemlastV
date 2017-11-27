@@ -58,7 +58,7 @@
 				
 				if($_SESSION['type']=="admin"){
 
-					redirect('User');  
+					redirect('user');  
 
 				} elseif($_SESSION['type']=="manager"){
 
@@ -75,7 +75,7 @@
 					redirect('shopping'); 
 				}elseif($_SESSION['type']=="emp_account"){
 
-					redirect('Account'); 
+					redirect('account'); 
 				}elseif($_SESSION['type']=="customers"){
 
 					redirect('index'); 	

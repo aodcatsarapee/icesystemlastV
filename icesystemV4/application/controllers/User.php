@@ -45,7 +45,7 @@ class User extends CI_Controller
             $data['check_username']=true;  
             $user_insert= array(
                 'username'=>$this->input->post('username'),
-                'password'=>$this->input->post('username'),
+                'password'=>$this->input->post('password'),
                 'employee_id'=>$this->input->post('employee_id'),
                 'user_type'=>$this->input->post('type'),
             );
@@ -61,10 +61,49 @@ class User extends CI_Controller
         public  function select_emp_user()
         {
             $data['user']=$this->User_model->select_emp_user($this->input->post('id'));
-
             echo json_encode($data);
-
         }
-        
-        
+        public function update_emp_user()
+        {
+            $check_user=$this->User_model->check_user($this->input->post('edit_username'));
+            
+                if($this->input->post('edit_username') == $this->input->post('edit_username_old'))
+                {
+                    $data['check_username']=true;  
+                        $user_update= array(
+                            'username'=>$this->input->post('edit_username'),
+                            'password'=>$this->input->post('edit_password'),
+                            'employee_id'=>$this->input->post('edit_employee_id'),
+                            'user_type'=>$this->input->post('edit_type'),
+                        );
+                        $this->db->where('employee_id',$this->input->post('edit_employee_id'));
+                        $this->db->update('users',$user_update);
+                }
+                else
+                {
+                    if($check_user == 0)
+                    {
+                     $data['check_username']=true;  
+                     $user_update= array(
+                         'username'=>$this->input->post('edit_username'),
+                         'password'=>$this->input->post('edit_password'),
+                         'employee_id'=>$this->input->post('edit_employee_id'),
+                         'user_type'=>$this->input->post('edit_type'),
+                     );
+                     $this->db->where('employee_id',$this->input->post('edit_employee_id'));
+                     $this->db->update('users',$user_update);
+                    }
+                    else
+                    {
+                     $data['check_username']=false;
+                    }
+                }
+                       echo json_encode($data); 
+        }
+        public function delete_user()
+        {
+            $this->db->where('employee_id',$this->input->post('id'));
+            $this->db->delete('users');
+        }
+            
 }

@@ -64,7 +64,6 @@
 
                                 echo "ผู้จัดการ";
 
-
                               }elseif($value->user_type=="emp_store"){
 
                                  echo "พนักงานคลังสินค้า";
@@ -212,7 +211,7 @@
 		<div class="modal-content">
 			<div class="modal-header bg-success">
 				<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-				<h4 class="modal-title">เพิ่มผู้ใช้งาน</h4>
+				<h4 class="modal-title">เเก้ไขข้อมูลผู้ใช้งาน</h4>
 			</div>
 			<div class="modal-body" id="user_emp_edit">    
             <div class="form-horizontal">
@@ -220,55 +219,56 @@
                         <label class="col-sm-3 control-label">ค้นหาพนักงาน :</label>
                         <div class="col-sm-7">
                         <i class="help-block"></i>
-                        <i class="help-block1 text-danger"></i>
+                        <i class="help-block2 text-danger"></i>
                             <input class="form-control" type="number" name="search_employee" id="search_employee" style="margin-bottom:2px;" placeholder="กรอกรหัสพนักงาน " readonly>
                             <center><a class="btn btn-default float-center btn-block disabled" onclick="search_employee()">ค้นหา</a> </center>
                         </div>
                     </div>
             </div>
                 <form class="form-horizontal" method="POST" id="edit_edit_user" name="edit_edit_user" enctype="multipart/form-data">
-                <input class="form-control" type="hidden" name="employee_id" id="employee_id" >
+                <input class="form-control" type="hidden" name="edit_employee_id" id="edit_employee_id" >
+				<input class="form-control" type="hidden" name="edit_username_old" id="edit_username_old" >
                     <div class="form-group  ">
 						<label class="col-sm-3 control-label">ชื่อ :</label>
 						<div class="col-sm-7">
-							<input class="form-control" type="text" name="employee_fname" id="employee_fname" readonly>
+							<input class="form-control" type="text" name="edit_employee_fname" id="edit_employee_fname" readonly>
 						</div>
 					</div>
                     <div class="form-group  ">
 						<label class="col-sm-3 control-label">นามสกุล :</label>
 						<div class="col-sm-7">
-							<input class="form-control" type="text" name="employee_lname" id="employee_lname" readonly>
+							<input class="form-control" type="text" name="edit_employee_lname" id="edit_employee_lname" readonly>
 						</div>
 					</div>
                     <div class="form-group  ">
 						<label class="col-sm-3 control-label">เเผนก :</label>
 						<div class="col-sm-7">
-							<input class="form-control" type="text" name="department" id="department" readonly>
+							<input class="form-control" type="text" name="edit_department" id="edit_department" readonly>
 						</div>
 					</div>
                     
 					<div class="form-group  ">
 						<label class="col-sm-3 control-label">ชื่อผู้ใช้งาน :</label>
 						<div class="col-sm-7">
-							<input class="form-control" type="text" name="username" id="username" >
+							<input class="form-control" type="text" name="edit_username" id="edit_username" >
 						</div>
 					</div>
 					<div class="form-group  ">
 						<label class="col-sm-3 control-label">รหัสผู้ใช้งาน :</label>
 						<div class="col-sm-7">
-							<input class="form-control" type="password" name="password" id="password">
+							<input class="form-control" type="text" name="edit_password" id="edit_password">
 						</div>
 					</div>
 					<div class="form-group  ">
 						<label class="col-sm-3 control-label">ยืนยันรหัสผู้ใช้งาน :</label>
 						<div class="col-sm-7">
-							<input class="form-control" type="password" name="confirmpassword" id="confirmpassword">
+							<input class="form-control" type="password" name="edit_confirmpassword" id="edit_confirmpassword">
 						</div>
 					</div>
 					<div class="form-group  ">
 						<label class="col-sm-3 control-label">ประเภทผู้ใช้งาน :</label>
 						<div class="col-sm-7">
-							<select name="type" id="input" class="form-control" required>
+							<select name="edit_type" id="edit_type" class="form-control" required>
 								<option value="">เลือกประเภทผู้ใช้งาน</option>
 								<option value="admin">ผู้ดูเเลระบบ</option>
 								<option value="manager">ผู้จัดการ</option>
@@ -287,8 +287,26 @@
 		</div>
 	</div>
 </div>
-<script>
 
+<!-- modal delete -->
+<div class="modal modal-danger fade" id="delete_data">
+  <div class="modal-dialog ">
+    <div class="modal-content ">
+      <div class="modal-body" >
+
+
+        <h1 align="center" style="margin-bottom: 60px;">ต้องการลบข้อมูลหรือไม่?</h1> 
+               
+       <div align="center">
+       <button type="submit" class="btn  btn-default" id="submit_delete" style="font-size: 20px" >ลบข้อมูล</button>
+        <button type="button" class="btn btn-default" data-dismiss="modal" style="font-size: 20px">ยกเลิก</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
 
 function search_employee() {
 	var search_employee = $("#search_employee").val();
@@ -343,8 +361,6 @@ function search_employee() {
 		})
 	}
 }
-
-
 
 </script>
 

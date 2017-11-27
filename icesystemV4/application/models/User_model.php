@@ -109,8 +109,6 @@ class User_model extends CI_Model {
 				 ->get()
 				 ->result();
 		}
-
-		
 		public function select_emp_user($id)
 		{
 			return $this->db->select('*')
@@ -121,5 +119,25 @@ class User_model extends CI_Model {
 			->get()
 			->row();
 		}
+  //----------------------------customer----------------------------------//
+  public function get_customer_user()
+  {
+	   		return $this->db->select('*')
+			->from('users')
+			->join('customers', 'users.customer_id = customers.customer_id')
+			->get()
+			->result();
+  }
+
+  public function select_customer_user($id)
+  {
+	  return $this->db->select('*')
+	  ->from('users')
+	  ->join('customers', 'users.customer_id = customers.customer_id')
+	  ->where("users.customer_id",$id)
+	  ->get()
+	  ->row();
+  }
+
 }	
 ?>
