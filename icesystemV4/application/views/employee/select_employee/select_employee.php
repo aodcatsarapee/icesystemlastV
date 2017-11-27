@@ -162,7 +162,7 @@
             </div>
           </div>
           <input type="hidden" id="employee_id" name='employee_id' class="form-control" value="<?php echo $rs['employee_id'] ?>" >
-          <input type="hidden" name="emp_img_old" id="emp_img_old" class="form-control" value="<?php echo $rs['image']; ?>">
+          <input type="hidden" name="emp_img_old" id="emp_img_old" class="form-control" value="<?php echo $rs['employee_image']; ?>">
             <div class="form-group ">
               <label class="col-sm-3 control-label"  >เเผนก :</label>
                 <div class="col-sm-7">
@@ -183,50 +183,50 @@
           <div class="form-group  ">
             <label class="col-sm-3 control-label"  >ชื่อ :</label>
             <div class="col-sm-7">
-              <input class="form-control" type="text" name="emp_name" id="emp_name"  placeholder="เช่น สุทร " value="<?php echo $rs['fname'] ?>" >
+              <input class="form-control" type="text" name="emp_name" id="emp_name"  placeholder="เช่น สุทร " value="<?php echo $rs['employee_fname'] ?>" >
             </div>
           </div>
              <div class="form-group  ">
             <label class="col-sm-3 control-label"  >นามสกุล :</label>
             <div class="col-sm-7">
-              <input class="form-control" type="text" name="emp_lname" id="emp_lname"  placeholder="เช่น ชาติไทย " value="<?php echo $rs['lname'] ?>" >
+              <input class="form-control" type="text" name="emp_lname" id="emp_lname"  placeholder="เช่น ชาติไทย " value="<?php echo $rs['employee_lname'] ?>" >
             </div>
           </div>
 
           	<div class="form-group  ">
             <label class="col-sm-3 control-label"  >สัณชาติ :</label>
             <div class="col-sm-3">
-              <input class="form-control" type="text" name="emp_blood" id="emp_blood"  placeholder="เช่น ไทย " value="<?php echo $rs['country'] ?>" >
+              <input class="form-control" type="text" name="emp_blood" id="emp_blood"  placeholder="เช่น ไทย " value="<?php echo $rs['employee_country'] ?>" >
             </div>
           </div>
 
           <div class="form-group  ">
             <label class="col-sm-3 control-label"  >เลขบัตรประชาชน :</label>
             <div class="col-sm-4">
-              <input class="form-control" type="text" name="id_card" id="id_card"  placeholder="เช่น 1509901476538 "  maxlength="13" minlength="13"  value="<?php echo $rs['IDcard'] ?>">
+              <input class="form-control" type="text" name="id_card" id="id_card"  placeholder="เช่น 1509901476538 "  maxlength="13" minlength="13"  value="<?php echo $rs['employee_IDcard'] ?>">
             </div>
           </div>
 
              <div class="form-group  ">
             <label class="col-sm-3 control-label"  >เพศ :</label>
             <div class="col-sm-7">
-              <input type="radio" name="gender" value="male" style="margin-top:12px;"  <?php echo ( $rs['sex'] == 'male')?'checked':'' ?> " "> ชาย &nbsp
-              <input type="radio" name="gender" value="fmale" <?php echo ( $rs['sex'] =='fmale')?'checked':'' ?> > หญิง
+              <input type="radio" name="gender" value="male" style="margin-top:12px;"  <?php echo ( $rs['employee_sex'] == 'male')?'checked':'' ?> " "> ชาย &nbsp
+              <input type="radio" name="gender" value="fmale" <?php echo ( $rs['employee_sex'] =='fmale')?'checked':'' ?> > หญิง
             </div>
           </div>
           <div class="form-group  ">
             <label class="col-sm-3 control-label"  >วันเกิด :</label>
             <div class="col-sm-7">
-              <input class="form-control" type="date" name="emp_date" id="emp_date"  value="<?php echo $rs['birthday'] ?>"  >
+              <input class="form-control" type="date" name="emp_date" id="emp_date"  value="<?php echo $rs['employee_birthday'] ?>"  >
             </div>
           </div>
 
 	<div class="form-group  ">
  			<label class="col-sm-3 control-label"  >ที่พักปัจจุบัน :</label>
             <div class="col-sm-5">
-             <input type="radio" name="home" value="home" style="margin-top:12px;" <?php echo ( $rs['home_type'] =='home')?'checked':'' ?> > บ้านพักของตัวเอง &nbsp
-              <input type="radio" name="home" value="factory_hotel"  <?php echo ( $rs['home_type'] =='factory_hotel')?'checked':'' ?> > ที่พักโรงงาน &nbsp
-              <input type="radio" name="home" value="hotel" <?php echo ( $rs['home_type'] =='hotel')?'checked':'' ?> > หอพัก            
+             <input type="radio" name="home" value="home" style="margin-top:12px;" <?php echo ( $rs['employee_home_type'] =='home')?'checked':'' ?> > บ้านพักของตัวเอง &nbsp
+              <input type="radio" name="home" value="factory_hotel"  <?php echo ( $rs['employee_home_type'] =='factory_hotel')?'checked':'' ?> > ที่พักโรงงาน &nbsp
+              <input type="radio" name="home" value="hotel" <?php echo ( $rs['employee_home_type'] =='hotel')?'checked':'' ?> > หอพัก            
   
             </div>
  			</div>
@@ -235,34 +235,34 @@
           <div class="form-group  ">
             <label class="col-sm-3 control-label"  >ที่อยู่ :</label>
             <div class="col-sm-7">
-              <input class="form-control" type="text" name="emp_adress" id="emp_adress"  placeholder="เช่น 1295/1 โรงน้ำแข็งทวีชัย ถนน แก้วนวรัฐ " value="<?php echo $rs['address'] ?>" >
+              <input class="form-control" type="text" name="emp_adress" id="emp_adress"  placeholder="เช่น 1295/1 โรงน้ำแข็งทวีชัย ถนน แก้วนวรัฐ " value="<?php echo $rs['employee_address'] ?>" >
             </div>
           </div>
           <div class="form-group  ">
             <label class="col-sm-3 control-label"  >เขต/ตำบล :</label>
             <div class="col-sm-7">
-              <input class="form-control" type="text" name="emp_sub_area" id="emp_sub_area" placeholder="เช่น วัดเกต " value="<?php echo $rs['Sub_area'] ?>" >
+              <input class="form-control" type="text" name="emp_sub_area" id="emp_sub_area" placeholder="เช่น วัดเกต " value="<?php echo $rs['employee_sub_area'] ?>" >
             </div>
             
           </div>
           <div class="form-group  ">
           <label class="col-sm-3 control-label"  >อำเภอ :</label>
             <div class="col-sm-5">
-              <input class="form-control" type="text" name="emp_area" id="emp_area"  size="20px;" placeholder="เช่น เมืองเชีงใหม่ " value="<?php echo $rs['Area'] ?>" >
+              <input class="form-control" type="text" name="emp_area" id="emp_area"  size="20px;" placeholder="เช่น เมืองเชีงใหม่ " value="<?php echo $rs['employee_area'] ?>" >
             </div>
  			</div>
 
  			<div class="form-group  ">
           <label class="col-sm-3 control-label"  >จังหวัด :</label>
             <div class="col-sm-5">
-              <input class="form-control" type="text" name="emp_province" id="emp_province"  size="20px;" placeholder="เช่น เชียงใหม่ " value="<?php echo $rs['Province'] ?>" >
+              <input class="form-control" type="text" name="emp_province" id="emp_province"  size="20px;" placeholder="เช่น เชียงใหม่ " value="<?php echo $rs['employee_province'] ?>" >
             </div>
  			</div>
 
  			<div class="form-group  ">
           <label class="col-sm-3 control-label"  >รหัสไปรษณีย์ :</label>
             <div class="col-sm-5">
-              <input class="form-control" type="text" name="emp_post_code" id="emp_post_code"  size="20px;" placeholder="เช่น 50000 " value="<?php echo $rs['Postal_Code'] ?>" >
+              <input class="form-control" type="text" name="emp_post_code" id="emp_post_code"  size="20px;" placeholder="เช่น 50000 " value="<?php echo $rs['employee_postal_code'] ?>" >
             </div>
  			</div>
 
@@ -271,15 +271,15 @@
  			<div class="form-group  ">
  			<label class="col-sm-3 control-label"  >เบอร์โทรที่ติดต่อได้ :</label>
             <div class="col-sm-5">
-              <input class="form-control" type="text" name="emp_phone" id="emp_phone"  size="20px;" placeholder="เช่น 0955142114 " maxlength="10" minlength="10" value="<?php echo $rs['phone'] ?>">            </div>
+              <input class="form-control" type="text" name="emp_phone" id="emp_phone"  size="20px;" placeholder="เช่น 0955142114 " maxlength="10" minlength="10" value="<?php echo $rs['employee_phone'] ?>">            </div>
  			</div>
 
  			<div class="form-group  ">
  			<label class="col-sm-3 control-label"  >สถานภาพ :</label>
             <div class="col-sm-5">
-               <input type="radio" name="emp_condition" value="sing" style="margin-top:12px;" <?php echo ( $rs['status'] =='sing')?'checked':'' ?> > โสด &nbsp
-              <input type="radio" name="emp_condition" value="marie" <?php echo ( $rs['status'] =='marie')?'checked':'' ?> > สมรส
-              <input type="radio" name="emp_condition" value="ruin" <?php echo ( $rs['status'] =='ruin')?'checked':'' ?> > อย่าร้าง
+               <input type="radio" name="emp_condition" value="sing" style="margin-top:12px;" <?php echo ( $rs['employee_status'] =='sing')?'checked':'' ?> > โสด &nbsp
+              <input type="radio" name="emp_condition" value="marie" <?php echo ( $rs['employee_status'] =='marie')?'checked':'' ?> > สมรส
+              <input type="radio" name="emp_condition" value="ruin" <?php echo ( $rs['employee_status'] =='ruin')?'checked':'' ?> > อย่าร้าง
   
             </div>
  			</div>
@@ -289,20 +289,20 @@
      <div class="form-group  ">
           <label class="col-sm-3 control-label"  >เดินทางข้ามาวันที่ :</label>
            <div class="col-sm-7">
-              <input class="form-control" type="date" name="date_county" id="date_county"   value="<?php echo $rs['date_county'] ?>" >
+              <input class="form-control" type="date" name="date_county" id="date_county"   value="<?php echo $rs['employee_date_county'] ?>" >
             </div>
       </div>
 
       <div class="form-group  ">
       <label class="col-sm-3 control-label"  >เลขที่หนังสือเดินทาง :</label>
             <div class="col-sm-5">
-              <input class="form-control" type="text" name="emp_pastpost" id="emp_pastpost"  size="20px;" placeholder="เช่น 0955142114 " maxlength="13" minlength="13" value="<?php echo $rs['emp_pastpost'] ?>" >            </div>
+              <input class="form-control" type="text" name="emp_pastpost" id="emp_pastpost"  size="20px;" placeholder="เช่น 0955142114 " maxlength="13" minlength="13" value="<?php echo $rs['employee_pastpost'] ?>" >            </div>
       </div>
       <div class="form-group  ">
           <label class="col-sm-3 control-label"  >จากประเทศ :</label>
             <div class="col-sm-5">
               <input class="form-control" type="text" name="emp_truecoun" id="emp_truecoun"  size="20px;" placeholder="เช่น พม่า "  
-              value="<?php echo $rs['emp_truecoun'] ?>" >
+              value="<?php echo $rs['employee_truecoun'] ?>" >
             </div>
       </div>
  			

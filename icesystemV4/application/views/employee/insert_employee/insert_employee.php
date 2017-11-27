@@ -149,7 +149,7 @@
       <div class="form-group  ">
       <label class="col-sm-3 control-label"  >เลขที่หนังสือเดินทาง :</label>
             <div class="col-sm-5">
-              <input class="form-control" type="text" name="emp_pastpost" id="emp_pastpost"   placeholder="เช่น 0955142114 " >            
+              <input class="form-control" type="text" name="emp_pastpost" id="emp_pastpost"   placeholder="เช่น 0955142114 "  maxlength="13" minlength="13" >            
 
               </div>
       </div>

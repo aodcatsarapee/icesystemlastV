@@ -72,25 +72,25 @@ $this->load->library('upload');
 		    
 			$ar = array(
 
-						"fname" => $emp_name,
-						"lname" => $emp_lname,
-						"country" => $emp_blood,
-						"IDcard" => $id_card,
-						"sex" => $gender,
-						"birthday" => $emp_date,
-						"home_type" => $home,
-						"address" => $emp_adress,
-						"Sub_area" => $emp_sub_area,
-						"Area" => $emp_area,
-						"Province" => $emp_province,
-						"Postal_Code" => $emp_post_code,
-						"phone" => $emp_phone,
-						"status" => $condition,
-						"image" => $emp_img,
-						"datasave" => $datasave,
-						"date_county" => $date_county,
-						"emp_pastpost" => $emp_pastpost,
-						"emp_truecoun" => $emp_truecoun,
+						"employee_fname" => $emp_name,
+						"employee_lname" => $emp_lname,
+						"employee_country" => $emp_blood,
+						"employee_IDcard" => $id_card,
+						"employee_sex" => $gender,
+						"employee_birthday" => $emp_date,
+						"employee_home_type" => $home,
+						"employee_address" => $emp_adress,
+						"employee_sub_area" => $emp_sub_area,
+						"employee_area" => $emp_area,
+						"employee_province" => $emp_province,
+						"employee_postal_Code" => $emp_post_code,
+						"employee_phone" => $emp_phone,
+						"employee_status" => $condition,
+						"employee_image" => $emp_img,
+						"employee_datasave" => $datasave,
+						"employee_date_county" => $date_county,
+						"employee_pastpost" => $emp_pastpost,
+						"employee_truecoun" => $emp_truecoun,
 						"department" => $department_id,
 						
 
@@ -144,24 +144,24 @@ $this->load->library('upload');
 
 				$ar = array(
 
-						"fname" => $employee_name,
-						"lname" => $emp_lname,
-						"country" => $emp_blood,
-						"IDcard" => $id_card,
-						"sex" => $gender,
-						"birthday" => $emp_date,
-						"home_type" => $home,
-						"address" => $emp_adress,
-						"Sub_area" => $emp_sub_area,
-						"Area" => $emp_area,
-						"Province" => $emp_province,
-						"Postal_Code" => $emp_post_code,
-						"phone" => $emp_phone,
-						"status" => $emp_condition,
+						"employee_fname" => $employee_name,
+						"employee_lname" => $emp_lname,
+						"employee_country" => $emp_blood,
+						"employee_IDcard" => $id_card,
+						"employee_sex" => $gender,
+						"employee_birthday" => $emp_date,
+						"employee_home_type" => $home,
+						"employee_address" => $emp_adress,
+						"employee_sub_area" => $emp_sub_area,
+						"employee_area" => $emp_area,
+						"employee_province" => $emp_province,
+						"employee_postal_Code" => $emp_post_code,
+						"employee_phone" => $emp_phone,
+						"employee_status" => $emp_condition,
 						"department" => $department_id,
-						"date_county" => $date_county,
-						"emp_pastpost" => $emp_pastpost,
-						"emp_truecoun" => $emp_truecoun,
+						"employee_date_county" => $date_county,
+						"employee_pastpost" => $emp_pastpost,
+						"employee_truecoun" => $emp_truecoun,
 						
 				);
 			$this->employee_models->edit_data_employee($employee_id,$ar);
@@ -177,7 +177,7 @@ $this->load->library('upload');
 				
 				$ar=array(
 					
-					"image" =>" ",
+					"employee_image" =>" ",
 
 					);
 
@@ -200,25 +200,26 @@ $this->load->library('upload');
 		       $emp_img = $this->upload->data('file_name');
 
 		       $ar=array(
-						"fname" => $employee_name,
-						"lname" => $emp_lname,
-						"country" => $emp_blood,
-						"IDcard" => $id_card,
-						"sex" => $gender,
-						"birthday" => $emp_date,
-						"home_type" => $home,
-						"address" => $emp_adress,
-						"Sub_area" => $emp_sub_area,
-						"Area" => $emp_area,
-						"Province" => $emp_province,
-						"Postal_Code" => $emp_post_code,
-						"phone" => $emp_phone,
-						"status" => $emp_condition,
-						"image" => $emp_img,
-						"department" => $department_id,
-						"date_county" => $date_county,
-						"emp_pastpost" => $emp_pastpost,
-						"emp_truecoun" => $emp_truecoun,
+						
+				"employee_fname" => $employee_name,
+				"employee_lname" => $emp_lname,
+				"employee_country" => $emp_blood,
+				"employee_IDcard" => $id_card,
+				"employee_sex" => $gender,
+				"employee_birthday" => $emp_date,
+				"employee_home_type" => $home,
+				"employee_address" => $emp_adress,
+				"employee_sub_area" => $emp_sub_area,
+				"employee_area" => $emp_area,
+				"employee_province" => $emp_province,
+				"employee_postal_Code" => $emp_post_code,
+				"employee_phone" => $emp_phone,
+				"employee_status" => $emp_condition,
+				"department" => $department_id,
+				"employee_date_county" => $date_county,
+				"employee_pastpost" => $emp_pastpost,
+				"employee_truecoun" => $emp_truecoun,
+				"employee_image" => $emp_img,
 
 					);
 
@@ -252,7 +253,7 @@ $this->load->library('upload');
 
 			$data=$this->employee_models->select_data_employee($id);
 				
-			@unlink('img/'.$data['image']);
+			@unlink('img/'.$data['employee_image']);
 				
 				$this->db->where("employee_id",$id);
 				$this->db->delete('employee');

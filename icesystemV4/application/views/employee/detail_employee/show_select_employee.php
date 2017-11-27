@@ -3,13 +3,13 @@
      <tr>
        
         <td colspan="2">
-          <p style="text-align: center; font-weight: bold; font-size: 20px;"> รูปประจำตัว <br><img  src="img/<?php echo $rs['image'];  ?>" width="200" height="230" style="border: 1px solid grey; margin-top: 5px;" >
+          <p style="text-align: center; font-weight: bold; font-size: 20px;"> รูปประจำตัว <br><img  src="img/<?php echo $rs['employee_image'];  ?>" width="200" height="230" style="border: 1px solid grey; margin-top: 5px;" >
           </p>
         </td>
      </tr>
       <tr>
           <td width="50%"><p style="text-align: right; font-weight: bold;">ชื่อ นามสกุล  :</p></td>
-          <td width="50%"><p><?php echo $rs['fname']?> <?php echo $rs['lname']?></p></td>
+          <td width="50%"><p><?php echo $rs['employee_fname']?> <?php echo $rs['employee_lname']?></p></td>
       </tr>
       
       <tr>
@@ -17,7 +17,7 @@
           <td>
              <p>   
           <?php 
-          if($rs['sex'] == 'male' ){
+          if($rs['employee_sex'] == 'male' ){
 
             echo "ชาย";
         } else{
@@ -31,14 +31,14 @@
       </tr>
       <tr>
           <td><p style="text-align: right; font-weight: bold;">สัญชาติ  :</p></td>
-          <td><p><?php echo $rs['country']  ?></p></td>
+          <td><p><?php echo $rs['employee_country']  ?></p></td>
       </tr>
       <tr>
       <?php 
 
   $this->load->helper('Datethai');
 
-  $birthday = $rs['birthday'];
+  $birthday = $rs['employee_birthday'];
  
 
 
@@ -51,16 +51,16 @@
       </tr>
       <tr>
           <td><p style="text-align: right; font-weight: bold;">เลขประจำตัวประชาชน  :</p></td>
-          <td><p><?php echo $rs['IDcard']  ?></p></td>
+          <td><p><?php echo $rs['employee_IDcard']  ?></p></td>
       </tr>
       <tr>
           <td><p style="text-align: right; font-weight: bold;">ที่พักปัจจุบัน  :</p></td>
           <td><p>   
           <?php 
-          if($rs['home_type'] == 'home' ){
+          if($rs['employee_home_type'] == 'home' ){
 
             echo "บ้านพักของตนเอง";
-        } else if($rs['home_type'] == 'hotel' ){
+        } else if($rs['employee_home_type'] == 'hotel' ){
 
             echo"หอพัก";
         }else{
@@ -74,31 +74,31 @@
       </tr>
       <tr>
           <td><p style="text-align: right; font-weight: bold;">ที่อยู่  :</p></td>
-          <td><p><?php echo $rs['address']  ?></p></td>
+          <td><p><?php echo $rs['employee_address']  ?></p></td>
       </tr>
        <tr>
           <td><p style="text-align: right; font-weight: bold;">ตำบล  :</p></td>
-          <td><p><?php echo $rs['Sub_area']  ?></p></td>
+          <td><p><?php echo $rs['employee_sub_area']  ?></p></td>
       </tr> 
       <tr>
           <td><p style="text-align: right; font-weight: bold;">อำเภอ  :</p></td>
-          <td><p><?php echo $rs['Area']  ?></p></td>
+          <td><p><?php echo $rs['employee_area']  ?></p></td>
       </tr>
       <tr>
           <td><p style="text-align: right; font-weight: bold;">จังหวัด  :</p></td>
-          <td><p><?php echo $rs['Province']  ?></p></td>
+          <td><p><?php echo $rs['employee_province']  ?></p></td>
       </tr>
       <tr>
           <td><p style="text-align: right; font-weight: bold;">รหัสไปรษณีย์  :</p></td>
-          <td><p><?php echo $rs['Postal_Code']  ?></p></td>
+          <td><p><?php echo $rs['employee_postal_code']  ?></p></td>
       </tr>
       <tr>
           <td><p style="text-align: right; font-weight: bold;">เบอร์โทรที่ติดต่อได้ :</p></td>
-          <td><p><?php echo $rs['phone']  ?></p></td>
+          <td><p><?php echo $rs['employee_phone']  ?></p></td>
       </tr>
     
  <?php 
-          if($rs['emp_pastpost'] == null ){        ?> 
+          if($rs['employee_pastpost'] == null ){        ?> 
 
             <tr>
           <td><p style="text-align: right; font-weight: bold;">เลขที่หนังสือเดินทาง :</p></td>
@@ -120,15 +120,15 @@
  ?> 
               <tr>
           <td><p style="text-align: right; font-weight: bold;">เลขที่หนังสือเดินทาง :</p></td>
-          <td><p><?php echo $rs['emp_pastpost']  ?></p></td>
+          <td><p><?php echo $rs['employee_pastpost']  ?></p></td>
       </tr>
       <tr>
           <td><p style="text-align: right; font-weight: bold;">เดินทางข้ามาวันที่ :</p></td>
-          <td><p><?php echo $rs['date_county']  ?></p></td>
+          <td><p><?php echo $rs['employee_date_county']  ?></p></td>
       </tr>
       <tr>
           <td><p style="text-align: right; font-weight: bold;">จากประเทศ :</p></td>
-          <td><p><?php echo $rs['emp_truecoun']  ?></p></td>
+          <td><p><?php echo $rs['employee_truecoun']  ?></p></td>
       </tr>
 <?php 
         }

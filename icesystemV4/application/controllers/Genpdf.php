@@ -1857,7 +1857,7 @@ $html ='
 
             <div style="text-align:center; font-size:30px;"><b>ใบเสร็จรับเงิน</b></div>
 
-     ห้างหุ่นส่วนจำกัด โรงน้ำเเข็งธวีชัย &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; เลขที่ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp; '.$orders['sell_detail_id'].'<br>
+      ห้างหุ่นส่วนจำกัด โรงน้ำเเข็งธวีชัย &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; เลขที่ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp; '.$orders['sell_detail_id'].'<br>
       ที่อยู่  295/1 ถนนแก้วนวรัฐ ตำบลวัดเกต &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;วันที่&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'.Datethai($date_format).' 
       <br>  อำเภอเมืองเชียงใหม่ จังหวัด เชียงใหม่ 50000  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ลูกค้า &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; -<br>
 
@@ -2233,7 +2233,7 @@ $html ='
 
             <div style="text-align:center; font-size:30px;"><b>ใบเสร็จรับเงิน</b></div>
 
-     ห้างหุ่นส่วนจำกัด โรงน้ำเเข็งธวีชัย &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; เลขที่ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp; S'.$orders['sell_detail_id'].'<br>
+      ห้างหุ่นส่วนจำกัด โรงน้ำเเข็งธวีชัย &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; เลขที &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp; S'.$orders['sell_detail_id'].'<br>
       ที่อยู่  295/1 ถนนแก้วนวรัฐ ตำบลวัดเกต &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;วันที่&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'.Datethai($date_format).' 
       <br>  อำเภอเมืองเชียงใหม่ จังหวัด เชียงใหม่ 50000  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ลูกค้า &nbsp;&nbsp;&nbsp;&nbsp; '. $fname.' '. $lname.'<br>
 
@@ -3051,11 +3051,11 @@ $tbl = '<table cellspacing="0" cellpadding="8" >
 
 
      $tbl = $tbl . ' <tr>
-          <td style="border: 1px solid #000000;  text-align:center; ">รวม</td>
-          <td style="border: 1px solid #000000;  text-align:center"> - </td>
-          <td style="border: 1px solid #000000;  text-align:center"> 0 บาท</td>
-          <td style="border: 1px solid #000000;  text-align:center"> - </td>
-            <td style="border: 1px solid #000000;  text-align:center"> - </td>
+          <td width="20%" style="border: 1px solid #000000;  text-align:center; ">รวม</td>
+          <td width="20%" style="border: 1px solid #000000;  text-align:center"> - </td>
+          <td width="20%" style="border: 1px solid #000000;  text-align:center"> 0 บาท</td>
+          <td width="20%"style="border: 1px solid #000000;  text-align:center"> - </td>
+            <td width="20%" style="border: 1px solid #000000;  text-align:center"> - </td>
           
       </tr>
 
@@ -3070,11 +3070,11 @@ $tbl = '<table cellspacing="0" cellpadding="8" >
                     if ($value === end($debtors)) {
         
      $tbl = $tbl . ' <tr>
-          <td style="border: 1px solid #000000;  text-align:center; ">รวม</td>
-          <td style="border: 1px solid #000000;  text-align:center"> - </td>
-          <td style="border: 1px solid #000000;  text-align:center"> '.$total1.'.00 บาท</td>
-          <td style="border: 1px solid #000000;  text-align:center"> - </td>
-            <td style="border: 1px solid #000000;  text-align:center"> - </td>
+          <td width="20%" style="border: 1px solid #000000;  text-align:center; ">รวม</td>
+          <td width="20%" style="border: 1px solid #000000;  text-align:center"> - </td>
+          <td width="20%" style="border: 1px solid #000000;  text-align:center"> '.$total1.'.00 บาท</td>
+          <td width="20%" style="border: 1px solid #000000;  text-align:center"> - </td>
+            <td width="20%" style="border: 1px solid #000000;  text-align:center"> - </td>
           
       </tr>';
                                   
@@ -3216,11 +3216,11 @@ $tbl = '<table cellspacing="0" cellpadding="8" >
 
 
      $tbl = $tbl . ' <tr>
-          <td style="border: 1px solid #000000;  text-align:center; ">รวม</td>
-          <td style="border: 1px solid #000000;  text-align:center"> - </td>
-          <td style="border: 1px solid #000000;  text-align:center"> 0 บาท</td>
-          <td style="border: 1px solid #000000;  text-align:center"> - </td>
-            <td style="border: 1px solid #000000;  text-align:center"> - </td>
+          <td width="20%" style="border: 1px solid #000000;  text-align:center; ">รวม</td>
+          <td width="20%" style="border: 1px solid #000000;  text-align:center"> - </td>
+          <td width="20%" style="border: 1px solid #000000;  text-align:center"> 0 บาท</td>
+          <td width="20%" style="border: 1px solid #000000;  text-align:center"> - </td>
+            <td width="20%" style="border: 1px solid #000000;  text-align:center"> - </td>
           
       </tr>
 
@@ -3235,11 +3235,11 @@ $tbl = '<table cellspacing="0" cellpadding="8" >
                     if ($value === end($debtors)) {
         
      $tbl = $tbl . ' <tr>
-          <td style="border: 1px solid #000000;  text-align:center; ">รวม</td>
-          <td style="border: 1px solid #000000;  text-align:center"> - </td>
-          <td style="border: 1px solid #000000;  text-align:center"> '.$total1.'.00 บาท</td>
-          <td style="border: 1px solid #000000;  text-align:center"> - </td>
-            <td style="border: 1px solid #000000;  text-align:center"> - </td>
+          <td width="20%" style="border: 1px solid #000000;  text-align:center; ">รวม</td>
+          <td width="20%" style="border: 1px solid #000000;  text-align:center"> - </td>
+          <td width="20%" style="border: 1px solid #000000;  text-align:center"> '.$total1.'.00 บาท</td>
+          <td width="20%" style="border: 1px solid #000000;  text-align:center"> - </td>
+            <td width="20%" style="border: 1px solid #000000;  text-align:center"> - </td>
           
       </tr>';
                                   
@@ -3382,11 +3382,11 @@ $tbl = '<table cellspacing="0" cellpadding="8" >
 
 
      $tbl = $tbl . ' <tr>
-          <td style="border: 1px solid #000000;  text-align:center; ">รวม</td>
-          <td style="border: 1px solid #000000;  text-align:center"> - </td>
-          <td style="border: 1px solid #000000;  text-align:center"> 0 บาท</td>
-          <td style="border: 1px solid #000000;  text-align:center"> - </td>
-            <td style="border: 1px solid #000000;  text-align:center"> - </td>
+          <td width="20%" style="border: 1px solid #000000;  text-align:center; ">รวม</td>
+          <td width="20%" style="border: 1px solid #000000;  text-align:center"> - </td>
+          <td width="20%" style="border: 1px solid #000000;  text-align:center"> 0 บาท</td>
+          <td width="20%" style="border: 1px solid #000000;  text-align:center"> - </td>
+            <td width="20%" style="border: 1px solid #000000;  text-align:center"> - </td>
           
       </tr>
 
@@ -3401,11 +3401,11 @@ $tbl = '<table cellspacing="0" cellpadding="8" >
                     if ($value === end($debtors)) {
         
      $tbl = $tbl . ' <tr>
-          <td style="border: 1px solid #000000;  text-align:center; ">รวม</td>
-          <td style="border: 1px solid #000000;  text-align:center"> - </td>
-          <td style="border: 1px solid #000000;  text-align:center"> '.$total1.'.00 บาท</td>
-          <td style="border: 1px solid #000000;  text-align:center"> - </td>
-            <td style="border: 1px solid #000000;  text-align:center"> - </td>
+          <td width="20%" style="border: 1px solid #000000;  text-align:center; ">รวม</td>
+          <td width="20%" style="border: 1px solid #000000;  text-align:center"> - </td>
+          <td width="20%" style="border: 1px solid #000000;  text-align:center"> '.$total1.'.00 บาท</td>
+          <td width="20%" style="border: 1px solid #000000;  text-align:center"> - </td>
+            <td width="20%" style="border: 1px solid #000000;  text-align:center"> - </td>
           
       </tr>';
                                   
@@ -4048,14 +4048,14 @@ $tbl = '<table cellspacing="0" cellpadding="8" >
     $i = 1; 
     foreach ($customers as $customer) {
         # code...
-      $date=date_create($customer['datasave']);
+      $date=date_create($customer['customer_datasave']);
 
      $date_format = date_format($date,"d/m/Y");
 
      $tbl = $tbl . ' <tr nobr="true">
           <td width="10%" style="border: 1px solid #000000;  text-align:center; ">'.$i.'</td>
-          <td width="22%"  style="border: 1px solid #000000;  text-align:center">C'.$customer['Customer_id'].'</td>
-          <td width="30%" style="border: 1px solid #000000;  text-align:center">'.$customer['Customer_fname'].' '.$customer['Customer_lname'].'</td>
+          <td width="22%"  style="border: 1px solid #000000;  text-align:center">C'.$customer['customer_id'].'</td>
+          <td width="30%" style="border: 1px solid #000000;  text-align:center">'.$customer['customer_fname'].' '.$customer['customer_lname'].'</td>
           <td width="38%" style="border: 1px solid #000000;  text-align:center"> </td>
           
           
@@ -4154,9 +4154,12 @@ $pdf->Output('stock.pdf', 'I');
  
 // กำหนดเนื้อหาข้อมูลที่จะสร้าง pdf ในที่นี้เราจะกำหนดเป็นแบบ html โปรดระวัง EOD; โค้ดสุดท้ายต้องชิดซ้ายไม่เว้นวรรค
 
+$this->load->helper('Datethai');
+
+
 $tbl = '<table cellspacing="0" cellpadding="8" >
                    <tr>
-                          <th style="border: 1px solid #000000;  text-align:center;" colspan="4" > ห้างหุ่นส่วน โรงน้ำเเข็งธวีชัย<br>  รายชื่อพนักงานทั้งหมด<br>ณ วันที่ '.date("d/m/Y").'</th>
+                          <th style="border: 1px solid #000000;  text-align:center;" colspan="4" > ห้างหุ่นส่วน โรงน้ำเเข็งธวีชัย<br>  รายชื่อพนักงานทั้งหมด<br>ณ วันที่ '.Datethai(date("d-m-Y")).'</th>
 
                    </tr> ';
 
@@ -4179,14 +4182,14 @@ $tbl = '<table cellspacing="0" cellpadding="8" >
     $i = 1; 
     foreach ($employee as $emp) {
         # code...
-      $date=date_create($emp['datasave']);
+      $date=date_create($emp['employee_datasave']);
 
      $date_format = date_format($date,"d/m/Y");
 
      $tbl = $tbl . ' <tr nobr="true">
           <td width="10%" style="border: 1px solid #000000;  text-align:center; ">'.$i.'</td>
           <td width="22%" style="border: 1px solid #000000;  text-align:center">E'.$emp['employee_id'].'</td>
-          <td width="30%"  style="border: 1px solid #000000;  text-align:center">'.$emp['fname'].' '.$emp['lname'].'</td>
+          <td width="30%"  style="border: 1px solid #000000;  text-align:center">'.$emp['employee_fname'].' '.$emp['employee_lname'].'</td>
           <td width="38%" style="border: 1px solid #000000;  text-align:center"> </td>
           
           
@@ -4528,12 +4531,12 @@ $tbl = '<table cellspacing="0" cellpadding="8" >
   
     
         # code...
-      $date=date_create($emp['datasave']);
+      $date=date_create($emp['employee_datasave']);
 
      $date_format = date_format($date,"d/m/Y");
 
 $tbl = $tbl . ' <tr>
-          <th  style="border: 1px solid #000000;  text-align:center;" colspan="4" ><b> <img src="img/'.$emp['image'].' " width="170" height="160" >
+          <th  style="border: 1px solid #000000;  text-align:center;" colspan="4" ><b> <img src="img/'.$emp['employee_image'].' " width="170" height="160" >
           </b></th>
            
 
@@ -4549,13 +4552,13 @@ $tbl = $tbl . ' <tr>
       </tr>
        <tr>          
           <td style="border: 1px solid #000000;  text-align:right;" colspan="2">ชื่อ สกุล </td>
-          <td style="border: 1px solid #000000;  " colspan="2">'.$emp['fname'].' '.$emp['lname'].'</td>
+          <td style="border: 1px solid #000000;  " colspan="2">'.$emp['employee_fname'].' '.$emp['employee_lname'].'</td>
          
        
           
       </tr>  '; 
 
-      if($emp['sex']=="male"){
+      if($emp['employee_sex']=="male"){
 
      $tbl .='
        <tr>  
@@ -4581,27 +4584,27 @@ $tbl = $tbl . ' <tr>
           
       $tbl .=' <tr>          
           <td style="border: 1px solid #000000;  text-align:right;" colspan="2">สัญชาติ </td>
-          <td style="border: 1px solid #000000; " colspan="2">'.$emp['country'].'</td>
+          <td style="border: 1px solid #000000; " colspan="2">'.$emp['employee_country'].'</td>
          
        
           
       </tr>
       <tr>          
           <td style="border: 1px solid #000000;  text-align:right;" colspan="2">วันเกิด </td>
-          <td style="border: 1px solid #000000;  " colspan="2">'.Datethai($emp['birthday']).'</td>
+          <td style="border: 1px solid #000000;  " colspan="2">'.Datethai($emp['employee_birthday']).'</td>
          
        
           
       </tr>
       <tr>          
           <td style="border: 1px solid #000000;  text-align:right;" colspan="2">เลขบัตรประชาชน </td>
-          <td style="border: 1px solid #000000;  " colspan="2">'.$emp['IDcard'].'</td>
+          <td style="border: 1px solid #000000;  " colspan="2">'.$emp['employee_IDcard'].'</td>
          
        
           
       </tr>';
 
-        if($emp['home_type']=="home"){
+        if($emp['employee_home_type']=="home"){
 
      $tbl .='
        <tr>  
@@ -4611,7 +4614,7 @@ $tbl = $tbl . ' <tr>
           <td style="border: 1px solid #000000;  " colspan="2"> บ้านพักของตัวเอง </td>
            
       </tr>'; 
-            }else if($emp['home_type']=="hotel"){
+            }else if($emp['employee_home_type']=="hotel"){
 
           $tbl .='
        <tr>  
@@ -4641,22 +4644,22 @@ $tbl = $tbl . ' <tr>
        $tbl .='
       <tr>          
           <td style="border: 1px solid #000000;  text-align:right;" colspan="2">ที่อยู่ </td>
-          <td style="border: 1px solid #000000;  " colspan="2">'.$emp['address'].' ตำบล '. $emp['Sub_area'] .'
-          อำเภอ '. $emp['Area'] .'  จังหวัด ' .$emp['Province']. '</td>
+          <td style="border: 1px solid #000000;  " colspan="2">'.$emp['employee_address'].' ตำบล '. $emp['employee_sub_area'] .'
+          อำเภอ '. $emp['employee_area'] .'  จังหวัด ' .$emp['employee_province']. '</td>
          
        
           
       </tr>
       <tr>          
           <td style="border: 1px solid #000000;  text-align:right;" colspan="2">รหัสไปรษณีย์ </td>
-          <td style="border: 1px solid #000000;  " colspan="2">'.$emp['Postal_Code'].'</td>
+          <td style="border: 1px solid #000000;  " colspan="2">'.$emp['employee_postal_code'].'</td>
          
        
           
       </tr>
        <tr>          
           <td style="border: 1px solid #000000;  text-align:right;" colspan="2">เบอร์โทรติดต่อ </td>
-          <td style="border: 1px solid #000000;  " colspan="2">'.$emp['phone'].'</td>
+          <td style="border: 1px solid #000000;  " colspan="2">'.$emp['employee_phone'].'</td>
          
        
           
@@ -4677,7 +4680,7 @@ $tbl = $tbl . ' <tr>
       </tr> ';
 
 
-        if($emp['emp_pastpost']== null ){
+        if($emp['employee_pastpost']== null ){
 
      $tbl .='
        <tr>          
@@ -4704,21 +4707,21 @@ $tbl = $tbl . ' <tr>
      $tbl .='
        <tr>          
           <td style="border: 1px solid #000000;  text-align:right;" colspan="2">เลขที่หนังสือเดินทาง </td>
-          <td style="border: 1px solid #000000;  " colspan="2">'.$emp['emp_pastpost'].'</td>
+          <td style="border: 1px solid #000000;  " colspan="2">'.$emp['employee_pastpost'].'</td>
          
        
           
       </tr>
       <tr>          
           <td style="border: 1px solid #000000;  text-align:right;" colspan="2">เดินทางเข้ามาวันที่ </td>
-          <td style="border: 1px solid #000000;  " colspan="2">'.Datethai($emp['date_county']).'</td>
+          <td style="border: 1px solid #000000;  " colspan="2">'.Datethai($emp['employee_date_county']).'</td>
          
        
           
       </tr>
        <tr>          
           <td style="border: 1px solid #000000;  text-align:right;" colspan="2">จากประเทศ </td>
-          <td style="border: 1px solid #000000;  " colspan="2">'.$emp['emp_truecoun'].'</td>
+          <td style="border: 1px solid #000000;  " colspan="2">'.$emp['employee_truecoun'].'</td>
          
        
           
