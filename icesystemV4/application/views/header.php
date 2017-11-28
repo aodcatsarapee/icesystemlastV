@@ -213,7 +213,8 @@ desired effect
             </span>
           </a>
           <ul class="treeview-menu">
-            <li><a href="<?php echo base_url() ?>User"  ><i class="fa fa-circle-o"></i> ผู้ใช้งาน</a></li> 
+            <li><a href="<?php echo base_url() ?>user"  ><i class="fa fa-circle-o"></i> ผู้ใช้งาน</a></li> 
+            <li><a href="<?php echo base_url() ?>user_customer"  ><i class="fa fa-circle-o"></i> ลูกค้า</a></li> 
           </ul>
         </li>
         
@@ -262,14 +263,14 @@ desired effect
           </a>
           <ul class="treeview-menu">
              <li><a href="<?php echo base_url(); ?>shopping"><i class="fa fa-circle-o"></i>ขายสินค้า</a></li>
-              <li class="sub_menu"><a href="<?php echo base_url(); ?>Shopping_show_sell_detail"><i class="fa fa-files-o"></i>การขายสินค้าวันนี้</a>
+              <li class="sub_menu"><a href="<?php echo base_url(); ?>shopping_show_sell_detail"><i class="fa fa-files-o"></i>การขายสินค้าวันนี้</a>
                             </li>
-                            <li><a href="<?php echo base_url(); ?>Shopping_show_sell_detail_m"><i class="fa fa-files-o"></i>การขายสินค้าเดือนนี้</a>
+                            <li><a href="<?php echo base_url(); ?>shopping_show_sell_detail_m"><i class="fa fa-files-o"></i>การขายสินค้าเดือนนี้</a>
                             </li>
-                            <li><a href="<?php echo base_url(); ?>Shopping_show_sell_detail_y"><i class="fa fa-files-o"></i>การขายสินค้าสินค้าปีนี้</a>
+                            <li><a href="<?php echo base_url(); ?>shopping_show_sell_detail_y"><i class="fa fa-files-o"></i>การขายสินค้าสินค้าปีนี้</a>
                             </li>
                             <li>
-                                <a href="<?php echo base_url(); ?>Shopping_show_sell_detail_all"><i class="fa fa-files-o"></i>การขายสินค้าทั้งหมด</a>
+                                <a href="<?php echo base_url(); ?>shopping_show_sell_detail_all"><i class="fa fa-files-o"></i>การขายสินค้าทั้งหมด</a>
                             </li>
           </ul>
         </li>
@@ -281,7 +282,7 @@ desired effect
             </span>
           </a>
           <ul class="treeview-menu">
-            <li><a href="<?php echo base_url(); ?>Order"><i class="fa fa-circle-o"></i>สินค้าที่ลูกค้าสั้งซื้อ</a></li>
+            <li><a href="<?php echo base_url(); ?>order"><i class="fa fa-circle-o"></i>สินค้าที่ลูกค้าสั้งซื้อ</a></li>
           </ul>
         </li>
         <li class="treeview">
@@ -293,14 +294,14 @@ desired effect
           </a>
           <ul class="treeview-menu">
              <li><a href="<?php echo base_url(); ?>debtor"><i class="fa fa-circle-o"></i>ลูกหนี้</a></li>
-             <li class="sub_menu"><a href="<?php echo base_url(); ?>Debtor_show_detail"><i class="fa fa-files-o"></i>ลูกหนี้ที่ชำระเงินวันนี้</a>
+             <li class="sub_menu"><a href="<?php echo base_url(); ?>debtor_show_detail"><i class="fa fa-files-o"></i>ลูกหนี้ที่ชำระเงินวันนี้</a>
                             </li>
-                            <li><a href="<?php echo base_url(); ?>Debtor_show_detail_m"><i class="fa fa-files-o"></i>ลูกหนี้ที่ชำระเงินเดือนนี้</a>
+                            <li><a href="<?php echo base_url(); ?>debtor_show_detail_m"><i class="fa fa-files-o"></i>ลูกหนี้ที่ชำระเงินเดือนนี้</a>
                             </li>
-                            <li><a href="<?php echo base_url(); ?>Debtor_show_detail_y"><i class="fa fa-files-o"></i>ลูกหนี้ที่ชำระเงินปีนี้</a>
+                            <li><a href="<?php echo base_url(); ?>debtor_show_detail_y"><i class="fa fa-files-o"></i>ลูกหนี้ที่ชำระเงินปีนี้</a>
                             </li>
                             <li>
-                                <a href="<?php echo base_url(); ?>Debtor_show_detail_all"><i class="fa fa-files-o"></i>ลูกหนี้ที่ชำระเงินทั้งหมด</a>
+                                <a href="<?php echo base_url(); ?>debtor_show_detail_all"><i class="fa fa-files-o"></i>ลูกหนี้ที่ชำระเงินทั้งหมด</a>
                             </li>
           </ul>
         </li>
@@ -313,7 +314,7 @@ desired effect
             </span>
           </a>
           <ul class="treeview-menu">
-            <li><a href="<?php echo base_url(); ?>Work_time/show_Work_time_in_and_out"></i> <i class="fa fa-circle-o"></i>บันทึกเวลาการเข้างาน</a></li>
+            <li><a href="<?php echo base_url(); ?>work_time/show_Work_time_in_and_out"></i> <i class="fa fa-circle-o"></i>บันทึกเวลาการเข้างาน</a></li>
              <li><a href="<?php echo base_url(); ?>absence"></i> <i class="fa fa-circle-o"></i>บันทึกการขาดงาน</a></li>
              <li><a href="<?php echo base_url(); ?>rest_work"></i> <i class="fa fa-circle-o"></i>บันทึกการลางาน</a></li>
             
@@ -343,13 +344,13 @@ desired effect
             </span>
           </a>
           <ul class="treeview-menu">
-            <li><a href="<?php echo base_url(); ?>Account"><i class="fa fa-circle-o"></i>รายรับ - รายจ่าย</a></li>
-             <li><a href="<?php echo base_url(); ?>Account_show_detail_m"><i class="fa fa-files-o"></i>รายรับ - รายจ่ายเดือนนี้</a>
+            <li><a href="<?php echo base_url(); ?>account"><i class="fa fa-circle-o"></i>รายรับ - รายจ่าย</a></li>
+             <li><a href="<?php echo base_url(); ?>account_show_detail_m"><i class="fa fa-files-o"></i>รายรับ - รายจ่ายเดือนนี้</a>
                             </li>
-                            <li><a href="<?php echo base_url(); ?>Account_show_detail_y"><i class="fa fa-files-o"></i>รายรับ - รายจ่ายปีนี้</a>
+                            <li><a href="<?php echo base_url(); ?>account_show_detail_y"><i class="fa fa-files-o"></i>รายรับ - รายจ่ายปีนี้</a>
                             </li>
                             <li>
-                                <a href="<?php echo base_url(); ?>Account_show_detail_all"><i class="fa fa-files-o"></i>รายรับ - รายจ่ายทั้งหมด</a>
+                                <a href="<?php echo base_url(); ?>account_show_detail_all"><i class="fa fa-files-o"></i>รายรับ - รายจ่ายทั้งหมด</a>
                             </li>
           </ul>
         </li>
@@ -437,14 +438,14 @@ desired effect
           </a>
           <ul class="treeview-menu">
              <!-- <li><a href="<?php echo base_url(); ?>shopping"><i class="fa fa-circle-o"></i>ขายสินค้า</a></li> -->
-              <li class="sub_menu"><a href="<?php echo base_url(); ?>Shopping_show_sell_detail"><i class="fa fa-files-o"></i>การขายสินค้าวันนี้</a>
+              <li class="sub_menu"><a href="<?php echo base_url(); ?>shopping_show_sell_detail"><i class="fa fa-files-o"></i>การขายสินค้าวันนี้</a>
                             </li>
-                            <li><a href="<?php echo base_url(); ?>Shopping_show_sell_detail_m"><i class="fa fa-files-o"></i>การขายสินค้าเดือนนี้</a>
+                            <li><a href="<?php echo base_url(); ?>shopping_show_sell_detail_m"><i class="fa fa-files-o"></i>การขายสินค้าเดือนนี้</a>
                             </li>
-                            <li><a href="<?php echo base_url(); ?>Shopping_show_sell_detail_y"><i class="fa fa-files-o"></i>การขายสินค้าสินค้าปีนี้</a>
+                            <li><a href="<?php echo base_url(); ?>shopping_show_sell_detail_y"><i class="fa fa-files-o"></i>การขายสินค้าสินค้าปีนี้</a>
                             </li>
                             <li>
-                                <a href="<?php echo base_url(); ?>Shopping_show_sell_detail_all"><i class="fa fa-files-o"></i>การขายสินค้าทั้งหมด</a>
+                                <a href="<?php echo base_url(); ?>shopping_show_sell_detail_all"><i class="fa fa-files-o"></i>การขายสินค้าทั้งหมด</a>
                             </li>
           </ul>
         </li>
@@ -456,7 +457,7 @@ desired effect
             </span>
           </a>
           <ul class="treeview-menu">
-            <li><a href="<?php echo base_url(); ?>Order"><i class="fa fa-circle-o"></i>สินค้าที่ลูกค้าสั้งซื้อ</a></li>
+            <li><a href="<?php echo base_url(); ?>order"><i class="fa fa-circle-o"></i>สินค้าที่ลูกค้าสั้งซื้อ</a></li>
           </ul>
         </li>
         <li class="treeview">
@@ -468,14 +469,14 @@ desired effect
           </a>
           <ul class="treeview-menu">
              <li><a href="<?php echo base_url(); ?>debtor"><i class="fa fa-circle-o"></i>ลูกหนี้</a></li>
-             <li class="sub_menu"><a href="<?php echo base_url(); ?>Debtor_show_detail"><i class="fa fa-files-o"></i>ลูกหนี้ที่ชำระเงินวันนี้</a>
+             <li class="sub_menu"><a href="<?php echo base_url(); ?>debtor_show_detail"><i class="fa fa-files-o"></i>ลูกหนี้ที่ชำระเงินวันนี้</a>
                             </li>
-                            <li><a href="<?php echo base_url(); ?>Debtor_show_detail_m"><i class="fa fa-files-o"></i>ลูกหนี้ที่ชำระเงินเดือนนี้</a>
+                            <li><a href="<?php echo base_url(); ?>debtor_show_detail_m"><i class="fa fa-files-o"></i>ลูกหนี้ที่ชำระเงินเดือนนี้</a>
                             </li>
-                            <li><a href="<?php echo base_url(); ?>Debtor_show_detail_y"><i class="fa fa-files-o"></i>ลูกหนี้ที่ชำระเงินปีนี้</a>
+                            <li><a href="<?php echo base_url(); ?>debtor_show_detail_y"><i class="fa fa-files-o"></i>ลูกหนี้ที่ชำระเงินปีนี้</a>
                             </li>
                             <li>
-                                <a href="<?php echo base_url(); ?>Debtor_show_detail_all"><i class="fa fa-files-o"></i>ลูกหนี้ที่ชำระเงินทั้งหมด</a>
+                                <a href="<?php echo base_url(); ?>debtor_show_detail_all"><i class="fa fa-files-o"></i>ลูกหนี้ที่ชำระเงินทั้งหมด</a>
                             </li>
           </ul>
         </li>
@@ -488,7 +489,7 @@ desired effect
             </span>
           </a>
           <ul class="treeview-menu">
-            <li><a href="<?php echo base_url(); ?>Work_time/show_Work_time_in_and_out"></i> <i class="fa fa-circle-o"></i>บันทึกเวลาการเข้างาน</a></li>
+            <li><a href="<?php echo base_url(); ?>work_time/show_Work_time_in_and_out"></i> <i class="fa fa-circle-o"></i>บันทึกเวลาการเข้างาน</a></li>
              <li><a href="<?php echo base_url(); ?>absence"></i> <i class="fa fa-circle-o"></i>บันทึกการขาดงาน</a></li>
              <li><a href="<?php echo base_url(); ?>rest_work"></i> <i class="fa fa-circle-o"></i>บันทึกการลางาน</a></li>
             
@@ -520,13 +521,13 @@ desired effect
             </span>
           </a>
           <ul class="treeview-menu">
-            <li><a href="<?php echo base_url(); ?>Account"><i class="fa fa-circle-o"></i>รายรับ - รายจ่าย</a></li>
-             <li><a href="<?php echo base_url(); ?>Account_show_detail_m"><i class="fa fa-files-o"></i>รายรับ - รายจ่ายเดือนนี้</a>
+            <li><a href="<?php echo base_url(); ?>account"><i class="fa fa-circle-o"></i>รายรับ - รายจ่าย</a></li>
+             <li><a href="<?php echo base_url(); ?>account_show_detail_m"><i class="fa fa-files-o"></i>รายรับ - รายจ่ายเดือนนี้</a>
                             </li>
-                            <li><a href="<?php echo base_url(); ?>Account_show_detail_y"><i class="fa fa-files-o"></i>รายรับ - รายจ่ายปีนี้</a>
+                            <li><a href="<?php echo base_url(); ?>account_show_detail_y"><i class="fa fa-files-o"></i>รายรับ - รายจ่ายปีนี้</a>
                             </li>
                             <li>
-                                <a href="<?php echo base_url(); ?>Account_show_detail_all"><i class="fa fa-files-o"></i>รายรับ - รายจ่ายทั้งหมด</a>
+                                <a href="<?php echo base_url(); ?>account_show_detail_all"><i class="fa fa-files-o"></i>รายรับ - รายจ่ายทั้งหมด</a>
                             </li>
           </ul>
         </li>
@@ -539,7 +540,7 @@ desired effect
             </span>
           </a>
           <ul class="treeview-menu">
-            <li><a href="<?php echo base_url(); ?>Customer"><i class="fa fa-circle-o"></i>ลูกค้า</a></li>
+            <li><a href="<?php echo base_url(); ?>customer"><i class="fa fa-circle-o"></i>ลูกค้า</a></li>
           </ul>
         </li>
         <li class="treeview">
@@ -604,14 +605,14 @@ desired effect
           </a>
           <ul class="treeview-menu">
              <li><a href="<?php echo base_url(); ?>shopping"><i class="fa fa-circle-o"></i>ขายสินค้า</a></li>
-              <li class="sub_menu"><a href="<?php echo base_url(); ?>Shopping_show_sell_detail"><i class="fa fa-files-o"></i>การขายสินค้าวันนี้</a>
+              <li class="sub_menu"><a href="<?php echo base_url(); ?>shopping_show_sell_detail"><i class="fa fa-files-o"></i>การขายสินค้าวันนี้</a>
                             </li>
-                            <li><a href="<?php echo base_url(); ?>Shopping_show_sell_detail_m"><i class="fa fa-files-o"></i>การขายสินค้าเดือนนี้</a>
+                            <li><a href="<?php echo base_url(); ?>shopping_show_sell_detail_m"><i class="fa fa-files-o"></i>การขายสินค้าเดือนนี้</a>
                             </li>
-                            <li><a href="<?php echo base_url(); ?>Shopping_show_sell_detail_y"><i class="fa fa-files-o"></i>การขายสินค้าสินค้าปีนี้</a>
+                            <li><a href="<?php echo base_url(); ?>shopping_show_sell_detail_y"><i class="fa fa-files-o"></i>การขายสินค้าสินค้าปีนี้</a>
                             </li>
                             <li>
-                                <a href="<?php echo base_url(); ?>Shopping_show_sell_detail_all"><i class="fa fa-files-o"></i>การขายสินค้าทั้งหมด</a>
+                                <a href="<?php echo base_url(); ?>shopping_show_sell_detail_all"><i class="fa fa-files-o"></i>การขายสินค้าทั้งหมด</a>
                             </li>
           </ul>
         </li>
@@ -623,7 +624,7 @@ desired effect
             </span>
           </a>
           <ul class="treeview-menu">
-            <li><a href="<?php echo base_url(); ?>Order"><i class="fa fa-circle-o"></i>สินค้าที่ลูกค้าสั้งซื้อ</a></li>
+            <li><a href="<?php echo base_url(); ?>order"><i class="fa fa-circle-o"></i>สินค้าที่ลูกค้าสั้งซื้อ</a></li>
           </ul>
         </li>
       <li class="treeview">
@@ -634,7 +635,7 @@ desired effect
             </span>
           </a>
           <ul class="treeview-menu">
-            <li><a href="<?php echo base_url(); ?>Customer"><i class="fa fa-circle-o"></i>ลูกค้า</a></li>
+            <li><a href="<?php echo base_url(); ?>customer"><i class="fa fa-circle-o"></i>ลูกค้า</a></li>
           </ul>
         </li>
         
@@ -648,13 +649,13 @@ desired effect
             </span>
           </a>
           <ul class="treeview-menu">
-            <li><a href="<?php echo base_url(); ?>Account"><i class="fa fa-circle-o"></i>รายรับ - รายจ่าย</a></li>
-             <li><a href="<?php echo base_url(); ?>Account_show_detail_m"><i class="fa fa-files-o"></i>รายรับ - รายจ่ายเดือนนี้</a>
+            <li><a href="<?php echo base_url(); ?>account"><i class="fa fa-circle-o"></i>รายรับ - รายจ่าย</a></li>
+             <li><a href="<?php echo base_url(); ?>account_show_detail_m"><i class="fa fa-files-o"></i>รายรับ - รายจ่ายเดือนนี้</a>
                             </li>
-                            <li><a href="<?php echo base_url(); ?>Account_show_detail_y"><i class="fa fa-files-o"></i>รายรับ - รายจ่ายปีนี้</a>
+                            <li><a href="<?php echo base_url(); ?>account_show_detail_y"><i class="fa fa-files-o"></i>รายรับ - รายจ่ายปีนี้</a>
                             </li>
                             <li>
-                                <a href="<?php echo base_url(); ?>Account_show_detail_all"><i class="fa fa-files-o"></i>รายรับ - รายจ่ายทั้งหมด</a>
+                                <a href="<?php echo base_url(); ?>account_show_detail_all"><i class="fa fa-files-o"></i>รายรับ - รายจ่ายทั้งหมด</a>
                             </li>
           </ul>
         </li>
@@ -667,14 +668,14 @@ desired effect
           </a>
           <ul class="treeview-menu">
              <li><a href="<?php echo base_url(); ?>debtor"><i class="fa fa-circle-o"></i>ลูกหนี้</a></li>
-             <li class="sub_menu"><a href="<?php echo base_url(); ?>Debtor_show_detail"><i class="fa fa-files-o"></i>ลูกหนี้ที่ชำระเงินวันนี้</a>
+             <li class="sub_menu"><a href="<?php echo base_url(); ?>debtor_show_detail"><i class="fa fa-files-o"></i>ลูกหนี้ที่ชำระเงินวันนี้</a>
                             </li>
-                            <li><a href="<?php echo base_url(); ?>Debtor_show_detail_m"><i class="fa fa-files-o"></i>ลูกหนี้ที่ชำระเงินเดือนนี้</a>
+                            <li><a href="<?php echo base_url(); ?>debtor_show_detail_m"><i class="fa fa-files-o"></i>ลูกหนี้ที่ชำระเงินเดือนนี้</a>
                             </li>
-                            <li><a href="<?php echo base_url(); ?>Debtor_show_detail_y"><i class="fa fa-files-o"></i>ลูกหนี้ที่ชำระเงินปีนี้</a>
+                            <li><a href="<?php echo base_url(); ?>debtor_show_detail_y"><i class="fa fa-files-o"></i>ลูกหนี้ที่ชำระเงินปีนี้</a>
                             </li>
                             <li>
-                                <a href="<?php echo base_url(); ?>Debtor_show_detail_all"><i class="fa fa-files-o"></i>ลูกหนี้ที่ชำระเงินทั้งหมด</a>
+                                <a href="<?php echo base_url(); ?>debtor_show_detail_all"><i class="fa fa-files-o"></i>ลูกหนี้ที่ชำระเงินทั้งหมด</a>
                             </li>
           </ul>
         </li>
@@ -698,7 +699,7 @@ desired effect
             </span>
           </a>
           <ul class="treeview-menu">
-            <li><a href="<?php echo base_url(); ?>Work_time/show_Work_time_in_and_out"></i> <i class="fa fa-circle-o"></i>บันทึกเวลาการเข้างาน</a></li>
+            <li><a href="<?php echo base_url(); ?>work_time/show_Work_time_in_and_out"></i> <i class="fa fa-circle-o"></i>บันทึกเวลาการเข้างาน</a></li>
              <li><a href="<?php echo base_url(); ?>absence"></i> <i class="fa fa-circle-o"></i>บันทึกการขาดงาน</a></li>
              <li><a href="<?php echo base_url(); ?>rest_work"></i> <i class="fa fa-circle-o"></i>บันทึกการลางาน</a></li>
             

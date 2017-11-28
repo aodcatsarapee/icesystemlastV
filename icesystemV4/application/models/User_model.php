@@ -20,7 +20,6 @@ class User_model extends CI_Model {
 	
 	}
 
-
 	public function resolve_user_login($username, $password){
 		
 		$this->db->select('*');
@@ -47,7 +46,6 @@ class User_model extends CI_Model {
 		return $sql = $this->db->get()->result_array();
 	}
 
-	
 
 	public function select_user($id)
 	{
@@ -77,6 +75,69 @@ class User_model extends CI_Model {
 			
 		}
 
+//-------------------------User1------------------------------------//
+		public function search_employee($search_employee){
+			return $this->db->select('*')
+			->from('employee')
+			->join('department', 'employee.department = department.department_id', 'left')
+			->where(" ( employee_id LIKE '%" .$search_employee. "%' ) ")
+			->get()
+			->row();
+		}
+		public function check_user_employee($id)
+		{
+			return $this->db->select('*')
+			->from('users')
+			->where("employee_id",$id)
+			->get()
+			->row();		
+		}
+		public function check_user($username)
+		{
+			return $this->db->select('*')
+			->from('users')
+			->where("username",$username)
+			->get()
+			->num_rows();			
+		}
+
+		public function get_emp_user()
+		{
+			 return $this->db->select('*')
+				->from('users')
+				->join('employee', 'users.employee_id = employee.employee_id')
+				 ->get()
+				 ->result();
+		}
+		public function select_emp_user($id)
+		{
+			return $this->db->select('*')
+			->from('users')
+			->join('employee', 'users.employee_id = employee.employee_id')
+			->join('department', 'employee.department = department.department_id')
+			->where("users.employee_id",$id)
+			->get()
+			->row();
+		}
+  //----------------------------customer----------------------------------//
+  public function get_customer_user()
+  {
+	   		return $this->db->select('*')
+			->from('users')
+			->join('customers', 'users.customer_id = customers.customer_id')
+			->get()
+			->result();
+  }
+
+  public function select_customer_user($id)
+  {
+	  return $this->db->select('*')
+	  ->from('users')
+	  ->join('customers', 'users.customer_id = customers.customer_id')
+	  ->where("users.customer_id",$id)
+	  ->get()
+	  ->row();
+  }
 
 }	
 ?>
