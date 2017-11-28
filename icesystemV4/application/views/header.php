@@ -158,6 +158,7 @@ desired effect
               <li class="user-footer">
                 
                 <div style="text-align: center;">
+                <a href="<?php echo base_url()?>Profile/toProfile" class="btn btn-default btn-flat">Profile</a>
                   <a href="<?php echo base_url()?>login/sign_out" class="btn btn-default btn-flat">Sign out</a>
                 </div>
               </li>
