@@ -16,11 +16,14 @@
 			<td style="text-align: center;"><?php echo $value['stock_amount']." ".$value['stock_product_type'] ; ?></td>
 		</tr>
 	<?php }?>
+
+	
 	</tbody>
+	
 </table>
-
-
-
+<a href="Genpdf/stock_detail_id?id=<?php echo $value['stock_detail_id'] ?>" class="btn btn-success btn-xs" target="_blank" style="float: right ;font-size:20px;" ><spen class='glyphicon glyphicon-print'  ></spen> พิมพ์ </a>
+<br>
+<br>
 
 
 

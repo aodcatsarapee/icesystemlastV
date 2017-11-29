@@ -75,13 +75,7 @@
 			
 			$this->db->delete('stock');
 
-			
 
-			
-
-
-
-			
 		}
 
 		public function insert_data_produce($ar)

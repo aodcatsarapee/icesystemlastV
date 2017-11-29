@@ -11,6 +11,7 @@
 			$this->load->model('Produce_models');
 
 			$this->load->model('billing_model');
+			$this->load->library('Pdf');
 
 		}
 
@@ -259,6 +260,7 @@
 
 
 	}
+		
 
 }
 

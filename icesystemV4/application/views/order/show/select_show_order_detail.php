@@ -148,6 +148,8 @@
 			</tr>
 		</tbody>
 	</table>
+
+
 </div>
 
 <?php foreach ($order_detail as $key => $value) { 
