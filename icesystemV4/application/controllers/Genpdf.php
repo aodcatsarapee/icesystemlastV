@@ -5673,7 +5673,7 @@ $pdf->Output('stock.pdf', 'I');
                          <th width="16.67%"  style="font-size: 15pt; ">ขาดงาน </th>
                         <td width="16.67%" style="font-size: 15pt; ">'.$emp['absence'].' วัน</td>
                          <th width="16.67%" style="font-size: 15pt; " >ลางาน </th>
-                        <td width="16.67%" style="font-size: 15pt; ">'.($emp['rest_work']+1).' วัน</td>
+                        <td width="16.67%" style="font-size: 15pt; ">'.$emp['rest_work'].' วัน</td>
                    </tr>
                     <tr>
                        <th  colspan="4" style="text-align: center; font-size: 15pt;">เงินเดือน </th>

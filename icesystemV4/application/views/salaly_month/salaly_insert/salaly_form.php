@@ -49,11 +49,18 @@
 
           }
 
-
             $before = $re['rest_before'];
             $after = $re['rest_after'];
-            $Datetotal =DateDiff($before,$after);
 
+            if( $after !="" && $after !=""){
+
+              $Datetotal =DateDiff($before,$after)+1;
+              
+            }else{
+              $Datetotal=0;
+            }
+
+    
              ?>
 
 
@@ -61,7 +68,7 @@
             <label class="col-sm-3 control-label" >จำนวนวันลาหยุด :</label>
             <div class="col-sm-7">
               <fieldset disabled>
-              <input type="text" id="disabledTextInput" class="form-control" value="<?php echo count($Datetotal); ?>" >
+              <input type="text" id="disabledTextInput" class="form-control" value="<?php echo $Datetotal; ?>" >
               </fieldset>
             </div>
           </div>
