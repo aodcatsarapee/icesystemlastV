@@ -202,7 +202,7 @@
 
           <div class="form-group  ">
             <label class="col-sm-3 control-label"  >เลขบัตรประชาชน :</label>
-            <div class="col-sm-4">
+            <div class="col-sm-6">
               <input class="form-control" type="text" name="id_card" id="id_card"  placeholder="เช่น 1509901476538 "  maxlength="13" minlength="13"  value="<?php echo $rs['employee_IDcard'] ?>">
             </div>
           </div>

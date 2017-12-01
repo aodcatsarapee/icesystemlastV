@@ -141,10 +141,6 @@
 
         $this->db->where('order_detail.order_detail_status','ดำเนินเรียบเรียบเเล้ว');
         
-      
-
-        $this->db->where('MONTH(order_detail.order_detail_date)',date('m'));
-
         $this->db->where('YEAR(order_detail.order_detail_date)',date('Y'));
 
 
