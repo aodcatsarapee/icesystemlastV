@@ -17,12 +17,12 @@
             <!-- Content Header (Page header) -->
             <section class="content-header">
                 <h1>
-                    <i class="fa fa-product-hunt fa-1x "> </i> บันทึกเวลาการทำงาน
-                    <small></small>
+                <i class="fa fa-money"> </i> บันทึกเวลาการทำงาน
+                <button type="button" class="btn btn-success btn-xs " id="insert"  data-toggle="modal" data-target="#modal-select-date" style="float: right;font-size: 20px;"><spen class="glyphicon glyphicon-plus"> </spen> เลือกวันที่ </button>
+
                 </h1>
 
-                 <button type="button" class="btn btn-success btn-xs " id="insert"  data-toggle="modal" data-target="#modal-select-date" style="float: right;font-size: 20px;"><spen class="glyphicon glyphicon-plus"> </spen> เลือกวันที่ </button>
-
+                 
 
 
             </section>

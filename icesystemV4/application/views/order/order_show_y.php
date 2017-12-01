@@ -8,7 +8,7 @@
     <!-- Content Header (Page header) -->
     <section class="content-header">
       <h1>
-       <i class="fa fa-money"></i> </i> ยอดสั่งสินค้าของลูกค้าในปีนี้<small></small>
+      <i class="fa fa-shopping-cart "></i> ยอดสั่งสินค้าของลูกค้าในปีนี้<small></small>
         
       </h1>
       
