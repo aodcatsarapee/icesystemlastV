@@ -283,9 +283,9 @@ desired effect
           </a>
           <ul class="treeview-menu">
             <li><a href="<?php echo base_url(); ?>order"><i class="fa fa-circle-o"></i>สินค้าที่ลูกค้าสั้งซื้อ</a></li>
-            <li><a href="<?php echo base_url(); ?>order_show_d"><i class="fa fa-circle-o"></i>สินค้าที่ลูกค้าสั้งซื้อในวันนี้</a></li>
-           <li><a href="<?php echo base_url(); ?>order_show_m"><i class="fa fa-circle-o"></i>สินค้าที่ลูกค้าสั้งซื้อในเดือนนี้</a></li>
-           <li><a href="<?php echo base_url(); ?>order_show_y"><i class="fa fa-circle-o"></i>สินค้าที่ลูกค้าสั้งซื้อในปีนี้</a></li>
+           <li><a href="<?php echo base_url(); ?>order_show_d"><i class="fa fa-circle-o"></i>สินค้าที่ลูกค้าสั้งซื้อวันนี้</a></li>
+           <li><a href="<?php echo base_url(); ?>order_show_m"><i class="fa fa-circle-o"></i>สินค้าที่ลูกค้าสั้งซื้อเดือนนี้</a></li>
+           <li><a href="<?php echo base_url(); ?>order_show_y"><i class="fa fa-circle-o"></i>สินค้าที่ลูกค้าสั้งซื้อปีนี้</a></li>
            <li><a href="<?php echo base_url(); ?>order_show_all"><i class="fa fa-circle-o"></i>สินค้าที่ลูกค้าสั้งซื้อทั้งหมด</a></li>
           </ul>
         </li>
@@ -629,6 +629,10 @@ desired effect
           </a>
           <ul class="treeview-menu">
             <li><a href="<?php echo base_url(); ?>order"><i class="fa fa-circle-o"></i>สินค้าที่ลูกค้าสั้งซื้อ</a></li>
+            <li><a href="<?php echo base_url(); ?>order_show_d"><i class="fa fa-circle-o"></i>สินค้าที่ลูกค้าสั้งซื้อวันนี้</a></li>
+           <li><a href="<?php echo base_url(); ?>order_show_m"><i class="fa fa-circle-o"></i>สินค้าที่ลูกค้าสั้งซื้อเดือนนี้</a></li>
+           <li><a href="<?php echo base_url(); ?>order_show_y"><i class="fa fa-circle-o"></i>สินค้าที่ลูกค้าสั้งซื้อปีนี้</a></li>
+           <li><a href="<?php echo base_url(); ?>order_show_all"><i class="fa fa-circle-o"></i>สินค้าที่ลูกค้าสั้งซื้อทั้งหมด</a></li>
           </ul>
         </li>
       <li class="treeview">
