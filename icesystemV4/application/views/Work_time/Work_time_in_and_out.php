@@ -1,5 +1,5 @@
 <?php if (!empty($_SESSION['type'])) { ?>
-    <?php if ($_SESSION['type'] == 'admin' || $_SESSION['type'] == 'emp_account') { ?>
+    <?php if ($_SESSION['type'] == 'admin' || $_SESSION['type'] == 'emp_account'  || $_SESSION['type']=='manager') { ?>
 
  <?php require("set_date/form_set.php") ?>
 
@@ -131,11 +131,17 @@
                                                                                value="<?php echo $value['employee_id']; ?>">
 
                                                                         <td style="text-align: center;padding-top: 30px;">
-
+                                                                            <?php if($_SESSION['type']!='manager'){?>
                                                                             <button type="submit"
                                                                                     class="btn btn-success btn-xs"> <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
                                                                                 เข้างาน
                                                                             </button>
+                                                                            <?php }else{?>
+                                                                                <button type="submit"
+                                                                                    class="btn btn-success btn-xs" disabled> <span class="glyphicon glyphicon-plus" aria-hidden="true" ></span>
+                                                                                เข้างาน
+                                                                            </button>
+                                                                            <?php }?>
                                                                     </form>
 
                                                                     <form action="<?php echo base_url() ?>Work_time/insert_date_out"
@@ -146,11 +152,15 @@
                                                                                value="<?php echo $value['employee_id']; ?>">
 
                                                                         <td style="text-align: center;padding-top: 30px;">
-
+                                                                        <?php if($_SESSION['type']!='manager'){?>
                                                                             <button type="submit"
                                                                                     class="btn btn-danger btn-xs"> <span class="glyphicon glyphicon-plus" aria-hidden="true"></span> ออกงาน
                                                                             </button>
-
+                                                                            <?php }else{?>
+                                                                                <button type="submit"
+                                                                                    class="btn btn-danger btn-xs" disabled> <span class="glyphicon glyphicon-plus" aria-hidden="true"></span> ออกงาน
+                                                                            </button>
+                                                                                <?php }?>
                                                                     </form>
                                                                     <!--  <td style="text-align: center; padding-top: 30px;">
 

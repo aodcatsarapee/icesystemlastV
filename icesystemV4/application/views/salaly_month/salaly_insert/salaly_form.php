@@ -61,7 +61,7 @@
             <label class="col-sm-3 control-label" >จำนวนวันลาหยุด :</label>
             <div class="col-sm-7">
               <fieldset disabled>
-              <input type="text" id="disabledTextInput" class="form-control" value="<?php echo $Datetotal+1 ?>" >
+              <input type="text" id="disabledTextInput" class="form-control" value="<?php echo count($Datetotal); ?>" >
               </fieldset>
             </div>
           </div>
