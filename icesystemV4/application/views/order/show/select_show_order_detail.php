@@ -152,7 +152,13 @@
 
 </div>
 
+
+
 <?php foreach ($order_detail as $key => $value) { 
+
+
+if($value['order_detail_status'] == "กำลังดำเนินการ"){
+
 	
 	if ($value === end($order_detail)) { 
 
@@ -316,7 +322,7 @@
 
 
 
-	<?php } } } ?>
+	<?php } } } } ?>
 
 
 

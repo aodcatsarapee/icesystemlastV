@@ -115,6 +115,133 @@
 		}
 
 
+//  ==========================================กุย้่ายบ้านมาจาก order============================================================
+
+		public function show_order_detail($order_id)
+		{
+			$this->db->select('order_detail.*,order.*,customers.*');
+			
+			$this->db->from('order');
+   
+			$this->db->join('order_detail', 'order.order_detail_id = order_detail.order_detail_id', 'left');
+   
+			$this->db->join('customers', 'order.customer_id = customers.customer_id', 'left');
+			
+			$this->db->where('order.order_detail_id',$order_id);
+   
+			$sql=$this->db->get();
+   
+			return $sql->result_array();
+		}
+
+
+		
+		public function order_view_d()
+		{
+   
+		   $this->db->select('order_detail.*,order.*,customers.*');
+		   
+		   $this->db->from('order');
+   
+		   $this->db->join('order_detail', 'order.order_detail_id = order_detail.order_detail_id', 'left');
+   
+		   $this->db->join('customers', 'order.customer_id = customers.customer_id', 'left');
+   
+		   $this->db->group_by('order.order_detail_id');
+   
+		   $this->db->where('order_detail.order_detail_status','ดำเนินเรียบเรียบเเล้ว');
+		   
+		   $this->db->where('DAY(order_detail.order_detail_date)',date('d'));
+   
+		   $this->db->where('MONTH(order_detail.order_detail_date)',date('m'));
+   
+		   $this->db->where('YEAR(order_detail.order_detail_date)',date('Y'));
+   
+   
+			 $sql=$this->db->get();
+   
+			 return $sql->result_array();
+   
+		 }
+
+
+		 public function order_view_m()
+		 {
+	
+			$this->db->select('order_detail.*,order.*,customers.*');
+			
+			$this->db->from('order');
+	
+			$this->db->join('order_detail', 'order.order_detail_id = order_detail.order_detail_id', 'left');
+	
+			$this->db->join('customers', 'order.customer_id = customers.customer_id', 'left');
+	
+			$this->db->group_by('order.order_detail_id');
+	
+			$this->db->where('order_detail.order_detail_status','ดำเนินเรียบเรียบเเล้ว');
+					
+			$this->db->where('MONTH(order_detail.order_detail_date)',date('m'));
+	
+			$this->db->where('YEAR(order_detail.order_detail_date)',date('Y'));
+	
+	
+			  $sql=$this->db->get();
+	
+			  return $sql->result_array();
+	
+		  }
+
+
+		  public function order_view_y()
+		  {
+	 
+			 $this->db->select('order_detail.*,order.*,customers.*');
+			 
+			 $this->db->from('order');
+	 
+			 $this->db->join('order_detail', 'order.order_detail_id = order_detail.order_detail_id', 'left');
+	 
+			 $this->db->join('customers', 'order.customer_id = customers.customer_id', 'left');
+	 
+			 $this->db->group_by('order.order_detail_id');
+	 
+			 $this->db->where('order_detail.order_detail_status','ดำเนินเรียบเรียบเเล้ว');
+					 	 
+			 $this->db->where('YEAR(order_detail.order_detail_date)',date('Y'));
+	 
+	 
+			   $sql=$this->db->get();
+	 
+			   return $sql->result_array();
+	 
+		   }
+
+
+		   
+		   public function order_view_all()
+		   {
+	  
+			  $this->db->select('order_detail.*,order.*,customers.*');
+			  
+			  $this->db->from('order');
+	  
+			  $this->db->join('order_detail', 'order.order_detail_id = order_detail.order_detail_id', 'left');
+	  
+			  $this->db->join('customers', 'order.customer_id = customers.customer_id', 'left');
+	  
+			  $this->db->group_by('order.order_detail_id');
+	  
+			  $this->db->where('order_detail.order_detail_status','ดำเนินเรียบเรียบเเล้ว');
+		 
+				$sql=$this->db->get();
+	  
+				return $sql->result_array();
+	  
+			}
+	 
+ 
+
+
 	}
 
  ?>

@@ -6147,7 +6147,7 @@ $pdf->Output('stock.pdf', 'I');
 $this->load->helper('Datethai');
 $tbl = '<table cellspacing="0" cellpadding="8" >
                  <tr>
-                        <th style="border: 1px solid #000000;  text-align:center;" colspan="4" > ห้างหุ่นส่วน โรงน้ำเเข็งธวีชัย<br> รายงาน<br> ข้อมูลการสั่งซื้้อสินค้า<br>ณ วันที่ '.Datethai(date("d-m-Y")).'</th>
+                        <th style="border: 1px solid #000000;  text-align:center;" colspan="4" > ห้างหุ่นส่วน โรงน้ำเเข็งธวีชัย<br> รายงาน<br> ใบสั่งสินค้า<br>ณ วันที่ '.Datethai(date("d-m-Y")).'</th>
 
                  </tr> ';
 
@@ -6155,26 +6155,36 @@ $tbl = '<table cellspacing="0" cellpadding="8" >
 
 // -----------------------------------------------------------------------------
 $tbl = $tbl . ' <tr>
-           <th width="30%" style="border: 1px solid #000000;  text-align:center;"><b>รหัสสินค้า</b></th>
-           <th width="50%" style="border: 1px solid #000000;  text-align:center;"><b>ชื่อสินค้า</b></th>
-          <th width="20%" style="border: 1px solid #000000;  text-align:center;"><b>จำนวน</b></th>
+           <th width="15%" style="border: 1px solid #000000;  text-align:center;"><b>รหัสสินค้า</b></th>
+           <th width="27%" style="border: 1px solid #000000;  text-align:center;"><b>ชื่อสินค้า</b></th>
+          <th width="20%" style="border: 1px solid #000000;  text-align:center;"><b>ราคาต่อหน่วย</b></th>
+          <th width="17%" style="border: 1px solid #000000;  text-align:center;"><b>จำนวน</b></th>
+          <th width="21%" style="border: 1px solid #000000;  text-align:center;"><b>ราคารวม</b></th>
     </tr>'; 
 
-    $this->load->model('Order_models');
-    
+  $this->load->model('Produce_models');
+
   $id = $_GET['id'];
+  $order=$this->Produce_models->show_order_detail($id);
+
+  foreach ($order as $s) {
 
 
-//   foreach ($order as $s) {
+   $tbl = $tbl . ' <tr>
+        <td style="border: 1px solid #000000;  text-align:center; ">P'.$s['product_id'].'</td>
+        <td style="border: 1px solid #000000;  text-align:center; ">'.$s['order_product_name'].'</td>
+        <td style="border: 1px solid #000000;  text-align:center; ">'.$s['order_product_price'].' บาท</td>
+     <td style="border: 1px solid #000000;  text-align:center; ">'.$s['order_product_quantity'].'</td>
+        <td style="border: 1px solid #000000;  text-align:center; ">'.$s['order_product_total_price'].' บาท</td>
+     
+    </tr>'; 
+    
+  }
 
-
-//    $tbl = $tbl . ' <tr>
-//         <td style="border: 1px solid #000000;  text-align:center; ">P'.$s['product_id'].'</td>
-//         <td style="border: 1px solid #000000;  text-align:center; ">'.$s['order_product_name'].'</td>
-//         <td style="border: 1px solid #000000;  text-align:center; ">'.$s['order_product_price'].'บาท</td>
-//     </tr>'; 
-
-//   }
+  $tbl = $tbl . ' <tr>
+  <td colspan="4" style="border: 1px solid #000000; text-align: center;">รวม</td>
+   <td style="border: 1px solid #000000;  text-align:center; ">'.$s['order_detail_total'].' บาท</td>
+  </tr>'; 
     
 $tbl = $tbl . '</table>';
 
@@ -6214,6 +6224,175 @@ $pdf->Output('stock.pdf', 'I');
 //============================================================+
 
   }
+
+
+  public function order_detail_d()
+  {
+
+      // สร้าง object สำหรับใช้สร้าง pdf 
+      $pdf = new TCPDF(PDF_PAGE_ORIENTATION, PDF_UNIT, PDF_PAGE_FORMAT, true, 'UTF-8', false);
+       
+      // กำหนดรายละเอียดของ pdf
+      $pdf->SetCreator(PDF_CREATOR);
+      $pdf->SetAuthor('Nicola Asuni');
+      $pdf->SetTitle('stock');
+      $pdf->SetSubject('TCPDF Tutorial');
+      $pdf->SetKeywords('TCPDF, PDF, example, test, guide');
+       
+      // กำหนดข้อมูลที่จะแสดงในส่วนของ header และ footer
+      $pdf->SetHeaderData(PDF_HEADER_LOGO, PDF_HEADER_LOGO_WIDTH, PDF_HEADER_TITLE.' 001', PDF_HEADER_STRING, array(0,64,255), array(0,64,128));
+      $pdf->setFooterData(array(0,64,0), array(0,64,128));
+
+      $pdf->setPrintHeader(false);
+      $pdf->SetPrintFooter(false);
+       
+      // กำหนดรูปแบบของฟอนท์และขนาดฟอนท์ที่ใช้ใน header และ footer
+      $pdf->setHeaderFont(Array(PDF_FONT_NAME_MAIN, '', PDF_FONT_SIZE_MAIN));
+      $pdf->setFooterFont(Array(PDF_FONT_NAME_DATA, '', PDF_FONT_SIZE_DATA));
+       
+      // กำหนดค่าเริ่มต้นของฟอนท์แบบ monospaced 
+      $pdf->SetDefaultMonospacedFont(PDF_FONT_MONOSPACED);
+       
+      // กำหนด margins
+      $pdf->SetMargins(PDF_MARGIN_LEFT, PDF_MARGIN_TOP, PDF_MARGIN_RIGHT);
+      $pdf->SetHeaderMargin(PDF_MARGIN_HEADER);
+      $pdf->SetFooterMargin(PDF_MARGIN_FOOTER);
+       
+      // กำหนดการแบ่งหน้าอัตโนมัติ
+      $pdf->SetAutoPageBreak(TRUE, PDF_MARGIN_BOTTOM);
+       
+      // กำหนดรูปแบบการปรับขนาดของรูปภาพ 
+      $pdf->setImageScale(PDF_IMAGE_SCALE_RATIO);
+       
+      // ---------------------------------------------------------
+       
+      // set default font subsetting mode
+      $pdf->setFontSubsetting(true);
+       
+      // กำหนดฟอนท์ 
+      // ฟอนท์ freeserif รองรับภาษาไทย
+      $pdf->SetFont('freeserif', '', 14, '', true);
+       
+       
+       
+      // เพิ่มหน้า pdf
+      // การกำหนดในส่วนนี้ สามารถปรับรูปแบบต่างๆ ได้ ดูวิธีใช้งานที่คู่มือของ tcpdf เพิ่มเติม
+      $pdf->AddPage();
+       
+      // กำหนดเงาของข้อความ 
+      $pdf->setTextShadow(array('enabled'=>true, 'depth_w'=>0.2, 'depth_h'=>0.2, 'color'=>array(196,196,196), 'opacity'=>1, 'blend_mode'=>'Normal'));
+
+// กำหนดเนื้อหาข้อมูลที่จะสร้าง pdf ในที่นี้เราจะกำหนดเป็นแบบ html โปรดระวัง EOD; โค้ดสุดท้ายต้องชิดซ้ายไม่เว้นวรรค
+$this->load->helper('Datethai');
+$id = $_GET['id'];
+
+if($id == 'm'){
+    $tbl = '<table cellspacing="0" cellpadding="8" >
+    <tr>
+           <th style="border: 1px solid #000000;  text-align:center;" colspan="4" > ห้างหุ่นส่วน โรงน้ำเเข็งธวีชัย<br> รายงาน<br> ยอดสั่งสินค้าเดือนนี้้<br>ณ วันที่ '.Datethai(date("d-m-Y")).'</th>
+
+    </tr> ';
+}else if($id == 'd'){
+
+    $tbl = '<table cellspacing="0" cellpadding="8" >
+    <tr>
+           <th style="border: 1px solid #000000;  text-align:center;" colspan="4" > ห้างหุ่นส่วน โรงน้ำเเข็งธวีชัย<br> รายงาน<br> ยอดสั่งสินค้าวันนี้<br>ณ วันที่ '.Datethai(date("d-m-Y")).'</th>
+
+    </tr> ';
+    
+}else if($id == "all"){
+
+    $tbl = '<table cellspacing="0" cellpadding="8" >
+    <tr>
+           <th style="border: 1px solid #000000;  text-align:center;" colspan="4" > ห้างหุ่นส่วน โรงน้ำเเข็งธวีชัย<br> รายงาน<br> ยอดสั่งสินค้าทั้งหมด<br>ณ วันที่ '.Datethai(date("d-m-Y")).'</th>
+
+    </tr> ';
+
+
+
+}
+
+
+
+// -----------------------------------------------------------------------------
+$tbl = $tbl . ' <tr>
+           <th width="25%" style="border: 1px solid #000000;  text-align:center;"><b>รหัสสั่งซื้อ</b></th>
+           <th width="25%" style="border: 1px solid #000000;  text-align:center;"><b>ผู้สั่ง</b></th>
+          <th width="25%" style="border: 1px solid #000000;  text-align:center;"><b>ราคารวม</b></th>
+          <th width="25%" style="border: 1px solid #000000;  text-align:center;"><b>สถานะ</b></th>
+  
+    </tr>'; 
+
+  $this->load->model('Produce_models');
+
+ 
+
+  if($id == 'm'){
+     $order=$this->Produce_models->order_view_m();
+  }else if($id == 'd'){
+     $order=$this->Produce_models->order_view_d();
+    }else if($id == 'y'){
+        $order=$this->Produce_models->order_view_y();
+    }else{
+        $order=$this->Produce_models->order_view_all();
+
+    }
+
+  foreach ($order as $s) {
+
+
+   $tbl = $tbl . ' <tr>
+        <td style="border: 1px solid #000000;  text-align:center; ">'.$s['order_detail_id'].'</td>
+        <td style="border: 1px solid #000000;  text-align:center; ">'.$s['customer_fname']." ".$s['customer_lname'].'</td>
+        <td style="border: 1px solid #000000;  text-align:center; ">'.$s['order_detail_total'].' บาท</td>
+     <td style="border: 1px solid #000000;  text-align:center; ">'.$s['order_detail_status'].'</td>
+       
+     
+    </tr>'; 
+    
+  }
+
+
+    
+$tbl = $tbl . '</table>';
+
+
+
+$pdf->writeHTML($tbl, true, false, false, false, '');
+
+
+
+
+
+
+
+
+
+  // สร้างข้อเนื้อหา pdf ด้วยคำสั่ง writeHTMLCell()
+ // $pdf->writeHTMLCell(0, 0, '', '', $html, 0, 1, 0, true, '', true);
+
+// write some JavaScript code
+$js = <<<EOD
+
+EOD;
+
+// force print dialog
+$js .= 'print(true);';
+
+// set javascript
+$pdf->IncludeJS($js);
+
+// ---------------------------------------------------------
+
+//Close and output PDF document
+$pdf->Output('stock.pdf', 'I');
+
+//============================================================+
+// END OF FILE
+//============================================================+
+
+  }
+
 
 
 
