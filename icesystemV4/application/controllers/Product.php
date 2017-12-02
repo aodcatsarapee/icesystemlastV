@@ -14,7 +14,7 @@
 		public function index()
 		{
 			$this->load->model('employee_models');
-			$data1['employee1'] =$this->employee_models->select_data_employee($_SESSION['employee_id']);
+			$data1['employee1'] =$this->employee_models->select_data_employee(@$_SESSION['employee_id']);
 
 			$this->load->view('header',$data1);
 			
