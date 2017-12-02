@@ -107,7 +107,13 @@
           <input type="hidden" name="salaly_total" class="form-control" value="<?php echo $total_money; ?>">
           <input type="hidden" name="absence_total" class="form-control" value="<?php echo $ab; ?>">
 
+          <?php if( $_SESSION['type']=='manager'){?>
+            <input type="submit" class="btn btn-default " id="insert" value=" จ่ายเงินเดือน " aria-hidden="true" style="float: right;font-size: 15px;" disabled >
 
-           <input type="submit" class="btn btn-default" id="insert" value=" จ่ายเงินเดือน " style="float: right;font-size: 15px;">
+          <?php } else{ ?>
+
+            <input type="submit" class="btn btn-default" id="insert" value=" จ่ายเงินเดือน " style="float: right;font-size: 15px;">
+
+        <?php  }?>
         </form>
         <br><br>
