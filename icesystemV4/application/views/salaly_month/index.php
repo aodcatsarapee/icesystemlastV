@@ -141,11 +141,9 @@
                 
 
                    <td width="20%" style="text-align: center;padding-top: 30px;">
-                   <?php if( $_SESSION['type']=='manager'){?>
-                   <button  type="button" class="btn btn-primary btn-xs inset_salaly" id="<?php echo $employees['employee_id']; ?>"  disabled><spen class='glyphicon glyphicon-plus'> </spen> จ่ายเงินเดือน</button>
-                   <?php }else{ ?>
+              
                     <button  type="button" class="btn btn-primary btn-xs inset_salaly" id="<?php echo $employees['employee_id']; ?>"  ><spen class='glyphicon glyphicon-plus'> </spen> จ่ายเงินเดือน</button>
-                    <?php } ?>
+
                      <a href="<?php echo base_url(); ?>Genpdf/print_saraly?id=<?php echo $employees['employee_id'] ?>" class="btn btn-success btn-xs" target="_blank" style="float: right ;"  ><spen class='glyphicon glyphicon-print'></spen> พิมพ์  </a>
 
  
