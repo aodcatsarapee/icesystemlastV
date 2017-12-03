@@ -42,7 +42,7 @@
 
                 <?php foreach ($order as $order) {
 
-                    if ($order['order_detail_status']!="ดำเนินเรียบเรียบเเล้ว") {
+                    if ($order['order_detail_status']!="ดำเนินการเรียบร้อยเเล้ว") {
                      
                     
 

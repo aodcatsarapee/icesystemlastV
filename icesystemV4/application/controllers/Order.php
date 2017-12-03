@@ -121,7 +121,7 @@
 
 
 			 $order_status =  array(
-                 'order_detail_status'=>'ดำเนินการเรียบเรียบเเล้ว',
+                 'order_detail_status'=>'ดำเนินการเรียบร้อยเเล้ว',
                  'order_detail_date' => date('Y-m-d H:i:s'),
 
 			 	);
@@ -205,7 +205,7 @@
 				$this->db->insert('debtor',$debtor);
 
 				$order_status =  array(
-					'order_detail_status'=>'ดำเนินการเรียบเรียบเเล้ว',
+					'order_detail_status'=>'ดำเนินการเรียบร้อยเเล้ว',
 					'order_detail_date' => date('Y-m-d H:i:s'),
    
 					);
