@@ -4188,7 +4188,7 @@ $tbl = '<table cellspacing="0" cellpadding="8" >
 
      $tbl = $tbl . ' <tr nobr="true">
           <td width="10%" style="border: 1px solid #000000;  text-align:center; ">'.$i.'</td>
-          <td width="22%" style="border: 1px solid #000000;  text-align:center">E'.$emp['employee_id'].'</td>
+          <td width="22%" style="border: 1px solid #000000;  text-align:center">'.$emp['employee_id'].'</td>
           <td width="30%"  style="border: 1px solid #000000;  text-align:center">'.$emp['employee_fname'].' '.$emp['employee_lname'].'</td>
           <td width="38%" style="border: 1px solid #000000;  text-align:center"> </td>
           
@@ -6289,14 +6289,14 @@ $id = $_GET['id'];
 if($id == 'm'){
     $tbl = '<table cellspacing="0" cellpadding="8" >
     <tr>
-           <th style="border: 1px solid #000000;  text-align:center;" colspan="4" > ห้างหุ่นส่วน โรงน้ำเเข็งธวีชัย<br> รายงาน<br> ยอดสั่งสินค้าเดือนนี้้<br>ณ วันที่ '.Datethai(date("d-m-Y")).'</th>
+           <th style="border: 1px solid #000000;  text-align:center;" colspan="4" > ห้างหุ่นส่วน โรงน้ำเเข็งธวีชัย<br> รายงาน<br> ยอดสั่งซื้อสินค้าเดือนนี้้<br>ณ วันที่ '.Datethai(date("d-m-Y")).'</th>
 
     </tr> ';
 }else if($id == 'd'){
 
     $tbl = '<table cellspacing="0" cellpadding="8" >
     <tr>
-           <th style="border: 1px solid #000000;  text-align:center;" colspan="4" > ห้างหุ่นส่วน โรงน้ำเเข็งธวีชัย<br> รายงาน<br> ยอดสั่งสินค้าวันนี้<br>ณ วันที่ '.Datethai(date("d-m-Y")).'</th>
+           <th style="border: 1px solid #000000;  text-align:center;" colspan="4" > ห้างหุ่นส่วน โรงน้ำเเข็งธวีชัย<br> รายงาน<br> ยอดสั่งซื้อสินค้าวันนี้<br>ณ วันที่ '.Datethai(date("d-m-Y")).'</th>
 
     </tr> ';
     
@@ -6304,12 +6304,18 @@ if($id == 'm'){
 
     $tbl = '<table cellspacing="0" cellpadding="8" >
     <tr>
-           <th style="border: 1px solid #000000;  text-align:center;" colspan="4" > ห้างหุ่นส่วน โรงน้ำเเข็งธวีชัย<br> รายงาน<br> ยอดสั่งสินค้าทั้งหมด<br>ณ วันที่ '.Datethai(date("d-m-Y")).'</th>
+           <th style="border: 1px solid #000000;  text-align:center;" colspan="4" > ห้างหุ่นส่วน โรงน้ำเเข็งธวีชัย<br> รายงาน<br> ยอดสั่งซื้อสินค้าทั้งหมด<br>ณ วันที่ '.Datethai(date("d-m-Y")).'</th>
 
     </tr> ';
 
 
 
+}else{
+    $tbl = '<table cellspacing="0" cellpadding="8" >
+    <tr>
+           <th style="border: 1px solid #000000;  text-align:center;" colspan="4" > ห้างหุ่นส่วน โรงน้ำเเข็งธวีชัย<br> รายงาน<br> ยอดสั่งซื้อสินค้าปีนี้<br>ณ วันที่ '.Datethai(date("d-m-Y")).'</th>
+
+    </tr> ';
 }
 
 
@@ -6318,8 +6324,8 @@ if($id == 'm'){
 $tbl = $tbl . ' <tr>
            <th width="25%" style="border: 1px solid #000000;  text-align:center;"><b>รหัสสั่งซื้อ</b></th>
            <th width="25%" style="border: 1px solid #000000;  text-align:center;"><b>ผู้สั่ง</b></th>
-          <th width="25%" style="border: 1px solid #000000;  text-align:center;"><b>ราคารวม</b></th>
-          <th width="25%" style="border: 1px solid #000000;  text-align:center;"><b>สถานะ</b></th>
+          <th width="22%" style="border: 1px solid #000000;  text-align:center;"><b>ราคารวม</b></th>
+          <th width="28%" style="border: 1px solid #000000;  text-align:center;"><b>สถานะ</b></th>
   
     </tr>'; 
 

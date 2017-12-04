@@ -10,7 +10,7 @@
 
 			$this->db->join('department', 'employee.department = department.department_id', 'left');
 			
-			$this->db->order_by('employee_id', 'DESC');
+			$this->db->order_by('employee_id', 'ASC');
 
 			$sql=$this->db->get();
 			

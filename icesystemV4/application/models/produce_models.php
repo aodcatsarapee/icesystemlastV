@@ -149,7 +149,7 @@
    
 		   $this->db->group_by('order.order_detail_id');
    
-		   $this->db->where('order_detail.order_detail_status','ดำเนินเรียบเรียบเเล้ว');
+		   $this->db->where('order_detail.order_detail_status','ดำเนินการเรียบร้อยเเล้ว');
 		   
 		   $this->db->where('DAY(order_detail.order_detail_date)',date('d'));
    
@@ -178,7 +178,7 @@
 	
 			$this->db->group_by('order.order_detail_id');
 	
-			$this->db->where('order_detail.order_detail_status','ดำเนินเรียบเรียบเเล้ว');
+			$this->db->where('order_detail.order_detail_status','ดำเนินการเรียบร้อยเเล้ว');
 					
 			$this->db->where('MONTH(order_detail.order_detail_date)',date('m'));
 	
@@ -205,7 +205,7 @@
 	 
 			 $this->db->group_by('order.order_detail_id');
 	 
-			 $this->db->where('order_detail.order_detail_status','ดำเนินเรียบเรียบเเล้ว');
+			 $this->db->where('order_detail.order_detail_status','ดำเนินการเรียบร้อยเเล้ว');
 					 	 
 			 $this->db->where('YEAR(order_detail.order_detail_date)',date('Y'));
 	 
@@ -231,7 +231,7 @@
 	  
 			  $this->db->group_by('order.order_detail_id');
 	  
-			  $this->db->where('order_detail.order_detail_status','ดำเนินเรียบเรียบเเล้ว');
+			  $this->db->where('order_detail.order_detail_status','ดำเนินการเรียบร้อยเเล้ว');
 		 
 				$sql=$this->db->get();
 	  
