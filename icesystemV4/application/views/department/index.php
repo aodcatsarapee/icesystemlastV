@@ -13,7 +13,7 @@
       <h1>
        <i class="fa fa-user"></i> เเผนก<small></small>
        <button type="button" class="btn btn-success btn-xs insert_amount234" id="insert"  data-toggle="modal" data-target="#modal-insert-department" style="float: right;font-size: 20px;"><spen class="glyphicon glyphicon-plus"> </spen> เพิ่มเเผนก </button>
-        <small>advanced tables</small>
+      
       </h1>
       
     </section>

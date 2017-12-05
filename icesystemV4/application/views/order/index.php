@@ -11,11 +11,9 @@
       <h1>
        <i class="fa fa-shopping-cart "></i> สินค้าที่ลูกค้าสั้งซื้อ<small></small>
         
-      
       </h1>
       
     </section>
-
     <!-- Main content -->
     <section class="content">
       <div class="row">
@@ -43,9 +41,7 @@
                 <?php foreach ($order as $order) {
 
                     if ($order['order_detail_status']!="ดำเนินการเรียบร้อยเเล้ว") {
-                     
-                    
-
+                                       
                  ?>
                     <tr>
                 	<td style="text-align: center;"><?php echo $order['order_detail_id'] ?></td>
@@ -70,13 +66,13 @@
                        <?php if($order['order_detail_status']=="กำลังดำเนินการ"){ ?>
                 			
                 		<button type="button" class="btn btn-xs btn-primary view_order" id="<?php echo $order['order_detail_id'] ?>"><spen class='glyphicon glyphicon-play-circle'> </spen> เรียกดู</button>
-                		<button type="button" class="btn btn-xs btn-success" disabled> <spen class='glyphicon glyphicon-plus'> </spen> ลูกค้ารับสินค้า</button>
+                		<button type="button" class="btn btn-xs btn-success" disabled> <spen class='glyphicon glyphicon-plus'> </spen> ขายเป็นเงินสด</button>
                     <button type="button" class="btn btn-xs btn-warning " disabled> <spen class='glyphicon glyphicon-plus'> </spen>ขายเป็นเงินเชื่อ</button>
 					
 					<?php }else if($order['order_detail_status']=="รับออเดอร์เรียบร้อยเเล้ว"){ ?>
 
 					    <button type="button" class="btn btn-xs btn-primary view_order" id="<?php echo $order['order_detail_id'] ?>"> <spen class='glyphicon glyphicon-play-circle'> </spen> เรียกดู</button>
-                		<button type="button" class="btn btn-xs btn-success" disabled> <spen class='glyphicon glyphicon-plus'> </spen> ลูกค้ารับสินค้า</button>
+                		<button type="button" class="btn btn-xs btn-success" disabled> <spen class='glyphicon glyphicon-plus'> </spen> ขายเป็นเงินสด</button>
 
                     <button type="button" class="btn btn-xs btn-warning " disabled> <spen class='glyphicon glyphicon-plus'> </spen> ขายเป็นเงินเชื่อ</button>
 
@@ -122,11 +118,6 @@
     <!-- /.content -->
   </div>
   <!-- /.content-wrapper -->
-
-
-
-
-
 
    <?php }else{
 

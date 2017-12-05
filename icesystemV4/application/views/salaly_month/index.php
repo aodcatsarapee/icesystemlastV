@@ -129,7 +129,7 @@
                   <?php  foreach ($employee as $employees) { ?>
                      <tr>
                   <td style="text-align: center; "><img src="img/<?php echo $employees['employee_image'];  ?>" width="80" height="80" ></td>
-                  <td style="text-align: center; padding-top: 30px;"><?php echo "E".$employees['employee_id'] ; ?></td>
+                  <td style="text-align: center; padding-top: 30px;"><?php echo "".$employees['employee_id'] ; ?></td>
  
 
                   <td style="padding-top: 30px;"><?php echo $employees['employee_fname']." ".$employees['employee_lname'] ; ?></td>
@@ -180,7 +180,7 @@
                   <?php  foreach ($employee2 as $employees2) { ?>
                      <tr>
                   <td style="text-align: center; "><img src="img/<?php echo $employees2['employee_image'];  ?>" width="80" height="80" ></td>
-                  <td style="text-align: center; padding-top: 30px;"><?php echo "E".$employees2['employee_id'] ; ?></td>
+                  <td style="text-align: center; padding-top: 30px;"><?php echo "".$employees2['employee_id'] ; ?></td>
  
 
                   <td style=" padding-top: 30px;"><?php echo $employees2['employee_fname']." ".$employees2['employee_lname'] ; ?></td>
@@ -189,22 +189,13 @@
 
                      $this->load->helper('Datethai');
 
-                      $date_add = $employees2['date_add'];
-                     
-
+                      $date_add = $employees2['date_add'];                     
 ?>
-                  
                   <td style="text-align: center;padding-top: 30px;"><?php echo $employees2['name'] ; ?></td>
                    <td style="text-align: center;padding-top: 30px;"><?php echo Datethai($date_add) ; ?></td>
 
-                
-
                    <td width="20%" style="text-align: center;padding-top: 30px;">
                     <?php echo $employees2['salaly_month'] ; ?> </td>
-
-           
-
-                    
 
                     </tr>
 

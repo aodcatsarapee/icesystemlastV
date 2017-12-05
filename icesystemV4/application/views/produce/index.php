@@ -16,7 +16,6 @@
 
       <button type="button" class="btn btn-success btn-xs " id="insert"  data-toggle="modal" data-target="#modal-insert-produce" style="float: right;font-size: 20px;"><spen class="glyphicon glyphicon-plus"> </spen> สั่งผลิตสินค้า </button>
         
-        <small>advanced tables</small>
       </h1>
       
     </section>

@@ -245,7 +245,7 @@ $tbl = '<table cellspacing="0" cellpadding="8" >
            
         # code...
      $tbl = $tbl . ' <tr>
-          <td style="border: 1px solid #000000;  text-align:center; ">P'.$s['product_id'].'</td>
+          <td style="border: 1px solid #000000;  text-align:center; ">'.$s['product_id'].'</td>
           <td style="border: 1px solid #000000;  text-align:center; ">'.$s['stock_product_name'].'</td>
           <td style="border: 1px solid #000000;  text-align:center; ">'.$s['amount']." ".$s['stock_product_type'].'</td>
 
@@ -504,7 +504,7 @@ $this->load->model('produce_product_models');
  $tbl .= '
 
        <tr>
-          <td style="border: 1px solid #000000;  text-align:center; ">P'.$s['product_id'].'</td>
+          <td style="border: 1px solid #000000;  text-align:center; ">'.$s['product_id'].'</td>
           <td style="border: 1px solid #000000;  text-align:center; ">'.$s['stock_product_name'].'</td>
           <td style="border: 1px solid #000000;  text-align:center; ">'.$s['amount'].'</td>
       </tr>';
@@ -635,7 +635,7 @@ $tbl = '<table cellspacing="0" cellpadding="8" >
 
 
      $tbl = $tbl . ' <tr>
-          <td style="border: 1px solid #000000;  text-align:center; ">P'.$s['product_id'].'</td>
+          <td style="border: 1px solid #000000;  text-align:center; ">'.$s['product_id'].'</td>
           <td style="border: 1px solid #000000;  text-align:center; ">'.$s['stock_product_name'].'</td>
           <td style="border: 1px solid #000000;  text-align:center; ">'.$s['amount'].'</td>
       </tr>'; 
@@ -762,7 +762,7 @@ $tbl = '<table cellspacing="0" cellpadding="8" >
 
 
      $tbl = $tbl . ' <tr>
-          <td style="border: 1px solid #000000;  text-align:center; ">P'.$s['product_id'].'</td>
+          <td style="border: 1px solid #000000;  text-align:center; ">'.$s['product_id'].'</td>
           <td style="border: 1px solid #000000;  text-align:center; ">'.$s['stock_product_name'].'</td>
           <td style="border: 1px solid #000000;  text-align:center; ">'.$s['amount'].'</td>
       </tr>'; 
@@ -890,7 +890,7 @@ $tbl = '<table cellspacing="0" cellpadding="8" >
 
 
      $tbl = $tbl . ' <tr>
-          <td style="border: 1px solid #000000;  text-align:center; ">P'.$s['product_id'].'</td>
+          <td style="border: 1px solid #000000;  text-align:center; ">'.$s['product_id'].'</td>
           <td style="border: 1px solid #000000;  text-align:center; ">'.$s['stock_product_name'].'</td>
           <td style="border: 1px solid #000000;  text-align:center; ">'.$s['amount'].'</td>
       </tr>'; 
@@ -1365,7 +1365,7 @@ $tbl = '<table cellspacing="0" cellpadding="8" >
 
 
      $tbl = $tbl . ' <tr nobr="true">
-          <td style="border: 1px solid #000000;  text-align:center; ">S'.$order['sell_detail_id'].'</td>
+          <td style="border: 1px solid #000000;  text-align:center; ">'.$order['sell_detail_id'].'</td>
           <td style="border: 1px solid #000000;  text-align:center">'.$order['sell_detail_total'].' บาท</td>
           <td style="border: 1px solid #000000;  text-align:center">'.$order['sell_detail_status'].' </td>
           <td style="border: 1px solid #000000;  text-align:center">'.Datethai($date_format).' </td>
@@ -1528,7 +1528,7 @@ $tbl = '<table cellspacing="0" cellpadding="8" >
 
 
      $tbl = $tbl . ' <tr nobr="true">
-          <td style="border: 1px solid #000000;  text-align:center; ">S'.$order['sell_detail_id'].'</td>
+          <td style="border: 1px solid #000000;  text-align:center; ">'.$order['sell_detail_id'].'</td>
           <td style="border: 1px solid #000000;  text-align:center">'.$order['sell_detail_total'].' บาท</td>
           <td style="border: 1px solid #000000;  text-align:center">'.$order['sell_detail_status'].' </td>
           <td style="border: 1px solid #000000;  text-align:center">'.Datethai($date_format).' </td>
@@ -1707,7 +1707,7 @@ $tbl = '<table cellspacing="0" cellpadding="8" >
            
         # code...
      $tbl = $tbl . ' <tr nobr="true">
-          <td style="border: 1px solid #000000;  text-align:center; ">S'.$order['sell_detail_id'].'</td>
+          <td style="border: 1px solid #000000;  text-align:center; ">'.$order['sell_detail_id'].'</td>
           <td style="border: 1px solid #000000;  text-align:center">'.$order['sell_detail_total'].' บาท</td>
           <td style="border: 1px solid #000000;  text-align:center">'.$order['sell_detail_status'].' </td>
           <td style="border: 1px solid #000000;  text-align:center">'.Datethai($date_format).' </td>
@@ -2050,7 +2050,7 @@ $html ='
 
             <div style="text-align:center; font-size:30px;"><b>ใบเเจ้งชำระหนี้</b></div>
 
-     ห้างหุ่นส่วนจำกัด โรงน้ำเเข็งธวีชัย &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; เลขที่ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp; '.$orders['sell_detail_id'].'<br>
+     ห้างหุ่นส่วนจำกัด โรงน้ำเเข็งธวีชัย &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; เลขที่ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; '.$orders['sell_detail_id'].'<br>
       ที่อยู่  295/1 ถนนแก้วนวรัฐ ตำบลวัดเกต &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;วันที่&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'.Datethai($date_format).' 
       <br>  อำเภอเมืองเชียงใหม่ จังหวัด เชียงใหม่ 50000  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ลูกหนี้ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'.$name.'<br>
 
@@ -2080,7 +2080,7 @@ $html ='
           <tr>
           
                                   <td style="text-align: center; border-left: 1px solid black;">'.$sell_detail['product_id'].'</td>
-                                  <td style="text-align: center;">'.$sell_detail['product_name'].'.</td>
+                                  <td style="text-align: center;">'.$sell_detail['product_name'].'</td>
                                   <td style="text-align: center;">'.$sell_detail['sell_product_quantity'].' </td>
                                   <td style="text-align: center;">'.$sell_detail['sell_product_price'].'.00</td>
                                   <td style="text-align: center;border-right: 1px solid black;">'.$sell_detail['sell_product_quantity']*$sell_detail['sell_product_price'].'.00</td>
@@ -2233,7 +2233,7 @@ $html ='
 
             <div style="text-align:center; font-size:30px;"><b>ใบเสร็จรับเงิน</b></div>
 
-      ห้างหุ่นส่วนจำกัด โรงน้ำเเข็งธวีชัย &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; เลขที &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp; S'.$orders['sell_detail_id'].'<br>
+      ห้างหุ่นส่วนจำกัด โรงน้ำเเข็งธวีชัย &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; เลขที &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'.$orders['sell_detail_id'].'<br>
       ที่อยู่  295/1 ถนนแก้วนวรัฐ ตำบลวัดเกต &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;วันที่&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'.Datethai($date_format).' 
       <br>  อำเภอเมืองเชียงใหม่ จังหวัด เชียงใหม่ 50000  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ลูกค้า &nbsp;&nbsp;&nbsp;&nbsp; '. $fname.' '. $lname.'<br>
 
@@ -2262,8 +2262,8 @@ $html ='
 
                    <tr>
 
-                        <td style="text-align: center; border-left: 1px solid black;">P'.$sell_detail['product_id'].'</td>
-                        <td style="text-align: center;">'.$sell_detail['product_name'].'.</td>
+                        <td style="text-align: center; border-left: 1px solid black;">'.$sell_detail['product_id'].'</td>
+                        <td style="text-align: center;">'.$sell_detail['product_name'].'</td>
                         <td style="text-align: center;">'.$sell_detail['sell_product_quantity'].' </td>
                         <td style="text-align: center;">'.$sell_detail['sell_product_price'].'.00</td>
                         <td style="text-align: center;border-right: 1px solid black;">'.$sell_detail['sell_product_quantity']*$sell_detail['sell_product_price'].'.00</td>
@@ -2837,7 +2837,7 @@ $html ='
 
             <div style="text-align:center; font-size:30px;"><b>ใบเสร็จรับเงิน</b></div>
 
-     ห้างหุ่นส่วนจำกัด โรงน้ำเเข็งธวีชัย &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; เลขที่ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp; S'.$orders['sell_detail_id'].'<br>
+     ห้างหุ่นส่วนจำกัด โรงน้ำเเข็งธวีชัย &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; เลขที่ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; '.$orders['sell_detail_id'].'<br>
       ที่อยู่  295/1 ถนนแก้วนวรัฐ ตำบลวัดเกต &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;วันที่&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'.Datethai($date_format).' 
       <br>  อำเภอเมืองเชียงใหม่ จังหวัด เชียงใหม่ 50000  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ลูกค้า &nbsp;&nbsp;&nbsp;&nbsp; '. $fname.' '. $lname.'<br>
 
@@ -3036,7 +3036,7 @@ $tbl = '<table cellspacing="0" cellpadding="8" >
 
 
      $tbl = $tbl . ' <tr nobr="true">
-          <td width="20%" style="border: 1px solid #000000;  text-align:center; ">S'.$debtor['debtor_id'].'</td>
+          <td width="20%" style="border: 1px solid #000000;  text-align:center; ">'.$debtor['debtor_id'].'</td>
           <td width="20%" style="border: 1px solid #000000;  text-align:center">'.$debtor['customer_fname'].' '.$debtor['customer_lname'].'</td>
           <td width="20%" style="border: 1px solid #000000;  text-align:center">'.$debtor['price_total'].' บาท</td>
           <td width="20%"  style="border: 1px solid #000000;  text-align:center">'.$debtor['debtor_status'].' </td>
@@ -3201,7 +3201,7 @@ $tbl = '<table cellspacing="0" cellpadding="8" >
       $date_format = date_format($date,"H:i:s");
 
      $tbl = $tbl . ' <tr nobr="true">
-          <td width="20%" style="border: 1px solid #000000;  text-align:center; ">S'.$debtor['debtor_id'].'</td>
+          <td width="20%" style="border: 1px solid #000000;  text-align:center; ">'.$debtor['debtor_id'].'</td>
           <td width="20%"  style="border: 1px solid #000000;  text-align:center">'.$debtor['customer_fname'].' '.$debtor['customer_lname'].'</td>
           <td width="20%" style="border: 1px solid #000000;  text-align:center">'.$debtor['price_total'].' บาท</td>
           <td  width="20%" style="border: 1px solid #000000;  text-align:center">'.$debtor['debtor_status'].' </td>
@@ -3367,7 +3367,7 @@ $tbl = '<table cellspacing="0" cellpadding="8" >
      $date_format = date_format($date,"d-m-Y");
 
    $tbl = $tbl . ' <tr nobr="true">
-          <td width="20%" style="border: 1px solid #000000;  text-align:center; ">S'.$debtor['debtor_id'].'</td>
+          <td width="20%" style="border: 1px solid #000000;  text-align:center; ">'.$debtor['debtor_id'].'</td>
           <td width="20%"  style="border: 1px solid #000000;  text-align:center">'.$debtor['customer_fname'].' '.$debtor['customer_lname'].'</td>
           <td width="20%" style="border: 1px solid #000000;  text-align:center">'.$debtor['price_total'].' บาท</td>
           <td  width="20%" style="border: 1px solid #000000;  text-align:center">'.$debtor['debtor_status'].' </td>
@@ -3533,7 +3533,7 @@ $tbl = '<table cellspacing="0" cellpadding="8" >
      $date_format = date_format($date,"d-m-Y");
 
     $tbl = $tbl . ' <tr nobr="true">
-          <td width="20%" style="border: 1px solid #000000;  text-align:center; ">S'.$debtor['debtor_id'].'</td>
+          <td width="20%" style="border: 1px solid #000000;  text-align:center; ">'.$debtor['debtor_id'].'</td>
           <td width="20%"  style="border: 1px solid #000000;  text-align:center">'.$debtor['customer_fname'].' '.$debtor['customer_lname'].'</td>
           <td width="20%" style="border: 1px solid #000000;  text-align:center">'.$debtor['price_total'].' บาท</td>
           <td  width="20%" style="border: 1px solid #000000;  text-align:center">'.$debtor['debtor_status'].' </td>
@@ -3700,7 +3700,7 @@ $tbl = '<table cellspacing="0" cellpadding="8" >
      $date_format = date_format($date,"d-m-Y");
 
    $tbl = $tbl . ' <tr nobr="true">
-          <td width="20%" style="border: 1px solid #000000;  text-align:center; ">S'.$debtor['debtor_id'].'</td>
+          <td width="20%" style="border: 1px solid #000000;  text-align:center; ">'.$debtor['debtor_id'].'</td>
           <td width="20%"  style="border: 1px solid #000000;  text-align:center">'.$debtor['customer_fname'].' '.$debtor['customer_lname'].'</td>
           <td width="20%" style="border: 1px solid #000000;  text-align:center">'.$debtor['price_total'].' บาท</td>
           <td  width="20%" style="border: 1px solid #000000;  text-align:center">'.$debtor['debtor_status'].' </td>
@@ -3883,7 +3883,7 @@ $tbl = '<table cellspacing="0" cellpadding="8" >
      $date_format = date_format($date,"d-m-Y");
 
     $tbl = $tbl . ' <tr nobr="true">
-          <td width="20%" style="border: 1px solid #000000;  text-align:center; ">S'.$debtor['debtor_id'].'</td>
+          <td width="20%" style="border: 1px solid #000000;  text-align:center; ">'.$debtor['debtor_id'].'</td>
           <td width="20%"  style="border: 1px solid #000000;  text-align:center">'.$debtor['customer_fname'].' '.$debtor['customer_lname'].'</td>
           <td width="20%" style="border: 1px solid #000000;  text-align:center">'.$debtor['price_total'].' บาท</td>
           <td  width="20%" style="border: 1px solid #000000;  text-align:center">'.$debtor['debtor_status'].' </td>
@@ -4859,7 +4859,7 @@ $tbl = '<table cellspacing="0" cellpadding="8" >
 
     $tbl .='
     <tr nobr="true">
-    <td style="border: 1px solid #000000;  text-align:center">A'.$value['account_id'].' </td>
+    <td style="border: 1px solid #000000;  text-align:center">'.$value['account_id'].' </td>
     <td style="border: 1px solid #000000;  text-align:center">'.$value['account_detail'].' </td>
     ';
 
@@ -5054,7 +5054,7 @@ $tbl = '<table cellspacing="0" cellpadding="8" >
 
     $tbl .='
     <tr nobr="true">
-    <td style="border: 1px solid #000000;  text-align:center">A'.$value['account_id'].' </td>
+    <td style="border: 1px solid #000000;  text-align:center">'.$value['account_id'].' </td>
     <td style="border: 1px solid #000000;  text-align:center">'.$value['account_detail'].' </td>
     ';
 
@@ -5248,7 +5248,7 @@ $tbl = '<table cellspacing="0" cellpadding="8" >
 
     $tbl .='
     <tr  nobr="true">
-    <td style="border: 1px solid #000000;  text-align:center">A'.$value['account_id'].' </td>
+    <td style="border: 1px solid #000000;  text-align:center">'.$value['account_id'].' </td>
     <td style="border: 1px solid #000000;  text-align:center">'.$value['account_detail'].' </td>
     ';
 
@@ -5451,7 +5451,7 @@ $tbl = '<table cellspacing="0" cellpadding="8" >
     $tbl .='
     <tbody>
     <tr nobr="true">
-    <td width="20%"  style="border: 1px solid #000000;  text-align:center">A'.$value['account_id'].' </td>
+    <td width="20%"  style="border: 1px solid #000000;  text-align:center">'.$value['account_id'].' </td>
     <td width="20%" style="border: 1px solid #000000;  text-align:center">'.$value['account_detail'].' </td>
     ';
 
@@ -5849,7 +5849,7 @@ $tbl = '<table cellspacing="0" cellpadding="8" >
  $tbl .='
     <tbody>
     <tr nobr="true">
-    <td width="20%"  style="border: 1px solid #000000;  text-align:center">A'.$value['account_id'].' </td>
+    <td width="20%"  style="border: 1px solid #000000;  text-align:center">'.$value['account_id'].' </td>
     <td width="20%" style="border: 1px solid #000000;  text-align:center">'.$value['account_detail'].' </td>
     ';
 
@@ -6011,15 +6011,19 @@ $pdf->Output('amount_detail.pdf', 'I');
       // กำหนดเงาของข้อความ 
       $pdf->setTextShadow(array('enabled'=>true, 'depth_w'=>0.2, 'depth_h'=>0.2, 'color'=>array(196,196,196), 'opacity'=>1, 'blend_mode'=>'Normal'));
 
+      $this->load->model('Produce_models');
+      
+        $id = $_GET['id'];
+        $stock=$this->Produce_models->select_data_stock_detail($id);
+
 // กำหนดเนื้อหาข้อมูลที่จะสร้าง pdf ในที่นี้เราจะกำหนดเป็นแบบ html โปรดระวัง EOD; โค้ดสุดท้ายต้องชิดซ้ายไม่เว้นวรรค
 $this->load->helper('Datethai');
 $tbl = '<table cellspacing="0" cellpadding="8" >
                  <tr>
-                        <th style="border: 1px solid #000000;  text-align:center;" colspan="4" > ห้างหุ่นส่วน โรงน้ำเเข็งธวีชัย<br> รายงาน<br> ข้อมูลการผลิตสินค้า<br>ณ วันที่ '.Datethai(date("d-m-Y")).'</th>
+                        <th style="border: 1px solid #000000;  text-align:center;" colspan="4" > ห้างหุ่นส่วน โรงน้ำเเข็งธวีชัย<br> รายงาน<br> ข้อมูลการผลิตสินค้า<br>ณ วันที่ '.Datethai(date("d-m-Y")).'
+                         <p style="text-align:left">รหัสการผลิต '.$id.'</p></th>
 
                  </tr> ';
-
-
 
 // -----------------------------------------------------------------------------
 $tbl = $tbl . ' <tr>
@@ -6028,16 +6032,11 @@ $tbl = $tbl . ' <tr>
           <th width="20%" style="border: 1px solid #000000;  text-align:center;"><b>จำนวน</b></th>
     </tr>'; 
 
-  $this->load->model('Produce_models');
-
-  $id = $_GET['id'];
-  $stock=$this->Produce_models->select_data_stock_detail($id);
-
   foreach ($stock as $s) {
 
 
    $tbl = $tbl . ' <tr>
-        <td style="border: 1px solid #000000;  text-align:center; ">P'.$s['product_id'].'</td>
+        <td style="border: 1px solid #000000;  text-align:center; ">'.$s['product_id'].'</td>
         <td style="border: 1px solid #000000;  text-align:center; ">'.$s['stock_product_name'].'</td>
         <td style="border: 1px solid #000000;  text-align:center; ">'.$s['stock_amount']." ".$s['stock_product_type'].'</td>
     </tr>'; 
@@ -6049,13 +6048,6 @@ $tbl = $tbl . '</table>';
 
 
 $pdf->writeHTML($tbl, true, false, false, false, '');
-
-
-
-
-
-
-
 
 
   // สร้างข้อเนื้อหา pdf ด้วยคำสั่ง writeHTMLCell()
@@ -6143,13 +6135,30 @@ $pdf->Output('stock.pdf', 'I');
       // กำหนดเงาของข้อความ 
       $pdf->setTextShadow(array('enabled'=>true, 'depth_w'=>0.2, 'depth_h'=>0.2, 'color'=>array(196,196,196), 'opacity'=>1, 'blend_mode'=>'Normal'));
 
+
+      $id = $_GET['id'];
+      
+      
+                $result_explode= explode('-',$id);
+        
+                $order_id= $result_explode[0]; 
+        
+                $fname= $result_explode[1];
+
+                $lname= $result_explode[1];
+
+
 // กำหนดเนื้อหาข้อมูลที่จะสร้าง pdf ในที่นี้เราจะกำหนดเป็นแบบ html โปรดระวัง EOD; โค้ดสุดท้ายต้องชิดซ้ายไม่เว้นวรรค
 $this->load->helper('Datethai');
 $tbl = '<table cellspacing="0" cellpadding="8" >
                  <tr>
-                        <th style="border: 1px solid #000000;  text-align:center;" colspan="4" > ห้างหุ่นส่วน โรงน้ำเเข็งธวีชัย<br> รายงาน<br> ใบสั่งสินค้า<br>ณ วันที่ '.Datethai(date("d-m-Y")).'</th>
-
-                 </tr> ';
+                        <th style="border: 1px solid #000000;  text-align:center;" colspan="4" > ห้างหุ่นส่วน โรงน้ำเเข็งธวีชัย<br> รายงาน<br> ใบสั่งซื้อสินค้า<br>ณ วันที่ '.Datethai(date("d-m-Y")).'
+                        <p style="text-align:left">รหัสใบสั่งซื้อสินค้า '.$order_id.' &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ลูกค้า '.$fname." ".$lname.'</p>
+                        </th>
+                        
+                 </tr> 
+                 ';
 
 
 
@@ -6164,14 +6173,14 @@ $tbl = $tbl . ' <tr>
 
   $this->load->model('Produce_models');
 
-  $id = $_GET['id'];
-  $order=$this->Produce_models->show_order_detail($id);
+ 
+  $order=$this->Produce_models->show_order_detail($order_id);
 
   foreach ($order as $s) {
 
 
    $tbl = $tbl . ' <tr>
-        <td style="border: 1px solid #000000;  text-align:center; ">P'.$s['product_id'].'</td>
+        <td style="border: 1px solid #000000;  text-align:center; ">'.$s['product_id'].'</td>
         <td style="border: 1px solid #000000;  text-align:center; ">'.$s['order_product_name'].'</td>
         <td style="border: 1px solid #000000;  text-align:center; ">'.$s['order_product_price'].' บาท</td>
      <td style="border: 1px solid #000000;  text-align:center; ">'.$s['order_product_quantity'].'</td>

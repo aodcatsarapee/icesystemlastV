@@ -8,7 +8,6 @@
       <h1>
       <i class="fa fa-product-hunt fa-1x "> </i> สินค้าคงเหลือ<small></small>
         
-        <small>advanced tables</small>
       </h1>
       
     </section>

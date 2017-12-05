@@ -148,7 +148,7 @@
 			</tr>
 		</tbody>
 	</table>
-	<a href="Genpdf/order_detail_id?id=<?php echo $value['order_detail_id'] ?>" class="btn btn-success btn-xs" target="_blank" style="float: right ;font-size:20px;" ><spen class='glyphicon glyphicon-print'  ></spen> พิมพ์ </a>
+	<a href="Genpdf/order_detail_id?id=<?php echo $value['order_detail_id']."-".$value['customer_fname']."-".$value['customer_lname'] ?>" class="btn btn-success btn-xs" target="_blank" style="float: right ;font-size:20px;" ><spen class='glyphicon glyphicon-print'  ></spen> พิมพ์ </a>
 <br>
 <br>
 

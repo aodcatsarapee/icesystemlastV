@@ -142,7 +142,7 @@
                     <?php
                         foreach ($accunt as $value){ ?>
                             <tr>
-                                <td style="text-align: center;">A<?php echo $value['account_id']; ?></td>
+                                <td style="text-align: center;"><?php echo $value['account_id']; ?></td>
                                 <td><?php echo $value['account_detail']; ?></td>
                                
 

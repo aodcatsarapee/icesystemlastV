@@ -1,5 +1,5 @@
 <?php if(!empty($_SESSION['type'])){ ?>
-<?php if($_SESSION['type']=='admin' || $_SESSION['type']=='emp_account'){ ?>
+<?php if($_SESSION['type']=='admin' || $_SESSION['type']=='emp_account' || $_SESSION['type']=='manager'){ ?>
 
 
 <?php require("modal/modal-select-date.php") ?>
@@ -92,9 +92,11 @@
                           
                            </td>
                            <td style="text-align: center;padding-top: 30px;">
-                             
+                             <?php if($_SESSION['type']!='manager'){?>
                               <button type ="button" class="btn btn-xs btn-primary insert_rest "  id="<?php echo $value['employee_id'] ?>" style='width: px;'><spen class='glyphicon glyphicon-plus'> </spen> ลางาน</button>
-             
+                             <?php }else{?>
+                              <button type ="button" class="btn btn-xs btn-primary "  style='width: px;' disabled><spen class='glyphicon glyphicon-plus'> </spen> ลางาน</button>
+                             <?php } ?>
                            </td>
 
                         </tr>

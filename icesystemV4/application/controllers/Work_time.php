@@ -239,16 +239,13 @@ $tbl = '<table cellspacing="0" cellpadding="8" >
   // -----------------------------------------------------------------------------
   $tbl = $tbl . ' <tr>
   
-
           <th width="30%" style="border: 1px solid #000000;  text-align:center;"><b>รหัสพนักงาน</b></th>
           <th width="50%" style="border: 1px solid #000000;  text-align:center;"><b>ชื่อ</b></th>
-          <th width="20%" style="border: 1px solid #000000;  text-align:center;"><b>วันที่</b></th>
+          <th width="20%" style="border: 1px solid #000000;  text-align:center;"><b>ว/ด/ป</b></th>
 
       </tr>'; 
 
-        
-
-          $this->load->model('Work_time_models');
+        $this->load->model('Work_time_models');
 
         $stock=$this->Work_time_models->work_in_detail($id,$date_start,$date_end);
 
@@ -260,7 +257,7 @@ $tbl = '<table cellspacing="0" cellpadding="8" >
            
         # code...
      $tbl = $tbl . ' <tr>
-          <td style="border: 1px solid #000000;  text-align:center; ">P'.$s['employee_id'].'</td>
+          <td style="border: 1px solid #000000;  text-align:center; ">'.$s['employee_id'].'</td>
           <td style="border: 1px solid #000000;  text-align:center; ">'.$s['employee_fname']." ".$s['employee_lname'].'</td>
           <td style="border: 1px solid #000000;  text-align:center; ">'.Datethai($s['date']).'</td>
 

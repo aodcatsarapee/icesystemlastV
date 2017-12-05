@@ -9,7 +9,7 @@
       <h1>
       <i class="fa fa-product-hunt fa-1x "> </i> ผลิตสินค้า<small></small>
         
-        <small>advanced tables</small>
+  
       </h1>
       
     </section>

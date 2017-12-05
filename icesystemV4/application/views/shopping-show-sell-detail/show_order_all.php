@@ -136,7 +136,7 @@
                             <?php foreach ($orders as  $order) { ?>
 
                             <tr>
-                              <td style=" text-align: center;">S<?php echo $order['sell_detail_id']; ?></td> 
+                              <td style=" text-align: center;"><?php echo $order['sell_detail_id']; ?></td> 
                                 <td style=" text-align: center;"><?php echo $order['sell_detail_total']; ?> บาท </td>
                                 <td style=" text-align: center;" >
 
