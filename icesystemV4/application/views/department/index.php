@@ -42,7 +42,7 @@
               <tbody>
               <?php foreach ($department as $d) {    ?>
               <tr>
-                    <td style="text-align: center;">D<?php echo $d['department_id']; ?></td>  
+                    <td style="text-align: center;"><?php echo $d['department_id']; ?></td>  
                     <td style="text-align: center;"> <?php echo $d['name']; ?></td>
                     <td style="text-align: center;">
                          <button type ="button" class="btn btn-xs btn-warning edit_data_department "   id="<?php echo $d['department_id'] ?>" style='width: px;'><spen class='glyphicon glyphicon-cog'> </spen> เเก้ไข</button>

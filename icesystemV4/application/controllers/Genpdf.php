@@ -1857,7 +1857,7 @@ $html ='
 
             <div style="text-align:center; font-size:30px;"><b>ใบเสร็จรับเงิน</b></div>
 
-      ห้างหุ่นส่วนจำกัด โรงน้ำเเข็งธวีชัย &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; เลขที่ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp; '.$orders['sell_detail_id'].'<br>
+      ห้างหุ่นส่วนจำกัด โรงน้ำเเข็งธวีชัย &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; เลขที่ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; '.$orders['sell_detail_id'].'<br>
       ที่อยู่  295/1 ถนนแก้วนวรัฐ ตำบลวัดเกต &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;วันที่&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'.Datethai($date_format).' 
       <br>  อำเภอเมืองเชียงใหม่ จังหวัด เชียงใหม่ 50000  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ลูกค้า &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; -<br>
 
@@ -1886,8 +1886,8 @@ $html ='
 
                    <tr>
 
-                        <td style="text-align: center; border-left: 1px solid black;">P'.$sell_detail['product_id'].'</td>
-                        <td style="text-align: center;">'.$sell_detail['product_name'].'.</td>
+                        <td style="text-align: center; border-left: 1px solid black;">'.$sell_detail['product_id'].'</td>
+                        <td style="text-align: center;">'.$sell_detail['product_name'].'</td>
                         <td style="text-align: center;">'.$sell_detail['sell_product_quantity'].' </td>
                         <td style="text-align: center;">'.$sell_detail['sell_product_price'].'.00</td>
                         <td style="text-align: center;border-right: 1px solid black;">'.$sell_detail['sell_product_quantity']*$sell_detail['sell_product_price'].'.00</td>
@@ -2082,7 +2082,7 @@ $html ='
                                   <td style="text-align: center; border-left: 1px solid black;">'.$sell_detail['product_id'].'</td>
                                   <td style="text-align: center;">'.$sell_detail['product_name'].'</td>
                                   <td style="text-align: center;">'.$sell_detail['sell_product_quantity'].' </td>
-                                  <td style="text-align: center;">'.$sell_detail['sell_product_price'].'.00</td>
+                                  <td style="text-align: center;">'.$sell_detail['sell_product_price'].'</td>
                                   <td style="text-align: center;border-right: 1px solid black;">'.$sell_detail['sell_product_quantity']*$sell_detail['sell_product_price'].'.00</td>
                              </tr>
     ';
@@ -2265,7 +2265,7 @@ $html ='
                         <td style="text-align: center; border-left: 1px solid black;">'.$sell_detail['product_id'].'</td>
                         <td style="text-align: center;">'.$sell_detail['product_name'].'</td>
                         <td style="text-align: center;">'.$sell_detail['sell_product_quantity'].' </td>
-                        <td style="text-align: center;">'.$sell_detail['sell_product_price'].'.00</td>
+                        <td style="text-align: center;">'.$sell_detail['sell_product_price'].'</td>
                         <td style="text-align: center;border-right: 1px solid black;">'.$sell_detail['sell_product_quantity']*$sell_detail['sell_product_price'].'.00</td>
                    </tr>
     ';
@@ -2419,7 +2419,7 @@ $html ='
 
             <div style="text-align:center; font-size:30px;"><b>ใบเสร็จรับเงิน</b></div>
 
-     ห้างหุ่นส่วนจำกัด โรงน้ำเเข็งธวีชัย &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; เลขที่ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp; '.$orders['sell_detail_id'].'<br>
+     ห้างหุ่นส่วนจำกัด โรงน้ำเเข็งธวีชัย &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; เลขที่ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; '.$orders['sell_detail_id'].'<br>
       ที่อยู่  295/1 ถนนแก้วนวรัฐ ตำบลวัดเกต &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;วันที่&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'.Datethai($date_format).' 
       <br>  อำเภอเมืองเชียงใหม่ จังหวัด เชียงใหม่ 50000  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ลูกค้า &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; -<br>
 
@@ -2449,9 +2449,9 @@ $html ='
                   <tr>
           
                                   <td style="text-align: center; border-left: 1px solid black;">'.$sell_detail['product_id'].'</td>
-                                  <td style="text-align: center;">'.$sell_detail['product_name'].'.</td>
+                                  <td style="text-align: center;">'.$sell_detail['product_name'].'</td>
                                   <td style="text-align: center;">'.$sell_detail['sell_product_quantity'].' </td>
-                                  <td style="text-align: center;">'.$sell_detail['sell_product_price'].'.00</td>
+                                  <td style="text-align: center;">'.$sell_detail['sell_product_price'].'</td>
                                   <td style="text-align: center;border-right: 1px solid black;">'.$sell_detail['sell_product_quantity']*$sell_detail['sell_product_price'].'.00</td>
                              </tr>
     ';
@@ -2615,7 +2615,7 @@ $html ='
 
             <div style="text-align:center; font-size:30px;"><b>ใบเเจ้งชำระหนี้</b></div>
 
-     ห้างหุ่นส่วนจำกัด โรงน้ำเเข็งธวีชัย &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; เลขที่ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp; S'.$orders['sell_detail_id'].'<br>
+     ห้างหุ่นส่วนจำกัด โรงน้ำเเข็งธวีชัย &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; เลขที่ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'.$orders['sell_detail_id'].'<br>
       ที่อยู่  295/1 ถนนแก้วนวรัฐ ตำบลวัดเกต &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;วันที่&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'.Datethai($date_format).' 
       <br>  อำเภอเมืองเชียงใหม่ จังหวัด เชียงใหม่ 50000  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ลูกหนี้ &nbsp;&nbsp;&nbsp;&nbsp; '. $fname.' '. $lname.'<br>
 
@@ -2645,9 +2645,9 @@ $html ='
                    <tr>
           
                                   <td style="text-align: center; border-left: 1px solid black;">'.$sell_detail['product_id'].'</td>
-                                  <td style="text-align: center;">'.$sell_detail['product_name'].'.</td>
+                                  <td style="text-align: center;">'.$sell_detail['product_name'].'</td>
                                   <td style="text-align: center;">'.$sell_detail['sell_product_quantity'].' </td>
-                                  <td style="text-align: center;">'.$sell_detail['sell_product_price'].'.00</td>
+                                  <td style="text-align: center;">'.$sell_detail['sell_product_price'].'</td>
                                   <td style="text-align: center;border-right: 1px solid black;">'.$sell_detail['sell_product_quantity']*$sell_detail['sell_product_price'].'.00</td>
                              </tr>
     ';
@@ -2750,7 +2750,7 @@ $pdf->Output('pay.pdf', 'I');
         "account_detail"   =>'ได้รับการชำระเงินจากลูกหนี้ ชื่อ '.$fname." ".$lname,
         "account_income"   => $total,
         "account_type"     => 'รายรับจากการชำระหนี้',
-        "account_datasave" => date('Y-m-d H:i:s'),
+        "account_datasave" => date('Y-m-d H:i:s')
         );
 
         $this->db->insert('account',$account);

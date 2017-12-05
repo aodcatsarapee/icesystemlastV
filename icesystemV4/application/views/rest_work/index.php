@@ -85,7 +85,7 @@
                            <td style="text-align: center; "><img src="<?php echo base_url() ?>img/<?php echo $value['employee_image'];  ?>" width="80" height="80" ></td> 
 
 
-                          <td style="text-align: center;padding-top: 30px;">E<?php echo $value['employee_id']; ?></td>
+                          <td style="text-align: center;padding-top: 30px;"><?php echo $value['employee_id']; ?></td>
                            <td style="padding-top: 30px; "><?php echo $value['employee_fname']." ".$value['employee_lname']; ?></td>
                            <td style="text-align: center; padding-top: 30px;"><?php echo$value['name']; ?></td>
 

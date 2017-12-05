@@ -98,7 +98,7 @@
                   <?php foreach ($debtor as $debtors) { ?>
 
                   <tr>
-                        <td  style="text-align: center;" >  D<?php echo $debtors['debtor_id'] ?></td>           
+                        <td  style="text-align: center;" >  <?php echo $debtors['debtor_id'] ?></td>           
                         <td  style="text-align: center;"> <?php echo $debtors['customer_fname']." ".$debtors['customer_lname'] ?></td>
                         <td  style="text-align: center;"> <?php echo $debtors['price_total'] ?> บาท</td>
                         <td  style="text-align: center;"> 

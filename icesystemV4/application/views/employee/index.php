@@ -60,7 +60,7 @@
                   <?php  foreach ($employee as $employees) { ?>
                      <tr>
                   <td style="text-align: center; "><img src="img/<?php echo $employees['employee_image'];  ?>" width="80" height="80" ></td>
-                  <td style="text-align: center; padding-top: 30px;"><?php echo "E".$employees['employee_id'] ; ?></td>
+                  <td style="text-align: center; padding-top: 30px;"><?php echo "".$employees['employee_id'] ; ?></td>
  
 
                   <td style="text-align: center; padding-top: 30px;"><?php echo $employees['employee_fname']." ".$employees['employee_lname'] ; ?></td>
