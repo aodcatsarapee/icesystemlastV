@@ -107,6 +107,9 @@
 
 			$this->db->where("stock_detail_id",$id);
 
+			$this->db->where("stock_amount != 0");
+
+
 			$sql=$this->db->get();
 
 			return $sql->result_array();

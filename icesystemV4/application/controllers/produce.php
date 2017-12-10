@@ -78,8 +78,6 @@
 
 			$data['stock_detail']=$this->Produce_models->select_data_stock_detail($id);
 
-
-
 			$this->load->view("produce/show/select_show_stock_detail",$data);
 		}
 

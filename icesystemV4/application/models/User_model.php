@@ -76,6 +76,22 @@ class User_model extends CI_Model {
 		}
 
 //-------------------------User1------------------------------------//
+
+		public function employee_view ()
+		{
+			$this->db->select('employee.*,department.*');
+			
+			$this->db->from('employee');
+
+			$this->db->join('department', 'employee.department = department.department_id', 'left');
+			
+			$this->db->order_by('employee_id', 'ASC');
+
+			return $this->db->get();
+			
+			
+		}
+
 		public function search_employee($search_employee){
 			return $this->db->select('*')
 			->from('employee')

@@ -2747,7 +2747,7 @@ $pdf->Output('pay.pdf', 'I');
         $account = array(
 
         "sell_id"          => $sell_id,
-        "account_detail"   =>'ได้รับการชำระเงินจากลูกหนี้ ชื่อ '.$fname." ".$lname,
+        "account_detail"   =>'ได้รับการชำระเงินจากลูกหนี้ชื่อ '.$fname." ".$lname,
         "account_income"   => $total,
         "account_type"     => 'รายรับจากการชำระหนี้',
         "account_datasave" => date('Y-m-d H:i:s')
@@ -2869,7 +2869,7 @@ $html ='
                         <td style="text-align: center; border-left: 1px solid black;">P'.$sell_detail['product_id'].'</td>
                         <td style="text-align: center;">'.$sell_detail['product_name'].'.</td>
                         <td style="text-align: center;">'.$sell_detail['sell_product_quantity'].' </td>
-                        <td style="text-align: center;">'.$sell_detail['sell_product_price'].'.00</td>
+                        <td style="text-align: center;">'.$sell_detail['sell_product_price'].'</td>
                         <td style="text-align: center;border-right: 1px solid black;">'.$sell_detail['sell_product_quantity']*$sell_detail['sell_product_price'].'.00</td>
                    </tr>
     ';

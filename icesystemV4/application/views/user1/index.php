@@ -132,12 +132,20 @@
 			<div class="modal-body">    
             <div class="form-horizontal">
                     <div class="form-group ">
-                        <label class="col-sm-3 control-label">ค้นหาพนักงาน :</label>
+                        <label class="col-sm-3 control-label">เลือกพนักงาน :</label>
                         <div class="col-sm-7">
                         <i class="help-block"></i>
                         <i class="help-block1 text-danger"></i>
-                            <input class="form-control" type="number" name="search_employee" id="search_employee" style="margin-bottom:2px;" placeholder="กรอกรหัสพนักงาน ">
-                            <center><a class="btn btn-default float-center btn-block" onclick="search_employee()">ค้นหา</a> </center>
+                            <!-- <input class="form-control" type="number" name="search_employee" id="search_employee" style="margin-bottom:2px;" placeholder="กรอกรหัสพนักงาน "> -->
+							
+							<select  class="form-control" name="search_employee" id="search_employee" >
+							<option value="0">เลือก</option>
+	  						<?php  foreach($get_employee as $emp){?>
+								<option value="<?php echo $emp->employee_id?>"><?php echo $emp->employee_fname." ".$emp->employee_lname?></option>
+							  <?php }?>
+							</select>
+							
+                            <center><a class="btn btn-default float-center btn-block" onclick="search_employee()">ตรวจสอบ</a> </center>
                         </div>
                     </div>
             </div>
@@ -220,7 +228,9 @@
                         <div class="col-sm-7">
                         <i class="help-block"></i>
                         <i class="help-block2 text-danger"></i>
-                            <input class="form-control" type="number" name="search_employee" id="search_employee" style="margin-bottom:2px;" placeholder="กรอกรหัสพนักงาน " readonly>
+						<select  class="form-control" readonly >
+							<option value="0">เลือก</option>
+							</select>
                             <center><a class="btn btn-default float-center btn-block disabled" onclick="search_employee()">ค้นหา</a> </center>
                         </div>
                     </div>
@@ -312,7 +322,7 @@ function search_employee() {
 	var search_employee = $("#search_employee").val();
 	if (search_employee == "" || search_employee == 0 ) {  //ค้นหาเป๋นค่าว่าง
 		$("#search_employee").parent().parent().addClass('has-error');
-		$('.help-block').text('กรอกรหัสพนักงาน');
+		$('.help-block').text('เลือกหัสพนักงาน');
         $('.help-block1').text('');
         $('#insert_form_user')[0].reset(); 
 

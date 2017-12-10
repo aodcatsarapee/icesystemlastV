@@ -12,7 +12,8 @@ class User extends CI_Controller
         {
             $data1['employee1'] =$this->employee_models->select_data_employee(@$_SESSION['employee_id']);
             $this->load->view('header',$data1);
-            $data['emp_user'] =$this->User_model->get_emp_user();       
+            $data['emp_user'] =$this->User_model->get_emp_user();
+            $data['get_employee'] =$this->User_model->employee_view()->result();
             $this->load->view('user1/index',$data);          
             $this->load->view('footer');
         }
