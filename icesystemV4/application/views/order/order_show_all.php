@@ -39,7 +39,7 @@
                                       $total1+=$value['order_detail_total'];
 
                                     if ($value === end($order)) {
-                                        echo $total1 ;
+                                        echo number_format($total1,2) ;
                                     }
                                 }
                           }else
@@ -64,7 +64,7 @@
           <div class="small-box bg-green">
             <div class="inner">
               <h3>   <?php 
-                               echo count($order);
+                               echo number_format(count($order));
                       ?><sup style="font-size: 20px"> รายการ</sup></h3>
 
               <p>ยอดผู้สั่งสินค้า</p>
@@ -108,7 +108,7 @@
                   <tr>
                         <td  style="text-align: center;" > <?php echo $value['order_detail_id']; ?> </td>           
                         <td  style="text-align: center;"> <?php echo $value['customer_fname']." ".$value['customer_lname'];?>  </td>
-                        <td  style="text-align: center;"> <?php  echo $value['order_detail_total'];?> บาท</td>
+                        <td  style="text-align: center;"> <?php  echo number_format($value['order_detail_total'],2);?> บาท</td>
                         <td style="text-align: center;" > 
                         <span class="label label-success">
                         

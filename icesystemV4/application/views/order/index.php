@@ -45,7 +45,7 @@
                  ?>
                     <tr>
                 	<td style="text-align: center;"><?php echo $order['order_detail_id'] ?></td>
-                	<td style="text-align: center;"><?php echo $order['order_detail_total'] ?> บาท</td>
+                	<td style="text-align: center;"><?php echo number_format($order['order_detail_total'],2)?> บาท</td>
                 	<td style="text-align: center;">
                 	<?php if($order['order_detail_status']=="กำลังดำเนินการ"){ ?>
                 			

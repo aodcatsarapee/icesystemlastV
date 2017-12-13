@@ -80,7 +80,7 @@
                                   <h4 style="text-align: center;"><?php echo $name; ?></h4>
                               
 
-                                   <h4 style="text-align: center;">คงเหลือ : <?php echo "<span >".$amount." ".$type."</span>"; ?></h4>
+                                   <h4 style="text-align: center;">คงเหลือ : <?php echo "<span >".number_format($amount)." ".$type."</span>"; ?></h4>
 
                                  </div>
                                 </button>
@@ -94,7 +94,7 @@
                               
                               
 
-                                  <h4 style="text-align: center;">คงเหลือ : <?php echo "<span >".$amount." ".$type."</span>"; ?></h4>
+                                  <h4 style="text-align: center;">คงเหลือ : <?php echo "<span >".number_format($amount)." ".$type."</span>"; ?></h4>
 
                                  </div>
                               </button>

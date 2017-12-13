@@ -37,7 +37,7 @@
                                       $total1+=$value['sell_detail_total'];
 
                                     if ($value === end($orders)) {
-                                        echo $total1 ;
+                                        echo number_format($total1,2) ;
                                     }
                                 }
                               }
@@ -58,7 +58,7 @@
           <div class="small-box bg-green">
             <div class="inner">
               <h3>  <?php 
-                              echo $cash+$cash_sell;
+                              echo number_format($cash+$cash_sell);
                       ?><sup style="font-size: 20px"> รายการ</sup></h3>
 
               <p>ขายสินค้าเป็นเงินสด</p>
@@ -75,7 +75,7 @@
           <div class="small-box bg-yellow">
             <div class="inner">
               <h3> <?php 
-                              echo $credit+$credit_sell;
+                              echo number_format($credit+$credit_sell);
                       ?><sup style="font-size: 20px"> รายการ</sup></h3>
 
               <p>ขายสินค้าเป็นเงินเชื่อ</p>
@@ -129,7 +129,7 @@
 
                             <tr>
                               <td style=" text-align: center;"><?php echo $order['sell_detail_id']; ?></td> 
-                                <td style=" text-align: center;"><?php echo $order['sell_detail_total']; ?> บาท </td>
+                                <td style=" text-align: center;"><?php echo number_format($order['sell_detail_total'],2); ?> บาท </td>
                                 <td style=" text-align: center;" >
 
                                   <?php if($order['sell_detail_status']=='ขายสินค้าเป็นเงินสด' || $order['sell_detail_status']=='ขายสินค้าเป็นเงินสดจากการสั้งซื้อ'){ ?>

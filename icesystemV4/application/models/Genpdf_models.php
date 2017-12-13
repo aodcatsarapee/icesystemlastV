@@ -14,7 +14,7 @@ class Genpdf_models extends CI_Model {
 
 			$this->db->group_by('stock.product_id'); 
 
-			$this->db->order_by('stock.product_id', 'DESC');
+			$this->db->order_by('stock.product_id', 'ASC');
 
 			$this->db->where('stock_detail.stock_detail_date >=', $date_start);
 
@@ -45,7 +45,7 @@ class Genpdf_models extends CI_Model {
 			
 			$this->db->from('sell_detail');
 			
-			$this->db->order_by('sell_detail_date', 'DESC');
+			$this->db->order_by('sell_detail_date', 'ASC');
 
 			$this->db->where('sell_detail_date >=', $date_start);
 
@@ -87,7 +87,7 @@ class Genpdf_models extends CI_Model {
 			
 			$this->db->join('customers', 'debtor.customer_id = customers.customer_id', 'left'); 
 			
-			$this->db->order_by('debtor_id', 'DESC');
+			$this->db->order_by('debtor_id', 'ASC');
 
 			$this->db->where('debtor_status','ชำระเงินเเล้ว');
 
@@ -120,9 +120,9 @@ class Genpdf_models extends CI_Model {
 			
 			$this->db->from('account');
 
-       		$this->db->order_by('account_id', 'DESC');
+       		$this->db->order_by('account_id', 'ASC');
 			
-			$this->db->order_by('account_datasave', 'DESC');
+			$this->db->order_by('account_datasave', 'ASC');
 
 			$this->db->where('account_datasave >=', $date_start);
 

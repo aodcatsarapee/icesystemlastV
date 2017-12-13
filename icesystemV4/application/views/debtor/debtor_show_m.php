@@ -35,7 +35,7 @@
                                       $total1+=$value['price_total'];
 
                                     if ($value === end($debtor)) {
-                                        echo $total1 ;
+                                        echo number_format($total1,2) ;
                                     }
                                 }
                           }else
@@ -59,7 +59,7 @@
           <div class="small-box bg-green">
             <div class="inner">
               <h3>   <?php 
-                               echo $debtor_num;
+                               echo number_format($debtor_num);
                       ?><sup style="font-size: 20px"> รายการ</sup></h3>
 
               <p>ลูกหนี้ชำระเงิน</p>
@@ -101,7 +101,7 @@
                   <tr>
                         <td  style="text-align: center;" >  <?php echo $debtors['debtor_id'] ?></td>           
                         <td  style="text-align: center;"> <?php echo $debtors['customer_fname']." ".$debtors['customer_lname'] ?></td>
-                        <td  style="text-align: center;"> <?php echo $debtors['price_total'] ?> บาท</td>
+                        <td  style="text-align: center;"> <?php echo number_format($debtors['price_total'],2) ?> บาท</td>
                         <td  style="text-align: center;"> 
                             
                                <span class="label label-primary">

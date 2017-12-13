@@ -28,7 +28,7 @@
         <div class="col-xs-12">
           <!-- Small boxes (Stat box) -->
       <div class="row">
-        <div class="col-lg-4 col-xs-12" >
+        <div class="col-lg-3 col-xs-12" >
           <!-- small box -->
           <div class="small-box bg-aqua" >
             <div class="inner">
@@ -43,12 +43,16 @@
                           }else{
 
                        $total1=0;
+                       $total_pro=0;
                        foreach ($accunt as $key => $value) {
 
                                        $total1+=$value['account_income'];
-
+                                       $total_pro+=$value['account_income'];
+                                       
+                                       
                                      if ($value === end($accunt)) {
-                                         echo $total1 ;
+                                         
+                                         echo  number_format($total1,2) ;
                                      }
                                  }
                         }
@@ -63,7 +67,7 @@
           </div>
         </div>
         <!-- ./col -->
-         <div class="col-lg-4 col-xs-12" >
+         <div class="col-lg-3 col-xs-12" >
           <!-- small box -->
           <div class="small-box bg-yellow" >
             <div class="inner">
@@ -77,12 +81,15 @@
                               echo "0";
                           }else{
                               $total1=0;
+                              $total_lost=0;
                        foreach ($accunt as $key => $value) {
 
                                        $total1+=$value['account_expenses'];
+                                       $total_lost+=$value['account_expenses'];
 
                                      if ($value === end($accunt)) {
-                                         echo $total1 ;
+                                     
+                                         echo number_format($total1,2) ;
                                      }
                                  }
                           }
@@ -99,7 +106,63 @@
           </div>
         </div>
         <!-- ./col -->
-        <div class="col-lg-4 col-xs-12" >
+        <div class="col-lg-3 col-xs-12" >
+          <!-- small box -->
+          <?php 
+                              if($total_pro >$total_lost ){
+                                ?>
+                                  <div class="small-box bg-blue" >
+                   <?php 
+                              }else{
+                                ?>
+
+                                  <div class="small-box bg-red" >
+                           <?php   }
+
+                              ?>
+         
+            <div class="inner">
+              <h3>  
+
+                      
+                       <?php 
+
+                        if(count($accunt)==0){
+
+                              echo "0";
+                          }else{
+
+                            $POL = $total_pro - $total_lost;
+                            echo number_format(abs($POL),2);
+                            
+                          }
+                      ?>
+
+                     <sup style="font-size: 20px"> บาท</sup></h3>
+
+              <p> <?php 
+                              if($total_pro >$total_lost ){
+                                ?>
+                                 กำไร
+                   <?php 
+                              }else{
+                                ?>
+
+                                  ขาดทุน
+                           <?php   }
+
+                              ?>
+              
+              </p>
+            </div>
+            <div class="icon">
+              <i class="fa fa-money"></i>
+            </div>
+          
+          </div>
+        </div>
+        <!-- ./col -->
+        <div class="col-lg-3 col-xs-12" >
           <!-- small box -->
           <div class="small-box bg-green">
             <div class="inner">
@@ -150,11 +213,11 @@
                                     
                                     <?php if($value['account_type'] == "รายรับ" || $value['account_type'] == "รายรับจากการชำระหนี้" || $value['account_type'] == "รายรับจากการขายสินค้า" || $value['account_type'] == "รายรับจากการขายสินค้าจากการสั้งซื้อ"  ){ 
 
-                                     echo $value['account_income']; 
+                                     echo number_format($value['account_income'],2); 
                                     
                                      }else{   
 
-                                      echo $value['account_expenses'];
+                                      echo number_format($value['account_expenses'],2);
 
                                       } ?>                                    
                                   บาท

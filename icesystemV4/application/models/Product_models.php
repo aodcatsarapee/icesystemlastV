@@ -8,7 +8,7 @@
 			
 			$this->db->from('product');
 			
-			$this->db->order_by('product_id', 'DESC');
+			$this->db->order_by('product_id', 'ASC');
 
 			$sql=$this->db->get();
 			

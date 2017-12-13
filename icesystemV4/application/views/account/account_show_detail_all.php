@@ -24,104 +24,167 @@
       
     </section>
 
-    <!-- Main content -->
-    <section class="content">
-      <div class="row">
-        <div class="col-xs-12">
-          <!-- Small boxes (Stat box) -->
-      <div class="row">
-        <div class="col-lg-4 col-xs-12" >
-          <!-- small box -->
-          <div class="small-box bg-aqua" >
-            <div class="inner">
-              <h3> 
+   <!-- Main content -->
+   <section class="content">
+   <div class="row">
+     <div class="col-xs-12">
+       <!-- Small boxes (Stat box) -->
+   <div class="row">
+     <div class="col-lg-3 col-xs-12" >
+       <!-- small box -->
+       <div class="small-box bg-aqua" >
+         <div class="inner">
+           <h3> 
 
-                    
-                       <?php 
+                 
+                    <?php 
 
-                        if(count($accunt)==0){
+                     if(count($accunt)==0){
 
-                              echo "0";
-                          }else{
+                           echo "0";
+                       }else{
 
-                       $total1=0;
-                       foreach ($accunt as $key => $value) {
+                    $total1=0;
+                    $total_pro=0;
+                    foreach ($accunt as $key => $value) {
 
-                                       $total1+=$value['account_income'];
+                                    $total1+=$value['account_income'];
+                                    $total_pro+=$value['account_income'];
+                                    
+                                    
+                                  if ($value === end($accunt)) {
+                                      
+                                      echo  number_format($total1,2) ;
+                                  }
+                              }
+                     }
+                   ?> <sup style="font-size: 20px"> บาท</sup></h3>
 
-                                     if ($value === end($accunt)) {
-                                         echo $total1 ;
-                                     }
-                                 }
-                        }
-                      ?> <sup style="font-size: 20px"> บาท</sup></h3>
+           <p> รายรับ</p>
+         </div>
+         <div class="icon">
+           <i class="fa fa-money"></i>
+         </div>
+         
+       </div>
+     </div>
+     <!-- ./col -->
+      <div class="col-lg-3 col-xs-12" >
+       <!-- small box -->
+       <div class="small-box bg-yellow" >
+         <div class="inner">
+           <h3>  
 
-              <p> รายรับ</p>
-            </div>
-            <div class="icon">
-              <i class="fa fa-money"></i>
-            </div>
-            
-          </div>
-        </div>
-        <!-- ./col -->
-         <div class="col-lg-4 col-xs-12" >
-          <!-- small box -->
-          <div class="small-box bg-yellow" >
-            <div class="inner">
-              <h3>  
+                   
+                    <?php 
 
-                      
-                       <?php 
+                     if(count($accunt)==0){
 
-                        if(count($accunt)==0){
+                           echo "0";
+                       }else{
+                           $total1=0;
+                           $total_lost=0;
+                    foreach ($accunt as $key => $value) {
 
-                              echo "0";
-                          }else{
-                              $total1=0;
-                       foreach ($accunt as $key => $value) {
+                                    $total1+=$value['account_expenses'];
+                                    $total_lost+=$value['account_expenses'];
 
-                                       $total1+=$value['account_expenses'];
+                                  if ($value === end($accunt)) {
+                                  
+                                      echo number_format($total1,2) ;
+                                  }
+                              }
+                       }
+                   ?>
 
-                                     if ($value === end($accunt)) {
-                                         echo $total1 ;
-                                     }
-                                 }
-                          }
-                      ?>
+                  <sup style="font-size: 20px"> บาท</sup></h3>
 
-                     <sup style="font-size: 20px"> บาท</sup></h3>
+           <p> รายจ่าย</p>
+         </div>
+         <div class="icon">
+           <i class="fa fa-money"></i>
+         </div>
+       
+       </div>
+     </div>
+     <!-- ./col -->
+     <div class="col-lg-3 col-xs-12" >
+       <!-- small box -->
+       <?php 
+                           if($total_pro >$total_lost ){
+                             ?>
+                               <div class="small-box bg-blue" >
+                <?php 
+                           }else{
+                             ?>
 
-              <p> รายจ่าย</p>
-            </div>
-            <div class="icon">
-              <i class="fa fa-money"></i>
-            </div>
+                               <div class="small-box bg-red" >
+                        <?php   }
+
+                           ?>
+      
+         <div class="inner">
+           <h3>  
+
+                   
+                    <?php 
+
+                     if(count($accunt)==0){
+
+                           echo "0";
+                       }else{
+
+                         $POL = $total_pro - $total_lost;
+                         echo number_format(abs($POL),2);
+                         
+                       }
+                   ?>
+
+                  <sup style="font-size: 20px"> บาท</sup></h3>
+
+           <p> <?php 
+                           if($total_pro >$total_lost ){
+                             ?>
+                              กำไร
+                <?php 
+                           }else{
+                             ?>
+
+                               ขาดทุน
+                        <?php   }
+
+                           ?>
            
-          </div>
-        </div>
-        <!-- ./col -->
-        <div class="col-lg-4 col-xs-12" >
-          <!-- small box -->
-          <div class="small-box bg-green">
-            <div class="inner">
-              <h3>    <?php 
-                               echo $accunt_row; ;
-                      ?><sup style="font-size: 20px"> รายการ</sup></h3>
+           </p>
+         </div>
+         <div class="icon">
+           <i class="fa fa-money"></i>
+         </div>
+       
+       </div>
+     </div>
+     <!-- ./col -->
+     <div class="col-lg-3 col-xs-12" >
+       <!-- small box -->
+       <div class="small-box bg-green">
+         <div class="inner">
+           <h3>    <?php 
+                            echo $accunt_row; ;
+                   ?><sup style="font-size: 20px"> รายการ</sup></h3>
 
-              <p>รายรับ - รายจ่าย</p>
-            </div>
-            <div class="icon">
-              <i class=" fa fa-user"></i>
-            </div>
-            
-          </div>
-        </div>
-        <!-- ./col -->
-       
-       
-      </div>
-       <!-- ./row -->
+           <p>รายรับ - รายจ่าย</p>
+         </div>
+         <div class="icon">
+           <i class=" fa fa-user"></i>
+         </div>
+        
+       </div>
+     </div>
+     <!-- ./col -->
+    
+    
+   </div>
+    <!-- ./row -->
 
           <div class="box">
                       
@@ -152,11 +215,11 @@
                                     
                                     <?php if($value['account_type'] == "รายรับ" || $value['account_type'] == "รายรับจากการชำระหนี้" || $value['account_type'] == "รายรับจากการขายสินค้า" || $value['account_type'] == "รายรับจากการขายสินค้าจากการสั้งซื้อ"  ){ 
 
-                                     echo $value['account_income']; 
+                                     echo number_format($value['account_income'],2); 
                                     
                                      }else{   
 
-                                      echo $value['account_expenses'];
+                                      echo number_format($value['account_expenses'],2);
 
                                       } ?>
                                   บาท

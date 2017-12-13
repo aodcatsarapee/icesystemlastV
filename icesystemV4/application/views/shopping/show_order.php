@@ -34,7 +34,7 @@
 
                             <tr>
                               <td>S<?php echo $order['order_id']; ?></td> 
-                                <td style=" text-align: center;"><?php echo $order['total']; ?> บาท </td>
+                                <td style=" text-align: center;"><?php echo number_format($order['total'],2); ?> บาท </td>
                                 <td style=" text-align: center;" >
 
                                   <?php if($order['sell_status']=='ขายสินค้าเป็นเงินสด'){ ?>

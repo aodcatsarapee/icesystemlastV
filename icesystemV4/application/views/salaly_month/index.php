@@ -195,7 +195,7 @@
                    <td style="text-align: center;padding-top: 30px;"><?php echo Datethai($date_add) ; ?></td>
 
                    <td width="20%" style="text-align: center;padding-top: 30px;">
-                    <?php echo $employees2['salaly_month'] ; ?> </td>
+                    <?php echo number_format($employees2['salaly_month'],2) ; ?> </td>
 
                     </tr>
 
