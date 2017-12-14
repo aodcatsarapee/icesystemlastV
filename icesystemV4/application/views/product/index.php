@@ -73,7 +73,7 @@
 
                 </td>
                 <td  width =""><p style="margin-top: 15px;"><?php echo "".$r['product_detail'].""; ?></p></td>
-                <td style  ="text-align: center;"><p style="margin-top: 15px;"><?php echo "".$r['product_price']." บาท"; ?></p></td>
+                <td style  ="text-align: center;"><p style="margin-top: 15px;"><?php echo "".number_format($r['product_price'],2)." บาท"; ?></p></td>
                 
                   <?php if(@$_SESSION['type']=="manager"){  ?>
                       <td  style ="text-align: center " ><p style="margin-top: 15px;" >

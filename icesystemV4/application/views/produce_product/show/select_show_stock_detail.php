@@ -14,7 +14,7 @@
 
 	<?php foreach ($stock_detail as $key => $value) {?> 
 		<tr>
-			<td>P<?php echo $value['product_id'] ; ?></td>
+			<td><?php echo $value['product_id'] ; ?></td>
 			<td><?php echo $value['product_name'] ; ?></td>
 			<td style="text-align: center;"><?php echo number_format($value['stock_amount'])." ".$value['product_type'] ; ?></td>
 		</tr>
