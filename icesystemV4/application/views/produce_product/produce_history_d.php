@@ -44,7 +44,7 @@
                   
                   <tr>
 
-                      <td  style="text-align: center;">S<?php echo $stock['stock_detail_id']; ?></td>
+                      <td  style="text-align: center;"><?php echo $stock['stock_detail_id']; ?></td>
 
 
                       
