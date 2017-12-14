@@ -43,7 +43,7 @@
                                       $total1+=$value['price_total'];
 
                                     if ($value === end($debtor)) {
-                                        echo number_format($total1) ;
+                                        echo number_format($total1,2) ;
                                     }
                                 }
                           }else

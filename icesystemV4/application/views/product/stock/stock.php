@@ -68,7 +68,7 @@
                   <td style="text-align: center;" width="20%">
                       <?php  if($stock['product_amount_order']=='0'){
 
-                    echo "<p style='color:red;'>".number_format($stock['product_amount'])." ".$stock['product_type']."</p>";
+                    echo "<p style='color:red;'>".number_format($stock['product_amount_order'])." ".$stock['product_type']."</p>";
 
                   }else{
                      echo "<p style='color:blue;'>".number_format($stock['product_amount'])." ".$stock['product_type']."</p>";

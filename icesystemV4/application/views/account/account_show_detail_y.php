@@ -27,127 +27,142 @@
        <div class="small-box bg-aqua" >
          <div class="inner">
            <h3> 
+           <?php 
+           $total_pro=0;
+           if(count($accunt)==0){
 
-                 
-                    <?php 
+                 echo "0";
+             }else{
 
-                     if(count($accunt)==0){
+               $total1=0;
+               
+          foreach ($accunt as $key => $value) {
 
-                           echo "0";
-                       }else{
+                          $total1+=$value['account_income'];
+                          $total_pro+=$value['account_income'];
+                          
+                          
+                        if ($value === end($accunt)) {
+                            
+                            echo  number_format($total1,2) ;
+                        }
+                    }
+           }
+         ?> <sup style="font-size: 20px"> บาท</sup></h3>
 
-                    $total1=0;
-                    $total_pro=0;
-                    foreach ($accunt as $key => $value) {
+ <p> รายรับ</p>
+</div>
+<div class="icon">
+ <i class="fa fa-money"></i>
+</div>
 
-                                    $total1+=$value['account_income'];
-                                    $total_pro+=$value['account_income'];
-                                    
-                                    
-                                  if ($value === end($accunt)) {
-                                      
-                                      echo  number_format($total1,2) ;
-                                  }
-                              }
-                     }
-                   ?> <sup style="font-size: 20px"> บาท</sup></h3>
+</div>
+</div>
+<!-- ./col -->
+<div class="col-lg-3 col-xs-12" >
+<!-- small box -->
+<div class="small-box bg-yellow" >
+<div class="inner">
+ <h3>  
 
-           <p> รายรับ</p>
-         </div>
-         <div class="icon">
-           <i class="fa fa-money"></i>
-         </div>
          
-       </div>
-     </div>
-     <!-- ./col -->
-      <div class="col-lg-3 col-xs-12" >
-       <!-- small box -->
-       <div class="small-box bg-yellow" >
-         <div class="inner">
-           <h3>  
+                                  <?php 
+                                    $total_lost=0;
+                                  if(count($accunt)==0){
 
-                   
-                    <?php 
+                                        echo "0";
+                                    }else{
+                                        $total1=0;
+                                        
+                                  foreach ($accunt as $key => $value) {
 
-                     if(count($accunt)==0){
+                                                  $total1+=$value['account_expenses'];
+                                                  $total_lost+=$value['account_expenses'];
 
-                           echo "0";
-                       }else{
-                           $total1=0;
-                           $total_lost=0;
-                    foreach ($accunt as $key => $value) {
+                                                if ($value === end($accunt)) {
+                                                
+                                                    echo number_format($total1,2) ;
+                                                }
+                                            }
+                                    }
+                                ?>
 
-                                    $total1+=$value['account_expenses'];
-                                    $total_lost+=$value['account_expenses'];
+                                <sup style="font-size: 20px"> บาท</sup></h3>
 
-                                  if ($value === end($accunt)) {
+                        <p> รายจ่าย</p>
+                        </div>
+                        <div class="icon">
+                        <i class="fa fa-money"></i>
+                        </div>
+
+                        </div>
+                        </div>
+                        <!-- ./col -->
+                        <div class="col-lg-3 col-xs-12" >
+                        <!-- small box -->
+                        <?php 
+                        if($total_pro == 0 && $total_lost == 0 ){
+
+                        ?> 
+                        <div class="small-box bg-blue" >     
+
+                        <?php 
+                        }else{
+
                                   
-                                      echo number_format($total1,2) ;
-                                  }
-                              }
-                       }
-                   ?>
+                                        if($total_pro > $total_lost ){
+                                          ?>
+                                            <div class="small-box bg-blue" >
+                              <?php 
+                                        }else{
+                                          ?>
 
-                  <sup style="font-size: 20px"> บาท</sup></h3>
+                                            <div class="small-box bg-red" >
+                                      <?php   }
 
-           <p> รายจ่าย</p>
-         </div>
-         <div class="icon">
-           <i class="fa fa-money"></i>
-         </div>
-       
-       </div>
-     </div>
-     <!-- ./col -->
-     <div class="col-lg-3 col-xs-12" >
-       <!-- small box -->
-       <?php 
-                           if($total_pro >$total_lost ){
-                             ?>
-                               <div class="small-box bg-blue" >
-                <?php 
-                           }else{
-                             ?>
+                          }
 
-                               <div class="small-box bg-red" >
-                        <?php   }
+                            
+                                        ?>
 
-                           ?>
-      
-         <div class="inner">
-           <h3>  
+                        <div class="inner">
+                        <h3>  
 
-                   
-                    <?php 
+                                
+                                  <?php 
 
-                     if(count($accunt)==0){
+                                  if(count($accunt)==0){
 
-                           echo "0";
-                       }else{
+                                        echo "0";
+                                    }else{
 
-                         $POL = $total_pro - $total_lost;
-                         echo number_format(abs($POL),2);
-                         
-                       }
-                   ?>
+                                      $POL = $total_pro - $total_lost;
+                                      echo number_format(abs($POL),2);
+                                      
+                                    }
+                                ?>
 
-                  <sup style="font-size: 20px"> บาท</sup></h3>
+                                <sup style="font-size: 20px"> บาท</sup></h3>
 
-           <p> <?php 
-                           if($total_pro >$total_lost ){
-                             ?>
-                              กำไร
-                <?php 
-                           }else{
-                             ?>
+                        <p> <?php 
+                                        if($total_pro == 0 && $total_lost == 0 ){
+                                          ?>
 
-                               ขาดทุน
-                        <?php   }
+                                          กำไร ขาดทุน
+                                          
+                              <?php 
+                                        }else if($total_pro > $total_lost){
+                                          ?>
+                                                กำไร
+                                      <?php   }else{
 
-                           ?>
-           
-           </p>
+                                        ?>
+                                                ขาดทุน
+                                        <?php } 
+                                        
+                                        ?>
+                        
+                        </p>
          </div>
          <div class="icon">
            <i class="fa fa-money"></i>

@@ -36,14 +36,14 @@
 
                     
                        <?php 
-
+                        $total_pro=0;
                         if(count($accunt)==0){
 
                               echo "0";
                           }else{
 
-                       $total1=0;
-                       $total_pro=0;
+                            $total1=0;
+                            
                        foreach ($accunt as $key => $value) {
 
                                        $total1+=$value['account_income'];
@@ -75,13 +75,13 @@
 
                       
                        <?php 
-
+                         $total_lost=0;
                         if(count($accunt)==0){
 
                               echo "0";
                           }else{
                               $total1=0;
-                              $total_lost=0;
+                             
                        foreach ($accunt as $key => $value) {
 
                                        $total1+=$value['account_expenses'];
@@ -109,7 +109,16 @@
         <div class="col-lg-3 col-xs-12" >
           <!-- small box -->
           <?php 
-                              if($total_pro >$total_lost ){
+          if($total_pro == 0 && $total_lost == 0 ){
+
+           ?> 
+           <div class="small-box bg-blue" >     
+
+           <?php 
+          }else{
+         
+                        
+                              if($total_pro > $total_lost ){
                                 ?>
                                   <div class="small-box bg-blue" >
                    <?php 
@@ -119,6 +128,9 @@
                                   <div class="small-box bg-red" >
                            <?php   }
 
+                }
+
+                  
                               ?>
          
             <div class="inner">
@@ -141,16 +153,21 @@
                      <sup style="font-size: 20px"> บาท</sup></h3>
 
               <p> <?php 
-                              if($total_pro >$total_lost ){
+                              if($total_pro == 0 && $total_lost == 0 ){
                                 ?>
-                                 กำไร
+
+                                กำไร ขาดทุน
+                                
                    <?php 
-                              }else{
+                              }else if($total_pro > $total_lost){
                                 ?>
+                                      กำไร
+                           <?php   }else{
 
-                                  ขาดทุน
-                           <?php   }
-
+                              ?>
+                                      ขาดทุน
+                              <?php } 
+                              
                               ?>
               
               </p>
