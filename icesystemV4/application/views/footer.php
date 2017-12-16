@@ -247,14 +247,15 @@
       <?php require('theme/dist/js/backend/debtor.js');  ?>
       <?php require('theme/dist/js/backend/account.js');  ?>
       <?php require('theme/dist/js/backend/department.js');  ?>
-      <?php require('theme/dist/js/backend/Work_time.js');  ?>
+      <?php require('theme/dist/js/backend/work_time.js');  ?>
       <?php require('theme/dist/js/backend/customers.js');  ?>
       <?php require('theme/dist/js/backend/user.js');  ?>
-        <?php require('theme/dist/js/backend/order.js');  ?>
-        <?php require('theme/dist/js/backend/absence.js');  ?>
-        <?php require('theme/dist/js/backend/rest_work.js');  ?>
-        <?php require('theme/dist/js/backend/salaly_month.js');  ?>
-        <?php require('theme/dist/js/backend/profile.js');  ?>
+      <?php require('theme/dist/js/backend/order.js');  ?>
+      <?php require('theme/dist/js/backend/absence.js');  ?>
+      <?php require('theme/dist/js/backend/rest_work.js');  ?>
+      <?php require('theme/dist/js/backend/salaly_month.js');  ?>
+      <?php require('theme/dist/js/backend/profile.js');  ?>
+      <?php require('theme/dist/js/backend/analyze.js');  ?>
         <script type="text/javascript">
           /** add active class and stay opened when selected */
         var url = window.location;

@@ -289,7 +289,7 @@
 							</select>
 						</div>
 					</div>
-					<input type="submit" class="btn btn-default" id="insert" value=" บันทึกข้อมูล " style="float: right;font-size: 15px;">
+					<input type="submit" class="btn btn-default"  value=" บันทึกข้อมูล " style="float: right;font-size: 15px;">
 				</form>
 				<br>
 				<br>

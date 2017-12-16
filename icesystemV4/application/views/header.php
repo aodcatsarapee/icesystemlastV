@@ -45,6 +45,10 @@
     {
       font-family: 'Prompt', sans-serif;
     }
+    h3
+    {
+        font-family: 'Prompt', sans-serif;
+    }
 
  </style>
 </head>
