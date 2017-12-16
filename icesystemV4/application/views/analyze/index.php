@@ -1,3 +1,4 @@
+
 <?php if (!empty($_SESSION['type'])) { ?>
     <?php if ($_SESSION['type'] == 'admin' || $_SESSION['type'] == 'emp_store' || $_SESSION['type'] == 'manager') { ?>
         <!-- Content Wrapper. Contains page content -->
@@ -19,7 +20,7 @@
                                     <label for="">ชื่อสินค้า : </label>
                                     <select name="product_id" id="product_id" class="form-control" required="required" onchange="get_analyze()">
                                         <?php foreach ($get_product as $products) { ?>
-                                            <option value="<?php echo $products->product_id ?>"><?php echo $products->product_name ?></option>
+                                            <option value="<?php echo $products->product_id."-".$products->product_type ?>"><?php echo $products->product_name ?></option>
                                         <?php } ?>
                                     </select>
                                 </div>
@@ -35,8 +36,8 @@
                                                         <div class="box-header " style="background:#00a65a; font-size: 20px;color: #fff;">
                                                             <i class="fa fa-check" aria-hidden="true"> </i> รายวัน
                                                         </div>
-                                                        <div class="circle circle-success text-center"><div class="text-center text-circle" >100</div></div>
-                                                        <h3 style="margin-top: 100px">กระสอบ</h3>
+                                                        <div class="circle circle-success text-center"><div class="text-center text-circle" id="get_d"></div></div>
+                                                        <h3 style="margin-top: 100px" id="get_type">กระสอบ</h3>
                                                     </div>
                                                 </div>
                                             </div>
@@ -50,8 +51,8 @@
                                                         <div class="box-header " style="background:#f39c12; font-size: 20px;color: #fff;">
                                                             <i class="fa fa-check" aria-hidden="true"> </i> รายสัปดาห์
                                                         </div>
-                                                        <div class="circle circle-warning text-center"><div class="text-center text-circle">500</div></div>
-                                                        <h3 style="margin-top: 100px">กระสอบ</h3>
+                                                        <div class="circle circle-warning text-center"><div class="text-center text-circle" id="get_w" ></div></div>
+                                                        <h3 style="margin-top: 100px" id="get_type1">กระสอบ</h3>
                                                     </div>
                                                 </div>
                                             </div>
@@ -65,8 +66,8 @@
                                                         <div class="box-header " style="background:#f56954; font-size: 20px;color: #fff;">
                                                             <i class="fa fa-check" aria-hidden="true"> </i> รายเดือน
                                                         </div>
-                                                        <div class="circle circle-danger text-center"> <div class="text-center text-circle">1000</div></div>
-                                                        <h3 style="margin-top: 100px">กระสอบ</h3>
+                                                        <div class="circle circle-danger text-center"> <div class="text-center text-circle" id="get_m"></div></div>
+                                                        <h3 style="margin-top: 100px" id="get_type2">กระสอบ</h3>
                                                     </div>
                                                 </div>
                                             </div>

@@ -61,8 +61,6 @@ class Genpdf_models extends CI_Model {
          		$this->db->where('sell_detail_date <=', $Y."-".$m."-".($d+1));
          	}
 
-
-
 			$sql=$this->db->get();
 			
 			if ($sql->num_rows() > 0) {
@@ -72,12 +70,8 @@ class Genpdf_models extends CI_Model {
 			else
 			{
 				return $sql->result_array();
-			}
-
-			
+			}		
 	}
-
-
 	    public function debtor_all_1($id,$date_start,$date_end)
 	{
 		

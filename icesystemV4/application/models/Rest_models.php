@@ -108,12 +108,8 @@ class Rest_models extends CI_Model
       else
       {
         return $sql->result_array();
-      }
-
-      
+      }    
   }
-
-
     public function check_rest($employee_id){
           $this->db->select('rest_work.*,employee.*');
           $this->db->from('rest_work');
