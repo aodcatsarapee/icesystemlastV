@@ -238,6 +238,17 @@ desired effect
         </li>
         <li class="treeview">
           <a href="#">
+            <i class="fa fa-product-hunt"></i> <span>ช่วยตัดสินใจในการผลิต </span>
+            <span class="pull-right-container">
+              <i class="fa fa-angle-left pull-right"></i>
+            </span>
+          </a>
+          <ul class="treeview-menu">
+            <li><a href="<?php echo base_url() ?>analyze"><i class="fa fa-circle-o"></i> ปริมาณที่เหมาะสมในการผลิต </a></li>
+          </ul>
+        </li>
+        <li class="treeview">
+          <a href="#">
             <i class="fa fa-product-hunt"></i> <span>การผลิตสินค้า</span>
             <span class="pull-right-container">
               <i class="fa fa-angle-left pull-right"></i>
@@ -417,6 +428,17 @@ desired effect
         </li>
         <li class="treeview">
           <a href="#">
+            <i class="fa fa-product-hunt"></i> <span>ช่วยตัดสินใจในการผลิต </span>
+            <span class="pull-right-container">
+              <i class="fa fa-angle-left pull-right"></i>
+            </span>
+          </a>
+          <ul class="treeview-menu">
+            <li><a href="<?php echo base_url() ?>analyze"><i class="fa fa-circle-o"></i> ปริมาณที่เหมาะสมในการผลิต </a></li>
+          </ul>
+        </li>
+        <li class="treeview">
+          <a href="#">
              <i class="fa fa-product-hunt"></i> <span>การผลิตสินค้า</span>
             <span class="pull-right-container">
               <i class="fa fa-angle-left pull-right"></i>
@@ -566,9 +588,6 @@ desired effect
              <li><a href="<?php echo base_url(); ?>employee"><i class="fa fa-circle-o"></i>พนักงาน</a></li>
           </ul>
         </li>
-
-
-
       <?php }elseif(@$_SESSION['type']=="emp_store"){ ?>
             <li class="treeview">
           <a href="#">
@@ -584,6 +603,17 @@ desired effect
             
           </ul>
         </li>
+        <li class="treeview">
+          <a href="#">
+            <i class="fa fa-product-hunt"></i> <span>ช่วยตัดสินใจในการผลิต </span>
+            <span class="pull-right-container">
+              <i class="fa fa-angle-left pull-right"></i>
+            </span>
+          </a>
+          <ul class="treeview-menu">
+            <li><a href="<?php echo base_url() ?>analyze"><i class="fa fa-circle-o"></i> ปริมาณที่เหมาะสมในการผลิต </a></li>
+          </ul>
+        </li
       <?php }elseif($_SESSION['type']=="emp_produce"){  ?>
                <li class="treeview">
                   <a href="#">

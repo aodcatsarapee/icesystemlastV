@@ -62,4 +62,29 @@ class Analyze_model extends CI_Model
             $this->db->group_by('sell.product_id',$product_id);
             return $this->db->get('sell');
     }
+
+    public function get_sell_m($product_id,$m)
+    {   
+            $this->db->select(' sell.product_id ,SUM(sell.sell_product_quantity) as qty');
+            $this->db->join('sell_detail', 'sell_detail.sell_detail_id = sell.sell_detail_id ');         
+            $this->db->where('sell.product_id',$product_id);
+            $this->db->where('sell.order_id',NULL);                
+            if($m == -1 ){
+                 $start_date = date('Y-m-d');
+                $end_date = date('Y-m-d', strtotime("-1 month"));
+            }elseif($m == -2){
+                $start_date = date('Y-m-d',strtotime("-1 month"));
+                $end_date = date('Y-m-d', strtotime("-2 month"));
+            }elseif($m == -3){
+                $start_date = date('Y-m-d',strtotime("-2 month"));
+                $end_date = date('Y-m-d', strtotime("-3 month"));
+            }else{
+                $start_date = date('Y-m-d',strtotime("-3 month"));
+                $end_date = date('Y-m-d', strtotime("-4 month"));
+            }
+            $this->db->where('sell_detail.sell_detail_date >=',$end_date);
+            $this->db->where('sell_detail.sell_detail_date <=',$start_date);
+            $this->db->group_by('sell.product_id',$product_id);
+            return $this->db->get('sell');
+    }
 }

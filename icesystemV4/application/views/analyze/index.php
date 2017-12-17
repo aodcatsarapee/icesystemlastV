@@ -1,4 +1,3 @@
-
 <?php if (!empty($_SESSION['type'])) { ?>
     <?php if ($_SESSION['type'] == 'admin' || $_SESSION['type'] == 'emp_store' || $_SESSION['type'] == 'manager') { ?>
         <!-- Content Wrapper. Contains page content -->
