@@ -37,10 +37,10 @@ class Analyze extends CI_Controller
       $data['get_d']=ceil($total_all/$n_total);
     //------------------------------ คำนวณรายสัปดาห์ 3ปดาห์ย้อนหลัง--------------------------------------//     
         $n_w=0;
-        $n1_w=3;
+        $n1_w=4;
         $n_total_w=0;
         $total_all_w=0;
-        for($i=-1; $i>= -3;$i--){
+        for($i=-1; $i>= -4;$i--){
             $data['w'][]=$this->analyze_model->get_sell_w($product_id,$i)->row();
             $total_w[]=(@$data['w'][$n_w]->qty*($n1_w));
             $total_all_w+=$total_w[$n_w];

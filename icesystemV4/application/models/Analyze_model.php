@@ -53,9 +53,12 @@ class Analyze_model extends CI_Model
             }elseif($w == -2){
                 $start_date = date('Y-m-d',strtotime("-1 week"));
                 $end_date = date('Y-m-d', strtotime("-2 week"));
-            }else{
+            }elseif($w == -3){
                 $start_date = date('Y-m-d',strtotime("-2 week"));
                 $end_date = date('Y-m-d', strtotime("-3 week"));
+            }else{
+                $start_date = date('Y-m-d',strtotime("-3 week"));
+                $end_date = date('Y-m-d', strtotime("-4 week"));
             }
             $this->db->where('sell_detail.sell_detail_date >=',$end_date);
             $this->db->where('sell_detail.sell_detail_date <=',$start_date);
