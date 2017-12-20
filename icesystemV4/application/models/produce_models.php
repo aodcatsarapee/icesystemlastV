@@ -105,6 +105,8 @@
 
 			$this->db->from("stock");
 
+			$this->db->join('product','product.product_id = stock.product_id');
+
 			$this->db->where("stock_detail_id",$id);
 
 			$this->db->where("stock_amount != 0");

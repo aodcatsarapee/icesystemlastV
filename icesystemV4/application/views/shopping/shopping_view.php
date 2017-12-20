@@ -325,7 +325,7 @@
                                       </fieldset>
 
                                 <?php $disabled='disabled'; }else{ ?>      
-                                   <input type="text" class="form-control" name='received'  placeholder="เงินสด เช่น 100 500 1000 บาท" >
+                                   <input type="text" class="form-control" name='received' id="received1" placeholder="เงินสด เช่น 100 500 1000 บาท" onkeyup="test(<?php echo $grand_total?>)">
                                    
                                    <?php } ?>
                                    </div>
@@ -333,7 +333,7 @@
                               
                                 <div class="form-group">
                                   <div class="col-sm-12">
-                               <button type="submit" class="btn btn-success  btn-block "  <?php echo @$disabled; ?>>คำนวณ</button>
+                               <button type="submit" class="btn btn-success  btn-block " id="submit_dis"  <?php echo @$disabled; ?>  >คำนวณ</button>
                                </div>
                                </div>
                            </form>

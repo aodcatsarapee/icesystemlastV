@@ -171,7 +171,6 @@ $(".show_order_sell").click(function(event) {
         window.location = "<?php echo base_url(); ?>index.php/shopping/remove/all";
     });
 
-
      $('#datatable-orders').DataTable({
                 "order": [[ 0, "desc" ]],
 
@@ -186,8 +185,20 @@ $(".show_order_sell").click(function(event) {
         }
 
      });
-
-
+     
        });
+
+function test(total)
+     { 
+        if(total <= $('#received1').val()){
+            
+            $('#submit_dis').removeAttr("disabled");
+            console.log(total+"ok"+$('#received1').val());
+           
+        }else{
+            $('#submit_dis').prop("disabled", true);
+            console.log(total+"no"+$('#received1').val());
+        }
+     }  
 
  </script> 
