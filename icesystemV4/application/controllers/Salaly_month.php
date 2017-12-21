@@ -9,7 +9,7 @@ class Salaly_month extends CI_Controller
         //load model
         $this->load->model('Salaly_models');
 
-         $this->load->library('Pdf');
+        $this->load->library('Pdf');
 
     }
 
@@ -69,7 +69,7 @@ class Salaly_month extends CI_Controller
         $salaly_rest = $_POST['salaly_rest'];
         $salaly_in_work = $_POST['salaly_in_work'];
 
-        $fullname =$_POST['fullname'];
+        $fullname = $_POST['fullname'];
 
         $set_worktime = $this->Salaly_models->set_salaly($_POST['employee_id']);
         if ($set_worktime['employee_id'] == null) {
@@ -85,40 +85,39 @@ class Salaly_month extends CI_Controller
                 'rest_work' => $salaly_rest,
             );
 
-             $this->session->set_flashdata('pay', 'จ่ายเงินเดือนเรียบร้อยเเล้ว'); 
+            $this->session->set_flashdata('pay', 'จ่ายเงินเดือนเรียบร้อยเเล้ว');
 
             $this->db->insert("salary_month", $date_in);
 
             $account = array(
-                
-                                "account_detail" => 'จ่ายเงินเดือนให้พนักงานชื่อ '.$fullname,
-                                "account_expenses"=> $salaly_months,
-                                "account_type" => 'จ่ายเงินเดือนให้พนักงาน',
-                                "account_datasave" => date('Y-m-d H:i:s'),
-                                );
-                
-                                $this->db->insert('account',$account);
+
+                "account_detail" => 'จ่ายเงินเดือนให้พนักงานชื่อ ' . $fullname,
+                "account_expenses" => $salaly_months,
+                "account_type" => 'จ่ายเงินเดือนให้พนักงาน',
+                "account_datasave" => date('Y-m-d H:i:s'),
+            );
+
+            $this->db->insert('account', $account);
 
 
         } else {
 
-            
 
-                $this->session->set_flashdata('check', 'จ่ายเงินเดือนให้พนักงานคนนี้เเล้ว');            
+            $this->session->set_flashdata('check', 'จ่ายเงินเดือนให้พนักงานคนนี้เเล้ว');
 
 
         }
 
-         redirect('Salaly_month');
+        redirect('Salaly_month');
 
     }
+
     public function print_saraly()
     {
- 
-       
- 
+
+
     }
- 
+
 }
 
 

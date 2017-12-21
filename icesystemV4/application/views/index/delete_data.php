@@ -3,7 +3,6 @@
     <div class="modal-content ">
       <div class="modal-body" >
 
-
         <h1 align="center" style="margin-bottom: 60px;">ต้องการยกเลิกการสั่งซื้อใช่หรือไม่?</h1>
                
        <div align="center">

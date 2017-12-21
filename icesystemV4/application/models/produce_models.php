@@ -243,9 +243,6 @@
 				return $sql->result_array();
 	  
 			}
-	 
- 
-
 
 	}
 

@@ -6,10 +6,8 @@
 				<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
 				<h4 class="modal-title">รายละเอียดการสั่งผลิตสินค้า</h4>
 			</div>
-			<div class="modal-body" id="stock_detail">	
-			
-			</div>
-			
+			<div class="modal-body" id="stock_detail">				
+			</div>			
 		</div>
 	</div>
 </div>
