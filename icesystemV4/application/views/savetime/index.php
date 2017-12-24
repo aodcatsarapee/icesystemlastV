@@ -139,8 +139,8 @@
 			var numday = today.getDate();
 			var year = today.getFullYear() + 543;
 			var hour = today.getHours();
-			var minute = today.getMinutes();
-			var seconds = today.getSeconds();
+			var minute = (today.getMinutes()<10?'0':'')+today.getMinutes();
+			var seconds = (today.getSeconds()<10?'0':'')+today.getSeconds();
 			var milliseconds = today.getMilliseconds();
 			var output = 'วัน' + day + 'ที่ ' + numday + ' เดือน ' + month + ' พ.ศ. ' + year;
 			var time = 'เวลา ' + hour + ':' + minute + ':' + seconds + ' นาที';
