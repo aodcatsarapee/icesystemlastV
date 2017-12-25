@@ -35,7 +35,7 @@ class Savetime extends CI_Controller
             $data['status_emp']='ไม่สามารถบัททึกได้';
             $data['status']=false;
         }else{
-            if(date('H') >='6' && date('H') <='16' ){
+            if(date('H') >='6' && date('H') <='9' ){
                 $time = date('H');
                 $worktime = array(
                     'employee_id' => $emp->employee_id,
