@@ -2,7 +2,8 @@
 <html lang="en">
 
 <head>
-	<title>Hello, world!</title>
+	<title>ระบบลงเวลางาน
+ห้างหุ่นส่วนจำกัดโรงน้ำเเข้งทวีชัยเชียงใหม่</title>
 	<!-- Required meta tags -->
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -32,8 +33,7 @@
 	</style>
 	<!-- Optional JavaScript -->
 	<!-- jQuery first, then Popper.js, then Bootstrap JS -->
-	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
-	crossorigin="anonymous"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh"
 	crossorigin="anonymous"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ"
@@ -53,26 +53,26 @@
 			<div class="col-10">
 				<!-- <div class="container"> -->
 					<div class="content_main">
-						<input type="text" class="form-control" name="employee_id" id="employee_id" aria-describedby="helpId" placeholder="" onkeypress="if (event.keyCode === 13) { enter(); }"
+						<input type="text" class="form-control text-center" name="employee_id" id="employee_id" aria-describedby="helpId" placeholder="สเเกนรหัสพนักงาน" onkeypress="if (event.keyCode === 13) { enter(); }"
 						autofocus>
                         <br>
                         <div class="row">
-						<div class="card   mb-3 box" style="min-width: 25rem;">
+						<div class="card  box col-4" >
 							<div class="card-header"><h4>ชื่อ-นาสกุล</h4></div>
 							<div class="card-body">
-								<h4 class="card-title" style="padding-top:50px;">สรศักดิ์ ต้นเกณฑ์</h4>
+								<h4 class="card-title" style="padding-top:50px;" id="emplyee_name">-</h4>
 							</div>
 						</div>
-                        <div class="card   mb-3 box" style="min-width: 25rem;">
+                        <div class="card  box col-4" >
 							<div class="card-header"><h4 >เวลา</h4></div>
 							<div class="card-body">
-								<h4 class="card-title" style="padding-top:50px;">07:50</h4>
+								<h4 class="card-title" style="padding-top:50px;" id="emplyee_time">-</h4>
 							</div>
 						</div>
-                        <div class="card   mb-3 box" style="min-width: 25rem;">
+                        <div class="card  box col-3" >
 							<div class="card-header"><h4>สถานะ</h4></div>
 							<div class="card-body">
-								<h4 class="card-title" style="padding-top:50px;">เข้างาน</h4>
+								<h4 class="card-title" style="padding-top:50px;" id="emplyee_status">-</h4>
 							</div>
 						</div>
 
@@ -111,6 +111,7 @@
 	}
 
 	.box {
+		padding:0px;
 		margin: 0px 12px 0px 15px;
 		/* box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); */
 		text-align: center;
@@ -124,10 +125,10 @@
 
 </style>
 <script>
+	var timeout;
 	$(function () {
 		run_time();
 	});
-
 	function run_time() {
 		setInterval(function () {
 			var today = new Date();
@@ -147,9 +148,39 @@
 			$('#dmytime').text(output + " " + time);
 		}, 1000);
 	}
-
 	function enter() {
-		alert($('#employee_id').val());
+		$.ajax({
+			url: 'savetime/get_emp',
+			type: "POST",
+			data: {
+				id: $('#employee_id').val()
+			},
+			dataType: "JSON",
+			success: function (data) {
+				if (data.status) {
+					$('#emplyee_name').text(data.name);
+					$('#emplyee_time').text(data.time);
+					$('#emplyee_status').text(data.status_emp);
+					$('#employee_id').val('');
+					clearTimeout(timeout);
+					reload();
+				}else{
+					$('#emplyee_name').text(data.name);
+					$('#emplyee_time').text(data.time);
+					$('#emplyee_status').text(data.status_emp);
+					$('#employee_id').val('');
+					clearTimeout(timeout);
+					reload();
+				}
+			},
+		});
+	};
+	function reload() {
+		timeout=setTimeout(() => {
+				$('#emplyee_name').text('-');
+				$('#emplyee_time').text('-');
+				$('#emplyee_status').text('-');
+		}, 5000);
 	}
 
 </script>
