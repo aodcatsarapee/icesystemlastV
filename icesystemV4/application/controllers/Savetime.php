@@ -21,8 +21,7 @@ class Savetime extends CI_Controller
             redirect(base_url()."index");
         }
     }
-    public function get_emp(){
-		
+    public function get_emp(){	
 		if($this->emp_model->get($this->input->post('id'))==true){
 			$emp = $this->emp_model->get($this->input->post('id'));
 			$set_worktime = $this->emp_model->set_worktime($this->input->post('id'));
@@ -36,7 +35,7 @@ class Savetime extends CI_Controller
             $data['status_emp']='ไม่สามารถบัททึกได้';
             $data['status']=false;
         }else{
-            if(date('H') >='6' && date('H') <='10' ){
+            if(date('H') >='6' && date('H') <='16' ){
                 $time = date('H');
                 $worktime = array(
                     'employee_id' => $emp->employee_id,
@@ -97,6 +96,7 @@ class Savetime extends CI_Controller
 		}
 		echo  json_encode($data);
     }
+   
     
-    
+
 }

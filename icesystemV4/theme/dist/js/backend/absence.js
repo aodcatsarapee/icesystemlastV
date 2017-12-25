@@ -1,8 +1,6 @@
 <script> 
- 
-
+var url = $("#base_url").val();
 		  $(document).ready(function(){
-
 
              $("#absence").submit(function(event) {
                    event.preventDefault();
@@ -66,8 +64,37 @@
              
            });
 
+          
+           if(url == 'http://127.0.0.1/icesystemlastV/icesystemV4/absence' ){ //เปลืยนด้วยเมือขึนhostจริง
+           procss();
+           
+          }
         });
-
-
-
+     var i = 1;
+function procss() {
+		setInterval(function () {
+      var today = new Date();
+      var minute = (today.getMinutes()<10?'0':'')+today.getMinutes();
+      if(minute == '28'){
+        if(i == 1){
+          $.ajax({
+            url: url + '/procss_absence',
+            type: 'POST',
+            dataType: "JSON",
+            success: function (data) {
+              $('#procss_absence').html('<a href="" type="button" class="btn btn-info btn-xs disabled"  style="float: right;font-size: 20px;margin-right:5px;"><i class="fa fa-check" aria-hidden="true"></i> ประมวลผลเรียบร้อยเเล้ว </a>');
+              // location.reload();
+            }
+        });
+      }
+      i++;
+      }else{
+        i=1;
+        $('#procss_absence').html('<a href="" type="button" class="btn btn-info btn-xs disabled"  style="float: right;font-size: 20px;margin-right:5px;"><i class="fa fa-spinner" aria-hidden="true"></i> รอประมวลผล </a>');
+        console.log(i);
+      }
+    },1000);
+  }
+	
 </script>
+
