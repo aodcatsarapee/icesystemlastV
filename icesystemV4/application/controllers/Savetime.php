@@ -62,7 +62,8 @@ class Savetime extends CI_Controller
 			$date_out = array(
 				'Worktime_time_out' => date("H:i:s")
 			);
-				$this->db->where('employee_id',$set_worktime['employee_id']);
+                $this->db->where('employee_id',$set_worktime['employee_id']);
+                $this->db->where('Worktime_id',$set_worktime['Worktime_id']);
 				$this->db->update("worktime", $date_out);	
 							
 							$get_worktime = $this->emp_model->get_worktime($set_worktime['employee_id']);

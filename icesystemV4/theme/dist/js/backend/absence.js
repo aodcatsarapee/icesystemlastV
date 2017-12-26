@@ -69,6 +69,7 @@ function procss() {
 		setInterval(function () {
       var today = new Date();
       var hour = today.getHours();
+      var minute = (today.getMinutes()<10?'0':'')+today.getMinutes();
       if(hour >= '11' && hour <= '23' ){
         if(i == 1){
           $.ajax({

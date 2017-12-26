@@ -43,7 +43,7 @@
                                 <div class="row">
                                     <div class="col-md-12">
 
-                                    <a href="<?php echo base_url()."savetime"?>" type="button" class="btn btn-info btn-xs"  style="float: right;font-size: 20px;margin-right:5px;"><i class="fa fa-plus" aria-hidden="true"></i> เข้าระบบลงเวลางาน </a>
+                                    <a target="_blank" href="<?php echo base_url()."savetime"?>" type="button" class="btn btn-info btn-xs"  style="float: right;font-size: 20px;margin-right:5px;"><i class="fa fa-plus" aria-hidden="true"></i> เข้าระบบลงเวลางาน </a>
                                         <!-- Custom Tabs -->
                                         <div class="nav-tabs-custom">
                                             <ul class="nav nav-tabs">
