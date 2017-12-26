@@ -39,7 +39,7 @@
         <div class="col-md-12">
           <!-- Custom Tabs -->
           <div id="procss_absence"></div>
-          <div class="nav-tabs-custom">
+          <a href="" type="button" class="btn btn-primary btn-xs"  style="float: right;font-size: 20px;margin-right:5px;"><i class="fa fa-refresh" aria-hidden="true"></i> Refresh  </a>
             <ul class="nav nav-tabs">
               <!-- <li class="active"><a href="#tab_1" data-toggle="tab">บันทึกพนักงานขาดงาน</a></li> -->
               <li  class="active"><a href="#tab_2" data-toggle="tab">พนักงานขาดงานวันนี้</a></li>

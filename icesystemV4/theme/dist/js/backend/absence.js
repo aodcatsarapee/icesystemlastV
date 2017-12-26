@@ -47,8 +47,6 @@ var url = $("#base_url").val();
              
            });
 
-
-
              $('#ab_work2').DataTable({
 
                 "order": [[ 0, "desc" ]],
@@ -60,22 +58,18 @@ var url = $("#base_url").val();
                     "info": " หน้า _PAGE_ จาก _PAGES_",
                    "infoEmpty": " ",
                    "infoFiltered": "(filtered from _MAX_ total records)",
-        }
-             
-           });
-
-          
+        }            
+           });         
            if(url == 'http://127.0.0.1/icesystemlastV/icesystemV4/absence' ){ //เปลืยนด้วยเมือขึนhostจริง
-           procss();
-           
+              procss();
           }
         });
      var i = 1;
 function procss() {
 		setInterval(function () {
       var today = new Date();
-      var minute = (today.getMinutes()<10?'0':'')+today.getMinutes();
-      if(minute == '28'){
+      var hour = today.getHours();
+      if(hour >= '11' && hour <= '23' ){
         if(i == 1){
           $.ajax({
             url: url + '/procss_absence',
@@ -90,7 +84,7 @@ function procss() {
       i++;
       }else{
         i=1;
-        $('#procss_absence').html('<a href="" type="button" class="btn btn-info btn-xs disabled"  style="float: right;font-size: 20px;margin-right:5px;"><i class="fa fa-spinner" aria-hidden="true"></i> รอประมวลผล </a>');
+        $('#procss_absence').html('<a href="" type="button" class="btn btn-info btn-xs disabled"  style="float: right;font-size: 20px;margin-right:5px;"><i class="fa fa-spinner" aria-hidden="true"></i> รอประมวลผลในเวลา 11:00 น ของทุกวัน</a>');
         console.log(i);
       }
     },1000);

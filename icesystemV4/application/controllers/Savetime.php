@@ -35,7 +35,7 @@ class Savetime extends CI_Controller
             $data['status_emp']='ไม่สามารถบัททึกได้';
             $data['status']=false;
         }else{
-            if(date('H') >='6' && date('H') <='9' ){
+            if(date('H') >='6' && date('H') <='10' ){
                 $time = date('H');
                 $worktime = array(
                     'employee_id' => $emp->employee_id,
@@ -58,7 +58,7 @@ class Savetime extends CI_Controller
             }
         }
 		}else if($set_worktime['Worktime_time_in'] =! null && $set_worktime['Worktime_time_out'] == null){
-            if(date('H') >='17' && date('H') <='18' ){
+            if(date('H') >='17' && date('H') <='19' ){
 			$date_out = array(
 				'Worktime_time_out' => date("H:i:s")
 			);
@@ -85,7 +85,6 @@ class Savetime extends CI_Controller
 			$data['status_emp']='แล้ว';
 			$data['status']=false;
 		}
-
 		}else{
 			$data['img']="";
 			$data['name']='ไม่มีข้อมูล';
@@ -96,7 +95,4 @@ class Savetime extends CI_Controller
 		}
 		echo  json_encode($data);
     }
-   
-    
-
 }

@@ -42,152 +42,22 @@
                             <div class="box-body">
                                 <div class="row">
                                     <div class="col-md-12">
+
+                                    <a href="<?php echo base_url()."savetime"?>" type="button" class="btn btn-info btn-xs"  style="float: right;font-size: 20px;margin-right:5px;"><i class="fa fa-plus" aria-hidden="true"></i> เข้าระบบลงเวลางาน </a>
                                         <!-- Custom Tabs -->
                                         <div class="nav-tabs-custom">
                                             <ul class="nav nav-tabs">
-                                                <li class="active"><a href="#tab_1"
-                                                                      data-toggle="tab">บันทึกเวลาเข้างาน</a></li>
-                                                <li><a href="#tab_2" data-toggle="tab">เวลาเข้างานวันนี้</a></li>
+                                                <!-- <li class="active"><a href="#tab_1"
+                                                                      data-toggle="tab">บันทึกเวลาเข้างาน</a></li> -->
+                                                <li  class="active"><a href="#tab_2" data-toggle="tab">เวลาเข้างานวันนี้</a></li>
                                                 <li><a href="#tab_3" data-toggle="tab">เวลาออกงานวันนี้</a></li>
 
 
                                             </ul>
                                             <div class="tab-content">
-                                                <div class="tab-pane active" id="tab_1">
-                                                    <div class="table-responsive">
-                                                        <table class="table table-hover "
-                                                               id="table_worrk">
-                                                            <thead>
-                                                            <tr>
-                                                                <th width="10%" style="text-align: center;">รูป</th>
-                                                                <th width="10%" style="text-align: center;">
-                                                                    รหัสพนักงาน
-                                                                </th>
-                                                                <th >ชื่อพนักงาน</th>
-                                                                <th width="10%" >เเผนก</th>
-
-
-                                                                <th width="8%" style="text-align: center;">เข้างาน</th>
-                                                                <th width="5%" style="text-align: center;">ออกงาน</th>
-
-                                                                <!--   <th width="10%">เวลาเข้างาน</th>
-                                                                  <th width="10%">ลงเวลาเข้างาน</th> -->
-
-                                                            </tr>
-                                                            </thead>
-                                                            <tbody>
-
-                                                            <?php if ($this->session->flashdata('worktimesave') != null) { ?>
-                                                                <div class="alert alert-success">
-                                                                    <a href="#" class="close" data-dismiss="alert"
-                                                                       aria-label="close">&times;</a>
-
-                                                                        <p style="font-size: 15pt"> <?php echo $this->session->flashdata('worktimesave'); ?> </p>
-
-                                                                </div>
-                                                            <?php } ?>
-                                                            <?php if ($this->session->flashdata('inworktime') != null) { ?>
-                                                                <div class="alert alert-danger">
-                                                                    <a href="#" class="close" data-dismiss="alert"
-                                                                       aria-label="close">&times;</a>
-
-                                                                        <p style="font-size: 15pt"> <?php echo $this->session->flashdata('inworktime'); ?> </p>
-
-                                                                </div>
-                                                                
-                    
-                                                            <?php } ?>
-
-
-
-                                                            <?php foreach ($employee as $key => $value) { ?>
-
-
-                                                                <!-- <?php foreach ($worktime as $key => $worktimes) { ?>
-
-                            <?php if ($value['employee_id'] == $worktimes['Employee_id']) {
-                                                                    echo($worktimes['Employee_id']); ?>
-
-
-                         <?php }
-                                                                } ?>   -->
-
-
-                                                                <tr>
-                                                                    <td style="text-align: center; "><img
-                                                                                src="<?php echo base_url() ?>img/<?php echo $value['employee_image']; ?>"
-                                                                                width="80" height="80"></td>
-                                                                    <td style="text-align: center;padding-top: 30px;">
-                                                                        <?php echo $value['employee_id']; ?></td>
-                                                                    <td style="padding-top: 30px; "><?php echo $value['employee_fname'] . " " . $value['employee_lname']; ?></td>
-                                                                    <td style="padding-top: 30px;"><?php echo $value['name']; ?></td>
-
-                                                                    <form action="<?php echo base_url() ?>Work_time/insert_date_in"
-                                                                          method="POST">
-
-
-                                                                        <input type="hidden" name="employee_id"
-                                                                               class="form-control"
-                                                                               value="<?php echo $value['employee_id']; ?>">
-
-                                                                        <td style="text-align: center;padding-top: 30px;">
-                                                                            <?php if($_SESSION['type']!='manager'){?>
-                                                                            <button type="submit"
-                                                                                    class="btn btn-success btn-xs"> <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
-                                                                                เข้างาน
-                                                                            </button>
-                                                                            <?php }else{?>
-                                                                                <button type="submit"
-                                                                                    class="btn btn-success btn-xs" disabled> <span class="glyphicon glyphicon-plus" aria-hidden="true" ></span>
-                                                                                เข้างาน
-                                                                            </button>
-                                                                            <?php }?>
-                                                                    </form>
-
-                                                                    <form action="<?php echo base_url() ?>Work_time/insert_date_out"
-                                                                          method="POST">
-
-                                                                        <input type="hidden" name="employee_id"
-                                                                               class="form-control"
-                                                                               value="<?php echo $value['employee_id']; ?>">
-
-                                                                        <td style="text-align: center;padding-top: 30px;">
-                                                                        <?php if($_SESSION['type']!='manager'){?>
-                                                                            <button type="submit"
-                                                                                    class="btn btn-danger btn-xs"> <span class="glyphicon glyphicon-plus" aria-hidden="true"></span> ออกงาน
-                                                                            </button>
-                                                                            <?php }else{?>
-                                                                                <button type="submit"
-                                                                                    class="btn btn-danger btn-xs" disabled> <span class="glyphicon glyphicon-plus" aria-hidden="true"></span> ออกงาน
-                                                                            </button>
-                                                                                <?php }?>
-                                                                    </form>
-                                                                    <!--  <td style="text-align: center; padding-top: 30px;">
-
-                           <input type="time" name="Worktime_time_in" class="form-control" value="00:00">
-
-                           <input type="hidden" name="employee_id" class="form-control" value="<?php echo $value['employee_id']; ?>">
-
-                           </td> -->
-                                                                    <!--  <td style="text-align: center;padding-top: 30px;">
-
-                                                                        <button type="submit" class="btn btn-success btn-xs" >บันทึกข้อมูล</button> -->
-                                                                    </form>
-
-                                                                    </td>
-
-                                                                </tr>
-
-                                                            <?php } ?>
-
-                                                            </tbody>
-                                                        </table>
-
-
-                                                    </div>
-                                                </div>
+                                                
                                                 <!-- /.tab-pane -->
-                                                <div class="tab-pane" id="tab_2">
+                                                <div class="tab-pane active" id="tab_2">
                                                     <table class="table table-hover" id="table_worrk2">
                                                         <thead>
                                                         <tr>
