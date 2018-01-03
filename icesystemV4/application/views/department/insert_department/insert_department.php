@@ -23,6 +23,14 @@
               <input class="form-control" type="text" name="department_name" id="department_name"  placeholder="เช่น พนักงานผลิต " >
             </div>
           </div>
+
+          <div class="form-group  ">
+            <label class="col-sm-3 control-label"  >เงินเดือนประจำแผนก :</label>
+            <div class="col-sm-7">
+              <input class="form-control" type="text" name="salaly_set" id="salaly_set"  placeholder="เช่น 300 " > 
+            </div>
+          </div>
+        
         
            <input type="submit" class="btn btn-default" id="insert" value=" บันทึกข้อมูล " style="float: right;font-size: 15px;">
         </form>

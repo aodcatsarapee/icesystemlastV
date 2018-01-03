@@ -49,7 +49,7 @@
                  
                  <th style ="text-align: center;">เบอร์โทร</th>
                  <th style ="text-align: center;">เเผนก</th>
-                     <th style ="text-align: center;">....</th>
+                     <th style ="text-align: center;" >จัดการ</th>
 
 
               </tr>
@@ -71,8 +71,9 @@
 
                   <td style="text-align: center;padding-top: 30px;"><?php echo $employees['name'] ; ?></td>
 
-                   <td width="20%" style="text-align: center;padding-top: 30px;">
-
+                   <td width="30%" style="text-align: center;padding-top: 30px;">
+                  
+                   <a href="Employee/print_card?id=<?php echo $employees['employee_id'] ?>"  class="btn btn-primary btn-xs print_card" target="_blank" ><spen class='glyphicon glyphicon-play-circle'> </spen> พิมพ์บัตร</a>
                    <button  type="button" class="btn btn-success btn-xs showdata" id="<?php echo $employees['employee_id']; ?>"  ><spen class='glyphicon glyphicon-play-circle'> </spen> ดูข้อมูล</button>
 
 

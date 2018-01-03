@@ -16,7 +16,17 @@
               </fieldset>
             </div>
           </div>
-            
+
+          <div class="form-group ">
+            <label class="col-sm-3 control-label" >เงินเดือนต่อวันละ :</label>
+            <div class="col-sm-7">
+            <fieldset disabled>
+              <input type="text" id="disabledTextInput" class="form-control" value="<?php echo $os['salaly_set']; ?>" >
+              </fieldset>
+            </div>
+          </div>
+
+
            <div class="form-group ">
             <label class="col-sm-3 control-label" >จำนวนวันที่เข้างาน :</label>
             <div class="col-sm-7">
@@ -37,7 +47,7 @@
             </div>
           </div>
               <?php $salaly = 0;
-                     $salaly = $rs*300; ?>
+                     $salaly = $rs*$os['salaly_set']; ?>
 
 
             <?php 

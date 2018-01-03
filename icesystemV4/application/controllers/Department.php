@@ -32,9 +32,11 @@
 		{
 
 			$department_name = $_POST['department_name'];
+			$salaly_set = $_POST['salaly_set'];
 			$ar = array(
 
 						"name" => $department_name,
+						"salaly_set" => $salaly_set,
 
 
 				);
@@ -59,9 +61,11 @@
 		{
 			$department_id =  $_POST['department_id'];
 			$department_name = $_POST['department_name'];
+			$salaly_set = $_POST['salaly_set'];
 			$ar = array(
 
 						"name" => $department_name,
+						"salaly_set" => $salaly_set,
 
 				);
 

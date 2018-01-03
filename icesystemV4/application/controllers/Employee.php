@@ -10,6 +10,7 @@
 
 			$this->load->model('employee_models');
 			$this->load->model('department_models');
+			
 		}
 
 		public function index()
@@ -258,7 +259,171 @@ $this->load->library('upload');
 				$this->db->where("employee_id",$id);
 				$this->db->delete('employee');
 
-		}	
+		}
+		
+		
+		public function testCoe(){
+
+			//load library
+		$this->load->library('Zend');
+		//load in folder Zend
+		$this->zend->load('Zend/Barcode');
+		//generate barcode
+		
+		for($i = 20; $i <= 24; $i++){
+			$barcode = '5656549563131646646797';
+			$imageResource = Zend_Barcode::factory('code128', 'image', array('text'=>$barcode , 'barHeight' => 300 ), array())->draw();
+			imagepng($imageResource, 'img/barcode'.$i.'.png');
+		}
+		
+		}
+
+
+		public function print_card() {
+			$id = $_GET['id'];
+			
+			
+				$this->load->library('Pdf');
+				$pdf = $this->pdf->loadPDFA5L();
+				$pdf->AddPage();
+				$pdf->SetTitle('ใบสมัครการเเข่งขัน', 'isUTF8');
+				$page = 1;
+				// setmargin left top right
+				$pdf->SetMargins(10, 10, 10);
+				// add font
+				$pdf->AddFont('THSarabun', '', 'THSarabun.php');
+				$pdf->AddFont('THSarabun', 'B', 'THSarabun Bold.php');
+				// head
+			
+				
+				//ข้อควาวม
+				$pdf->SetFont('THSarabun', 'B', 25);
+				$pdf->SetY(10);
+				$pdf->SetX(3);
+				$pdf->SetFillColor(222, 222, 222);
+				$pdf->Cell(200, 10, iconv('UTF-8', 'cp874', 'บัตรประจำตัวพนักงาน'), 0, 0, 'C');
+
+				$pdf->SetFont('THSarabun', 'B', 16);
+				$pdf->SetY(18);
+				$pdf->SetX(3);
+				$pdf->SetFillColor(222, 222, 222);
+				$pdf->Cell(200, 10, iconv('UTF-8', 'cp874', 'ห้างหุ้นส่วนจำกัดโรงน้ำแข็งทวีชัย '), 0, 0, 'C');
+
+				$pdf->SetFont('THSarabun', 'B', 14);
+				$pdf->SetY(20);
+				$pdf->SetX(3);
+				$pdf->SetFillColor(222, 222, 222);
+				$pdf->Cell(200, 10, iconv('UTF-8', 'cp874', '______________________________________________________________________________________ '), 0, 0, 'C');
+				
+				
+				$result = $this->employee_models->select_data_employee($id);
+
+				$row = $result;
+				//รูป
+				// if ($row->player_photo != "") {
+				// 	$photo = $row->player_photo;
+				// } else {
+				// 	$photo = "avatar.png";
+				// }
+				// $pdf->Image(base_url() . 'assets/uploads/player/' . $photo, 20, 55, 24, 0, '', '', '');
+				//ประวัติ
+				$pdf->SetFont('THSarabun', 'B', 18);
+				$pdf->SetY(30); // ตำเเหน่งเเถว
+				$pdf->SetX(22); // col
+				
+				$pdf->Cell(138, 8, iconv('UTF-8', 'cp874', 'ตำแหน่ง : '), '', 0, 'L');
+
+				$pdf->SetFont('THSarabun', 'B', 18);
+				$pdf->SetY(30); // ตำเเหน่งเเถว
+				$pdf->SetX(40); // col
+				$pdf->Cell(138, 8, iconv('UTF-8', 'cp874', $row['name']), '', 0, 'L');
+	
+				$pdf->SetFont('THSarabun', 'B', 18);
+				$pdf->SetY(40); // ตำเเหน่งเเถว
+				$pdf->SetX(22); // col
+				$pdf->Cell(138, 8, iconv('UTF-8', 'cp874', 'เลขประจำตัวประชาชน : '), '', 0, 'L');
+					
+				
+				$pdf->SetFont('THSarabun', 'B', 18);
+				$pdf->SetY(40); // ตำเเหน่งเเถว
+				$pdf->SetX(66); // col
+				$pdf->Cell(138, 8, iconv('UTF-8', 'cp874', $row['employee_IDcard']), '', 0, 'L');
+			
+				$pdf->SetFont('THSarabun', 'B', 18);
+				$pdf->SetY(40); // ตำเเหน่งเเถว
+				$pdf->SetX(110); // col
+				$pdf->Cell(138, 8, iconv('UTF-8', 'cp874', 'สัญชาติ: '), '', 0, 'L');
+				
+				$pdf->SetFont('THSarabun', 'B', 18);
+				$pdf->SetY(40); // ตำเเหน่งเเถว
+				$pdf->SetX(126); // col
+				$pdf->Cell(138, 8, iconv('UTF-8', 'cp874',  $row['employee_country'] ), '', 0, 'L');
+
+				$photo = $row['employee_image'];
+			
+				$pdf->Image(base_url() . 'img/' . $photo, 145, 30, 60, 80, '', '', '');	
+				
+				$pdf->SetFont('THSarabun', 'B', 18);
+				$pdf->SetY(50); // ตำเเหน่งเเถว
+				$pdf->SetX(22); // col
+				$pdf->Cell(138, 8, iconv('UTF-8', 'cp874',  'ชื่อ - สกุล : ' ), '', 0, 'L');
+
+				if($row['employee_sex'] == 'male' ){
+					 $gender = "นาย";
+				} else{
+		
+					$gender = "น.ส.";
+				}
+
+				$pdf->SetFont('THSarabun', 'B', 18);
+				$pdf->SetY(50); // ตำเเหน่งเเถว
+				$pdf->SetX(43); // col
+				$pdf->Cell(138, 8, iconv('UTF-8', 'cp874',  $gender.' '.$row['employee_fname'].' '.$row['employee_lname'] ), '', 0, 'L');
+				
+				
+				$pdf->SetFont('THSarabun', 'B', 18);
+				$pdf->SetY(60); // ตำเเหน่งเเถว
+				$pdf->SetX(22); // col
+				$pdf->Cell(138, 8, iconv('UTF-8', 'cp874', 'วันเกิด : ' ), '', 0, 'L');
+
+				$birthday = $row['employee_birthday'];
+				$this->load->helper('Datethai');
+				 
+				$pdf->SetFont('THSarabun', 'B', 18);
+				$pdf->SetY(60); // ตำเเหน่งเเถว
+				$pdf->SetX(37); // col
+				$pdf->Cell(138, 8, iconv('UTF-8', 'cp874', Datethai($birthday) ), '', 0, 'L');
+
+				$pdf->SetFont('THSarabun', 'B', 18);
+				$pdf->SetY(60); // ตำเเหน่งเเถว
+				$pdf->SetX(85); // col
+				$pdf->Cell(138, 8, iconv('UTF-8', 'cp874', 'วันออกบัตร : ' ), '', 0, 'L');
+
+				$date_card = date("Y-m-d");
+
+				$pdf->SetFont('THSarabun', 'B', 18);
+				$pdf->SetY(60); // ตำเเหน่งเเถว
+				$pdf->SetX(109); // col
+				$pdf->Cell(138, 8, iconv('UTF-8', 'cp874', Datethai($date_card) ), '', 0, 'L');
+
+				$this->load->library('Zend');
+				//load in folder Zend
+				$this->zend->load('Zend/Barcode');
+				//generate barcode
+				
+				
+					$barcode = $row['employee_id'];
+					$imageResource = Zend_Barcode::factory('code128', 'image', array('text'=>$barcode , 'barHeight' => 100 ), array())->draw();
+					imagepng($imageResource, 'img/'.$barcode.'.png');
+			
+					$pdf->Image(base_url() . 'img/' . $barcode.'.png', 10, 82, 135, 30, '', '', '');	
+				
+
+				$pdf->Output();
+		}
+
+
+
 
 	}
 	
