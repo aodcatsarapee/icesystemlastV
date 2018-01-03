@@ -25,16 +25,9 @@ class Absence extends CI_Controller {
 			$data['employee']= $this->Absence_models->ab_show();
 			$data['absence']= $this->Absence_models->show_absence();
 			
-
-
 			$this->load->view('absence/index',$data);
 			$this->load->view('footer');
-	
-
-
 	}
-
-
     public function insert_absence()
     {
 
@@ -47,12 +40,8 @@ class Absence extends CI_Controller {
             $data="ไม่สามารถบันทึกออกงานได้พนักงานชื่อ ".$chek_rest['employee_fname']." ".$chek_rest['employee_lname']." ลางาน";
             $this->session->set_flashdata('check',$data);   
 
-
-
         }else{
 
-
-        
         if ($set_worktime['employee_id'] != null) {
 
             $data = "ไม่สามารถบันทึกได้พนักงานชื่อ " . $set_worktime['employee_fname'] . " " . $set_worktime['employee_lname'] . " มาทำงานเเล้ว";
@@ -231,15 +220,38 @@ $pdf->Output('amount_detail.pdf', 'I');
 // END OF FILE
 //============================================================+
         
-     
- 
-
     }
-
-
-
+    public function procss_absence(){      
+       $employee=$this->db->get('employee')->result();
+       foreach($employee as $item){
+        $this->db->where('DAY(worktime.date)',date('d'));
+        $this->db->where('MONTH(worktime.date)',date('m'));
+        $this->db->where('YEAR(worktime.date)',date('Y'));
+        $this->db->where('employee_id',$item->employee_id);
+        $worktime=$this->db->get('worktime')->row();
+        if(count($worktime)!= 0){
+            // echo $worktime->employee_id." มาทำงาน <br/>";
+        }else{
+            $chek_rest = $this->Rest_models->check_rest($item->employee_id);
+            $date_day = date('Y-m-d');
+            if(strtotime($date_day) >= strtotime($chek_rest['rest_before']) && strtotime($date_day) <= strtotime($chek_rest['rest_after']) ){
+                // echo $item->employee_id." ลางาน <br/>";
+            }else{
+                $set_absence = $this->Absence_models->set_absence($item->employee_id);
+                    if ($set_absence['employee_id'] == null) { 
+                            // echo $item->employee_id." ขาดงาน <br/>"; 
+                            $date_in = array(
+                                'employee_id' => $item->employee_id,
+                                'date' => date("Y-m-d"),
+                            );
+                            $this->db->insert("absence", $date_in);
+                        }   
+            }
+        }
+       }
+       $data['status']=true;
+       echo json_encode($data);
+    }
 }
-
-
 
 ?>

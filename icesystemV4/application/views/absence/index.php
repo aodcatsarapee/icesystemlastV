@@ -15,6 +15,7 @@
     <section class="content-header">
       <h1>
       <i class="fa fa-money"> </i> บันทึกเวลาการขาดงาน<small></small>
+      
       <button type="button" class="btn btn-success btn-xs " id="insert"  data-toggle="modal" data-target="#modal-select-date" style="float: right;font-size: 20px;"><spen class="glyphicon glyphicon-plus"> </spen> เลือกวันที่ </button>
       </h1>
 
@@ -37,16 +38,16 @@
 <div class="row">
         <div class="col-md-12">
           <!-- Custom Tabs -->
-          <div class="nav-tabs-custom">
+          <div id="procss_absence"></div>
+          <a href="" type="button" class="btn btn-primary btn-xs"  style="float: right;font-size: 20px;margin-right:5px;"><i class="fa fa-refresh" aria-hidden="true"></i> Refresh  </a>
             <ul class="nav nav-tabs">
-              <li class="active"><a href="#tab_1" data-toggle="tab">บันทึกพนักงานขาดงาน</a></li>
-              <li><a href="#tab_2" data-toggle="tab">พนักงานขาดงานวันนี้</a></li>
-             
-              
-              
+              <!-- <li class="active"><a href="#tab_1" data-toggle="tab">บันทึกพนักงานขาดงาน</a></li> -->
+              <li  class="active"><a href="#tab_2" data-toggle="tab">พนักงานขาดงานวันนี้</a></li>
+
             </ul>
+            
             <div class="tab-content">
-              <div class="tab-pane active" id="tab_1">
+              <!-- <div class="tab-pane " id="tab_1">
                 <div class="table-responsive">                
                     <table class="table table-hover " id="ab_work" >
                       <thead>
@@ -126,9 +127,9 @@
 
                        
                   </div>
-              </div>
+              </div> -->
               <!-- /.tab-pane -->
-              <div class="tab-pane" id="tab_2">
+              <div class="tab-pane active" id="tab_2">
               <table class="table  table-hover" id="ab_work2" >
                  <thead>
                    <tr>
@@ -152,17 +153,9 @@
                </table>
               </div>
               <!-- /.tab-pane -->
-            
-
-                 
-
 
               </div>
               <!-- /.tab-pane -->
-
-              
-
-
 
             </div>
             <!-- /.tab-content -->
@@ -170,17 +163,6 @@
           <!-- nav-tabs-custom -->
         </div>
         <!-- /.col -->
-
-
-
-
-
-
-
-
-
-
-
 
 
                 </div>

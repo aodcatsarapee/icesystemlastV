@@ -13,7 +13,7 @@
 		<tr>
 			<td><?php echo $value['product_id'] ; ?></td>
 			<td><?php echo $value['stock_product_name'] ; ?></td>
-			<td style="text-align: center;"><?php echo number_format($value['stock_amount'])." ".$value['stock_product_type'] ; ?></td>
+			<td style="text-align: center;"><?php echo number_format($value['stock_amount'])." ".$value['product_type'] ; ?></td>
 		</tr>
 	<?php }?>
 

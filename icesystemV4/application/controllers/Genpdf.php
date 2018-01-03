@@ -5634,14 +5634,33 @@ $pdf->Output('stock.pdf', 'I');
 
            $date_format = $emp['date_add'];
 
-            $this->load->helper('Datethai');
+            $this->load->helper('datethai');
             
             $strMonthCut = Array("","มกราคม","กุมพาพันธ์","มีนาคม","เมษายน","พฤษภาคม","มิถุนายน","กรกฏาคม","สิงหาคม","กันยายน","ตุลาคม","พฤษจิกายน","ธันวาคม");
 
             list($Y,$m,$d) = explode('-',$emp['date_add']);
-
+            
+            if($m == '01'){
+                $m = 1;
+            }elseif($m == '02'){
+                $m = 2;
+            }elseif($m == '03'){
+                $m = 3;
+            }elseif($m == '04'){
+                $m = 4;
+            }elseif($m == '05'){
+                $m = 5;
+            }elseif($m == '06'){
+                $m = 6;
+            }elseif($m == '07'){
+                $m = 7;
+            }elseif($m == '08'){
+                $m = 8;
+            }elseif($m == '09'){
+                $m = 9;
+            }
+            
            
-
         $tbl = '<table width="100%" border="1" cellpadding="10">
     <tbody>
         <tr >
