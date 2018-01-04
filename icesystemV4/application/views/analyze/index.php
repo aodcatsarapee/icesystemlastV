@@ -19,7 +19,7 @@
                                     <label for="">ชื่อสินค้า : </label>
                                     <select name="product_id" id="product_id" class="form-control" required="required" onchange="get_analyze()">
                                         <?php foreach ($get_product as $products) { ?>
-                                            <option value="<?php echo $products->product_id."-".$products->product_type ?>"><?php echo $products->product_name ?></option>
+                                            <option value="<?php echo $products->product_id."-".$products->product_type."-".$products->product_name ?>"><?php echo $products->product_name ?></option>
                                         <?php } ?>
                                     </select>
                                 </div>
@@ -74,7 +74,7 @@
                                     </div>
                                 </div>
 
-                                    <button class="btn btn-success" style="float: right; font-size: 18px"> <i class="fa fa-print" aria-hidden="true"></i> พิมพ์</button>
+                                    <a href="#" target="_blank" id="print_analyze" class="btn btn-success" style="float: right; font-size: 18px"> <i class="fa fa-print" aria-hidden="true"></i> พิมพ์</a>
                             </div>
                             <!-- /.box-body -->
                         </div>

@@ -21,6 +21,7 @@ class Analyze extends CI_Controller
         $product= explode('-',$this->input->post('product'));
         $product_id= $product[0]; 
         $product_type= $product[1];
+        $product_name= $product[2];
     //------------------------------ คำนวณรายวัน 7 วันย้อนหลัง--------------------------------------//
         $n=0;
         $n1=7;
@@ -64,7 +65,140 @@ class Analyze extends CI_Controller
      }
      $data['get_m']=ceil($total_all_m /$n_total_m) ;
      $data['get_type']=$product_type;
+     $data['get_name']=$product_name;
      echo json_encode($data);
+    }
+
+    public function print_analyze()
+    {
+        $get_analyze= explode('-',$this->input->get('get_analyze'));
+
+        $get_d = $get_analyze[0];
+        $get_w = $get_analyze[1];
+        $get_m = $get_analyze[2];
+        $get_name = $get_analyze[3];
+        $get_type = $get_analyze[4];
+        
+        $this->load->library('Pdf');
+				$pdf = $this->pdf->loadPDFA5L();
+				$pdf->AddPage();
+				$pdf->SetTitle('รานยงานปริมาณที่เหมาะสมในการผลิต', 'isUTF8');
+                $page = 1;
+                $this->load->helper('Datethai');
+				// setmargin left top right
+				$pdf->SetMargins(10, 10, 10);
+				// add font
+				$pdf->AddFont('THSarabun', '', 'THSarabun.php');
+                $pdf->AddFont('THSarabun', 'B', 'THSarabun Bold.php');
+                
+                //ข้อควาวม
+				$pdf->SetFont('THSarabun', 'B', 25);
+				$pdf->Ln();
+				$pdf->SetX(3);
+				$pdf->SetFillColor(222, 222, 222);
+				$pdf->Cell(200, 10, iconv('UTF-8', 'cp874', 'ห้างหุ้นส่วนจำกัดโรงน้ำแข็งทวีชัย'), 0, 0, 'C');
+
+				$pdf->SetFont('THSarabun', 'B', 16);
+				$pdf->Ln();
+				$pdf->SetX(3);
+				$pdf->SetFillColor(222, 222, 222);
+                $pdf->Cell(200, 10, iconv('UTF-8', 'cp874', 'รายยงาน '), 0, 0, 'C');
+                
+                $pdf->SetFont('THSarabun', 'B', 16);
+				$pdf->Ln();
+				$pdf->SetX(3);
+				$pdf->SetFillColor(222, 222, 222);
+                $pdf->Cell(200, 10, iconv('UTF-8', 'cp874','ข้อมูลปริมาณที่เหมาะสมในการผลิต('.$get_name.')'), 0, 0, 'C');
+                
+                $pdf->SetFont('THSarabun', 'B', 16);
+				$pdf->Ln();
+				$pdf->SetX(3);
+				$pdf->SetFillColor(222, 222, 222);
+				$pdf->Cell(200, 10, iconv('UTF-8', 'cp874', 'ณ วันที่ '.Datethai(date("d-m-Y"))), 0, 0, 'C');
+
+				$pdf->SetFont('THSarabun', 'B', 14);
+				$pdf->Ln();
+				$pdf->SetX(3);
+				$pdf->SetFillColor(222, 222, 222);
+				$pdf->Cell(200, 10, iconv('UTF-8', 'cp874', '_______________________________________________________________________________________________ '), 0, 0, 'C');
+
+                $pdf->SetFont('THSarabun', 'B', 16);
+				$pdf->Ln();
+				$pdf->SetX(15);
+				$pdf->SetFillColor(222, 222, 222);
+                $pdf->Cell(50, 65, iconv('UTF-8', 'cp874',''), 1, 0,'C');
+
+                $pdf->SetX(75);
+				$pdf->SetFillColor(222, 222, 222);
+                $pdf->Cell(50, 65, iconv('UTF-8', 'cp874',''), 1, 0,'C');
+
+                $pdf->SetX(140);
+				$pdf->SetFillColor(222, 222, 222);
+                $pdf->Cell(50, 65, iconv('UTF-8', 'cp874',''), 1, 0,'C');
+                
+				$pdf->SetFont('THSarabun', 'B', 14);
+				$pdf->Ln();
+				$pdf->SetX(3);
+				$pdf->SetFillColor(222, 222, 222);
+				$pdf->Cell(200, 1, iconv('UTF-8', 'cp874', '_______________________________________________________________________________________________ '), 0, 0, 'C');
+                
+                $pdf->SetFont('THSarabun', 'B', 20);
+                $pdf->SetY(60);
+                $pdf->SetX(28);
+				$pdf->SetFillColor(222, 222, 222);
+                $pdf->Cell(20, 10, iconv('UTF-8', 'cp874','รายวัน'), 0, 0,'C');
+
+                $pdf->SetFont('THSarabun', 'B', 40);
+                $pdf->SetY(82);
+                $pdf->SetX(28);
+				$pdf->SetFillColor(222, 222, 222);
+                $pdf->Cell(20, 10, iconv('UTF-8', 'cp874',$get_d), 0, 0,'C');
+
+                $pdf->SetFont('THSarabun', 'B', 20);
+                $pdf->SetY(105);
+                $pdf->SetX(28);
+				$pdf->SetFillColor(222, 222, 222);
+                $pdf->Cell(20, 10, iconv('UTF-8', 'cp874',$get_type), 0, 0,'C');
+
+                
+                $pdf->SetFont('THSarabun', 'B', 20);
+                $pdf->SetY(60);
+                $pdf->SetX(90);
+				$pdf->SetFillColor(222, 222, 222);
+                $pdf->Cell(20, 10, iconv('UTF-8', 'cp874','รายสัปดาห์'), 0, 0,'C');
+
+                $pdf->SetFont('THSarabun', 'B', 40);
+                $pdf->SetY(82);
+                $pdf->SetX(90);
+				$pdf->SetFillColor(222, 222, 222);
+                $pdf->Cell(20, 10, iconv('UTF-8', 'cp874',$get_w), 0, 0,'C');
+
+                $pdf->SetFont('THSarabun', 'B', 20);
+                $pdf->SetY(105);
+                $pdf->SetX(90);
+				$pdf->SetFillColor(222, 222, 222);
+                $pdf->Cell(20, 10, iconv('UTF-8', 'cp874',$get_type), 0, 0,'C');
+
+
+                $pdf->SetFont('THSarabun', 'B', 20);
+                $pdf->SetY(60);
+                $pdf->SetX(155);
+				$pdf->SetFillColor(222, 222, 222);
+                $pdf->Cell(20, 10, iconv('UTF-8', 'cp874','รายเดือน'), 0, 0,'C');
+
+                $pdf->SetFont('THSarabun', 'B', 40);
+                $pdf->SetY(82);
+                $pdf->SetX(155);
+				$pdf->SetFillColor(222, 222, 222);
+                $pdf->Cell(20, 10, iconv('UTF-8', 'cp874',$get_m), 0, 0,'C');
+
+                $pdf->SetFont('THSarabun', 'B', 20);
+                $pdf->SetY(105);
+                $pdf->SetX(155);
+				$pdf->SetFillColor(222, 222, 222);
+                $pdf->Cell(20, 10, iconv('UTF-8', 'cp874',$get_type), 0, 0,'C');
+                $pdf->Output();
+
     }
 }
 
