@@ -50,7 +50,7 @@ class Analyze extends CI_Controller
             $n_w++;   
      }
      $data['get_w'] = ceil($total_all_w /$n_total_w) ;
-     //------------------------------ คำนวณรายสัปดาห์ 4เดือนย้อนหลัง--------------------------------------//    
+     //------------------------------ คำนวณรายสัปดาห์ 4สัปดาห์ย้อนหลัง--------------------------------------//    
      $n_m=0;
      $n1_m=4;
      $n_total_m=0;
@@ -64,6 +64,38 @@ class Analyze extends CI_Controller
         $n_m++;
      }
      $data['get_m']=ceil($total_all_m /$n_total_m) ;
+     //------------------------------ คำนวณรายเดือน 4เดือนย้อนหลัง--------------------------------------//    
+
+     //คำนวณตามฤดูกาล
+     if(date('m')>= 2 && date('m')<= 5){
+         //ผลิตสินค้าเพิ่มขึ้น 20 %
+        $data['water'] = 'กำลังอยู่ในช่วงฤดูร้อนการผลิตสินค้าเพิ่มขึ้น 20 %';
+         //d
+         $water_d = (($data['get_d'])*0.20 );
+         $data['get_d'] = ceil($data['get_d'] + $water_d);
+         //w
+         $water_w = (($data['get_w'])*0.20 );
+         $data['get_w'] = ceil($data['get_w'] + $water_w);
+         //m
+         $water_m = (($data['get_m'])*0.20 );
+         $data['get_m'] = ceil($data['get_m'] + $water_m);
+
+     }elseif(date('m')>= 6 && date('m')<= 9){
+        $data['water'] = 'กำลังอยู่ในช่วงฤดูฝนการผลิตสินค้าเท่าเดิม';
+         //ผลิตสินค้าเท่าเดิม %
+     }else{
+         //ผลิตสินค้าลดลง 20 %
+        $data['water'] = 'กำลังอยู่ในช่วงฤดูหนาวการผลิตสินค้าลดลง 20 %';
+        //d
+        $water_d = (($data['get_d'])*0.20 );
+        $data['get_d'] = ceil($data['get_d'] - $water_d);
+        //w
+        $water_w = (($data['get_w'])*0.20 );
+        $data['get_w'] = ceil($data['get_w'] - $water_w);
+        //m
+        $water_m = (($data['get_m'])*0.20 );
+        $data['get_m'] = ceil($data['get_m'] - $water_m);
+     }
      $data['get_type']=$product_type;
      $data['get_name']=$product_name;
      echo json_encode($data);
@@ -198,7 +230,6 @@ class Analyze extends CI_Controller
 				$pdf->SetFillColor(222, 222, 222);
                 $pdf->Cell(20, 10, iconv('UTF-8', 'cp874',$get_type), 0, 0,'C');
                 $pdf->Output();
-
     }
 }
 

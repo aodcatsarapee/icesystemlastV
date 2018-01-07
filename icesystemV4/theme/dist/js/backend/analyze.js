@@ -22,6 +22,7 @@ var url = $("#base_url").val();
             $("#get_type").html(data.get_type);
             $("#get_type1").html(data.get_type);
             $("#get_type2").html(data.get_type);
+            $("#water").html(data.water)
             
             $('#print_analyze').attr('href',url+'/print_analyze/?get_analyze='+data.get_d+'-'+data.get_w+'-'+data.get_m+'-'+data.get_name+'-'+data.get_type);
         }
