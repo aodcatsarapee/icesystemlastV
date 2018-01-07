@@ -400,17 +400,81 @@ desired effect
 
           <?php } elseif(@$_SESSION['type']=="manager"){  ?>
         
-        <!-- <li class="treeview">
+        <li class="treeview">
           <a href="#">
-            <i class="fa fa-dashboard"></i> <span>ผู้ใช้งาน</span>
+            <i class="fa fa-dashboard"></i> <span>รายงาน</span>
             <span class="pull-right-container">
               <i class="fa fa-angle-left pull-right"></i>
             </span>
           </a>
           <ul class="treeview-menu">
-            <li><a href="<?php echo base_url() ?>User"><i class="fa fa-circle-o"></i> ผู้ใช้งาน</a></li> 
+          <!-- คลังสินค้า -->
+          <li><a href="<?php echo base_url() ?>product"><i class="fa fa-files-o"></i>รายการสินค้า</a></li>
+             <li><a href="<?php echo base_url() ?>product/stock"><i class="fa fa-files-o"></i>สินค้าคงเหลือ</a></li>
+              <!-- <li><a href="<?php echo base_url() ?>produce"><i class="fa fa-circle-o"></i>สั่งผลิตสินค้า</a></li> -->
+          <!-- ช่วยตัดสินใจในการผลิต -->
+          <li><a href="<?php echo base_url() ?>analyze"><i class="fa fa-files-o"></i>ปริมาณที่เหมาะสมในการผลิต </a></li>
+          <!-- การผลิตสินค้า -->
+          <!-- <li><a href="<?php echo base_url() ?>produce_product"><i class="fa fa-circle-o"></i> สินค้าที่ต้องผลิต</a></li> -->
+          <li><a href="<?php echo base_url(); ?>produce_history"> <i class="fa fa-files-o"></i>การผลิตสินค้าวันนี้</a>
+               </li>
+                <li><a href="<?php echo base_url(); ?>produce_history_m"> <i class="fa fa-files-o"></i>การผลิตสินค้าเดือนนี้</a>
+                 </li>
+                 <li><a href="<?php echo base_url(); ?>produce_history_y"> <i class="fa fa-files-o"></i>การผลิตสินค้าปีนี้</a>
+                  </li>
+                 <li>
+                   <a href="<?php echo base_url(); ?>produce_history_all"> <i class="fa fa-files-o"></i>การผลิตสินค้าทั้งหมด</a>
+                     </li>  
+            <!-- การขายสินค้า -->
+             <!-- <li><a href="<?php echo base_url(); ?>shopping"><i class="fa fa-circle-o"></i>ขายสินค้า</a></li> -->
+             <li class="sub_menu"><a href="<?php echo base_url(); ?>shopping_show_sell_detail"><i class="fa fa-files-o"></i>การขายสินค้าวันนี้</a>
+                            </li>
+                            <li><a href="<?php echo base_url(); ?>shopping_show_sell_detail_m"><i class="fa fa-files-o"></i>การขายสินค้าเดือนนี้</a>
+                            </li>
+                            <li><a href="<?php echo base_url(); ?>shopping_show_sell_detail_y"><i class="fa fa-files-o"></i>การขายสินค้าสินค้าปีนี้</a>
+                            </li>
+                            <li>
+                                <a href="<?php echo base_url(); ?>shopping_show_sell_detail_all"><i class="fa fa-files-o"></i>การขายสินค้าทั้งหมด</a>
+                            </li>
+              <!-- สินค้าที่ลูกค้าสั้งซื้อ -->
+            <li><a href="<?php echo base_url(); ?>order_show_d"><i class="fa fa-files-o"></i>สินค้าที่ลูกค้าสั้งซื้อวันนี้</a></li>
+           <li><a href="<?php echo base_url(); ?>order_show_m"><i class="fa fa-files-o"></i>สินค้าที่ลูกค้าสั้งซื้อเดือนนี้</a></li>
+           <li><a href="<?php echo base_url(); ?>order_show_y"><i class="fa fa-files-o"></i>สินค้าที่ลูกค้าสั้งซื้อปีนี้</a></li>
+           <li><a href="<?php echo base_url(); ?>order_show_all"><i class="fa fa-files-o"></i>สินค้าที่ลูกค้าสั้งซื้อทั้งหมด</a></li>
+            <!-- ลูกหนี้ -->
+           <li><a href="<?php echo base_url(); ?>debtor"><i class="fa fa-files-o"></i>ลูกหนี้</a></li>
+             <li class="sub_menu"><a href="<?php echo base_url(); ?>debtor_show_detail"><i class="fa fa-files-o"></i>ลูกหนี้ที่ชำระเงินวันนี้</a>
+                            </li>
+                            <li><a href="<?php echo base_url(); ?>debtor_show_detail_m"><i class="fa fa-files-o"></i>ลูกหนี้ที่ชำระเงินเดือนนี้</a>
+                            </li>
+                            <li><a href="<?php echo base_url(); ?>debtor_show_detail_y"><i class="fa fa-files-o"></i>ลูกหนี้ที่ชำระเงินปีนี้</a>
+                            </li>
+                            <li>
+                                <a href="<?php echo base_url(); ?>debtor_show_detail_all"><i class="fa fa-files-o"></i>ลูกหนี้ที่ชำระเงินทั้งหมด</a>
+                            </li>
+              <!-- เวลาการทำงาน -->
+              <li><a href="<?php echo base_url(); ?>work_time/show_Work_time_in_and_out"></i> <i class="fa fa-files-o"></i>บันทึกเวลาการเข้างาน</a></li>
+             <li><a href="<?php echo base_url(); ?>absence"></i> <i class="fa fa-files-o"></i>บันทึกการขาดงาน</a></li>
+             <li><a href="<?php echo base_url(); ?>rest_work"></i> <i class="fa fa-files-o"></i>บันทึกการลางาน</a></li>
+             <!-- เงินเดือน -->
+             <li><a href="<?php echo base_url(); ?>salaly_month"><i class="fa fa-files-o"></i>เงินเดือน</a></li>
+             <!-- รายรับ - รายจ่าย -->
+             <li><a href="<?php echo base_url(); ?>account"><i class="fa fa-files-o"></i>รายรับ - รายจ่าย</a></li>
+             <li><a href="<?php echo base_url(); ?>account_show_detail_m"><i class="fa fa-files-o"></i>รายรับ - รายจ่ายเดือนนี้</a>
+                            </li>
+                            <li><a href="<?php echo base_url(); ?>account_show_detail_y"><i class="fa fa-files-o"></i>รายรับ - รายจ่ายปีนี้</a>
+                            </li>
+                            <li>
+                                <a href="<?php echo base_url(); ?>account_show_detail_all"><i class="fa fa-files-o"></i>รายรับ - รายจ่ายทั้งหมด</a>
+                            </li>
+              <!-- ลูกค้า -->
+              <li><a href="<?php echo base_url(); ?>customer"><i class="fa fa-files-o"></i>ลูกค้า</a></li>
+              <!-- พนักงาน -->
+               <!-- <li><a href="<?php echo base_url(); ?>department"><i class="fa fa-circle-o"></i>แผนกงาน</a></li> -->
+             <li><a href="<?php echo base_url(); ?>employee"><i class="fa fa-files-o"></i>พนักงาน</a></li>
           </ul>
-        </li> -->
+        </li>
+           
         
         <li class="treeview">
           <a href="#">

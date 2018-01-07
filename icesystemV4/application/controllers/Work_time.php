@@ -156,8 +156,7 @@ class Work_time extends CI_Controller
 
     public function print_work_detail()
     {
- 
-        
+
      // สร้าง object สำหรับใช้สร้าง pdf 
         $pdf = new TCPDF(PDF_PAGE_ORIENTATION, PDF_UNIT, PDF_PAGE_FORMAT, true, 'UTF-8', false);
          
@@ -225,7 +224,8 @@ $id=$_GET['id'];
          $nice_date_start = date('d-m-Y', strtotime($date_start));
 
          $nice_date_end = date('d-m-Y', strtotime($date_end));
-        $this->load->helper('Datethai');
+        
+         $this->load->helper('Datethai');
          
 $tbl = '<table cellspacing="0" cellpadding="8" >
                    <tr>
@@ -254,12 +254,15 @@ $tbl = '<table cellspacing="0" cellpadding="8" >
 
       $date=date_create($s['date']);
       $date_format = date_format($date,"d/m/Y");
-           
+    
+      $fullname = $s['employee_fname'];
         # code...
      $tbl = $tbl . ' <tr>
-          <td style="border: 1px solid #000000;  text-align:center; ">'.$s['employee_id'].'</td>
-          <td style="border: 1px solid #000000;  text-align:center; ">'.$s['employee_fname']." ".$s['employee_lname'].'</td>
-          <td style="border: 1px solid #000000;  text-align:center; ">'.Datethai($s['date']).'</td>
+         
+          <td style="border: 1px solid #000000;  text-align:center;">'.$s['employee_id'].'</td>
+          <td style="border: 1px solid #000000;  text-align:center;">'.$fullname.'</td>
+          <td style="border: 1px solid #000000;  text-align:center;">'.Datethai($s['date']).'</td>
+
 
       </tr>'; 
 
