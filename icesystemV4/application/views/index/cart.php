@@ -77,7 +77,8 @@
                 <form action="<?php  echo base_url() ?>index/checkout" method="POST">
                 <tr>
                   <td colspan="2" style="text-align: right;" >ต้องการรับสินค้า:</td>
-                  <td ><input type="text" name="order_out_customer_date" id="input" class="form-control"  required="required" placeholder="เช่น วันนี้ เวลา 12.00 น"></td>
+                  <td><input id="order_out_customer_date" type="time" name="order_out_customer_date" value="15:00"> <br>*PM คือช่วงบ่าย AM คือช่วงเช้า</td>
+                  <!-- <td ><input type="text" name="order_out_customer_date" id="input" class="form-control"  required="required" placeholder="เช่น วันนี้ เวลา 12.00 น"></td> -->
 
                    <td  class="text-center">รวม</td>
                    <td  class="text-center" ><?=count($_SESSION['ses_cart_pro_qty'],1)-count($_SESSION['ses_cart_pro_qty'])?> </td>
@@ -247,7 +248,9 @@
                                  <td class="text-center"><?php echo $value['order_detail_total']; ?> บาท</td>
                                  <td class="text-center"><?php echo $value['order_detail_status']; ?></td>              
                                   <td><?php echo $value['order_out_customer_date'] ?></td>
+
                                  <td width="16%"><?php echo $value['order_out_date'] ?></td>
+                                 
                                   <td class="text-center"><?php echo $value['order_detail_date']; ?></td>              
                                  <td class="text-center">
                                      <button type="button" class="btn btn-xs btn-primary show_order_detail_customer" id="<?php echo $value['order_detail_id']; ?>">เรียกดู</button>
