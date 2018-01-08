@@ -120,7 +120,81 @@
 			</tr>
 		</thead>
 		<tbody>
+		<?php 	$this->load->helper('Datethai'); 
+				$next_day = date('Y-m-d',strtotime("+1 day"));
+		
+		?> 
+	
         <?php foreach ($order_detail as $key => $value) { ?>
+
+		<!-- ==============คำนวนเวลา========= -->
+			<!-- น้ำแข็งผลิตเป็นรอบๆโดยตัวแปลหลักจะอยู่ที่ก้อนกับหลอด
+			ถ้ามีก้อนจะอิงก้อนเป็นหลักโดยการผลิตจะแบ่งเป็นรอบๆ
+			ช่วงตี 4 ถึง เที่ยง 
+			ช่วง เที่ยงถึง 4 ทุ่ม
+			ถ้าสั่งตอน บ่ายสามจะได้อีกทีตั้งแต่ตี 4เป็นต้นไป
+			ถ้าสั่งช่วง 8 โมงเช้าจะได้ตั้งแต่เที่ยงเ้ป็นต้นไปเพราะโรงงานจะผลิตเผื่อเต็มสล็อต
+
+			ส่วนหลอดรอบผลิตจะเยอะกว่า แต่เวลาสั่งจองจะคล้ายๆกับก้อน 
+			
+			
+			
+			-->
+
+		<!-- ======================================== -->
+		<?php 
+		$h = 0;
+		$m = 0;
+		$get_custime = $value['order_out_customer_date'];
+		$cal = explode(":",$get_custime);
+
+				if($value['product_id'] == '0013'){ 
+					
+					
+					if($cal[0] >= 4 && $cal[0] <= 12){
+						$set_time = "12.00 นาฬิกาในวันนี้เป็นต้นไป";
+						
+						
+					}else if($cal[0] > 12 && $cal[0] <= 22){
+						$set_time = '04.00 นาฬิกาใน '.Datethai($next_day).' เป็นต้นไป';
+						
+						
+					}else{
+
+						$set_time = '04.00 นาฬิกาใน '.Datethai($next_day).' เป็นต้นไป';
+					}
+					
+					?>
+
+					
+			<?php	}else{
+				
+				if($cal[0] >= 4 && $cal[0] <= 12){
+					$set_time = "12.00 นาฬิกาในวันนี้เป็นต้นไป";
+					
+					
+				}else if($cal[0] > 12 && $cal[0] <= 18){
+					$set_time = "18.00 นาฬิกาจนถึงเวลา 22.00 นาฬิกา";
+					
+					
+				}else if($cal[0] > 18 && $cal[0] <= 24){
+					$set_time = '04.00 นาฬิกาใน '.Datethai($next_day).' เป็นต้นไป';
+					
+					
+				}else{
+					$set_time = '04.00 นาฬิกาใน '.Datethai($next_day).' เป็นต้นไป';
+				}
+				
+				
+				
+				?>
+	
+				
+
+				<?php  } ?>
+	
+
+		<!-- ======================= -->
 			
 			<tr>
 				<td><?php echo $value['product_id'] ?></td>
@@ -205,7 +279,6 @@ if($value['order_detail_status'] == "กำลังดำเนินการ"
                     } } ?>
 
 
-				
 		</tr>
 			<tr>
 
@@ -216,7 +289,7 @@ if($value['order_detail_status'] == "กำลังดำเนินการ"
 				  
 		                <input type="text" class="form-control " name="order_out_date" id="order_out_date" placeholder="เช่น มารับสินค้าในเวลา 15.00 น วันที่ 10/05/2560 " disabled >
 		         <?php }else{ ?>
-		          <input type="text" class="form-control " name="order_out_date" id="order_out_date" placeholder="เช่น มารับสินค้าในเวลา 15.00 น วันที่ 10/05/2560 "  >
+		          <input type="text" class="form-control " name="order_out_date" id="order_out_date" placeholder="เช่น มารับสินค้าในเวลา 15.00 น วันที่ 10/05/2560 " value="<?php echo $set_time ?>" >
 
 		          <?php } ?>
 	              </div>

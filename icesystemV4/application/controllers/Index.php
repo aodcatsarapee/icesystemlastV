@@ -105,6 +105,8 @@
 
 		public function checkout(){
 
+			// echo $_POST['order_out_customer_date'];
+
 			$order = array(
 
 				
