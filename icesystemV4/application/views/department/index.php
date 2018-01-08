@@ -33,6 +33,7 @@
               <tr  >
                 <th style="text-align: center;">รหัสเเผนก</th>
                 <th style="text-align: center;">ชื่อเเผนก</th>
+                <th style="text-align: center;">อัตราเงินเดือนรายวัน</th>
                      <th style ="text-align: center;">จัดการ</th>
 
 
@@ -44,6 +45,7 @@
               <tr>
                     <td style="text-align: center;"><?php echo $d['department_id']; ?></td>  
                     <td style="text-align: center;"> <?php echo $d['name']; ?></td>
+                    <td style="text-align: center;"> <?php echo $d['salaly_set']; ?></td>
                     <td style="text-align: center;">
                          <button type ="button" class="btn btn-xs btn-warning edit_data_department "   id="<?php echo $d['department_id'] ?>" style='width: px;'><spen class='glyphicon glyphicon-cog'> </spen> เเก้ไข</button>
                       <button type ="button" class="btn btn-xs btn-danger delete_data_department"  id="<?php echo $d['department_id'] ?> " data-toggle="modal" data-target="#delete_data"><spen class='glyphicon glyphicon-trash'> </spen> ลบ</button>

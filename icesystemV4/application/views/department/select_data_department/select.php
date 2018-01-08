@@ -110,8 +110,8 @@
           </div>
 
           <div class="form-group  ">
-            <label class="col-sm-3 control-label"  >เงินเดือนประจำแผนก :</label>
-            <div class="col-sm-7">
+            <label class="col-sm-4 control-label"  >อัตราเงินเดือนรายวัน :</label>
+            <div class="col-sm-6">
               <input class="form-control" type="text" name="salaly_set" id="salaly_set"  placeholder="เช่น 300 " value="<?php echo $rs['salaly_set'] ?>" >
             </div>
           </div>

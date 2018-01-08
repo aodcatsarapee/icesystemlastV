@@ -15,7 +15,7 @@
     <!-- Content Header (Page header) -->
     <section class="content-header">
       <h1>
-        <i class="fa fa-product-hunt fa-1x "> </i> รายงานการผลิตสินค้า<small></small>
+        <i class="fa fa-product-hunt fa-1x "> </i> การผลิตสินค้าทั้งหมด<small></small>
          <button type="button" class="btn btn-success btn-xs " id="insert"  data-toggle="modal" data-target="#modal-select-date" style="float: right;font-size: 20px;"><spen class="glyphicon glyphicon-plus"> </spen> เลือกวันที่ </button>
         
        

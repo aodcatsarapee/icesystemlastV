@@ -8,8 +8,8 @@
     <!-- Content Header (Page header) -->
     <section class="content-header">
       <h1>
-      <i class="fa fa-shopping-cart "></i> ยอดสั่งสินค้าของลูกค้าทั้งหมด<small></small>
-        
+      <i class="fa fa-shopping-cart "></i> ยอดสั่งสินค้าของลูกค้าทั้งหมด <small></small>
+      <button type="button" class="btn btn-success btn-xs " id="insert"  data-toggle="modal" data-target="#modal-select-date" style="float: right;font-size: 20px;"><spen class="glyphicon glyphicon-plus"> </spen> เลือกวันที่ </button>
       </h1>
       
     </section>
