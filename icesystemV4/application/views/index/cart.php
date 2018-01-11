@@ -249,7 +249,7 @@
                                 <td class="text-center"><?php echo $value['order_detail_id']; ?></td>
                                  <td class="text-center"><?php echo $value['order_detail_total']; ?> บาท</td>
                                  <td class="text-center"><?php echo $value['order_detail_status']; ?></td>              
-                                  <td><?php echo $value['order_out_customer_date'] ?></td>
+                                  <td><?php echo $value['order_out_customer_date'].' น.' ?></td>
 
                                  <td width="16%"><?php echo $value['order_out_date'] ?></td>
                                  
