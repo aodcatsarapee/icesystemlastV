@@ -76,11 +76,12 @@
                 ?>
                 <form action="<?php  echo base_url() ?>index/checkout" method="POST">
                 <tr>
-                  <td colspan="2" style="text-align: right;" >ต้องการรับสินค้า:</td>
-                  <td><input id="order_out_customer_date" type="time" name="order_out_customer_date" value="15:00"> <br>*PM คือช่วงบ่าย AM คือช่วงเช้า</td>
+                    
+                  <!-- <td colspan="2" style="text-align: right;" >ต้องการรับสินค้า:</td>
+                  <td><input id="order_out_customer_date" type="time" name="order_out_customer_date" value="15:00"> <br>*PM คือช่วงบ่าย AM คือช่วงเช้า</td> -->
                   <!-- <td ><input type="text" name="order_out_customer_date" id="input" class="form-control"  required="required" placeholder="เช่น วันนี้ เวลา 12.00 น"></td> -->
 
-                   <td  class="text-center">รวม</td>
+                   <td colspan="4" class="text-center">รวม</td>
                    <td  class="text-center" ><?=count($_SESSION['ses_cart_pro_qty'],1)-count($_SESSION['ses_cart_pro_qty'])?> </td>
                    <td class="text-center"> <?=array_sum($_SESSION['ses_cart_pro_total_price'])?>.00  บาท</td>
                     <td>

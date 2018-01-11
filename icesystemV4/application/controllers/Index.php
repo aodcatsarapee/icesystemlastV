@@ -112,7 +112,7 @@
 				
 				 'order_detail_total'       =>array_sum($_SESSION['ses_cart_pro_total_price']),
 				 'order_detail_status'		=>'กำลังดำเนินการ',
-				 'order_out_customer_date'=>$_POST['order_out_customer_date'],
+				 'order_out_customer_date'	=>date("H:i"),
 				 'order_detail_date'  =>date("Y-m-d H:i:s"),
 			);	
 

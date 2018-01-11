@@ -151,17 +151,17 @@
 				if($value['product_id'] == '0013'){ 
 					
 					
-					if($cal[0] >= 4 && $cal[0] <= 12){
+					if($cal[0] >= 3 && $cal[0] <= 11){
 						$set_time = "12.00 นาฬิกาในวันนี้เป็นต้นไป";
 						
 						
 					}else if($cal[0] > 12 && $cal[0] <= 22){
-						$set_time = '04.00 นาฬิกาใน '.Datethai($next_day).' เป็นต้นไป';
+						$set_time = '03.00 นาฬิกาใน '.Datethai($next_day).' เป็นต้นไป';
 						
 						
 					}else{
 
-						$set_time = '04.00 นาฬิกาใน '.Datethai($next_day).' เป็นต้นไป';
+						$set_time = '03.00 นาฬิกาใน '.Datethai($next_day).' เป็นต้นไป';
 					}
 					
 					?>
@@ -169,20 +169,20 @@
 					
 			<?php	}else{
 				
-				if($cal[0] >= 4 && $cal[0] <= 12){
+				if($cal[0] >= 3 && $cal[0] <= 11){
 					$set_time = "12.00 นาฬิกาในวันนี้เป็นต้นไป";
 					
 					
-				}else if($cal[0] > 12 && $cal[0] <= 18){
+				}else if($cal[0] > 12 && $cal[0] <= 17){
 					$set_time = "18.00 นาฬิกาจนถึงเวลา 22.00 นาฬิกา";
 					
 					
-				}else if($cal[0] > 18 && $cal[0] <= 24){
-					$set_time = '04.00 นาฬิกาใน '.Datethai($next_day).' เป็นต้นไป';
+				}else if($cal[0] > 18 && $cal[0] <= 23){
+					$set_time = '03.00 นาฬิกาใน '.Datethai($next_day).' เป็นต้นไป';
 					
 					
 				}else{
-					$set_time = '04.00 นาฬิกาใน '.Datethai($next_day).' เป็นต้นไป';
+					$set_time = '03.00 นาฬิกาใน '.Datethai($next_day).' เป็นต้นไป';
 				}
 				
 				
@@ -258,7 +258,7 @@ if($value['order_detail_status'] == "กำลังดำเนินการ"
 
 		</tr>
 		<tr>
-				<th style="text-align: right; font-size: 18px;">ลูกค้าต่องการรับ :</th>
+				<th style="text-align: right; font-size: 18px;">ลูกค้าสั่งเมื่อ :</th>
 				
 
 			<?php foreach ($order_detail as $key => $value) {
@@ -269,7 +269,7 @@ if($value['order_detail_status'] == "กำลังดำเนินการ"
 
                   <th> 
                   		<div class="col-sm-12">
-		                <input type="text" class="form-control " disabled value=" <?php echo $value['order_out_customer_date'] ?>" >
+		                <input type="text" class="form-control " disabled value=" <?php echo 'วันที่ '.Datethai($value['order_detail_date']).' เวลา: '.$value['order_out_customer_date'].' น.'; ?>" >
 	              </div>
 
                  </th>
