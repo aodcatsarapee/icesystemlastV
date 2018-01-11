@@ -121,6 +121,7 @@
 		</thead>
 		<tbody>
 		<?php 	$this->load->helper('Datethai'); 
+				
 				$next_day = date('Y-m-d',strtotime("+1 day"));
 		
 		?> 
@@ -147,12 +148,14 @@
 		$m = 0;
 		$get_custime = $value['order_out_customer_date'];
 		$cal = explode(":",$get_custime);
+		$process_date = Datethai($value['order_detail_date']);
+		$pro_date = explode(" ",$process_date);
 
 				if($value['product_id'] == '0013'){ 
 					
 					
 					if($cal[0] >= 3 && $cal[0] <= 11){
-						$set_time = "12.00 นาฬิกาในวันนี้เป็นต้นไป";
+						$set_time = "12.00 นาฬิกาในวันที่ ".$pro_date[0].' '.($pro_date[1])." เป็นต้นไป";
 						
 						
 					}else if($cal[0] > 12 && $cal[0] <= 22){
@@ -170,11 +173,11 @@
 			<?php	}else{
 				
 				if($cal[0] >= 3 && $cal[0] <= 11){
-					$set_time = "12.00 นาฬิกาในวันนี้เป็นต้นไป";
+					$set_time = "12.00 นาฬิกาในวันที่ ".$pro_date[0].' '.$pro_date[1]." เป็นต้นไป";
 					
 					
 				}else if($cal[0] > 12 && $cal[0] <= 17){
-					$set_time = "18.00 นาฬิกาจนถึงเวลา 22.00 นาฬิกา";
+					$set_time = "18.00 นาฬิกาในวันที่ ".$pro_date[0].' '.$pro_date[1]." เป็นต้นไป";
 					
 					
 				}else if($cal[0] > 18 && $cal[0] <= 23){

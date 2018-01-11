@@ -9,4 +9,6 @@ function Datethai($strDate){
     $strMonthThai=$strMonthCut[$strMonth];
     return "$strDay $strMonthThai $strYear";
 }
+
+
 ?>

@@ -233,7 +233,7 @@
                                  <th class="text-center" width="20%">ราคารวม</th>
                                   <th class="text-center">สถานะการสั่งซื้อสินค้า</th>
                                                             
-                                  <th class="text-center">ต้องการมารับเวลา</th>
+                                  <th class="text-center">เวลาที่สั่งสินค้า</th>
                                   <th class="text-center">เวลานัดรับ</th>
                                    <th class="text-center">ว/ด/ป</th>  
                                    <th class="text-center">จัดการ</th>
@@ -241,6 +241,7 @@
                             </tr>
                         </thead>
                         <tbody>
+                        <?php 	$this->load->helper('Datethai'); ?>
                         <?php foreach ($order as $key => $value) {
                             # code...
                          ?>
@@ -252,7 +253,7 @@
 
                                  <td width="16%"><?php echo $value['order_out_date'] ?></td>
                                  
-                                  <td class="text-center"><?php echo $value['order_detail_date']; ?></td>              
+                                  <td class="text-center"><?php echo Datethai($value['order_detail_date']); ?></td>              
                                  <td class="text-center">
                                      <button type="button" class="btn btn-xs btn-primary show_order_detail_customer" id="<?php echo $value['order_detail_id']; ?>">เรียกดู</button>
                                       <?php if($value['order_detail_status']=="กำลังดำเนินการ"){ ?>
