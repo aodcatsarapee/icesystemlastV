@@ -17,8 +17,6 @@
         <div class="container">
         <div id="cart" >
             
-            
-               
         </div>
             <div class="row">
                 <div class="col-lg-12 text-center">
@@ -92,7 +90,6 @@
             </div>
         </div>
     </section>
-
     <!-- Contact Section -->
     <section id="contact">
         <div class="container">
@@ -147,3 +144,22 @@
             </div>
         </div>
     </section>
+    <!-- Contact Section -->
+    <section id="map">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2>MAP</h2>
+                    <hr class="star-primary">
+                </div>
+            </div>
+            <div class="row">
+            <div class="col-md-12 " id="map1" style="height:600px;">
+
+            </div>
+        </div>
+    </section>
+    <input type="hidden" id="set-building_latitude"  value="18.798231" />
+    <input type="hidden" id="set-building_longitude" value="99.009465" />
+
+    

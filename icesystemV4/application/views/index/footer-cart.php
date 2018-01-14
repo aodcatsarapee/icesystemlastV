@@ -4,33 +4,23 @@
         <div class="container">
             <div class="row">
                 <div class="footer-col col-md-4">
-                    <h3>Location</h3>
-                    <p>3481 Melrose Place
-                        <br>Beverly Hills, CA 90210</p>
+                    <h3>ที่อยู่</h3>
+                    <p>295/1 ถนน แก้วนวรัฐ
+                        <br>ตำบล วัดเกต อำเภอเมืองเชียงใหม่ เชียงใหม่ 50000</p>
+
+                         
                 </div>
                 <div class="footer-col col-md-4">
-                    <h3>Around the Web</h3>
+                    <h3>facebook</h3>
                     <ul class="list-inline">
                         <li>
                             <a href="#" class="btn-social btn-outline"><span class="sr-only">Facebook</span><i class="fa fa-fw fa-facebook"></i></a>
                         </li>
-                        <li>
-                            <a href="#" class="btn-social btn-outline"><span class="sr-only">Google Plus</span><i class="fa fa-fw fa-google-plus"></i></a>
-                        </li>
-                        <li>
-                            <a href="#" class="btn-social btn-outline"><span class="sr-only">Twitter</span><i class="fa fa-fw fa-twitter"></i></a>
-                        </li>
-                        <li>
-                            <a href="#" class="btn-social btn-outline"><span class="sr-only">Linked In</span><i class="fa fa-fw fa-linkedin"></i></a>
-                        </li>
-                        <li>
-                            <a href="#" class="btn-social btn-outline"><span class="sr-only">Dribble</span><i class="fa fa-fw fa-dribbble"></i></a>
-                        </li>
                     </ul>
                 </div>
                 <div class="footer-col col-md-4">
-                    <h3>About Freelancer</h3>
-                    <p>Freelance is a free to use, open source Bootstrap theme created by <a href="http://startbootstrap.com">Start Bootstrap</a>.</p>
+                    <h3>เกี่ยวกับเรา</h3>
+                    <p>ห้างหุ่นส่วนจำกัดโรงน้ำเเข็งธวีชัย<a href="http://startbootstrap.com">Start Bootstrap</a>.</p>
                 </div>
             </div>
         </div>
@@ -39,12 +29,13 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
-                    Copyright &copy; Your Website 2016
+                    Copyright &copy; icesystem 2018
                 </div>
             </div>
         </div>
     </div>
 </footer>
+
 
 <!-- Scroll to Top Button (Only visible on small and extra-small screen sizes) -->
 <div class="scroll-top page-scroll hidden-sm hidden-xs hidden-lg hidden-md">

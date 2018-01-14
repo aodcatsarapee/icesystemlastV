@@ -84,6 +84,9 @@
                 <li class="page-scroll">
                     <a href="#contact">ติดต่อ</a>
                 </li>
+                <li class="page-scroll">
+                    <a href="#map">เเผนที่</a>
+                </li>
 
                <?php if(!empty($_SESSION['type'])){ ?>
 
@@ -139,8 +142,8 @@
 
 <section id="index" style="padding-bottom: 0px;">
     <header class="masthead">
-      <div class="container-fluid" style="padding-top: 150px;padding-bottom: 150px; background-image: url(<?php echo base_url(); ?>img/test.jpg)">
-        <img class="img-fluid circle" src="<?php echo base_url(); ?>img/123.png" alt="" width="200" style="margin-top: 100px;">
+      <div class="container-fluid" style="padding-top: 150px;padding-bottom: 150px; background-image: url(<?php echo base_url(); ?>img/your-name_1.jpg); widht:20%">
+        <img class="img-fluid circle" src="<?php echo base_url(); ?>img/123.jpg" alt="" width="200" style="margin-top: 100px;">
         <div class="intro-text" >
           <span class="name" style=" font-family: 'Mitr', sans-serif;">ยินดีต้อนรับ</span>
           <hr class="star-light">
