@@ -307,6 +307,19 @@
 		   }
 			
 		}
+		public function contact(){
+			
+			$contact = array(
+				'contact_name' => $this->input->post('name'),
+				'contact_email' => $this->input->post('email'),
+				'contact_phone'=> $this->input->post('phone'),
+				'contact_detail'=> $this->input->post('message'),
+				'contact_datasave'=> date('Y-m-d H:i:s')
+			);
+			$this->db->insert('contact',$contact);
+
+			redirect('index');
+		}
 
 }
  ?>

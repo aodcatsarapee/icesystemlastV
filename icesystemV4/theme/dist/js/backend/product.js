@@ -224,6 +224,23 @@
            });
 
 
+           
+           $('#contact').DataTable({
+
+            "order": [[ 0, "asc" ]],
+           "lengthMenu": [[10, 15, 20, -1], [10, 15, 20, "All"]],
+           "language": {
+                "lengthMenu": "เเสดง _MENU_ หน้า",
+               "zeroRecords": "<p style='color:red;'> - - - ไม่มีรายการ - - - </p>",
+                "search": "ค้าหา",
+                "info": " หน้า _PAGE_ จาก _PAGES_",
+               "infoEmpty": " ",
+               "infoFiltered": "(filtered from _MAX_ total records)",
+    }
+         
+       })
+
+
 
 
            
