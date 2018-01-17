@@ -244,6 +244,28 @@
 	  
 			}
 
+
+			public function order_view_date()
+			{
+	   
+			   $this->db->select('order_detail.*,order.*,customers.*');
+			   
+			   $this->db->from('order');
+	   
+			   $this->db->join('order_detail', 'order.order_detail_id = order_detail.order_detail_id', 'left');
+	   
+			   $this->db->join('customers', 'order.customer_id = customers.customer_id', 'left');
+	   
+			   $this->db->group_by('order.order_detail_id');
+	   
+			   $this->db->where('order_detail.order_detail_status','ดำเนินการเรียบร้อยเเล้ว');
+		  
+				 $sql=$this->db->get();
+	   
+				 return $sql->result_array();
+	   
+			 }
+
 	}
 
  ?>

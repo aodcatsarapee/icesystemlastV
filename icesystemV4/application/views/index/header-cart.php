@@ -104,7 +104,7 @@
                     <a href="#order">สินค้าที่สั่งซื้อ</a>
                 </li>
                  <li class="page-scroll">
-                    <a href="#Customter">ข้มูลมูลใช้</a>
+                    <a href="#Customter">ข้มูลผู้ใช้</a>
                 </li>
                 <li class="page-scroll">
                     <a href="<?php echo base_url();?>login/sign_out_customer">ออกจากระบบ</a>

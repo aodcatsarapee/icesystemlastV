@@ -139,5 +139,47 @@ class Genpdf_models extends CI_Model {
 			
 	}
 
+
+	public function show_order_date($id,$date_start,$date_end)
+	{
+		
+			$this->db->select('order_detail.*,order.*,customers.*');
+				
+			$this->db->from('order');
+
+			$this->db->join('order_detail', 'order.order_detail_id = order_detail.order_detail_id', 'left');
+
+			$this->db->join('customers', 'order.customer_id = customers.customer_id', 'left');
+
+			$this->db->group_by('order.order_detail_id');
+
+			$this->db->where('order_detail.order_detail_status','ดำเนินการเรียบร้อยเเล้ว');
+
+			$this->db->where('order_detail_date >=', $date_start);
+
+         	list($Y,$m,$d) = explode('-',$date_end);
+
+         	if($d == "31"){
+
+         		$d==02;
+
+         		$this->db->where('order_detail_date <=', $Y."-".$m."-".$d);
+         	}else{
+
+         		$this->db->where('order_detail_date <=', $Y."-".$m."-".($d+1));
+         	}
+
+			$sql=$this->db->get();
+			
+			if ($sql->num_rows() > 0) {
+				
+				return $sql->result_array();
+			}
+			else
+			{
+				return $sql->result_array();
+			}		
+	}
+
        
 }

@@ -54,9 +54,7 @@
 										<td style="text-align: center;">
 											<button type="button" class="btn btn-sm btn-warning btn-xs edit_data_user_customer" id="<?php echo $customer_users->customer_id; ?>">
 												<spen class='glyphicon glyphicon-cog'></spen> เเก้ไข</button>
-											<button type="button" class="btn btn-sm btn-danger btn-xs delete_data_customer" id="<?php echo $customer_users->customer_id; ?> " data-toggle="modal"
-											data-target="#delete_data">
-												<spen class='glyphicon glyphicon-trash'> </spen> ลบ</button>
+									
 										</td>
 									</tr>
 									<?php }?>

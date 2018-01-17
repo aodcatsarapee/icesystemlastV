@@ -2,6 +2,7 @@
 <?php if($_SESSION['type']=='admin' || $_SESSION['type']=='emp_sale' || $_SESSION['type']=='manager'){ ?>
 
     <?php require("show/show_order_detail.php") ?>
+    <?php require("modal/modal-select-date.php") ?>
 
 <!-- Content Wrapper. Contains page content -->
   <div class="content-wrapper">
