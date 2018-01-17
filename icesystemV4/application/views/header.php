@@ -398,6 +398,18 @@ desired effect
           </ul>
         </li>
 
+        <li class="treeview">
+          <a href="#">
+             <i class="fa fa-user"> </i><span> ติดต่อ </span>
+            <span class="pull-right-container">
+              <i class="fa fa-angle-left pull-right"></i>
+            </span>
+          </a>
+          <ul class="treeview-menu">
+            <li><a href="<?php echo base_url(); ?>contact"><i class="fa fa-circle-o"></i>ติดต่อ</a></li>
+          </ul>
+        </li>
+
           <?php } elseif(@$_SESSION['type']=="manager"){  ?>
         
         <li class="treeview">
@@ -745,6 +757,17 @@ desired effect
           </a>
           <ul class="treeview-menu">
             <li><a href="<?php echo base_url(); ?>customer"><i class="fa fa-circle-o"></i>ลูกค้า</a></li>
+          </ul>
+        </li>
+        <li class="treeview">
+          <a href="#">
+             <i class="fa fa-user"> </i><span> ติดต่อ </span>
+            <span class="pull-right-container">
+              <i class="fa fa-angle-left pull-right"></i>
+            </span>
+          </a>
+          <ul class="treeview-menu">
+            <li><a href="<?php echo base_url(); ?>contact"><i class="fa fa-circle-o"></i>ติดต่อ</a></li>
           </ul>
         </li>
         
