@@ -82,6 +82,40 @@ $('.check_out_order_debtor').click(function(event) {
 
 
 
+$("#select-date-new").submit(function(event) {
+    event.preventDefault();
+
+  
+  if($("#date_start").val()=="" || $("#date_end").val()==""){
+
+         $("#alert_select-date").modal('show');   
+
+
+ }else{
+     if($("#date_start").val() > $("#date_end").val() ) {
+
+      $("#alert-error-date").modal('show'); 
+
+     }else{
+
+         
+           var id         = $("#id").val();
+           var date_start =$("#date_start").val();
+           var date_end   =$("#date_end").val()
+           
+           ;
+
+window.open('Genpdf/order_detail_date?id='+id+'&date_start='+date_start+'&date_end='+date_end+'', '_blank')
+                                                                                     
+     }
+ }
+
+});
+
+
+
+
+
 
 // js veiw_data---------------------------------------------------------------------------------------------
 

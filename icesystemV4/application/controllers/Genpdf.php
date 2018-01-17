@@ -6556,6 +6556,9 @@ $pdf->Output('stock.pdf', 'I');
 //============================================================+
 
   }
+
+
+
   public function order_detail_date()
   {
 
@@ -6622,6 +6625,7 @@ $this->load->helper('Datethai');
 
          $date_end= date($_GET['date_end']);
 
+
          $nice_date_start = date('d-m-Y', strtotime($date_start));
 
          $nice_date_end = date('d-m-Y', strtotime($date_end));
@@ -6649,11 +6653,15 @@ $tbl = $tbl . ' <tr>
 
   $this->load->model('Produce_models');
 
+ 
+
   $this->load->model('Genpdf_models');
     $orders=$this->Genpdf_models->show_order_date($id,$date_start,$date_end);
 
+    
 
   foreach ($orders as $s) {
+
 
    $tbl = $tbl . ' <tr>
         <td style="border: 1px solid #000000;  text-align:center; ">'.$s['order_detail_id'].'</td>
@@ -6664,10 +6672,23 @@ $tbl = $tbl . ' <tr>
      
     </tr>'; 
     
-  }  
+  }
+
+
+    
 $tbl = $tbl . '</table>';
 
+
+
 $pdf->writeHTML($tbl, true, false, false, false, '');
+
+
+
+
+
+
+
+
 
   // สร้างข้อเนื้อหา pdf ด้วยคำสั่ง writeHTMLCell()
  // $pdf->writeHTMLCell(0, 0, '', '', $html, 0, 1, 0, true, '', true);
@@ -6694,6 +6715,9 @@ $pdf->Output('order_detail_date.pdf', 'I');
 
   }
 
+
+
+        
          
 }
 
