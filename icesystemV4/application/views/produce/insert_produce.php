@@ -31,7 +31,7 @@
                             <input type="hidden" class="form-control" id="product_name" name="product_name[]" placeholder="Input field" value="<?php  echo $product['product_name']; ?>"   >
                   </td>
                   <td width="10%">           
-                            <input type="number" class="form-control " name="product_amount[]" id="product_amount<?php echo $i; ?>" placeholder="จำนวน" min="0" value="1" style="text-align: right;">   
+                            <input type="number" class="form-control " name="product_amount[]" id="product_amount<?php echo $i; ?>" placeholder="จำนวน" min="0" value="0" style="text-align: right;">   
                                 
                   </td>
 

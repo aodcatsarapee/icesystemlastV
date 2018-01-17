@@ -1,3 +1,4 @@
+<?php $this->load->helper('Datethai');?>
 <?php if (!empty($_SESSION['type'])) { ?>
     <?php if ($_SESSION['type'] == 'admin' || $_SESSION['type'] == 'emp_sale' || $_SESSION['type'] == 'manager') { ?>
         <!-- Content Wrapper. Contains page content -->
@@ -24,11 +25,12 @@
                                         <table class="table table-bordered" id="contact">
                                             <thead>
                                                 <tr>
-                                                    <th width="">ลำดับ</th>
-                                                    <th width="30%">ชื่อ</th>
-                                                    <th width="">อีเมล์</th>
-                                                    <th width="">เบอร์โทร</th>
+                                                    <th >ลำดับ</th>
+                                                    <th >ชื่อ</th>
+                                                    <th >อีเมล์</th>
+                                                    <th >เบอร์โทร</th>
                                                     <th >ข้อความ</th>
+                                                    <th >ว/ด/ป</th>
                                                 </tr>
                                             </thead>
                                             <tbody>
@@ -38,7 +40,8 @@
                                                     <td><?php echo $contacts->contact_name?></td>
                                                     <td><?php echo $contacts->contact_email?></td>
                                                     <td><?php echo $contacts->contact_phone?></td>
-                                                    <td width="30%"><?php echo $contacts->contact_detail?></td>
+                                                    <td><?php echo $contacts->contact_detail?></td>
+                                                    <td ><?php echo Datethai($contacts->contact_datasave);?></td>
                                                     </tr>
                                                 <?php $i++;}?>
                                             </tbody>
@@ -57,7 +60,6 @@
             <!-- /.content -->
         </div>
         <!-- /.content-wrapper -->
-
     <?php } else {
         unset($_SESSION['username']);
         unset($_SESSION['customer_id']);
