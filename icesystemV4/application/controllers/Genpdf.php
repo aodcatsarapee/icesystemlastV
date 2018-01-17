@@ -4054,7 +4054,7 @@ $tbl = '<table cellspacing="0" cellpadding="8" >
 
      $tbl = $tbl . ' <tr nobr="true">
           <td width="10%" style="border: 1px solid #000000;  text-align:center; ">'.$i.'</td>
-          <td width="22%"  style="border: 1px solid #000000;  text-align:center">C'.$customer['customer_id'].'</td>
+          <td width="22%"  style="border: 1px solid #000000;  text-align:center">'.$customer['customer_id'].'</td>
           <td width="30%" style="border: 1px solid #000000;  text-align:center">'.$customer['customer_fname'].' '.$customer['customer_lname'].'</td>
           <td width="38%" style="border: 1px solid #000000;  text-align:center"> </td>
           
