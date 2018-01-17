@@ -25,7 +25,7 @@
                                         <table class="table table-bordered" id="contact">
                                             <thead>
                                                 <tr>
-                                                    <th >ลำดับ</th>
+                                                    <th width="2">ลำดับ</th>
                                                     <th >ชื่อ</th>
                                                     <th >อีเมล์</th>
                                                     <th >เบอร์โทร</th>
