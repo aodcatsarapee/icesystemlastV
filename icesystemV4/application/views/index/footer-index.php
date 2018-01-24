@@ -19,8 +19,8 @@
                     </ul>
                 </div>
                 <div class="footer-col col-md-4">
-                    <h3>เกี่ยวกับเรา</h3>
-                    <p>ห้างหุ่นส่วนจำกัดโรงน้ำเเข็งธวีชัย<a href="http://startbootstrap.com">Start Bootstrap</a>.</p>
+                    <h3>เบอร์โทร</h3>
+                    <p>0-5324-5492</p>
                 </div>
             </div>
         </div>
