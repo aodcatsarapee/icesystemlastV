@@ -79,10 +79,10 @@
             </div>
             <div class="row">
                 <div class="col-lg-4 col-lg-offset-2">
-                    <p>Freelancer is a free bootstrap theme created by Start Bootstrap. The download includes the complete source files including HTML, CSS, and JavaScript as well as optional LESS stylesheets for easy customization.</p>
+                    <p>ห้างหุ้นส่วนจำกัด โรงน้ำแข็งทวีชัย ตั้งอยู่ที่ 295/1 ถนน แก้วนวรัฐ ตำบล วัดเกต อำเภอ เมือง จังหวัด เชียงใหม่ รหัสไปรษณีย์ 50000 จัดตั้งมากว่า 20 ปีสืบทอดต่อกันมาซึ่งในปัจจุบันเป็นของ ดร.อัครพล นิมลรัตน์ โดยห้างหุ้นส่วนจำกัด โรงน้ำแข็งทวีชัย นั้นทำกิจการขายน้ำแข็งหลายประเภทโดยรูปแบบการจัดจำหน่ายนั้น จะมีทั้งแบบให้คนรับไปค้าปลีกอีกต่อ หรือจัดส่งเอง </p>
                 </div>
                 <div class="col-lg-4">
-                    <p>Whether you're a student looking to showcase your work, a professional looking to attract clients, or a graphic artist looking to share your projects, this template is the perfect starting point!</p>
+                    <p>ผลิตภัณต์ส่วนใหญ่จัดเป็นน้ำแข็งแบบต่างๆ อาธิ น้ำแข็งหลอดเล็กใหญ่ น้ำแข็งโม่หรือน้ำแข็งเกร็ด และน้ำแข็งก้อน อีกทั้งกระบวนการผลิตยังสะอาดถูกหลักอนามัย โดยวิธีการสั่งนั้นสามารถสั่งได้โดยตรงหรือจะสั่งผ่านเว็ปไซต์นี้ก็ได้เพื่อความสะดวกรวดเร็วในการสั่งไม่ต้องรอ มาถึงรับได้เลยทันที</p>
                 </div>
                 <div class="col-lg-8 col-lg-offset-2 text-center">
                
