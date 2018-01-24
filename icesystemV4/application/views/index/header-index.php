@@ -142,12 +142,15 @@
 
 <section id="index" style="padding-bottom: 0px;">
     <header class="masthead">
-      <div class="container-fluid" style="padding-top: 150px;padding-bottom: 150px; background-image: url(<?php echo base_url(); ?>img/your-name_1.jpg); widht:20%">
-        <img class="img-fluid circle" src="<?php echo base_url(); ?>img/123.jpg" alt="" width="200" style="margin-top: 100px;">
+      <div class="container-fluid" style="padding-top: 150px;padding-bottom: 150px; background-image: url(<?php echo base_url(); ?>img/v7.jpg);height:600px;  background-repeat: repeat-y;">
+        <!-- <img class="img-fluid circle" src="<?php echo base_url(); ?>img/123.jpg" alt="" width="200" style="margin-top: 100px;"> -->
+        <br />
+        <br />
+        <br />
         <div class="intro-text" >
           <span class="name" style=" font-family: 'Mitr', sans-serif;">ยินดีต้อนรับ</span>
           <hr class="star-light">
-         <span class="skills" style="">ห้างหุ่นส่วนจำกัด โรงน้ำเเข็งธวีชัย ยินดีให้บริการ </span>
+         <span class="skills" style="font-size:40px;">ห้างหุ่นส่วนจำกัด โรงน้ำเเข็งธวีชัย ยินดีให้บริการ </span>
         </div>
       </div>
     </header>
