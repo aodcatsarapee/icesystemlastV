@@ -142,7 +142,7 @@
 
 <section id="index" style="padding-bottom: 0px;">
     <header class="masthead">
-      <div class="container-fluid" style="padding-top: 150px;padding-bottom: 150px; background-image: url(<?php echo base_url(); ?>img/v7.jpg);height:600px;  background-repeat: repeat-y;">
+      <div class="container-fluid" style="padding-top: 150px;padding-bottom: 150px; background-image: url(<?php echo base_url(); ?>img/v7.jpg); background-size: 100%;  background-repeat: repeat-y;">
         <!-- <img class="img-fluid circle" src="<?php echo base_url(); ?>img/123.jpg" alt="" width="200" style="margin-top: 100px;"> -->
         <br />
         <br />
