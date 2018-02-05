@@ -8,6 +8,7 @@ class Genpdf extends CI_Controller {
         parent::__construct();
 
         $this->load->library('Pdf');
+        ini_set("allow_url_fopen", 1);
     }  
  
     public function index()
@@ -4319,7 +4320,7 @@ $tbl = '<table cellspacing="0" cellpadding="8" >
  $tbl = $tbl . ' <tr>
          
            
-  <th  style="border: 1px solid #000000;  text-align:center;" colspan="4" ><b> <img src="img/'.$customer['customer_image'].' " width="170" height="160" >
+  <th  style="border: 1px solid #000000;  text-align:center;" colspan="4" ><b> <img src="'.base_url().'img/'.$customer['customer_image'].' " width="170" height="160" >
           </b></th>
           
       </tr>'; 
@@ -4452,6 +4453,7 @@ $pdf->Output('stock.pdf', 'I');
     }
     public function print_employee_data()
     {
+      
  
         // สร้าง object สำหรับใช้สร้าง pdf 
         $pdf = new TCPDF(PDF_PAGE_ORIENTATION, PDF_UNIT, PDF_PAGE_FORMAT, true, 'UTF-8', false);
@@ -4536,7 +4538,7 @@ $tbl = '<table cellspacing="0" cellpadding="8" >
      $date_format = date_format($date,"d/m/Y");
 
 $tbl = $tbl . ' <tr>
-          <th  style="border: 1px solid #000000;  text-align:center;" colspan="4" ><b> <img src="img/'.$emp['employee_image'].' " width="170" height="160" >
+          <th  style="border: 1px solid #000000;  text-align:center;" colspan="4" ><b> <img src="'.base_url().'img/'.$emp['employee_image'].' " width="170" height="160" >
           </b></th>
            
 

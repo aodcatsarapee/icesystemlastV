@@ -1,7 +1,7 @@
 <script>
 var url = $("#base_url").val();
     $(document).ready(function(){
-    if(url == 'http://127.0.0.1/icesystemlastV/icesystemV4/analyze' ){ //เปลืยนด้วยเมือขึนhostจริง
+    if(url == 'http://aodcat.esy.es/analyze' ){ //เปลืยนด้วยเมือขึนhostจริง
      get_analyze();
     }
 });

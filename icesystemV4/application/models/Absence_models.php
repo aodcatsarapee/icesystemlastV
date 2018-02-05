@@ -96,4 +96,3 @@ class Absence_models extends CI_Model
 
 
 
-?>

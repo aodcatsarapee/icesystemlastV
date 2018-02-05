@@ -107,4 +107,3 @@ public function insert_account()
 	}
 }
 
-?>

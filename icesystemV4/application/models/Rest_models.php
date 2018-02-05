@@ -158,4 +158,3 @@ class Rest_models extends CI_Model
 
 
 
-?>

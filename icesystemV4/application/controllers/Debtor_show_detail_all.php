@@ -32,4 +32,3 @@ public function index(){
 	
 	}
 
-?>

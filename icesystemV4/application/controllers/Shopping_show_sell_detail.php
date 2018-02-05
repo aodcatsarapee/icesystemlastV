@@ -49,4 +49,3 @@ public function index(){
 		}
 	}
 
-?>

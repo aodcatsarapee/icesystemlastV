@@ -121,4 +121,3 @@ class Salaly_month extends CI_Controller
 }
 
 
-?>

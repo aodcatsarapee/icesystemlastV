@@ -106,4 +106,3 @@ class Work_time_models extends CI_Model
 
 
   }
-?>

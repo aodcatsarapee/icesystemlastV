@@ -62,4 +62,3 @@ class User_customer extends CI_Controller
              $this->db->delete('users');
          }   
 }
-?>

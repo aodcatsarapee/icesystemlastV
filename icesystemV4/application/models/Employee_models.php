@@ -63,9 +63,5 @@
 			$this->db->where("employee_id",$employee_id);
 			$this->db->update('employee',$ar);
 		}
-
-
-
-
-		
+	
 	}

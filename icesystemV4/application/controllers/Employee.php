@@ -414,7 +414,7 @@ $this->load->library('upload');
 				
 					$barcode = $row['employee_id'];
 					$imageResource = Zend_Barcode::factory('code128', 'image', array('text'=>$barcode , 'barHeight' => 100 ), array())->draw();
-					imagepng($imageResource, 'img/'.$barcode.'.png');
+					imagepng($imageResource,'img/'.$barcode.'.png');
 			
 					$pdf->Image(base_url() . 'img/' . $barcode.'.png', 10, 82, 135, 30, '', '', '');	
 				
@@ -427,4 +427,3 @@ $this->load->library('upload');
 
 	}
 	
-	 ?>

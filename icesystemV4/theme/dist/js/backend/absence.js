@@ -60,7 +60,7 @@ var url = $("#base_url").val();
                    "infoFiltered": "(filtered from _MAX_ total records)",
         }            
            });         
-           if(url == 'http://127.0.0.1/icesystemlastV/icesystemV4/absence' ){ //เปลืยนด้วยเมือขึนhostจริง
+           if(url == 'http://aodcat.esy.es/absence' ){ //เปลืยนด้วยเมือขึนhostจริง
               procss();
           }
         });

@@ -91,4 +91,3 @@ class Analyze_model extends CI_Model
             return $this->db->get('sell');
     }
 }
-?>

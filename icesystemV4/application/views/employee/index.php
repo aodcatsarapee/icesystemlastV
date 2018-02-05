@@ -112,7 +112,7 @@
                             <span class="caret"></span></button>
                             <ul class="dropdown-menu">
                               <li><a href="Genpdf/print_employee_list" target="_blank" ><p style="font-size: 18px; text-align: center;">รายชื่พนักงาน</p></a></li>
-                               <li><a href="<?php echo base_url(); ?>img/ใบสมัครงาน.pdf" target="_blank" ><p style="font-size: 18px; text-align: center;">ใบสมัครงาน</p></a></li>
+                              
                               
                               
                             </ul>

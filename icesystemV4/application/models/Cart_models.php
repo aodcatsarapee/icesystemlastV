@@ -59,4 +59,3 @@ public function insert_order($data)
 
 }
 
-?>

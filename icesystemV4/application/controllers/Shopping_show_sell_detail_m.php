@@ -38,4 +38,3 @@ public function index(){
 	
 	}
 
-?>

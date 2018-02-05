@@ -233,4 +233,3 @@ class Analyze extends CI_Controller
     }
 }
 
-?>

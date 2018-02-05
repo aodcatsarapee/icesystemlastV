@@ -78,17 +78,10 @@ class Customer_models extends CI_Model
 		}
 
 
-		
-
-
-
-
-
-
 
 	}
 
 
 
 
- ?>
+ 

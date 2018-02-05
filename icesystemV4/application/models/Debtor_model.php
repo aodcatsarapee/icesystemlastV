@@ -267,12 +267,6 @@ class Debtor_model extends CI_Model {
 			 $this->db->where("debtor_id",$debtor_id);
        		 $this->db->update("debtor",$ar);
 		}
-
-
-
-
-
        
 }
 
-?>

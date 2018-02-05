@@ -277,4 +277,3 @@ $pdf->Output('amount_detail.pdf', 'I');
 
 
 
-?>
