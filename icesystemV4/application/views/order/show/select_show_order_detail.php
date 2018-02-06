@@ -156,7 +156,7 @@
 		$cal = explode(":",$get_custime);
 		$process_date = Datethai($value['order_detail_date']);
 		$pro_date = explode(" ",$process_date);
-		<?php 
+	
 		if($value['product_id'] == '0013'){ 
 
 
@@ -204,7 +204,7 @@
 
 	
 
-		// <!-- ======================= -->
+		 <!-- ======================= -->
 			
 			<tr>
 				<td><?php echo $value['product_id'] ?></td>
