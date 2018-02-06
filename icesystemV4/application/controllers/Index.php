@@ -163,7 +163,7 @@
 
 		$data['order_detail']=$this->Order_models->show_order_detail($order_id);
 
-		$this->load->view("Index/show/select_order_detail",$data);
+		$this->load->view("index/show/select_order_detail",$data);
 
 
 	}
