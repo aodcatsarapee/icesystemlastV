@@ -126,6 +126,56 @@
 		
 		?> 
 	
+	
+		<?php 
+							if($value['product_id'] == '0013'){ 
+					
+					
+								if($cal[0] >= 3 && $cal[0] <= 11){
+									$set_time = 'ในวันที่ '.$pro_date[0].' '.($pro_date[1])." เวลา 12.00 นาฬิกาเป็นต้นไป";
+									
+									
+								}else if($cal[0] > 12 && $cal[0] <= 22){
+									$set_time = '03.00 นาฬิกาใน '.Datethai($next_day).' เป็นต้นไป';
+									
+									
+								}else{
+			
+									$set_time = '03.00 นาฬิกาใน '.Datethai($next_day).' เป็นต้นไป';
+								}
+								
+								?>
+			
+								
+						<?php	}else{
+							
+							if($cal[0] >= 3 && $cal[0] <= 11){
+								$set_time = 'ในวันที่ '.$pro_date[0].' '.($pro_date[1])." เวลา 12.00 นาฬิกาเป็นต้นไป";
+								
+								
+							}else if($cal[0] > 12 && $cal[0] <= 17){
+								$set_time = 'ในวันที่ '.$pro_date[0].' '.($pro_date[1])." เวลา 18.00 นาฬิกาเป็นต้นไป";
+								
+								
+							}else if($cal[0] > 18 && $cal[0] <= 23){
+								$set_time = '03.00 นาฬิกาใน '.Datethai($next_day).' เป็นต้นไป';
+								
+								
+							}else{
+								$set_time = '03.00 นาฬิกาใน '.Datethai($next_day).' เป็นต้นไป';
+							}
+							
+							
+							
+							?>
+				
+							
+			
+							<?php  } ?>
+		
+		
+		
+		
         <?php foreach ($order_detail as $key => $value) { ?>
 
 		<!-- ==============คำนวนเวลา========= -->
@@ -151,53 +201,10 @@
 		$process_date = Datethai($value['order_detail_date']);
 		$pro_date = explode(" ",$process_date);
 
-				if($value['product_id'] == '0013'){ 
-					
-					
-					if($cal[0] >= 3 && $cal[0] <= 11){
-						$set_time = 'ในวันที่ '.$pro_date[0].' '.($pro_date[1])." เวลา 12.00 นาฬิกาเป็นต้นไป";
-						
-						
-					}else if($cal[0] > 12 && $cal[0] <= 22){
-						$set_time = '03.00 นาฬิกาใน '.Datethai($next_day).' เป็นต้นไป';
-						
-						
-					}else{
 
-						$set_time = '03.00 นาฬิกาใน '.Datethai($next_day).' เป็นต้นไป';
-					}
-					
-					?>
-
-					
-			<?php	}else{
-				
-				if($cal[0] >= 3 && $cal[0] <= 11){
-					$set_time = 'ในวันที่ '.$pro_date[0].' '.($pro_date[1])." เวลา 12.00 นาฬิกาเป็นต้นไป";
-					
-					
-				}else if($cal[0] > 12 && $cal[0] <= 17){
-					$set_time = 'ในวันที่ '.$pro_date[0].' '.($pro_date[1])." เวลา 18.00 นาฬิกาเป็นต้นไป";
-					
-					
-				}else if($cal[0] > 18 && $cal[0] <= 23){
-					$set_time = '03.00 นาฬิกาใน '.Datethai($next_day).' เป็นต้นไป';
-					
-					
-				}else{
-					$set_time = '03.00 นาฬิกาใน '.Datethai($next_day).' เป็นต้นไป';
-				}
-				
-				
-				
-				?>
-	
-				
-
-				<?php  } ?>
 	
 
-		<!-- ======================= -->
+		// <!-- ======================= -->
 			
 			<tr>
 				<td><?php echo $value['product_id'] ?></td>
