@@ -184,14 +184,14 @@
 
           	<div class="form-group  ">
             <label class="col-sm-3 control-label"  >สัณชาติ :</label>
-            <div class="col-sm-3">
+            <div class="col-sm-7">
               <input class="form-control" type="text" name="cus_blood" id="cus_blood"  placeholder="เช่น ไทย " value="<?php echo $rs['customer_country'] ?>" >
             </div>
           </div>
 
           <div class="form-group  ">
             <label class="col-sm-3 control-label"  >เลขบัตรประชาชน :</label>
-            <div class="col-sm-4">
+            <div class="col-sm-7">
               <input class="form-control" type="text" name="id_card" id="id_card"  placeholder="เช่น 1509901476538 "  maxlength="13" minlength="13"  value="<?php echo $rs['customer_IDcard'] ?>">
             </div>
           </div>
@@ -226,21 +226,21 @@
           </div>
           <div class="form-group  ">
           <label class="col-sm-3 control-label"  >อำเภอ :</label>
-            <div class="col-sm-5">
+            <div class="col-sm-7">
               <input class="form-control" type="text" name="cus_area" id="cus_area"  size="20px;" placeholder="เช่น เมืองเชีงใหม่ " value="<?php echo $rs['customer_area'] ?>" >
             </div>
  			</div>
 
  			<div class="form-group  ">
           <label class="col-sm-3 control-label"  >จังหวัด :</label>
-            <div class="col-sm-5">
+            <div class="col-sm-7">
               <input class="form-control" type="text" name="cus_province" id="cus_province"  size="20px;" placeholder="เช่น เชียงใหม่ " value="<?php echo $rs['customer_province'] ?>" >
             </div>
  			</div>
 
  			<div class="form-group  ">
           <label class="col-sm-3 control-label"  >รหัสไปรษณีย์ :</label>
-            <div class="col-sm-5">
+            <div class="col-sm-7">
               <input class="form-control" type="text" name="cus_post_code" id="cus_post_code"  size="20px;" placeholder="เช่น 50000 " value="<?php echo $rs['customer_postal_code'] ?>" >
             </div>
  			</div>
@@ -249,14 +249,14 @@
 
  			<div class="form-group  ">
  			<label class="col-sm-3 control-label"  >เบอร์โทรที่ติดต่อได้ :</label>
-            <div class="col-sm-5">
+            <div class="col-sm-7">
               <input class="form-control" type="text" name="cus_phone" id="cus_phone"  size="20px;" placeholder="เช่น 0955142114 "  value="<?php echo $rs['customer_phone'] ?>">            </div>
  			</div>
 
 
       <div class="form-group  ">
       <label class="col-sm-3 control-label"  >E-Mail :</label>
-            <div class="col-sm-5">
+            <div class="col-sm-7">
               <input class="form-control" type="text" name="cus_mail" id="cus_mail"  size="20px;" placeholder="เช่น toto@gmail.com " 
               value="<?php echo $rs['customer_email'] ?>" >            </div>
       </div>      
@@ -264,7 +264,7 @@
 
  			<div class="form-group  ">
  			<label class="col-sm-3 control-label"  >รูป :</label>
-            <div class="col-sm-4">
+            <div class="col-sm-7">
                <input type="file"  name="cus_img" class="form-control" id="cus_img" accept="image/*" >
             </div>
  			</div>

@@ -32,7 +32,7 @@
 
           	<div class="form-group  ">
             <label class="col-sm-3 control-label"  >สัณชาติ :</label>
-            <div class="col-sm-3">
+            <div class="col-sm-7">
               <input class="form-control" type="text" name="cus_blood" id="cus_blood"  placeholder="เช่น ไทย " >
             </div>
           </div>
@@ -74,21 +74,21 @@
           </div>
           <div class="form-group  ">
           <label class="col-sm-3 control-label"  >อำเภอ :</label>
-            <div class="col-sm-5">
+            <div class="col-sm-7">
               <input class="form-control" type="text" name="cus_area" id="cus_area"  size="20px;" placeholder="เช่น เมืองเชีงใหม่ " >
             </div>
  			</div>
 
  			<div class="form-group  ">
           <label class="col-sm-3 control-label"  >จังหวัด :</label>
-            <div class="col-sm-5">
+            <div class="col-sm-7">
               <input class="form-control" type="text" name="cus_province" id="cus_province"  size="20px;" placeholder="เช่น เชียงใหม่ " >
             </div>
  			</div>
 
  			<div class="form-group  ">
           <label class="col-sm-3 control-label"  >รหัสไปรษณีย์ :</label>
-            <div class="col-sm-5">
+            <div class="col-sm-7">
               <input class="form-control" type="text" name="cus_post_code" id="cus_post_code"  size="20px;" placeholder="เช่น 50000 "  maxlength="4" minlength="4">
             </div>
  			</div>
@@ -97,14 +97,14 @@
 
  			<div class="form-group  ">
  			<label class="col-sm-3 control-label"  >เบอร์โทรที่ติดต่อได้ :</label>
-            <div class="col-sm-5">
+            <div class="col-sm-7">
               <input class="form-control" type="text" name="cus_phone" id="cus_phone"  size="20px;" placeholder="เช่น 0955142114 "  maxlength="10" minlength="10">            </div>
  			</div> 			
 
 
       <div class="form-group  ">
       <label class="col-sm-3 control-label"  >อีเมล์ :</label>
-            <div class="col-sm-5">
+            <div class="col-sm-7">
               <input class="form-control" type="text" name="cus_mail" id="cus_mail"  size="20px;" placeholder="เช่น toto@gmail.com " >            </div>
       </div>      
 
@@ -116,14 +116,14 @@
 
       <div class="form-group  ">
       <label class="col-sm-3 control-label"  >รหัสผ่าน :</label>
-            <div class="col-sm-5">
+            <div class="col-sm-7">
               <input class="form-control" type="Password" name="cus_pass" id="cus_pass"  size="20px;"  >
               </div>
       </div>
 
       <div class="form-group  ">
       <label class="col-sm-3 control-label"  > ยืนยันรหัสผ่าน  :</label>
-            <div class="col-sm-5">
+            <div class="col-sm-7">
               <input class="form-control" type="Password" name="cus_pass_confirm" id="cus_pass_confirm"  size="20px;"  >
               </div>
       </div>       
@@ -133,7 +133,7 @@
 
  			<div class="form-group  ">
  			<label class="col-sm-3 control-label"  >รูป :</label>
-            <div class="col-sm-5">
+            <div class="col-sm-7">
                <input type="file"  name="cus_img" class="form-control" id="cus_img" accept="image/*" >
             </div>
  			</div>
