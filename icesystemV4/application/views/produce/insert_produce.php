@@ -31,7 +31,7 @@
                             <input type="hidden" class="form-control" id="product_name" name="product_name[]" placeholder="Input field" value="<?php  echo $product['product_name']; ?>"   >
                   </td>
                   <td width="10%">           
-                            <input type="number" class="form-control " name="product_amount[]" id="product_amount<?php echo $i; ?>" placeholder="จำนวน" min="0" value="0" style="text-align: right;">   
+                            <input type="number" class="form-control " name="product_amount[]" id="product_amount<?php echo $i; ?>" placeholder="จำนวน" min="0" value="0" style="text-align: right;" onchange="check_amount()">   
                                 
                   </td>
 
@@ -44,16 +44,42 @@
               
             </table>
             <i style="float: left; font-size: 15px;"><b>*หมายเหตุ</b> หากสินค้าชนิดใดที่ไม่ต้องการให้ผลิตให้กำหนดจำนวนเท่ากับ 0</i>
-             <button type="submit" class="btn btn-default" style="float: right;font-size: 15px;" > บันทึก</button>
+             <button type="submit" id="submit_dis" class="btn btn-default" style="float: right;font-size: 15px;" disabled > บันทึก</button>
          </form>
 
 
         <br>
         <br>
       </div>
-      
-       
-  
+    
     </div>
   </div>
-</div>
+</div><input type="hidden" name="number_check"  id='number_check' class="form-control" value="<?php echo count($rs); ?>">
+<script>
+function check_amount() {
+  var test = [];
+	var amount_count = $("#number_check").val();
+	var check_con;
+	for (var i = 0; i < amount_count; i++) {
+		if ($("#product_amount" + i).val() != 0) {
+			$('#submit_dis').removeAttr("disabled");
+    }
+     test[i] = $("#product_amount" + i).val() == 0 ;
+
+     if(  test[i]  == false){
+
+      alert(test[i]);
+
+     }else{
+      $('#submit_dis').prop("disabled", true);
+     }
+
+  }
+
+
+   
+    
+  
+}
+
+</script>
