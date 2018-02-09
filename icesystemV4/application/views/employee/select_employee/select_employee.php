@@ -195,14 +195,14 @@
 
           	<div class="form-group  ">
             <label class="col-sm-3 control-label"  >สัณชาติ :</label>
-            <div class="col-sm-3">
+            <div class="col-sm-7">
               <input class="form-control" type="text" name="emp_blood" id="emp_blood"  placeholder="เช่น ไทย " value="<?php echo $rs['employee_country'] ?>" >
             </div>
           </div>
 
           <div class="form-group  ">
             <label class="col-sm-3 control-label"  >เลขบัตรประชาชน :</label>
-            <div class="col-sm-6">
+            <div class="col-sm-7">
               <input class="form-control" type="text" name="id_card" id="id_card"  placeholder="เช่น 1509901476538 "  maxlength="13" minlength="13"  value="<?php echo $rs['employee_IDcard'] ?>">
             </div>
           </div>
@@ -247,21 +247,21 @@
           </div>
           <div class="form-group  ">
           <label class="col-sm-3 control-label"  >อำเภอ :</label>
-            <div class="col-sm-5">
+            <div class="col-sm-7">
               <input class="form-control" type="text" name="emp_area" id="emp_area"  size="20px;" placeholder="เช่น เมืองเชีงใหม่ " value="<?php echo $rs['employee_area'] ?>" >
             </div>
  			</div>
 
  			<div class="form-group  ">
           <label class="col-sm-3 control-label"  >จังหวัด :</label>
-            <div class="col-sm-5">
+            <div class="col-sm-7">
               <input class="form-control" type="text" name="emp_province" id="emp_province"  size="20px;" placeholder="เช่น เชียงใหม่ " value="<?php echo $rs['employee_province'] ?>" >
             </div>
  			</div>
 
  			<div class="form-group  ">
           <label class="col-sm-3 control-label"  >รหัสไปรษณีย์ :</label>
-            <div class="col-sm-5">
+            <div class="col-sm-7">
               <input class="form-control" type="text" name="emp_post_code" id="emp_post_code"  size="20px;" placeholder="เช่น 50000 " value="<?php echo $rs['employee_postal_code'] ?>" >
             </div>
  			</div>
@@ -270,7 +270,7 @@
 
  			<div class="form-group  ">
  			<label class="col-sm-3 control-label"  >เบอร์โทรที่ติดต่อได้ :</label>
-            <div class="col-sm-5">
+            <div class="col-sm-7">
               <input class="form-control" type="text" name="emp_phone" id="emp_phone"  size="20px;" placeholder="เช่น 0955142114 " maxlength="10" minlength="10" value="<?php echo $rs['employee_phone'] ?>">            </div>
  			</div>
 
@@ -295,12 +295,12 @@
 
       <div class="form-group  ">
       <label class="col-sm-3 control-label"  >เลขที่หนังสือเดินทาง :</label>
-            <div class="col-sm-5">
+            <div class="col-sm-7">
               <input class="form-control" type="text" name="emp_pastpost" id="emp_pastpost"  size="20px;" placeholder="เช่น 0955142114 " maxlength="13" minlength="13" value="<?php echo $rs['employee_pastpost'] ?>" >            </div>
       </div>
       <div class="form-group  ">
           <label class="col-sm-3 control-label"  >จากประเทศ :</label>
-            <div class="col-sm-5">
+            <div class="col-sm-7">
               <input class="form-control" type="text" name="emp_truecoun" id="emp_truecoun"  size="20px;" placeholder="เช่น พม่า "  
               value="<?php echo $rs['employee_truecoun'] ?>" >
             </div>

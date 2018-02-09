@@ -50,14 +50,14 @@
 
           	<div class="form-group  ">
             <label class="col-sm-3 control-label"  >สัณชาติ :</label>
-            <div class="col-sm-3">
+            <div class="col-sm-7">
               <input class="form-control" type="text" name="emp_blood" id="emp_blood"  placeholder="เช่น ไทย " >
             </div>
           </div>
 
           <div class="form-group  ">
             <label class="col-sm-3 control-label"  >เลขบัตรประชาชน :</label>
-            <div class="col-sm-3">
+            <div class="col-sm-7">
               <input class="form-control" type="text" name="id_card" id="id_card"  placeholder="เช่น 1509901476538 "  maxlength="13" minlength="13" >
             </div>
           </div>

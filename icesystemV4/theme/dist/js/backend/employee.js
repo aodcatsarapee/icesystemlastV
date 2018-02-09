@@ -137,9 +137,7 @@
                                  
                                     $('#insert_form_employee')[0].reset(); 
                                    
-                                         
-                                     alert("111");
-                                    location.reload();
+                                       location.reload();
                                     
                                     }
                               });
