@@ -59,26 +59,16 @@
 function check_amount() {
   var test = [];
 	var amount_count = $("#number_check").val();
-	var check_con;
+	var check_con = 0;
 	for (var i = 0; i < amount_count; i++) {
 		if ($("#product_amount" + i).val() != 0) {
-			$('#submit_dis').removeAttr("disabled");
+      $('#submit_dis').removeAttr("disabled");
+      check_con++;
     }
-     test[i] = $("#product_amount" + i).val() == 0 ;
-
-     if(  test[i]  == false){
-
-      alert(test[i]);
-
-     }else{
-      $('#submit_dis').prop("disabled", true);
-     }
-
   }
-
-
-   
-    
+  if( check_con == 0 ){
+    $('#submit_dis').prop("disabled", true);
+  }
   
 }
 
