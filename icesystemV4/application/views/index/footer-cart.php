@@ -3,22 +3,15 @@
     <div class="footer-above">
         <div class="container">
             <div class="row">
-                <div class="footer-col col-md-4">
+                <div class="footer-col col-md-6">
                     <h3>ที่อยู่</h3>
                     <p>295/1 ถนน แก้วนวรัฐ
                         <br>ตำบล วัดเกต อำเภอเมืองเชียงใหม่ เชียงใหม่ 50000</p>
 
                          
                 </div>
-                <div class="footer-col col-md-4">
-                    <h3>facebook</h3>
-                    <ul class="list-inline">
-                        <li>
-                            <a href="#" class="btn-social btn-outline"><span class="sr-only">Facebook</span><i class="fa fa-fw fa-facebook"></i></a>
-                        </li>
-                    </ul>
-                </div>
-                <div class="footer-col col-md-4">
+                
+                <div class="footer-col col-md-6">
                 <h3>เบอร์โทร</h3>
                 <p>0-5324-5492</p>
                 </div>
