@@ -89,7 +89,7 @@
  			<div class="form-group  ">
           <label class="col-sm-3 control-label"  >รหัสไปรษณีย์ :</label>
             <div class="col-sm-7">
-              <input class="form-control" type="text" name="cus_post_code" id="cus_post_code"  size="20px;" placeholder="เช่น 50000 "  maxlength="4" minlength="4">
+              <input class="form-control" type="text" name="cus_post_code" id="cus_post_code"  size="20px;" placeholder="เช่น 50000 " >
             </div>
  			</div>
 
