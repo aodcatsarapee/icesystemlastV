@@ -2248,8 +2248,8 @@ $html ='
             <table cellspacing="0" cellpadding="4" >
                    <tr>
                         <th  width="13%" style="text-align: center;border-top: 1px solid black;border-left: 1px solid black;border-bottom: 1px solid black;" ><b>รหัสสินค้า</b></th>
-                        <th  width="50%" style="text-align: center;border-top: 1px solid black;border-bottom: 1px solid black;"><b>ชื่อสินค้า</b></th>
-                        <th  width="10%"style="text-align: center;border-top: 1px solid black;border-bottom: 1px solid black;"><b>จำนวน</b></th>
+                        <th  width="40%" style="text-align: center;border-top: 1px solid black;border-bottom: 1px solid black;"><b>ชื่อสินค้า</b></th>
+                        <th  width="20%"style="text-align: center;border-top: 1px solid black;border-bottom: 1px solid black;"><b>จำนวน</b></th>
                         <th width="15%" style="text-align: center;border-top: 1px solid black;border-bottom: 1px solid black;"><b>ราคา/หน่วย</b></th>
                         <th width="15%" style="text-align: center;border-top: 1px solid black;border-bottom: 1px solid black;border-right: 1px solid black;" ><b>รวม</b></th>
 
@@ -2266,9 +2266,9 @@ $html ='
 
                         <td style="text-align: center; border-left: 1px solid black;">'.$sell_detail['product_id'].'</td>
                         <td style="text-align: center;">'.$sell_detail['product_name'].'</td>
-                        <td style="text-align: center;">'.$sell_detail['sell_product_quantity'].' </td>
-                        <td style="text-align: center;">'.$sell_detail['sell_product_price'].'</td>
-                        <td style="text-align: center;border-right: 1px solid black;">'.$sell_detail['sell_product_quantity']*$sell_detail['sell_product_price'].'.00</td>
+                        <td style="text-align: center;">'.$sell_detail['sell_product_quantity'].' '.$sell_detail['product_type'].' </td>
+                        <td style="text-align: center;">'.number_format($sell_detail['sell_product_price'],2).'</td>
+                        <td style="text-align: center;border-right: 1px solid black;">'.number_format($sell_detail['sell_product_quantity']*$sell_detail['sell_product_price'],2).'</td>
                    </tr>
     ';
 
@@ -2292,7 +2292,7 @@ $html ='
                         <tr>  
                           <td colspan="3" style="border-left: 1px solid black;"></td> 
                          <td >รวมทั้งหมด</td>
-                         <td style="text-align: center;border-right: 1px solid black;">'.$orders['sell_detail_total'].'</td>
+                         <td style="text-align: center;border-right: 1px solid black;">'.number_format($orders['sell_detail_total'],2).'</td>
                     </tr>
                     <tr>  
                           <td colspan="3" style="border-left: 1px solid black;"></td> 
