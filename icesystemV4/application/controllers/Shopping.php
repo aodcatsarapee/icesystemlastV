@@ -39,6 +39,7 @@ class Shopping extends CI_Controller {
 				'id'    => $this->input->post('id'),
 				'name'  => $this->input->post('name'),
 				'price' => $this->input->post('price'),
+				'type'  => $this->input->post('type'),
 				'qty'   => 1
 		);		
 

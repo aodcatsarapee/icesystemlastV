@@ -1027,7 +1027,7 @@ $tbl = '<table cellspacing="0" cellpadding="8" >
 
      $tbl = $tbl . ' <tr nobr="true">
           <td style="border: 1px solid #000000;  text-align:center; ">'.$order['sell_detail_id'].'</td>
-          <td style="border: 1px solid #000000;  text-align:center">'.$order['sell_detail_total'].' บาท</td>
+          <td style="border: 1px solid #000000;  text-align:center">'.number_format($order['sell_detail_total'],2).' บาท</td>
           <td style="border: 1px solid #000000;  text-align:center">'.$order['sell_detail_status'].' </td>
           <td style="border: 1px solid #000000;  text-align:center">'.$date_format.' </td>
           
@@ -1061,7 +1061,7 @@ $tbl = '<table cellspacing="0" cellpadding="8" >
         
      $tbl = $tbl . ' <tr>
           <td style="border: 1px solid #000000;  text-align:center; ">รวม</td>
-          <td style="border: 1px solid #000000;  text-align:center"> '.$total1.'.00 บาท</td>
+          <td style="border: 1px solid #000000;  text-align:center"> '.number_format($total1,2).' บาท</td>
           <td style="border: 1px solid #000000;  text-align:center"> -</td>
           <td style="border: 1px solid #000000;  text-align:center"> - </td>
           
@@ -1196,7 +1196,7 @@ $tbl = '<table cellspacing="0" cellpadding="8" >
 
       $tbl = $tbl . ' <tr nobr="true">
       <td style="border: 1px solid #000000;  text-align:center; ">'.$order['sell_detail_id'].'</td>
-      <td style="border: 1px solid #000000;  text-align:center">'.$order['sell_detail_total'].' บาท</td>
+      <td style="border: 1px solid #000000;  text-align:center">'.number_format($order['sell_detail_total'],2).' บาท</td>
       <td style="border: 1px solid #000000;  text-align:center">'.$order['sell_detail_status'].' </td>
       <td style="border: 1px solid #000000;  text-align:center">'.Datethai($date_format).' </td>
       
@@ -1232,7 +1232,7 @@ $tbl = '<table cellspacing="0" cellpadding="8" >
         
      $tbl = $tbl . ' <tr>
           <td style="border: 1px solid #000000;  text-align:center; ">รวม</td>
-          <td style="border: 1px solid #000000;  text-align:center"> '.$total1.'.00 บาท</td>
+          <td style="border: 1px solid #000000;  text-align:center"> '.number_format($total1,2).' บาท</td>
           <td style="border: 1px solid #000000;  text-align:center"> -</td>
           <td style="border: 1px solid #000000;  text-align:center"> - </td>
           
@@ -1368,7 +1368,7 @@ $tbl = '<table cellspacing="0" cellpadding="8" >
 
      $tbl = $tbl . ' <tr nobr="true">
           <td style="border: 1px solid #000000;  text-align:center; ">'.$order['sell_detail_id'].'</td>
-          <td style="border: 1px solid #000000;  text-align:center">'.$order['sell_detail_total'].' บาท</td>
+          <td style="border: 1px solid #000000;  text-align:center">'.number_format($order['sell_detail_total'],2).' บาท</td>
           <td style="border: 1px solid #000000;  text-align:center">'.$order['sell_detail_status'].' </td>
           <td style="border: 1px solid #000000;  text-align:center">'.Datethai($date_format).' </td>
           
@@ -1399,7 +1399,7 @@ $tbl = '<table cellspacing="0" cellpadding="8" >
         
      $tbl = $tbl . ' <tr>
           <td style="border: 1px solid #000000;  text-align:center; ">รวม</td>
-          <td style="border: 1px solid #000000;  text-align:center"> '.$total1.'.00 บาท</td>
+          <td style="border: 1px solid #000000;  text-align:center"> '.number_format($total1,2).' บาท</td>
           <td style="border: 1px solid #000000;  text-align:center"> -</td>
           <td style="border: 1px solid #000000;  text-align:center"> - </td>
           
@@ -1531,7 +1531,7 @@ $tbl = '<table cellspacing="0" cellpadding="8" >
 
      $tbl = $tbl . ' <tr nobr="true">
           <td style="border: 1px solid #000000;  text-align:center; ">'.$order['sell_detail_id'].'</td>
-          <td style="border: 1px solid #000000;  text-align:center">'.$order['sell_detail_total'].' บาท</td>
+          <td style="border: 1px solid #000000;  text-align:center">'.number_format($order['sell_detail_total'],2).' บาท</td>
           <td style="border: 1px solid #000000;  text-align:center">'.$order['sell_detail_status'].' </td>
           <td style="border: 1px solid #000000;  text-align:center">'.Datethai($date_format).' </td>
           
@@ -1562,7 +1562,7 @@ $tbl = '<table cellspacing="0" cellpadding="8" >
         
      $tbl = $tbl . ' <tr>
           <td style="border: 1px solid #000000;  text-align:center; ">รวม</td>
-          <td style="border: 1px solid #000000;  text-align:center"> '.$total1.'.00 บาท</td>
+          <td style="border: 1px solid #000000;  text-align:center"> '.number_format($total1,2).' บาท</td>
           <td style="border: 1px solid #000000;  text-align:center"> -</td>
           <td style="border: 1px solid #000000;  text-align:center"> - </td>
           
@@ -1710,7 +1710,7 @@ $tbl = '<table cellspacing="0" cellpadding="8" >
         # code...
      $tbl = $tbl . ' <tr nobr="true">
           <td style="border: 1px solid #000000;  text-align:center; ">'.$order['sell_detail_id'].'</td>
-          <td style="border: 1px solid #000000;  text-align:center">'.$order['sell_detail_total'].' บาท</td>
+          <td style="border: 1px solid #000000;  text-align:center">'.number_format($order['sell_detail_total'],2).' บาท</td>
           <td style="border: 1px solid #000000;  text-align:center">'.$order['sell_detail_status'].' </td>
           <td style="border: 1px solid #000000;  text-align:center">'.Datethai($date_format).' </td>
 
@@ -1740,7 +1740,7 @@ $tbl = '<table cellspacing="0" cellpadding="8" >
         
      $tbl = $tbl . ' <tr>
           <td style="border: 1px solid #000000;  text-align:center; ">รวม</td>
-          <td style="border: 1px solid #000000;  text-align:center"> '.$total1.' บาท</td>
+          <td style="border: 1px solid #000000;  text-align:center"> '.number_format($total1,2).' บาท</td>
           <td style="border: 1px solid #000000;  text-align:center"> -</td>
           <td style="border: 1px solid #000000;  text-align:center"> - </td>
           
@@ -1872,8 +1872,8 @@ $html ='
             <table cellspacing="0" cellpadding="4" >
                    <tr>
                         <th  width="13%" style="text-align: center;border-top: 1px solid black;border-left: 1px solid black;border-bottom: 1px solid black;" ><b>รหัสสินค้า</b></th>
-                        <th  width="50%" style="text-align: center;border-top: 1px solid black;border-bottom: 1px solid black;"><b>ชื่อสินค้า</b></th>
-                        <th  width="10%"style="text-align: center;border-top: 1px solid black;border-bottom: 1px solid black;"><b>จำนวน</b></th>
+                        <th  width="40%" style="text-align: center;border-top: 1px solid black;border-bottom: 1px solid black;"><b>ชื่อสินค้า</b></th>
+                        <th  width="20%"style="text-align: center;border-top: 1px solid black;border-bottom: 1px solid black;"><b>จำนวน</b></th>
                         <th width="15%" style="text-align: center;border-top: 1px solid black;border-bottom: 1px solid black;"><b>ราคา/หน่วย</b></th>
                         <th width="15%" style="text-align: center;border-top: 1px solid black;border-bottom: 1px solid black;border-right: 1px solid black;" ><b>รวม</b></th>
 
@@ -1890,9 +1890,9 @@ $html ='
 
                         <td style="text-align: center; border-left: 1px solid black;">'.$sell_detail['product_id'].'</td>
                         <td style="text-align: center;">'.$sell_detail['product_name'].'</td>
-                        <td style="text-align: center;">'.$sell_detail['sell_product_quantity'].' </td>
-                        <td style="text-align: center;">'.$sell_detail['sell_product_price'].'.00</td>
-                        <td style="text-align: center;border-right: 1px solid black;">'.$sell_detail['sell_product_quantity']*$sell_detail['sell_product_price'].'.00</td>
+                        <td style="text-align: center;">'.$sell_detail['sell_product_quantity'].' '.$sell_detail['product_type'].' </td>
+                        <td style="text-align: center;">'.number_format($sell_detail['sell_product_price'],2).'</td>
+                        <td style="text-align: center;border-right: 1px solid black;">'.number_format($sell_detail['sell_product_quantity']*$sell_detail['sell_product_price'],2).'</td>
                    </tr>
     ';
 
@@ -1916,17 +1916,17 @@ $html ='
                         <tr>  
                           <td colspan="3" style="border-left: 1px solid black;"></td> 
                          <td >รวมทั้งหมด</td>
-                         <td style="text-align: center;border-right: 1px solid black;">'.$orders['sell_detail_total'].'</td>
+                         <td style="text-align: center;border-right: 1px solid black;">'.number_format($orders['sell_detail_total'],2).'</td>
                     </tr>
                     <tr>  
                           <td colspan="3" style="border-left: 1px solid black;"></td> 
                          <td  st>เงินสด</td>
-                         <td style="text-align: center;border-right: 1px solid black;">'.$orders['sell_detail_received'].'</td>
+                         <td style="text-align: center;border-right: 1px solid black;">'.number_format($orders['sell_detail_received'],2).'</td>
                     </tr>
                      <tr>   
                           <td colspan="3" style="border-left: 1px solid black;border-bottom: 1px solid black;"></td> 
                          <td  style="border-bottom: 1px solid black;" >เงินทอน</td>
-                         <td style="text-align: center;border-bottom: 1px solid black;border-right: 1px solid black;">'.$orders['sell_detail_change_sell'].'</td>
+                         <td style="text-align: center;border-bottom: 1px solid black;border-right: 1px solid black;">'.number_format($orders['sell_detail_change_sell'],2).'</td>
                     </tr>
 
 
@@ -2065,8 +2065,8 @@ $html ='
             <table cellspacing="0" cellpadding="4" >
                    <tr>
                         <th  width="13%" style="text-align: center;border-top: 1px solid black;border-left: 1px solid black;border-bottom: 1px solid black;" ><b>รหัสสินค้า</b></th>
-                        <th  width="50%" style="text-align: center;border-top: 1px solid black;border-bottom: 1px solid black;"><b>ชื่อสินค้า</b></th>
-                        <th  width="10%"style="text-align: center;border-top: 1px solid black;border-bottom: 1px solid black;"><b>จำนวน</b></th>
+                        <th  width="40%" style="text-align: center;border-top: 1px solid black;border-bottom: 1px solid black;"><b>ชื่อสินค้า</b></th>
+                        <th  width="20%"style="text-align: center;border-top: 1px solid black;border-bottom: 1px solid black;"><b>จำนวน</b></th>
                         <th width="15%" style="text-align: center;border-top: 1px solid black;border-bottom: 1px solid black;"><b>ราคา/หน่วย</b></th>
                         <th width="15%" style="text-align: center;border-top: 1px solid black;border-bottom: 1px solid black;border-right: 1px solid black;" ><b>รวม</b></th>
 
@@ -2083,9 +2083,9 @@ $html ='
           
                                   <td style="text-align: center; border-left: 1px solid black;">'.$sell_detail['product_id'].'</td>
                                   <td style="text-align: center;">'.$sell_detail['product_name'].'</td>
-                                  <td style="text-align: center;">'.$sell_detail['sell_product_quantity'].' </td>
-                                  <td style="text-align: center;">'.$sell_detail['sell_product_price'].'</td>
-                                  <td style="text-align: center;border-right: 1px solid black;">'.$sell_detail['sell_product_quantity']*$sell_detail['sell_product_price'].'.00</td>
+                                  <td style="text-align: center;">'.$sell_detail['sell_product_quantity'].' '.$sell_detail['product_type'].' </td>
+                                  <td style="text-align: center;">'.number_format($sell_detail['sell_product_price'],2).'</td>
+                                  <td style="text-align: center;border-right: 1px solid black;">'.number_format($sell_detail['sell_product_quantity']*$sell_detail['sell_product_price'],2).'</td>
                              </tr>
     ';
 
@@ -2107,7 +2107,7 @@ $html ='
                      <tr>   
                           <td colspan="3" style="border-left: 1px solid black;border-bottom: 1px solid black;"></td> 
                          <td  style="border-bottom: 1px solid black;" >รวมทั้งหมด</td>
-                         <td style="text-align: center;border-bottom: 1px solid black;border-right: 1px solid black;">'.$orders['sell_detail_total'].'</td>
+                         <td style="text-align: center;border-bottom: 1px solid black;border-right: 1px solid black;">'.number_format($orders['sell_detail_total'],2).'</td>
                     </tr>
 
 
@@ -2434,8 +2434,8 @@ $html ='
             <table cellspacing="0" cellpadding="4" >
                    <tr>
                         <th  width="13%" style="text-align: center;border-top: 1px solid black;border-left: 1px solid black;border-bottom: 1px solid black;" ><b>รหัสสินค้า</b></th>
-                        <th  width="50%" style="text-align: center;border-top: 1px solid black;border-bottom: 1px solid black;"><b>ชื่อสินค้า</b></th>
-                        <th  width="10%"style="text-align: center;border-top: 1px solid black;border-bottom: 1px solid black;"><b>จำนวน</b></th>
+                        <th  width="40%" style="text-align: center;border-top: 1px solid black;border-bottom: 1px solid black;"><b>ชื่อสินค้า</b></th>
+                        <th  width="20%"style="text-align: center;border-top: 1px solid black;border-bottom: 1px solid black;"><b>จำนวน</b></th>
                         <th width="15%" style="text-align: center;border-top: 1px solid black;border-bottom: 1px solid black;"><b>ราคา/หน่วย</b></th>
                         <th width="15%" style="text-align: center;border-top: 1px solid black;border-bottom: 1px solid black;border-right: 1px solid black;" ><b>รวม</b></th>
 
@@ -2452,9 +2452,9 @@ $html ='
           
                                   <td style="text-align: center; border-left: 1px solid black;">'.$sell_detail['product_id'].'</td>
                                   <td style="text-align: center;">'.$sell_detail['product_name'].'</td>
-                                  <td style="text-align: center;">'.$sell_detail['sell_product_quantity'].' </td>
-                                  <td style="text-align: center;">'.$sell_detail['sell_product_price'].'</td>
-                                  <td style="text-align: center;border-right: 1px solid black;">'.$sell_detail['sell_product_quantity']*$sell_detail['sell_product_price'].'.00</td>
+                                  <td style="text-align: center;">'.$sell_detail['sell_product_quantity'].' '.$sell_detail['product_type'].' </td>
+                                  <td style="text-align: center;">'.number_format($sell_detail['sell_product_price'],2).'</td>
+                                  <td style="text-align: center;border-right: 1px solid black;">'.number_format($sell_detail['sell_product_quantity']*$sell_detail['sell_product_price'],2).'</td>
                              </tr>
     ';
 
@@ -2478,17 +2478,17 @@ $html ='
                         <tr>  
                           <td colspan="3" style="border-left: 1px solid black;"></td> 
                          <td >รวมทั้งหมด</td>
-                         <td style="text-align: center;border-right: 1px solid black;">'.$orders['sell_detail_total'].'</td>
+                         <td style="text-align: center;border-right: 1px solid black;">'.number_format($orders['sell_detail_total'],2).'</td>
                     </tr>
                     <tr>  
                           <td colspan="3" style="border-left: 1px solid black;"></td> 
                          <td  st>เงินสด</td>
-                         <td style="text-align: center;border-right: 1px solid black;">'.$orders['sell_detail_received'].'</td>
+                         <td style="text-align: center;border-right: 1px solid black;">'.number_format($orders['sell_detail_received'],2).'</td>
                     </tr>
                      <tr>   
                           <td colspan="3" style="border-left: 1px solid black;border-bottom: 1px solid black;"></td> 
                          <td  style="border-bottom: 1px solid black;" >เงินทอน</td>
-                         <td style="text-align: center;border-bottom: 1px solid black;border-right: 1px solid black;">'.$orders['sell_detail_change_sell'].'</td>
+                         <td style="text-align: center;border-bottom: 1px solid black;border-right: 1px solid black;">'.number_format($orders['sell_detail_change_sell'],2).'</td>
                     </tr>
 
 
@@ -2630,8 +2630,8 @@ $html ='
             <table cellspacing="0" cellpadding="4" >
                    <tr>
                         <th  width="13%" style="text-align: center;border-top: 1px solid black;border-left: 1px solid black;border-bottom: 1px solid black;" ><b>รหัสสินค้า</b></th>
-                        <th  width="50%" style="text-align: center;border-top: 1px solid black;border-bottom: 1px solid black;"><b>ชื่อสินค้า</b></th>
-                        <th  width="10%"style="text-align: center;border-top: 1px solid black;border-bottom: 1px solid black;"><b>จำนวน</b></th>
+                        <th  width="40%" style="text-align: center;border-top: 1px solid black;border-bottom: 1px solid black;"><b>ชื่อสินค้า</b></th>
+                        <th  width="20%"style="text-align: center;border-top: 1px solid black;border-bottom: 1px solid black;"><b>จำนวน</b></th>
                         <th width="15%" style="text-align: center;border-top: 1px solid black;border-bottom: 1px solid black;"><b>ราคา/หน่วย</b></th>
                         <th width="15%" style="text-align: center;border-top: 1px solid black;border-bottom: 1px solid black;border-right: 1px solid black;" ><b>รวม</b></th>
 
@@ -2648,9 +2648,9 @@ $html ='
           
                                   <td style="text-align: center; border-left: 1px solid black;">'.$sell_detail['product_id'].'</td>
                                   <td style="text-align: center;">'.$sell_detail['product_name'].'</td>
-                                  <td style="text-align: center;">'.$sell_detail['sell_product_quantity'].' </td>
-                                  <td style="text-align: center;">'.$sell_detail['sell_product_price'].'</td>
-                                  <td style="text-align: center;border-right: 1px solid black;">'.$sell_detail['sell_product_quantity']*$sell_detail['sell_product_price'].'.00</td>
+                                  <td style="text-align: center;">'.$sell_detail['sell_product_quantity'].' '.$sell_detail['product_type'].' </td>
+                                  <td style="text-align: center;">'. number_format($sell_detail['sell_product_price'],2).'</td>
+                                  <td style="text-align: center;border-right: 1px solid black;">'. number_format($sell_detail['sell_product_quantity']*$sell_detail['sell_product_price'],2).'</td>
                              </tr>
     ';
 
@@ -2674,7 +2674,7 @@ $html ='
                      <tr>   
                           <td colspan="3" style="border-left: 1px solid black;border-bottom: 1px solid black;"></td> 
                          <td  style="border-bottom: 1px solid black;" >รวมทั้งหมด</td>
-                         <td style="text-align: center;border-bottom: 1px solid black;border-right: 1px solid black;">'.$orders['sell_detail_total'].'</td>
+                         <td style="text-align: center;border-bottom: 1px solid black;border-right: 1px solid black;">'. number_format($orders['sell_detail_total'],2).'</td>
                     </tr>
 
 

@@ -64,6 +64,7 @@
                         echo form_hidden('id', $id);
                         echo form_hidden('name', $name);
                         echo form_hidden('price', $price);
+                        echo form_hidden('type', $type);
                         ?>  
                                        
                       <td >
@@ -174,6 +175,7 @@
                         echo form_hidden('cart[' . $item['id'] . '][rowid]', $item['rowid']);
                         echo form_hidden('cart[' . $item['id'] . '][name]', $item['name']);
                         echo form_hidden('cart[' . $item['id'] . '][price]', $item['price']);
+                        echo form_hidden('cart[' . $item['id'] . '][type]', $item['type']);
                         echo form_hidden('cart[' . $item['id'] . '][qty]', $item['qty']);
                         ?>
                         <tr>
@@ -189,7 +191,8 @@
                                 $ <?php echo number_format($item['price'], 2); ?>
                             </td>
                             <td>                 
-                            <input type="number" name="<?php echo 'cart[' . $item['id'] . '][qty]', $item['qty'] ?>" min="1" style="width: 40px; text-align: right;"  value="<?php echo $item['qty']; ?>" >
+                            <input type="number" name="<?php echo 'cart[' . $item['id'] . '][qty]', $item['qty'] ?>" min="1" style="width: 60px; text-align: right;"  value="<?php echo $item['qty']; ?>" >
+                                <?php echo  $item['type'];?>
 
                             </td>
                         <?php $grand_total = $grand_total + $item['subtotal']; ?>
