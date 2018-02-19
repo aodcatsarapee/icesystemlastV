@@ -120,6 +120,15 @@
 		}
 
 
+		public  function get_emp_for_produce($stock_detail_id){
+		    $this->db->join('employee','employee.employee_id = stock.employee_id' ,'left');
+            $this->db->where('stock_detail_id',$stock_detail_id);
+            $this->db->group_by('stock_detail_id');
+		    return $this->db->get('stock');
+
+        }
+
+
 //  ==========================================กุย้่ายบ้านมาจาก order============================================================
 
 		public function show_order_detail($order_id)

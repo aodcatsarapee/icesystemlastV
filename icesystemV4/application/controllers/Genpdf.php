@@ -6037,13 +6037,16 @@ $pdf->Output('amount_detail.pdf', 'I');
         $id = $_GET['id'];
         $stock=$this->Produce_models->select_data_stock_detail($id);
 
+        $emp_store = $this->Produce_models->get_emp_for_produce($id)->row();
+
 // กำหนดเนื้อหาข้อมูลที่จะสร้าง pdf ในที่นี้เราจะกำหนดเป็นแบบ html โปรดระวัง EOD; โค้ดสุดท้ายต้องชิดซ้ายไม่เว้นวรรค
 $this->load->helper('Datethai');
 $tbl = '<table cellspacing="0" cellpadding="8" >
                  <tr>
                         <th style="border: 1px solid #000000;  text-align:center;" colspan="4" > ห้างหุ่นส่วน โรงน้ำเเข็งธวีชัย<br> รายงาน<br> ข้อมูลการผลิตสินค้า<br>ณ วันที่ '.Datethai(date("d-m-Y")).'
-                         <p style="text-align:left">รหัสการผลิต '.$id.'</p></th>
-
+                         <p style="text-align:left">รหัสการผลิต '.$id.'<span style="padding-left: 500px;"> สั่งผลิตสินค้าโดย: '. $emp_store->employee_fname.' '.$emp_store->employee_lname.'</span></p></th>
+                         
+                        
                  </tr> ';
 
 // -----------------------------------------------------------------------------

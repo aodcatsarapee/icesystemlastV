@@ -29,10 +29,18 @@
                    <td width="40%">
                             <input type="text" class="form-control" id="product_name" name="product_name[]" placeholder="Input field" value="<?php  echo $product['product_name']; ?>" disabled  >
                             <input type="hidden" class="form-control" id="product_name" name="product_name[]" placeholder="Input field" value="<?php  echo $product['product_name']; ?>"   >
+
                   </td>
-                  <td width="10%">           
-                            <input type="number" class="form-control " name="product_amount[]" id="product_amount<?php echo $i; ?>" placeholder="จำนวน" min="0" value="0" style="text-align: right;" onchange="check_amount()">   
-                                
+                  <td width="30%">
+                      <div class="row">
+                      <div class="col-md-5" >
+                            <input type="number" class="form-control " name="product_amount[]" id="product_amount<?php echo $i; ?>" placeholder="จำนวน" min="0" value="0" style="text-align: right; width: 80px;" onchange="check_amount()">
+                      </div>
+                      <div class="col-md-5" >
+                          <input type="text" class="form-control"  class="form-control" style="width: 80px;" value="<?php echo $product['product_type']; ?>" disabled  >
+
+                      </div>
+                      </div>
                   </td>
 
                 </tr>
