@@ -507,7 +507,7 @@ $this->load->model('produce_product_models');
        <tr>
           <td style="border: 1px solid #000000;  text-align:center; ">'.$s['product_id'].'</td>
           <td style="border: 1px solid #000000;  text-align:center; ">'.$s['stock_product_name'].'</td>
-          <td style="border: 1px solid #000000;  text-align:center; ">'.$s['amount'].'</td>
+          <td style="border: 1px solid #000000;  text-align:center; ">'.$s['amount'].' '.$s['stock_product_type'].'</td>
       </tr>';
 }
   $tbl = $tbl . '</table>';
@@ -638,7 +638,7 @@ $tbl = '<table cellspacing="0" cellpadding="8" >
      $tbl = $tbl . ' <tr>
           <td style="border: 1px solid #000000;  text-align:center; ">'.$s['product_id'].'</td>
           <td style="border: 1px solid #000000;  text-align:center; ">'.$s['stock_product_name'].'</td>
-          <td style="border: 1px solid #000000;  text-align:center; ">'.$s['amount'].'</td>
+          <td style="border: 1px solid #000000;  text-align:center; ">'.$s['amount'].' '.$s['stock_product_type'].'</td>
       </tr>'; 
 
     }
@@ -765,7 +765,8 @@ $tbl = '<table cellspacing="0" cellpadding="8" >
      $tbl = $tbl . ' <tr>
           <td style="border: 1px solid #000000;  text-align:center; ">'.$s['product_id'].'</td>
           <td style="border: 1px solid #000000;  text-align:center; ">'.$s['stock_product_name'].'</td>
-          <td style="border: 1px solid #000000;  text-align:center; ">'.$s['amount'].'</td>
+         <td style="border: 1px solid #000000;  text-align:center; ">'.$s['amount'].' '.$s['stock_product_type'].'</td>
+          
       </tr>'; 
 
     }
@@ -893,7 +894,7 @@ $tbl = '<table cellspacing="0" cellpadding="8" >
      $tbl = $tbl . ' <tr>
           <td style="border: 1px solid #000000;  text-align:center; ">'.$s['product_id'].'</td>
           <td style="border: 1px solid #000000;  text-align:center; ">'.$s['stock_product_name'].'</td>
-          <td style="border: 1px solid #000000;  text-align:center; ">'.$s['amount'].'</td>
+          <td style="border: 1px solid #000000;  text-align:center; ">'.$s['amount'].' '.$s['stock_product_type'].'</td>
       </tr>'; 
 
     }
