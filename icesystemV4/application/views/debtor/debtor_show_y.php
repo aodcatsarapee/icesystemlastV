@@ -8,7 +8,11 @@
     <!-- Content Header (Page header) -->
     <section class="content-header">
       <h1>
-     <i class="fa fa-money"></i> ลูกหนี้ชำระเงินปีนี้<small></small>
+      <?php 	$this->load->helper('Datethai'); 
+         $date = Datethai(date('Y-m-d'));			
+         $get_year = explode(" ",$date);
+				?> 
+     <i class="fa fa-money"></i> ลูกหนี้ชำระเงินในปี<?php echo $get_year[2] ?><small></small>
         
        
       </h1>

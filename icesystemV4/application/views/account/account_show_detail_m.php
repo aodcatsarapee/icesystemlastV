@@ -10,7 +10,11 @@
     <!-- Content Header (Page header) -->
     <section class="content-header">
       <h1>
-    <i class="fa fa-money"></i> รายรับ - รายจ่ายเดือนนี้<small></small>
+      <?php 	$this->load->helper('Datethai'); 
+         $date = Datethai(date('Y-m-d'));			
+         $get_mount = explode(" ",$date);
+				?> 
+    <i class="fa fa-money"></i> รายรับ - รายจ่ายในเดือน <?php echo $get_mount[1] ?><small></small>
          
       </h1>
       

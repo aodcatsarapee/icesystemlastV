@@ -139,7 +139,7 @@
 			<tr>
 				<td style="text-align: center;">P<?php echo  $sell_detail['product_id']; ?></td>
 				<td  style="text-align: center;"><?php echo  $sell_detail['product_name']; ?></td>
-				<td  style="text-align: center;"><?php echo  number_format($sell_detail['sell_product_quantity']); ?></td>
+				<td  style="text-align: center;"><?php echo  number_format($sell_detail['sell_product_quantity']).' '.$sell_detail['product_type']; ?></td>
 				<td  style="text-align: center;"><?php echo  number_format($sell_detail['sell_product_price'],2); ?> บาท</td>
 				<td  style="text-align: center;"><?php echo  number_format($sell_detail['sell_product_quantity']*$sell_detail['sell_product_price']);  ?> บาท</td>
 			<?php $total=$sell_detail['sell_detail_total']; ?>

@@ -168,7 +168,7 @@
 				<td><?php echo $value['product_id'] ?></td>
 				<td><?php echo $value['order_product_name'] ?></td>
 				<td  style="text-align: center;"><?php echo $value['order_product_price'] ?> บาท</td>
-				<td  style="text-align: center;"><?php echo number_format($value['order_product_quantity']) ?></td>
+				<td  style="text-align: center;"><?php echo number_format($value['order_product_quantity']).' '.$value['product_type'] ?> </td>
 				<td  style="text-align: center;"><?php echo number_format($value['order_product_total_price'],2) ?> บาท</td>
 
 			</tr>

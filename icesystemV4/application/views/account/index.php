@@ -11,7 +11,10 @@
     <!-- Content Header (Page header) -->
     <section class="content-header">
       <h1>
-   <i class="fa fa-money"></i> รายรับ - รายจ่ายวันนี้<small></small>
+      <?php 	$this->load->helper('Datethai'); 
+				 $today = date('Y-m-d');			
+				?> 
+   <i class="fa fa-money"></i> รายรับ - รายจ่ายในวันที่ <?php echo Datethai($today) ?> <small></small>
      <?php if($_SESSION['type']=='manager'){ ?>
          <button type="button" class="btn btn-success btn-xs insert_account"   data-toggle="modal" data-target="#modal-insert-account" style="float: right;font-size: 20px;" disabled><spen class="glyphicon glyphicon-plus"> </spen> บันทึกรายรับ - รายจ่าย </button>
        <?php }else{ ?>

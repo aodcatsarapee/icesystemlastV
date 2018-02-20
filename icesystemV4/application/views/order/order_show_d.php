@@ -8,7 +8,12 @@
     <!-- Content Header (Page header) -->
     <section class="content-header">
       <h1>
-      <i class="fa fa-shopping-cart "></i> ยอดสั่งสินค้าของลูกค้าในวันนี้<small></small>
+     
+      <?php 	$this->load->helper('Datethai'); 
+				 $today = date('Y-m-d');			
+				?> 
+
+      <i class="fa fa-shopping-cart "></i> ยอดสั่งสินค้าของลูกค้าในวันที่ <?php echo Datethai($today) ?>   <small></small>
         
       </h1>
       

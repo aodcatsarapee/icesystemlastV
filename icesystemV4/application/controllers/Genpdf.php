@@ -6208,7 +6208,7 @@ $tbl = $tbl . ' <tr>
         <td style="border: 1px solid #000000;  text-align:center; ">'.$s['product_id'].'</td>
         <td style="border: 1px solid #000000;  text-align:center; ">'.$s['order_product_name'].'</td>
         <td style="border: 1px solid #000000;  text-align:center; ">'.$s['order_product_price'].' บาท</td>
-     <td style="border: 1px solid #000000;  text-align:center; ">'.$s['order_product_quantity'].'</td>
+     <td style="border: 1px solid #000000;  text-align:center; ">'.$s['order_product_quantity'].' '.$s['product_type'].'</td>
         <td style="border: 1px solid #000000;  text-align:center; ">'.$s['order_product_total_price'].' บาท</td>
      
     </tr>'; 

@@ -133,13 +133,13 @@
 
 		public function show_order_detail($order_id)
 		{
-			$this->db->select('order_detail.*,order.*,customers.*');
+			$this->db->select('order_detail.*,order.*,customers.*,product.*');
 			
 			$this->db->from('order');
    
-			$this->db->join('order_detail', 'order.order_detail_id = order_detail.order_detail_id', 'left');
-   
+			$this->db->join('order_detail', 'order.order_detail_id = order_detail.order_detail_id', 'left');   
 			$this->db->join('customers', 'order.customer_id = customers.customer_id', 'left');
+			$this->db->join('product','product.product_id = order.product_id', 'left'); 
 			
 			$this->db->where('order.order_detail_id',$order_id);
    

@@ -8,7 +8,10 @@
     <!-- Content Header (Page header) -->
     <section class="content-header">
       <h1>
-       <i class="fa fa-money"></i> </i> ลูกหนี้ชำระเงินวันนี้<small></small>
+      <?php 	$this->load->helper('Datethai'); 
+				 $today = date('Y-m-d');			
+				?> 
+       <i class="fa fa-money"></i> </i> ลูกหนี้ชำระเงินในวันที่ <?php echo Datethai($today) ?>  <small></small>
         
        
       </h1>

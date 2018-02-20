@@ -10,7 +10,11 @@
     <!-- Content Header (Page header) -->
     <section class="content-header">
       <h1>
-     <i class="fa fa-money"></i> รายรับ - รายจ่ายปีนี้<small></small>
+      <?php 	$this->load->helper('Datethai'); 
+         $date = Datethai(date('Y-m-d'));			
+         $get_year = explode(" ",$date);
+				?> 
+     <i class="fa fa-money"></i> รายรับ - รายจ่ายในปี<?php echo $get_year[2] ?><small></small>
          
       </h1>
       

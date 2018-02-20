@@ -7,8 +7,12 @@
   <div class="content-wrapper">
     <!-- Content Header (Page header) -->
     <section class="content-header">
+    <?php 	$this->load->helper('Datethai'); 
+         $date = Datethai(date('Y-m-d'));			
+         $get_mount = explode(" ",$date);
+				?> 
       <h1>
-      <i class="fa fa-shopping-cart "></i> ยอดสั่งสินค้าของลูกค้าในเดือนนี้<small></small>
+      <i class="fa fa-shopping-cart "></i> ยอดสั่งสินค้าของลูกค้าในเดือน <?php echo $get_mount[1] ?>  <small></small>
         
       </h1>
       

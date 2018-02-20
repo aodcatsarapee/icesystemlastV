@@ -7,7 +7,10 @@
     <!-- Content Header (Page header) -->
     <section class="content-header">
       <h1>
-      <i class="fa fa-product-hunt fa-1x "> </i> การผลิตสินค้าวันนี้<small></small>
+      <?php 	$this->load->helper('Datethai'); 
+				 $today = date('Y-m-d');			
+				?> 
+      <i class="fa fa-product-hunt fa-1x "> </i> การผลิตสินค้าวันที่ <?php echo Datethai($today) ?><small></small>
         
        
       </h1>

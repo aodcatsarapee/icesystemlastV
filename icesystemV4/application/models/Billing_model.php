@@ -626,10 +626,9 @@ public function orders_all()
 			$this->db->select('sell_detail.*,product.*,sell.*');
 			
 			$this->db->from('sell');
-
 			$this->db->join('product', 'sell.product_id = product.product_id', 'left'); 
-
 			$this->db->join('sell_detail', 'sell_detail.sell_detail_id = sell.sell_detail_id ', 'left'); 
+			
 
 			$this->db->where('sell.sell_detail_id',$id);
 

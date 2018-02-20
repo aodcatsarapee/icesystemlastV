@@ -23,7 +23,7 @@
 			$this->load->view('header',$data1);
 			
 			$data['order']=$this->Order_models->order_view_d();
-
+			
 			$this->load->view('order/order_show_d',$data);
 			
 			$this->load->view('footer');
