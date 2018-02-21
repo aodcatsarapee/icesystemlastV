@@ -77,7 +77,7 @@
 			$id = $_POST['id'];
 
             $data['emp_store'] = $this->Produce_models->get_emp_for_produce($id)->row();
-
+		
 			$data['stock_detail']=$this->Produce_models->select_data_stock_detail($id);
 
 			$this->load->view("produce/show/select_show_stock_detail",$data);

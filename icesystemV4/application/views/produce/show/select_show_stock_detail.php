@@ -1,8 +1,10 @@
 <table class="table table-bordered	">
     <thead>
     <tr>
+    <?php  $get_time = explode(" ",$emp_store->stock_detail_date) ?>
         <th>สั่งผลิตสินค้าโดย</th>
-        <th colspan="2"> ชื่อ - นาสกุล : <?php echo $emp_store->employee_fname.' '.$emp_store->employee_lname; ?></th>
+        <th > ชื่อ - นาสกุล : <?php echo $emp_store->employee_fname.' '.$emp_store->employee_lname; ?></th>
+        <th > เมื่อเวลา : <?php echo $get_time[1]; ?></th>
     </tr>
     <tr>
         <th>รหัสสินค้า</th>

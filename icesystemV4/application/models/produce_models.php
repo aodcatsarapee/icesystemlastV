@@ -121,9 +121,10 @@
 
 
 		public  function get_emp_for_produce($stock_detail_id){
-		    $this->db->join('employee','employee.employee_id = stock.employee_id' ,'left');
-            $this->db->where('stock_detail_id',$stock_detail_id);
-            $this->db->group_by('stock_detail_id');
+			$this->db->join('employee','employee.employee_id = stock.employee_id' ,'left');		
+			$this->db->join('stock_detail','stock_detail.stock_detail_id = stock.stock_detail_id ','left');	
+            $this->db->where('stock.stock_detail_id',$stock_detail_id);
+            $this->db->group_by('stock.stock_detail_id');
 		    return $this->db->get('stock');
 
         }
