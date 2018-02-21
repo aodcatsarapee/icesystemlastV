@@ -59,15 +59,15 @@
                     <td class="text-center"><?=$i?></td>
                     <td class="text-center">P<?=$_SESSION['ses_cart_pro_id'][$k_pro_id]?></td>
                     <td ><?=$_SESSION['ses_cart_pro_name'][$k_pro_id]?></td>
-                    <td class="text-center"><?=$_SESSION['ses_cart_pro_price'][$k_pro_id]?>.00 บาท</td>
+                    <td class="text-center"><?=number_format($_SESSION['ses_cart_pro_price'][$k_pro_id])?>.00 บาท</td>
                     <td  class="text-center">
                     <select name="qty[]" onchange="window.location='?u_pro_id=<?=$k_pro_id?>&new_qty='+this.value+'&update'">
                        <?php for($v=1;$v<=999;$v++){?>
                         <option  value="<?=$v?>" <?=($qty_data==$v)?"selected":""?> ><?=$v?></option>
                         <?php } ?>
-                    </select>
+                    </select>                  
                       </td>
-                    <td  class="text-center"><?=$_SESSION['ses_cart_pro_total_price'][$k_pro_id]?>.00  บาท</td>
+                    <td  class="text-center"><?=number_format($_SESSION['ses_cart_pro_total_price'][$k_pro_id])?>.00  บาท</td>
                     <td class="text-center"><a href="?d_pro_id=<?=$k_pro_id?>&remove" class="btn btn-danger">ลบ</a></td>
                 </tr>
                 <?php $i++; } } ?>
@@ -83,7 +83,7 @@
 
                    <td colspan="4" class="text-center">รวม</td>
                    <td  class="text-center" ><?=count($_SESSION['ses_cart_pro_qty'],1)-count($_SESSION['ses_cart_pro_qty'])?> </td>
-                   <td class="text-center"> <?=array_sum($_SESSION['ses_cart_pro_total_price'])?>.00  บาท</td>
+                   <td class="text-center"> <?=number_format( array_sum($_SESSION['ses_cart_pro_total_price']))?>.00  บาท</td>
                     <td>
                     <button class="btn btn-success">สั่งชื่อสินค้า</button>
                     </td>
@@ -247,7 +247,7 @@
                          ?>
                             <tr>
                                 <td class="text-center"><?php echo $value['order_detail_id']; ?></td>
-                                 <td class="text-center"><?php echo $value['order_detail_total']; ?> บาท</td>
+                                 <td class="text-center"><?php echo number_format($value['order_detail_total'],2); ?> บาท</td>
                                  <td class="text-center"><?php echo $value['order_detail_status']; ?></td>              
                                   <td><?php echo $value['order_out_customer_date'].' น.' ?></td>
 

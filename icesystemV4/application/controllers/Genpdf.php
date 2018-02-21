@@ -97,7 +97,7 @@ $tbl = '<table cellspacing="0" cellpadding="8" >
           <td style="border: 1px solid #000000;  text-align:center; ">'.$p['product_id'].'</td>
           <td style="border: 1px solid #000000;  text-align:center">'.$p['product_name'].'</td>
           <td  style="border: 1px solid #000000;  text-align:center">'.$p['product_detail'].'</td>
-          <td style="border: 1px solid #000000;  text-align:center">'.$p['product_price'].' บาท</td>
+          <td style="border: 1px solid #000000;  text-align:center">'.number_format($p['product_price'],2).' บาท</td>
       </tr>'; 
 
 
@@ -372,7 +372,7 @@ $tbl = '<table cellspacing="0" cellpadding="8" >
      $tbl = $tbl . ' <tr>
           <td style="border: 1px solid #000000;  text-align:center; ">'.$p['product_id'].'</td>
           <td style="border: 1px solid #000000;  text-align:center">'.$p['product_name'].'</td>
-          <td style="border: 1px solid #000000;  text-align:center">'.$p['product_price'].' บาท</td>
+          <td style="border: 1px solid #000000;  text-align:center">'.number_format($p['product_price'],2).' บาท</td>
           <td  style="border: 1px solid #000000;  text-align:center">'.$p['product_amount']." ".$p['product_type'].'</td>
            <td  style="border: 1px solid #000000;  text-align:center">'.$p['product_amount_order']." ".$p['product_type'].'</td>
       </tr>'; 
@@ -3040,7 +3040,7 @@ $tbl = '<table cellspacing="0" cellpadding="8" >
      $tbl = $tbl . ' <tr nobr="true">
           <td width="20%" style="border: 1px solid #000000;  text-align:center; ">'.$debtor['debtor_id'].'</td>
           <td width="20%" style="border: 1px solid #000000;  text-align:center">'.$debtor['customer_fname'].' '.$debtor['customer_lname'].'</td>
-          <td width="20%" style="border: 1px solid #000000;  text-align:center">'.$debtor['price_total'].' บาท</td>
+          <td width="20%" style="border: 1px solid #000000;  text-align:center">'.number_format($debtor['price_total'],2).' บาท</td>
           <td width="20%"  style="border: 1px solid #000000;  text-align:center">'.$debtor['debtor_status'].' </td>
           <td width="20%" style="border: 1px solid #000000;  text-align:center">'.Datethai($date_format).' </td>
           
@@ -3074,7 +3074,7 @@ $tbl = '<table cellspacing="0" cellpadding="8" >
      $tbl = $tbl . ' <tr>
           <td width="20%" style="border: 1px solid #000000;  text-align:center; ">รวม</td>
           <td width="20%" style="border: 1px solid #000000;  text-align:center"> - </td>
-          <td width="20%" style="border: 1px solid #000000;  text-align:center"> '.$total1.'.00 บาท</td>
+          <td width="20%" style="border: 1px solid #000000;  text-align:center"> '.number_format($total1,2).' บาท</td>
           <td width="20%" style="border: 1px solid #000000;  text-align:center"> - </td>
             <td width="20%" style="border: 1px solid #000000;  text-align:center"> - </td>
           
@@ -3205,7 +3205,7 @@ $tbl = '<table cellspacing="0" cellpadding="8" >
      $tbl = $tbl . ' <tr nobr="true">
           <td width="20%" style="border: 1px solid #000000;  text-align:center; ">'.$debtor['debtor_id'].'</td>
           <td width="20%"  style="border: 1px solid #000000;  text-align:center">'.$debtor['customer_fname'].' '.$debtor['customer_lname'].'</td>
-          <td width="20%" style="border: 1px solid #000000;  text-align:center">'.$debtor['price_total'].' บาท</td>
+          <td width="20%" style="border: 1px solid #000000;  text-align:center">'.number_format($debtor['price_total'],2).' บาท</td>
           <td  width="20%" style="border: 1px solid #000000;  text-align:center">'.$debtor['debtor_status'].' </td>
           <td  width="20%" style="border: 1px solid #000000;  text-align:center">'.$date_format.' </td>
           
@@ -3239,7 +3239,7 @@ $tbl = '<table cellspacing="0" cellpadding="8" >
      $tbl = $tbl . ' <tr>
           <td width="20%" style="border: 1px solid #000000;  text-align:center; ">รวม</td>
           <td width="20%" style="border: 1px solid #000000;  text-align:center"> - </td>
-          <td width="20%" style="border: 1px solid #000000;  text-align:center"> '.$total1.'.00 บาท</td>
+          <td width="20%" style="border: 1px solid #000000;  text-align:center"> '.number_format($total1,2).' บาท</td>
           <td width="20%" style="border: 1px solid #000000;  text-align:center"> - </td>
             <td width="20%" style="border: 1px solid #000000;  text-align:center"> - </td>
           
@@ -3371,7 +3371,7 @@ $tbl = '<table cellspacing="0" cellpadding="8" >
    $tbl = $tbl . ' <tr nobr="true">
           <td width="20%" style="border: 1px solid #000000;  text-align:center; ">'.$debtor['debtor_id'].'</td>
           <td width="20%"  style="border: 1px solid #000000;  text-align:center">'.$debtor['customer_fname'].' '.$debtor['customer_lname'].'</td>
-          <td width="20%" style="border: 1px solid #000000;  text-align:center">'.$debtor['price_total'].' บาท</td>
+          <td width="20%" style="border: 1px solid #000000;  text-align:center">'.number_format($debtor['price_total'],2).' บาท</td>
           <td  width="20%" style="border: 1px solid #000000;  text-align:center">'.$debtor['debtor_status'].' </td>
           <td  width="20%" style="border: 1px solid #000000;  text-align:center">'.Datethai($date_format).' </td>
           
@@ -3405,7 +3405,7 @@ $tbl = '<table cellspacing="0" cellpadding="8" >
      $tbl = $tbl . ' <tr>
           <td width="20%" style="border: 1px solid #000000;  text-align:center; ">รวม</td>
           <td width="20%" style="border: 1px solid #000000;  text-align:center"> - </td>
-          <td width="20%" style="border: 1px solid #000000;  text-align:center"> '.$total1.'.00 บาท</td>
+          <td width="20%" style="border: 1px solid #000000;  text-align:center"> '.number_format($total1,2).' บาท</td>
           <td width="20%" style="border: 1px solid #000000;  text-align:center"> - </td>
             <td width="20%" style="border: 1px solid #000000;  text-align:center"> - </td>
           
@@ -3537,7 +3537,7 @@ $tbl = '<table cellspacing="0" cellpadding="8" >
     $tbl = $tbl . ' <tr nobr="true">
           <td width="20%" style="border: 1px solid #000000;  text-align:center; ">'.$debtor['debtor_id'].'</td>
           <td width="20%"  style="border: 1px solid #000000;  text-align:center">'.$debtor['customer_fname'].' '.$debtor['customer_lname'].'</td>
-          <td width="20%" style="border: 1px solid #000000;  text-align:center">'.$debtor['price_total'].' บาท</td>
+          <td width="20%" style="border: 1px solid #000000;  text-align:center">'.number_format($debtor['price_total'],2).' บาท</td>
           <td  width="20%" style="border: 1px solid #000000;  text-align:center">'.$debtor['debtor_status'].' </td>
           <td  width="20%" style="border: 1px solid #000000;  text-align:center">'.Datethai($date_format).' </td>
           
@@ -3571,7 +3571,7 @@ $tbl = '<table cellspacing="0" cellpadding="8" >
      $tbl = $tbl . ' <tr>
           <td style="border: 1px solid #000000;  text-align:center; ">รวม</td>
           <td style="border: 1px solid #000000;  text-align:center"> - </td>
-          <td style="border: 1px solid #000000;  text-align:center"> '.$total1.'.00 บาท</td>
+          <td style="border: 1px solid #000000;  text-align:center"> '.number_format($total1,2).' บาท</td>
           <td style="border: 1px solid #000000;  text-align:center"> - </td>
             <td style="border: 1px solid #000000;  text-align:center"> - </td>
           
@@ -3704,7 +3704,7 @@ $tbl = '<table cellspacing="0" cellpadding="8" >
    $tbl = $tbl . ' <tr nobr="true">
           <td width="20%" style="border: 1px solid #000000;  text-align:center; ">'.$debtor['debtor_id'].'</td>
           <td width="20%"  style="border: 1px solid #000000;  text-align:center">'.$debtor['customer_fname'].' '.$debtor['customer_lname'].'</td>
-          <td width="20%" style="border: 1px solid #000000;  text-align:center">'.$debtor['price_total'].' บาท</td>
+          <td width="20%" style="border: 1px solid #000000;  text-align:center">'.number_format($debtor['price_total'],2).' บาท</td>
           <td  width="20%" style="border: 1px solid #000000;  text-align:center">'.$debtor['debtor_status'].' </td>
           <td  width="20%" style="border: 1px solid #000000;  text-align:center">'.Datethai($date_format).' </td>
           
@@ -3738,7 +3738,7 @@ $tbl = '<table cellspacing="0" cellpadding="8" >
      $tbl = $tbl . ' <tr>
           <td style="border: 1px solid #000000;  text-align:center; ">รวม</td>
           <td style="border: 1px solid #000000;  text-align:center"> - </td>
-          <td style="border: 1px solid #000000;  text-align:center"> '.$total1.'.00 บาท</td>
+          <td style="border: 1px solid #000000;  text-align:center"> '.number_format($total1,2).' บาท</td>
           <td style="border: 1px solid #000000;  text-align:center"> - </td>
             <td style="border: 1px solid #000000;  text-align:center"> - </td>
           
@@ -3887,7 +3887,7 @@ $tbl = '<table cellspacing="0" cellpadding="8" >
     $tbl = $tbl . ' <tr nobr="true">
           <td width="20%" style="border: 1px solid #000000;  text-align:center; ">'.$debtor['debtor_id'].'</td>
           <td width="20%"  style="border: 1px solid #000000;  text-align:center">'.$debtor['customer_fname'].' '.$debtor['customer_lname'].'</td>
-          <td width="20%" style="border: 1px solid #000000;  text-align:center">'.$debtor['price_total'].' บาท</td>
+          <td width="20%" style="border: 1px solid #000000;  text-align:center">'.number_format($debtor['price_total'],2).' บาท</td>
           <td  width="20%" style="border: 1px solid #000000;  text-align:center">'.$debtor['debtor_status'].' </td>
           <td  width="20%" style="border: 1px solid #000000;  text-align:center">'.Datethai($date_format).' </td>
           
@@ -3921,7 +3921,7 @@ $tbl = '<table cellspacing="0" cellpadding="8" >
      $tbl = $tbl . ' <tr>
           <td style="border: 1px solid #000000;  text-align:center; ">รวม</td>
           <td style="border: 1px solid #000000;  text-align:center"> - </td>
-          <td style="border: 1px solid #000000;  text-align:center"> '.$total1.'.00 บาท</td>
+          <td style="border: 1px solid #000000;  text-align:center"> '.number_format($total1,2).' บาท</td>
           <td style="border: 1px solid #000000;  text-align:center"> - </td>
             <td style="border: 1px solid #000000;  text-align:center"> - </td>
           
@@ -4870,13 +4870,13 @@ $tbl = '<table cellspacing="0" cellpadding="8" >
     if($value['account_income']!=0){
 
     $tbl .='
-    <td style="border: 1px solid #000000;  text-align:center">'.$value['account_income'].' บาท</td>
+    <td style="border: 1px solid #000000;  text-align:center">'.number_format($value['account_income'],2).' บาท</td>
     <td style="border: 1px solid #000000;  text-align:center"> - </td>
     ';
     }else{
     $tbl .='
     <td style="border: 1px solid #000000;  text-align:center"> - </td>
-    <td style="border: 1px solid #000000;  text-align:center"> '.$value['account_expenses'].' บาท </td>
+    <td style="border: 1px solid #000000;  text-align:center"> '.number_format($value['account_expenses'],2).' บาท </td>
     ';
 
     }
@@ -4921,8 +4921,8 @@ $tbl = '<table cellspacing="0" cellpadding="8" >
      <tr>
            <td style="border: 1px solid #000000;  text-align:center; ">รวม</td>
            <td style="border: 1px solid #000000;  text-align:center"> - </td>
-           <td style="border: 1px solid #000000;  text-align:center"> '.$total1.'.00 บาท</td>
-           <td style="border: 1px solid #000000;  text-align:center"> '.$total2.'.00 บาท </td>
+           <td style="border: 1px solid #000000;  text-align:center"> '.number_format($total1,2).' บาท</td>
+           <td style="border: 1px solid #000000;  text-align:center"> '.number_format($total2,2).' บาท </td>
             <td style="border: 1px solid #000000;  text-align:center"> - </td>
              <td style="border: 1px solid #000000;  text-align:center"> - </td>        
           
@@ -5065,13 +5065,13 @@ $tbl = '<table cellspacing="0" cellpadding="8" >
     if($value['account_income']!=0){
 
     $tbl .='
-    <td style="border: 1px solid #000000;  text-align:center">'.$value['account_income'].' บาท</td>
+    <td style="border: 1px solid #000000;  text-align:center">'.number_format($value['account_income'],2).' บาท</td>
     <td style="border: 1px solid #000000;  text-align:center"> - </td>
     ';
     }else{
     $tbl .='
     <td style="border: 1px solid #000000;  text-align:center"> - </td>
-    <td style="border: 1px solid #000000;  text-align:center"> '.$value['account_expenses'].' บาท </td>
+    <td style="border: 1px solid #000000;  text-align:center"> '.number_format($value['account_expenses'],2).' บาท </td>
     ';
 
     }
@@ -5116,8 +5116,8 @@ $tbl = '<table cellspacing="0" cellpadding="8" >
      <tr>
            <td style="border: 1px solid #000000;  text-align:center; ">รวม</td>
            <td style="border: 1px solid #000000;  text-align:center"> - </td>
-           <td style="border: 1px solid #000000;  text-align:center"> '.$total1.'.00 บาท</td>
-           <td style="border: 1px solid #000000;  text-align:center"> '.$total2.'.00 บาท </td>
+           <td style="border: 1px solid #000000;  text-align:center"> '.number_format($total1,2).' บาท</td>
+           <td style="border: 1px solid #000000;  text-align:center"> '.number_format($total2,2).' บาท </td>
             <td style="border: 1px solid #000000;  text-align:center"> - </td>
              <td style="border: 1px solid #000000;  text-align:center"> - </td>        
           
@@ -5259,13 +5259,13 @@ $tbl = '<table cellspacing="0" cellpadding="8" >
     if($value['account_income']!=0){
 
     $tbl .='
-    <td style="border: 1px solid #000000;  text-align:center">'.$value['account_income'].' บาท</td>
+    <td style="border: 1px solid #000000;  text-align:center">'.number_format($value['account_income'],2).' บาท</td>
     <td style="border: 1px solid #000000;  text-align:center"> - </td>
     ';
     }else{
     $tbl .='
     <td style="border: 1px solid #000000;  text-align:center"> - </td>
-    <td style="border: 1px solid #000000;  text-align:center"> '.$value['account_expenses'].' บาท </td>
+    <td style="border: 1px solid #000000;  text-align:center"> '.number_format($value['account_expenses'],2).' บาท </td>
     ';
 
     }
@@ -5310,8 +5310,8 @@ $tbl = '<table cellspacing="0" cellpadding="8" >
      <tr>
            <td style="border: 1px solid #000000;  text-align:center; ">รวม</td>
            <td style="border: 1px solid #000000;  text-align:center"> - </td>
-           <td style="border: 1px solid #000000;  text-align:center"> '.$total1.'.00 บาท</td>
-           <td style="border: 1px solid #000000;  text-align:center"> '.$total2.'.00 บาท </td>
+           <td style="border: 1px solid #000000;  text-align:center"> '.number_format($total1,2).' บาท</td>
+           <td style="border: 1px solid #000000;  text-align:center"> '.number_format($total2,2).' บาท </td>
             <td style="border: 1px solid #000000;  text-align:center"> - </td>
              <td style="border: 1px solid #000000;  text-align:center"> - </td>        
           
@@ -5462,13 +5462,13 @@ $tbl = '<table cellspacing="0" cellpadding="8" >
     if($value['account_income']!=0){
 
     $tbl .='
-    <td width="15%" style="border: 1px solid #000000;  text-align:center">'.$value['account_income'].' บาท</td>
+    <td width="15%" style="border: 1px solid #000000;  text-align:center">'.number_format($value['account_income'],2).' บาท</td>
     <td  width="14%" style="border: 1px solid #000000;  text-align:center"> - </td>
     ';
     }else{
     $tbl .='
     <td width="15%"  style="border: 1px solid #000000;  text-align:center"> - </td>
-    <td   width="14%" style="border: 1px solid #000000;  text-align:center"> '.$value['account_expenses'].' บาท </td>
+    <td   width="14%" style="border: 1px solid #000000;  text-align:center"> '.number_format($value['account_expenses'],2).' บาท </td>
     ';
 
     }
@@ -5514,8 +5514,8 @@ $tbl = '<table cellspacing="0" cellpadding="8" >
      <tr>
            <td style="border: 1px solid #000000;  text-align:center; ">รวม</td>
            <td style="border: 1px solid #000000;  text-align:center"> - </td>
-           <td style="border: 1px solid #000000;  text-align:center"> '.$total1.'.00 บาท</td>
-           <td style="border: 1px solid #000000;  text-align:center"> '.$total2.'.00 บาท </td>
+           <td style="border: 1px solid #000000;  text-align:center"> '.number_format($total1,2).' บาท</td>
+           <td style="border: 1px solid #000000;  text-align:center"> '.number_format($total2,2).' บาท </td>
             <td style="border: 1px solid #000000;  text-align:center"> - </td>
              <td style="border: 1px solid #000000;  text-align:center"> - </td>        
           
@@ -5699,7 +5699,7 @@ $pdf->Output('stock.pdf', 'I');
                    </tr>
                     <tr>
                        <th  colspan="4" style="text-align: center; font-size: 15pt;">เงินเดือน </th>
-                        <td colspan="2" style="text-align: center; font-size: 15pt;"  >'.$emp['salaly_month'].' บาท</td>  
+                        <td colspan="2" style="text-align: center; font-size: 15pt;"  >'.number_format($emp['salaly_month'],2).' บาท</td>  
                    </tr>
                    <tr>
                        <th  colspan="6" style="text-align: right; font-size: 15pt;"><p style="margin-top: 100px;">
@@ -5879,13 +5879,13 @@ $tbl = '<table cellspacing="0" cellpadding="8" >
     if($value['account_income']!=0){
 
     $tbl .='
-    <td width="15%" style="border: 1px solid #000000;  text-align:center">'.$value['account_income'].' บาท</td>
+    <td width="15%" style="border: 1px solid #000000;  text-align:center">'.number_format($value['account_income'],2).' บาท</td>
     <td  width="14%" style="border: 1px solid #000000;  text-align:center"> - </td>
     ';
     }else{
     $tbl .='
     <td width="15%"  style="border: 1px solid #000000;  text-align:center"> - </td>
-    <td   width="14%" style="border: 1px solid #000000;  text-align:center"> '.$value['account_expenses'].' บาท </td>
+    <td   width="14%" style="border: 1px solid #000000;  text-align:center"> '.number_format($value['account_expenses'],2).' บาท </td>
     ';
 
     }
@@ -5931,8 +5931,8 @@ $tbl = '<table cellspacing="0" cellpadding="8" >
      <tr>
            <td style="border: 1px solid #000000;  text-align:center; ">รวม</td>
            <td style="border: 1px solid #000000;  text-align:center"> - </td>
-           <td style="border: 1px solid #000000;  text-align:center"> '.$total1.'.00 บาท</td>
-           <td style="border: 1px solid #000000;  text-align:center"> '.$total2.'.00 บาท </td>
+           <td style="border: 1px solid #000000;  text-align:center"> '.number_format($total1,2).' บาท</td>
+           <td style="border: 1px solid #000000;  text-align:center"> '.number_format($total2,2).' บาท </td>
             <td style="border: 1px solid #000000;  text-align:center"> - </td>
              <td style="border: 1px solid #000000;  text-align:center"> - </td>        
           
@@ -6207,9 +6207,9 @@ $tbl = $tbl . ' <tr>
    $tbl = $tbl . ' <tr>
         <td style="border: 1px solid #000000;  text-align:center; ">'.$s['product_id'].'</td>
         <td style="border: 1px solid #000000;  text-align:center; ">'.$s['order_product_name'].'</td>
-        <td style="border: 1px solid #000000;  text-align:center; ">'.$s['order_product_price'].' บาท</td>
+        <td style="border: 1px solid #000000;  text-align:center; ">'.number_format($s['order_product_price'],2).' บาท</td>
      <td style="border: 1px solid #000000;  text-align:center; ">'.$s['order_product_quantity'].' '.$s['product_type'].'</td>
-        <td style="border: 1px solid #000000;  text-align:center; ">'.$s['order_product_total_price'].' บาท</td>
+        <td style="border: 1px solid #000000;  text-align:center; ">'.number_format($s['order_product_total_price'],2).' บาท</td>
      
     </tr>'; 
     
@@ -6217,7 +6217,7 @@ $tbl = $tbl . ' <tr>
 
   $tbl = $tbl . ' <tr>
   <td colspan="4" style="border: 1px solid #000000; text-align: center;">รวม</td>
-   <td style="border: 1px solid #000000;  text-align:center; ">'.$s['order_detail_total'].' บาท</td>
+   <td style="border: 1px solid #000000;  text-align:center; ">'.number_format($s['order_detail_total'],2).' บาท</td>
   </tr>'; 
     
 $tbl = $tbl . '</table>';
@@ -6384,7 +6384,7 @@ $tbl = $tbl . ' <tr>
    $tbl = $tbl . ' <tr>
         <td style="border: 1px solid #000000;  text-align:center; ">'.$s['order_detail_id'].'</td>
         <td style="border: 1px solid #000000;  text-align:center; ">'.$s['customer_fname']." ".$s['customer_lname'].'</td>
-        <td style="border: 1px solid #000000;  text-align:center; ">'.$s['order_detail_total'].' บาท</td>
+        <td style="border: 1px solid #000000;  text-align:center; ">'.number_format($s['order_detail_total'],2).' บาท</td>
      <td style="border: 1px solid #000000;  text-align:center; ">'.$s['order_detail_status'].'</td>
        
      
@@ -6672,7 +6672,7 @@ $tbl = $tbl . ' <tr>
    $tbl = $tbl . ' <tr>
         <td style="border: 1px solid #000000;  text-align:center; ">'.$s['order_detail_id'].'</td>
         <td style="border: 1px solid #000000;  text-align:center; ">'.$s['customer_fname']." ".$s['customer_lname'].'</td>
-        <td style="border: 1px solid #000000;  text-align:center; ">'.$s['order_detail_total'].' บาท</td>
+        <td style="border: 1px solid #000000;  text-align:center; ">'.number_format($s['order_detail_total'],2).' บาท</td>
      <td style="border: 1px solid #000000;  text-align:center; ">'.$s['order_detail_status'].'</td>
        
      
