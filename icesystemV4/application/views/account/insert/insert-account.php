@@ -9,8 +9,7 @@
       <div class="modal-body" id="insert" style="font-size: 15px;">
                 
           <form class="form-horizontal" method="POST" id="insert_account" name="insert_account" enctype="multipart/form-data" >
-           
-
+          
           <div class="form-group ">
               <label class="col-sm-3 control-label"  >ประเภท :</label>
                 <div class="col-sm-7">
